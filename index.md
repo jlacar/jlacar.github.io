@@ -1,4 +1,4 @@
-## Welcome to the Agile Jong Blog 
+## Mindfully Practicing Agility and Craftsmanship 
 
 You can use the [editor on GitHub](https://github.com/jlacar/jlacar.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
