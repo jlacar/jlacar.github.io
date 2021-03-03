@@ -1,12 +1,12 @@
 # Mindful Practice
 
-Things related to mindful practice of agility and technical excellence.
-
 ## About me
 
-I'm a long-time developer and currently trying to find my stride as a coach with a focus on agile technical practices like TDD, refactoring, and design.
+I'm a long-time developer and currently trying to find my stride as a coach with a focus on agile technical practices like emergent design, BDD/TDD, refactoring, automated testing, and pair/mob programming.
 
-I started this blog as a way to organize my thoughts around various things that interest me with a specific slant towards how to learn and practice them in a systematic and deliberate way.
+## About this blog
+
+I started this blog as a way to organize my thoughts around various things that interest me. A recurring theme will be how to learn and practice techniques in a deliberate and systematic way.
 
 -----
 
