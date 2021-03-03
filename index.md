@@ -1,4 +1,14 @@
-## Mindfully Practicing Agility and Craftsmanship 
+# Mindful Practice
+
+Things related to mindful practice of agility and technical excellence.
+
+## About me
+
+I'm a long-time developer and currently trying to find my stride as a coach with a focus on agile technical practices like TDD, refactoring, and design.
+
+I started this blog as a way to organize my thoughts around various things that interest me with a specific slant towards how to learn and practice them in a systematic and deliberate way.
+
+-----
 
 You can use the [editor on GitHub](https://github.com/jlacar/jlacar.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
