@@ -1,5 +1,5 @@
 > &ldquo;_Success has to do with deliberate practice. Practice must be focused,
-> determined, and in an environment where there's feedback._&rdquo;&mdash;Malcomb Gladwell
+> determined, and in an environment where there's feedback._&rdquo;&mdash;Malcolm Gladwell
 
 > &ldquo;_Mindfulness isn't difficult, we just need to remember to do it._&rdquo;
 > &mdash;Sharon Salzberg
