@@ -1,47 +1,16 @@
-# Mindful Practice
+> &ldquo;_Success has to do with deliberate practice. Practice must be focused,
+> determined, and in an environment where there's feedback._&rdquo;&mdash;Malcomb Gladwell
+
+> &ldquo;_Mindfulness isn't difficult, we just need to remember to do it._&rdquo;
+> &mdash;Sharon Salzberg
 
 ## About me
 
-I'm a long-time developer and currently trying to find my stride as a coach with a focus on agile technical practices like emergent design, BDD/TDD, refactoring, automated testing, and pair/mob programming.
+I'm a long-time developer and student of agile methods. Continuing to find my stride as a coach with a strong focus 
+on agile technical practices like emergent design, BDD/TDD, refactoring, automated testing, and pair/mob programming.
 
 ## About this blog
 
-I started this blog as a way to organize my thoughts around various things that interest me. A recurring theme will be how to learn and practice techniques in a deliberate and systematic way.
-
------
-
-You can use the [editor on GitHub](https://github.com/jlacar/jlacar.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jlacar/jlacar.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+I started this blog as a way to organize my thoughts around various things that interest me. A recurring theme will 
+be how to learn and practice techniques in a deliberate, systematic, and disciplined way to maximize learning and 
+minimize churn.
