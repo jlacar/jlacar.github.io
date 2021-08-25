@@ -141,15 +141,15 @@ gap between what the code "understands" and what we understand as its authors.
 
 > *I'm never in favor of writing code poorly*—Ward Cunningham
 
-As a way to help us bridge the gap created by semantic diffusion, Ward offers this: "I'm never in favor of writing 
-code poorly but I am in favor of writing code to reflect your current understanding of a problem even if that 
-understanding is partial."  
+As if to help us bridge the gap created by semantic diffusion, Ward offers this: "I'm never in favor of 
+writing code poorly but I am in favor of writing code to reflect your current understanding of a problem even if that 
+understanding is partial." (Cunningham, 2009)  
 
 ## There are no interest-free loans in software
 
 Ward likens being slowed down by technical debt to paying interest on a loan. In the experience report, Ward writes 
 "Every minute spent on not-quite-right code counts as interest on that debt. Entire engineering organizations can be 
-brought to a stand-still under the debt load of an unconsolidated implementation."  
+brought to a stand-still under the debt load of an unconsolidated implementation." (Cunningham, 1992)  
 
 Many organizations seem to think they can avoid paying interest by not going into debt at all. But that's not the 
 point nor is it realistic. There's always something you don't know, don't fully understand, or couldn't have known 
