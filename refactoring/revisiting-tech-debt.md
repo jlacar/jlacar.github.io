@@ -204,13 +204,12 @@ way to think about the Debt Metaphor and what Ward really meant when he coined i
 # References
 
 Cunningham, Ward (1992, March 26). The WyCash Portfolio Management System. OOPSLA '92 Experience Report. 
-https://c2.com/doc/oopsla92.html 
+[https://c2.com/doc/oopsla92.html](https://c2.com/doc/oopsla92.html) 
 
-Cunningham, Ward (2009, Feb 14). Debt Metaphor. YouTube. https://youtu.be/pqeJFYwnkjE
+Cunningham, Ward (2009, Feb 14). Debt Metaphor. YouTube. [https://youtu.be/pqeJFYwnkjE](https://youtu.be/pqeJFYwnkjE)
 
-Fowler, Martin (2006, Dec 14). SemanticDiffusion. [blog post] https://martinfowler.com/bliki/SemanticDiffusion.html
+Fowler, Martin (2006, Dec 14). SemanticDiffusion. [blog post] [https://martinfowler.com/bliki/SemanticDiffusion.html](https://martinfowler.com/bliki/SemanticDiffusion.html)
 
-Jeffries, Ron (2015, Nov 9). Technical Debt - Bad metaphor or worst metaphor? [blog post] 
-    https://ronjeffries.com/articles/015-11/tech-debt/ 
+Jeffries, Ron (2015, Nov 9). Technical Debt - Bad metaphor or worst metaphor? [blog post] [https://ronjeffries.com/articles/015-11/tech-debt/](https://ronjeffries.com/articles/015-11/tech-debt/) 
 
-Myers, Rob (2021, Apr). Avoid Tech Debt with these "Four Core" Practices. https://www.agileinstitute.com/articles/avoiding-tech-debt-w-the-core-four-practices
+Myers, Rob (2021, Apr). Avoid Tech Debt with these "Four Core" Practices. [https://www.agileinstitute.com/articles/avoiding-tech-debt-w-the-core-four-practices](https://www.agileinstitute.com/articles/avoiding-tech-debt-w-the-core-four-practices)
