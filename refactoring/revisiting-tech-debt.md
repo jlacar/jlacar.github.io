@@ -3,7 +3,8 @@
 > You keep using that word. I don't think it means what you think it means.—Iñigo Montoya in "The Princess Bride"
 
 The term "Technical Debt", coined some thirty years ago by Ward Cunningham, has undergone what Martin Fowler calls 
-semantic diffusion, where a term's definition is weakened as it spreads through the wider community.
+[semantic diffusion](https://martinfowler.com/bliki/SemanticDiffusion.html) (Fowler, 2006), where a term's 
+definition is weakened as it spreads through the wider community.
 
 It's important to understand that the effects of semantic diffusion extend beyond just a term's meaning; it can also 
 diminish a term's usefulness in influencing actions and outcomes. In the case of Technical Debt, or more precisely 
@@ -16,18 +17,19 @@ the way Ward and others have benefited from it.
 
 ## A short history of the Debt Metaphor
 
-The earliest mention of the Debt Metaphor appears to be in an experience report written by Ward for OOPSLA '92. 
-While there are no explicit references in that paper to "Technical Debt" or "the Debt Metaphor" per se, all the 
-relevant ideas are there. What we now know as refactoring is referred to as "consolidation", "revise", and "rewrite" 
-and what we consider as code with technical debt is referred to as "first time code", "immature code", 
-"unconsolidated implementation", and "not-quite-right code".    
+The earliest mention of the Debt Metaphor appears to be in [an experience report](https://c2.com/doc/oopsla92.html) 
+(Cunningham, 1992) written by Ward for OOPSLA '92. While there are no explicit references in that paper to 
+"Technical Debt" or "the Debt Metaphor" per se, all the relevant ideas are there. What we now know as refactoring 
+is referred to as "consolidation", "revise", and "rewrite" and what we consider as code with technical debt is 
+referred to as "first time code", "immature code", "unconsolidated implementation", and "not-quite-right code".    
 
-In 2009, Ward posted a video on YouTube in which he reflects on the Debt Metaphor, a transcript of which is posted 
-on his wiki. Notably absent from it is any mention of "Technical Debt". He does, however, refer to "the Debt 
-Metaphor" consistently throughout the video.  
+In 2009, Ward posted [a video on YouTube](https://youtu.be/pqeJFYwnkjE) in which he reflects on the Debt Metaphor, a 
+[transcript](http://wiki.c2.com/?WardExplainsDebtMetaphor) of which is posted on his wiki. Notably absent from it is 
+any mention of "Technical Debt". He does, however, refer to "the Debt Metaphor" consistently throughout the video.  
 
-Please take a few minutes to read the OOPSLA '92 experience report and watch Ward's 2009 video explaining the Debt 
-Metaphor. This will give you the context you'll need to better understand the rest of this article. 
+Please take a few minutes to read the [OOPSLA '92 experience report](https://c2.com/doc/oopsla92.html) and watch 
+[Ward's 2009 video](http://www.youtube.com/watch?v=pqeJFYwnkjE) explaining the Debt Metaphor. This will give you the 
+context you'll need to better understand the rest of this article.  
 
 ## Semantic Diffusion
 
@@ -50,20 +52,21 @@ software development practices stay more aligned with the less favorable view of
 continue to be weakened and its usefulness diminished by semantic diffusion and only a minority will see 
 "debt" in the positive light that Ward saw it and be able to benefit from it.   
 
-So expect to see more articles like Ron Jeffries' "Technical Debt - Bad metaphor or worst metaphor?" in the 
-foreseeable future. Ron points out a number of shortcomings of the metaphor which, in my opinion, are the effects of 
-semantic diffusion and applying a different context to the original idea. But at least Ron is familiar enough with 
-Ward's original thinking to offer a balanced perspective: "As for Ward’s original notion, it seems to me that he 
-was referring to a gap between what the code 'understands' and what we understand as its authors."    
+So expect to see more articles like "[Technical Debt - Bad metaphor or worst metaphor?](https://ronjeffries.com/articles/015-11/tech-debt/)" 
+(Jeffries, 2015) in the foreseeable future. Ron points out a number of shortcomings of the metaphor which, in my 
+opinion, are the effects of semantic diffusion and applying a different context to the original idea. But at least 
+Ron is familiar enough with Ward's original thinking to offer a balanced perspective: "As for Ward’s original notion,
+it seems to me that he was referring to a gap between what the code 'understands' and what we understand as its 
+authors."   
 
-Other articles abound, however, that clearly misrepresent what Ward meant, like this recent one by Rob Myers, whose 
-definition of Technical Debt compelled me to respond with this article. 
+Other articles abound, however, that clearly misrepresent what Ward meant, like [this recent one]() (Myers, 2021), 
+with a definition of Technical Debt ostensibly attributed to Ward but patently different from his actual definition. 
 
 # What did Ward actually mean then?
 
 When he coined the Debt Metaphor, Ward saw going into debt as a positive thing. He said, "I thought borrowing money 
 was a good thing. With borrowed money, you can do something sooner than you might otherwise. I thought that rushing 
-software out the door to get some experience with it was a good idea." 
+software out the door to get some experience with it was a good idea." (Cunningham, 2009)
 
 Most of us live with some kind of debt without much of a problem, and we often use debt to our advantage. If you have 
 a mortgage, a car loan, or a credit card account in good standing, you're a prime example of this. And that's a good 
@@ -171,8 +174,10 @@ Just as making regular and timely payments on a loan keeps you out of financial 
 refactoring keeps you out of technical trouble. 
 
 The best way I know to do that is by practicing Test-Driven Development (TDD), making sure not to skimp on the 
-refactoring step. Keep the code simple and follow principles like YAGNI (You Ain't Gonna Need It), DTSTTCPW (Do The 
-Simplest Thing That Could Possibly Work), DRY (Don't Repeat Yourself), and Kent Beck's Four Rules of Simple Design. 
+refactoring step. Keep the code simple and follow principles like [YAGNI](https://martinfowler.com/bliki/Yagni.html) 
+(You Ain't Gonna Need It), [DTSTTCPW](http://wiki.c2.com/?DoTheSimplestThingThatCouldPossiblyWork) (Do The 
+Simplest Thing That Could Possibly Work), [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't 
+Repeat Yourself), and Kent Beck's [Four Rules of Simple Design](https://martinfowler.com/bliki/BeckDesignRules.html. 
 These help instill technical discipline and excellence in the way we develop software.   
 
 With fiscal discipline, you can live comfortably and still thrive with debt. Likewise, by maintaining technical 
