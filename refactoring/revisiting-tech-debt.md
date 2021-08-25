@@ -1,6 +1,6 @@
 # Revisiting the Debt Metaphor
 
-> You keep using that word. I don't think it means what you think it means.—Iñigo Montoya in "The Princess Bride"
+> *You keep using that word. I don't think it means what you think it means.*—Iñigo Montoya in *"The Princess Bride"*
 
 The term "Technical Debt", coined some thirty years ago by Ward Cunningham, has undergone what Martin Fowler calls 
 [semantic diffusion](https://martinfowler.com/bliki/SemanticDiffusion.html) (Fowler, 2006), where a term's 
@@ -74,16 +74,16 @@ thing, isn't it?
 
 So, at least by Ward's estimation, taking on technical debt is a tactical choice made in order to gain experience 
 with the running software sooner rather than later. With that experience, you can learn things you couldn't 
-otherwise, even when the software is incomplete or as Ward put it, "not quite right." The idea was to quickly 
+otherwise, even when the software is incomplete, or as Ward put it, "not quite right." The idea was to quickly 
 accumulate learnings and reflect them back into the software by refactoring as soon as possible.   
 
 This explains why refactoring done as part of a tight feedback loop, as it's done in test-driven development, works 
 very well and why Ward thinks going into debt this way is "a good methodology. It's at the heart of Extreme 
-Programming" and that "the debt metaphor is one of many explanations why Extreme Programming works."  
+Programming" and that "the debt metaphor is one of many explanations why Extreme Programming works." (Cunningham, 2009) 
 
-The problem comes when people interpret "not-quite-right code" as code that's lacking in quality somehow or code 
-where you've taken some shortcuts to get software out the door sooner. That's not really what Ward meant. More on 
-this later but that's a clear sign of semantic diffusion.  
+The problem comes when people interpret "not-quite-right code" (Cunningham, 1992) as code that's lacking in quality 
+somehow or code where you've taken some shortcuts to get software out the door sooner. That's not really what Ward 
+meant. More on this later but that's a clear sign of semantic diffusion.  
 
 ## No time to get it right, all the time to fix it
 
@@ -94,7 +94,7 @@ If your only experience with technical debt has been painful and unproductive, i
 misunderstand Ward's original intent and make the mistake of thinking you can write code poorly or take shortcuts as 
 long as you repay the debt by refactoring later on.  
 
-However, experience shows there's hardly ever time, if any, to refactor later on. We're always under pressure to 
+However, experience shows there's little time, if any, to refactor later on. We're always under pressure to 
 deliver and show progress, and quickly move on to the next feature on the backlog. Who has time to refactor when 
 there are so many other things we need to get done? In the immortal words of Sweet Brown, "I ain't got time for that!"  
 
@@ -117,13 +117,13 @@ consequences later.
 ## What is Technical Debt really about?
 
 Going into debt with poorly-written code is like borrowing money from the mob; not refactoring is like stiffing them.
-Nobody in their right mind would ever consider doing that. Well, borrowing maybe, if you like living on the edge. 
-But stiffing them? Definitely not, at least not if you want to stay healthy and above ground. We say we'd never do 
-such a crazy thing and yet this happens all the time with software.   
+Nobody in their right mind would ever consider doing that. Well, borrowing money maybe, if you like living like that. 
+But stiffing them? Definitely not, at least not if you like living at all staying above ground. We say we'd never do 
+anything crazy like that and yet this happens all the time with software.
 
 When we ship code that's lacking in quality, we're taking out a loan we have little to no chance of ever repaying. 
-That's Ron Jeffries' main point in his article, and it's a very valid point. But a lack of quality is not the source 
-of debt in Ward's metaphor.  
+That's Ron Jeffries' main point in his article, and it's a very valid point. But in Ward's metaphor, the primary 
+source of debt is *not* a lack of quality. 
 
 If poorly-written code and taking shortcuts are not the primary sources of debt in Ward's metaphor, what is? Ward 
 makes it quite clear with these statements: 
@@ -136,10 +136,10 @@ is like paying interest on a loan."
 your understanding of those features, then eventually that program simply does not contain any understanding and all 
 efforts to work on it take longer and longer. In other words, the interest is total and you'll make zero progress."  
 
-Ron Jeffries captures it succinctly: the primary source of debt in Ward's original notion is the gap between what 
-the code "understands" and what we understand as its authors. 
+Ron Jeffries captures it succinctly: the primary source of debt in Ward's original notion is the 
+gap between what the code "understands" and what we understand as its authors. 
 
-> I'm never in favor of writing code poorly... —Ward Cunningham
+> *I'm never in favor of writing code poorly*—Ward Cunningham
 
 As a way to help us bridge the gap created by semantic diffusion, Ward offers this: "I'm never in favor of writing 
 code poorly but I am in favor of writing code to reflect your current understanding of a problem even if that 
