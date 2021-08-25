@@ -1,3 +1,5 @@
-theme: jekyll-theme-slate
+remote_theme: pages-themes/hacker@v0.2.0
 title: Mindful Practice Blog
-description: Deliberately getting better
+description: deliberately getting better 1% @aTime
+plugins:
+  - jekyll-remote-theme
