@@ -198,7 +198,7 @@ our understanding as best as possible; doing this as soon as possible reduces th
 ## Giving proper credit
 
 Ward Cunningham deserves credit for coining the Debt Metaphor but let's not credit him for what semantic diffusion 
-has led many to think he meant. Hopefully, this article has helped you gain a better understanding of a more useful 
+has misled many to think he meant. Hopefully, this article has helped you gain a better understanding of a more useful 
 way to think about the Debt Metaphor and what Ward really meant when he coined it.  
 
 # References
