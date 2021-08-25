@@ -99,12 +99,12 @@ deliver and show progress, and quickly move on to the next feature on the backlo
 there are so many other things we need to get done? In the immortal words of Sweet Brown, "I ain't got time for that!"  
 
 Not refactoring because "we don't have time to do that" makes no sense, financially or otherwise. Would you rather 
-spend more time trying to understand code, tracking down and fixing bugs, and dealing with issues in production then?
-Won't that be even more costly than spending time to refactor and avoid those problems in the first place?  
+spend more time trying to understand code, tracking down and fixing bugs, and dealing with production issues?
+Won't it cost less if we just refactor now and avoid those problems in the future?  
 
-Unfortunately, many organizations carry a technical debt load that's significant enough as to require substantial 
-investments in time and effort for refactoring to show any kind of justifiable returns. In other words, it costs too 
-much to try to address the cause of their pain, so they just choose to carry on living with their pain.  
+Unfortunately, many organizations carry a heavy technical debt load that would require substantial investment in 
+time and effort to refactor before seeing any kind of justifiable returns. In other words, it costs too much to try 
+to address the cause of their pain now, so they just choose to carry on living with that pain.  
 
 To compound the problem, when code is deemed to be already working, managers, stakeholders, and even developers can 
 lose sight of the long-term economic impact of a heavy technical debt load and question the need to refactor at all. 
