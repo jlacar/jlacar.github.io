@@ -4,14 +4,36 @@
 > &ldquo;_Mindfulness isn't difficult, we just need to remember to do it._&rdquo;
 > &mdash;Sharon Salzberg
 
+## About me
+
+I'm a long-time developer and student of agile software development methods. I am constantly looking for ways to get
+better as a developer, as a coach, as a person. I focus more on agile technical practices like emergent design,
+BDD/TDD, refactoring, automated testing, and pair/mob/ensemble programming.
+
+----
 ## About this blog
 
-This blog is where I'll try to reflect on different approach to learning about the things that interest me. 
+Information about different approaches for learning and improving. 
 
-A recurring theme will be how to learn and practice techniques and acquire new skills in a deliberate,  
-systematic, and disciplined way to maximize retention, accelerate mastery, and minimize churn.
+A recurring theme will be about techniques for learning and practicing skills in a deliberate, systematic, and 
+disciplined way to maximize retention, accelerate mastery, and minimize churn. Also, stuff about agile software 
+development. A smattering of things related to martial arts like Aikido, Wing Chun, and Jiujitsu.
 
-## Recent posts
+----
+## Recent Posts
+
+(Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.html)
+
+----
+## Categories 
+
+### Dojos
+
+[TBD]
+
+### Habit
+
+[TBD]
 
 ### Refactoring
 
@@ -21,12 +43,7 @@ systematic, and disciplined way to maximize retention, accelerate mastery, and m
 
 [TBD]
 
-## About me
-
-I'm a long-time developer and student of agile software development methods. I am constantly looking for ways to get 
-better as a developer, as a coach, as a person. I focus more on agile technical practices like emergent design, 
-BDD/TDD, refactoring, automated testing, and pair/mob/ensemble programming.
-
+----
 ## Finding me 
 
 Twitter: @jlacar
