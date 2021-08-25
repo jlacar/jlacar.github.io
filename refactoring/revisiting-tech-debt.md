@@ -118,8 +118,8 @@ consequences later.
 
 Going into debt with poorly-written code is like borrowing money from the mob; not refactoring is like stiffing them.
 Nobody in their right mind would ever consider doing that. Well, borrowing money maybe, if you like living like that. 
-But stiffing them? Definitely not, at least not if you like living at all staying above ground. We say we'd never do 
-anything crazy like that and yet this happens all the time with software.
+But stiffing the mob? Definitely not, at least not if you like living at all. We say we'd never do anything crazy 
+like that and yet this happens all the time with software.
 
 When we ship code that's lacking in quality, we're taking out a loan we have little to no chance of ever repaying. 
 That's Ron Jeffries' main point in his article, and it's a very valid point. But in Ward's metaphor, the primary 
@@ -153,15 +153,15 @@ brought to a stand-still under the debt load of an unconsolidated implementation
 
 Many organizations seem to think they can avoid paying interest by not going into debt at all. But that's not the 
 point nor is it realistic. There's always something you don't know, don't fully understand, or couldn't have known 
-before when you're developing software. In other words, you're always going to pay interest. That's the basic price 
-of admission we have to pay regardless. The question isn't if you'll pay, it's how much you'll pay.   
+beforehand as you're developing software. In other words, you're always going to pay interest. That's the basic price 
+of admission we have to pay regardless. The question isn't _if_ you'll pay, it's _how much_ you'll pay.   
 
 How much you'll pay, of course, depends on how quickly and how often you pay off your debt. If you don't make 
-regular payments on a loan, you'll get charged extra fees and your interest rate will likely go up because you're 
-now a greater risk and liability for the bank.  
+regular payments on a loan, you'll have to pay extra fees and your interest rate will likely go up because you're 
+now a greater risk and liability to the bank.  
 
 Likewise, failing to refactor your program promptly and regularly will increase the risk and liability in the 
-program and you end up paying more interest as all efforts to work on the program take longer and longer and your 
+program, and you end up paying more interest as all efforts to work on the program take longer and longer and your 
 progress becomes slower and slower. Worst-case scenario, the interest becomes total and you make zero progress.  
 
 ## How to benefit from the Debt Metaphor
@@ -177,7 +177,7 @@ The best way I know to do that is by practicing Test-Driven Development (TDD), m
 refactoring step. Keep the code simple and follow principles like [YAGNI](https://martinfowler.com/bliki/Yagni.html) 
 (You Ain't Gonna Need It), [DTSTTCPW](http://wiki.c2.com/?DoTheSimplestThingThatCouldPossiblyWork) (Do The 
 Simplest Thing That Could Possibly Work), [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't 
-Repeat Yourself), and Kent Beck's [Four Rules of Simple Design](https://martinfowler.com/bliki/BeckDesignRules.html. 
+Repeat Yourself), and Kent Beck's [Four Rules of Simple Design](https://martinfowler.com/bliki/BeckDesignRules.html). 
 These help instill technical discipline and excellence in the way we develop software.   
 
 With fiscal discipline, you can live comfortably and still thrive with debt. Likewise, by maintaining technical 
