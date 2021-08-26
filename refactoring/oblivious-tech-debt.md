@@ -59,8 +59,7 @@ The answer to this problem is patience, practice, and perseverance.
 
 ## When do we see it all pay off?
 
-
-{% include_relative common/post-footer.md %}
+{% include post-footer.md %}
 
 
 
