@@ -3,17 +3,17 @@
 _(August 26, 2021)_
 
 We often get posts on [the Ranch](https://coderanch.com) from people asking for help on interview questions. A good 
-number of those posts have to do with code optimization. Here's one such recent example given: 
+number of those posts have to do with code optimization. Here's an example I saw earlier today: 
 ```java
 String str = "";
 for (int i = 0; i > 100000; ++i) {
    str += i;
 }
 ```
-(Source: https://coderanch.com/t/745096/java/Interview#3460935)
+(Source: [https://coderanch.com/t/745096/java/Interview#3460935](https://coderanch.com/t/745096/java/Interview#3460935))
 
 The original poster asked for help in figuring out a way to increase the performance of that code. What would _you_ 
-say if asked to optimize that code?
+say if asked to optimize it?
 
 ## The only reasonable answer
 
@@ -46,7 +46,7 @@ based on hard-coded numbers and given the loop initializes `i` to zero, the loop
 
 ## But what's the real answer?
 
-When it comes to the question of optimization, a good answer would be along these lines.
+When it comes to the question of optimization, a good answer would be along these lines:
 
 1. Don't, just don't. Not yet. Clarify the code first.
 2. Don't, just don't. Not yet. Simplify the code first.
