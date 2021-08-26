@@ -20,7 +20,9 @@ I've used Spring Framework, Spring Boot, Maven, Gradle, git, Eclipse, IntelliJ I
 myriad of other tools I won't bore you with. 
 
 I'm a long-time developer and student of agile software development methods. I am constantly looking for ways to get
-better as a developer, as a coach, as a person. I hope you'll find something useful here. Thanks for visiting!
+better as a developer, as a coach, as a person. I hope you'll find something useful here. 
+
+Thanks for visiting!
 
 ----
 ## About this blog
@@ -50,14 +52,15 @@ development. A smattering of things related to martial arts like Aikido, Wing Ch
 
 ### Refactoring
 
-(Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.md)   
+(Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.md)  
 
 ### Engineering
 
+(Aug 26, 2021) - [Optimization Adventures - Pilot](coding/premature-optimization-1.md)  
 
 ### Miscellaneous
 
-[TBD]
+(Draft) - GitHub Pages Tips
 
 ----
 ## Finding me 
