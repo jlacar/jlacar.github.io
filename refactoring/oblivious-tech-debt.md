@@ -1,19 +1,19 @@
 # Unconscious Tech Debt isn't really a thing
 
-> Open your eyes, look within. Are you satisfied with the life you're living?—Bob Marley
+> _You always have two choices: your commitment versus your fear_—Sammy Davis, Jr.
 
-A common view of Technical Debt is that it's something that people go into unconsciously or unwillingly due to 
-some external pressure, like a looming deadline. Here's one such definition of Technical Debt I saw recently:
+A common view of Technical Debt is that it's something that happens unconsciously or incidentally. Here's one such 
+definition of Technical Debt I saw recently:
 
 > Technical Debt is the deferment of good software design for the sake of expediency. Put simply, we’ve chosen to 
 > make some questionable design choices in order to get product delivered. This may be a conscious choice, but—more 
 > often than not—it’s unconscious, and the result of a time-crunch. (Myers, 2021)
 
-This definition is self-contradicting. Here's how I figure it.
+I don't buy the unconscious part of that.
 
-If you claim your actions were unconscious, then you can't claim they were the result of some kind of external 
-influence like a time-crunch. If that were true, it means you were aware of the effect time pressure had on you. 
-Being aware of something is the very definition of consciousness. So that rationale doesn't really make sense. 
+If you claim your actions were unconscious, then you can't claim they were the result of an external influence like 
+a time-crunch. If that were true, it means you _were_ aware of the time pressure and acknowledge that you were 
+acting accordingly. Consciousness is, by definition, being aware, so that rationale doesn't really make sense. 
 
 If we're really being honest, that wasn't an unconscious choice. Rather, you made a conscious choice to acquiesce to 
 an immediate demand and avoid the consequences, whether perceived or real, of not declaring "Done!" at a 
@@ -21,15 +21,15 @@ predetermined—and usually arbitrary—point in time rather than risk dealing w
 with not-quite-right software.   
 
 The consequences of not meeting a deadline are far more immediate and palpable, so dealing with that threat becomes 
-more urgent. On the other hand, the repercussions of adding to an existing technical debt load are more nebulous and 
-further out in the future thus allowing us to consider them with less urgency, if at all.
+more urgent. On the other hand, the consequences of adding to an existing technical debt load are not a clear and 
+present danger so don't feel as much urgency to face them, if at all.
 
-The choice boils down to dodging a real arrow now or dodging a theoretical bullet tomorrow. You can't really fault 
-anyone for choosing to dodge the arrow; this is normal and perfectly understandable human nature.
+It really boils down to choosing to dodge a real arrow now or dodging a theoretical bullet tomorrow. 
+You can't fault anyone for choosing to dodge the arrow; it's perfectly normal and understandable human nature.
 
-So, rather than unconscious debt, maybe it's more correct to call it Instinctive Debt. That is, it's debt 
-that comes from choices we made to satisfy our primitive needs, like self-preservation. We are simply doing what 
-our primitive Lizard Brain tells us to do in these kinds of situations.
+So, rather than Unconscious Debt, maybe it's more correct to call it Instinctive Debt. That is, it's debt 
+that comes from choices we made to satisfy our primitive needs, like fear and avoiding danger. We are simply doing 
+what our primitive Lizard Brain tells us to do in these kinds of situations.
 
 Not a fan of Instinctive Debt? How about Primitive Debt? Lizard Brain Debt? I don't know, but it seems disingenuous 
 to call it unconscious, unintentional, or accidental debt.
