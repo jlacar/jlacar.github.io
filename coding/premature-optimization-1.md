@@ -70,3 +70,5 @@ production? You might find that the best way to optimize the code is to just del
 The bottom line here is that optimization shouldn't be done on the basis of intuition. Developers are your biggest 
 bottleneck in software development. Save _their_ time and you'll save more. Seek first to reduce development time by 
 simplifying and clarifying your code. That's where you'll get the most return on your time and effort.
+
+{% include post-footer.html %}
