@@ -6,6 +6,19 @@
 
 ## About me
 
+Junilu Lacar - I have over thirty years of experience in software development. I'm currently an Agile Technical Coach 
+with Accenture|SolutionsIQ where my official title is "Business Agility Enablement Manager" even though nobody 
+actually reports to me. My main responsibilities are to coach client teams on agile technical practices like 
+TDD/BDD, refactoring, automated testing, pair/mob/ensemble programming. I've been co-facilitating six-week dojos 
+recently and having a lot of fun doing it. 
+
+I'm most comfortable programming in Java but also know other languages like JavaScript, C#, Kotlin, Go, Python, Pascal, 
+Groovy, Scala, and various dialects of SQL. I'm also familiar with Domain-Driven Design, design principles and 
+patterns in general, functional programming, and object-oriented programming. 
+
+I've used Spring Framework, Spring Boot, Maven, Gradle, git, Eclipse, IntelliJ IDEs like IDEA and WebStorm, and a 
+myriad of other tools I won't bore you with. 
+
 I'm a long-time developer and student of agile software development methods. I am constantly looking for ways to get
 better as a developer, as a coach, as a person. I focus more on agile technical practices like emergent design,
 BDD/TDD, refactoring, automated testing, and pair/mob/ensemble programming.
@@ -13,9 +26,9 @@ BDD/TDD, refactoring, automated testing, and pair/mob/ensemble programming.
 ----
 ## About this blog
 
-Information about different approaches for learning and improving. 
+This blog is mostly about different approaches for learning and improving. 
 
-A recurring theme will be about techniques for learning and practicing skills in a deliberate, systematic, and 
+A recurring theme will be around techniques for learning and practicing skills in a deliberate, systematic, and 
 disciplined way to maximize retention, accelerate mastery, and minimize churn. Also, stuff about agile software 
 development. A smattering of things related to martial arts like Aikido, Wing Chun, and Jiujitsu.
 
