@@ -4,9 +4,9 @@
 > &ldquo;_Mindfulness isn't difficult, we just need to remember to do it._&rdquo;
 > &mdash;Sharon Salzberg
 
-## About me
+## About me, Junilu Lacar
 
-Junilu Lacar - I have over thirty years of experience in software development. I'm currently an Agile Technical Coach 
+I have over thirty years of experience in software development. I'm currently an Agile Technical Coach 
 with Accenture|SolutionsIQ where my official title is "Business Agility Enablement Manager" even though nobody 
 actually reports to me. My main responsibilities are to coach client teams on agile technical practices like 
 TDD/BDD, refactoring, automated testing, pair/mob/ensemble programming. I've been co-facilitating six-week dojos 
@@ -20,8 +20,7 @@ I've used Spring Framework, Spring Boot, Maven, Gradle, git, Eclipse, IntelliJ I
 myriad of other tools I won't bore you with. 
 
 I'm a long-time developer and student of agile software development methods. I am constantly looking for ways to get
-better as a developer, as a coach, as a person. I focus more on agile technical practices like emergent design,
-BDD/TDD, refactoring, automated testing, and pair/mob/ensemble programming.
+better as a developer, as a coach, as a person. I hope you'll find something useful here. Thanks for visiting!
 
 ----
 ## About this blog
