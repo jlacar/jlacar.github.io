@@ -214,4 +214,4 @@ Jeffries, Ron (2015, Nov 9). Technical Debt - Bad metaphor or worst metaphor? [b
 
 Myers, Rob (2021, Apr). Avoid Tech Debt with these "Four Core" Practices. [https://www.agileinstitute.com/articles/avoiding-tech-debt-w-the-core-four-practices](https://www.agileinstitute.com/articles/avoiding-tech-debt-w-the-core-four-practices)
 
-{% include post-footer.html %}
+{% include post-footer.md %}
