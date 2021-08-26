@@ -1,4 +1,4 @@
-# Adventures in Premature Optimization - Pilot
+# Optimization Adventures - Pilot
 
 _(August 26, 2021)_
 

@@ -22,7 +22,8 @@ development. A smattering of things related to martial arts like Aikido, Wing Ch
 ----
 ## Recent Posts
 
-(Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.html)
+(Aug 26, 2021) - [Optimization Adventures - Pilot](coding/premature-optimization-1.md)
+(Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.md)
 
 ----
 ## Categories 
@@ -37,7 +38,10 @@ development. A smattering of things related to martial arts like Aikido, Wing Ch
 
 ### Refactoring
 
-(Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.html)
+(Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.md)
+
+## Engineering
+
 
 ## Miscellaneous
 
