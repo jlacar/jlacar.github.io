@@ -63,7 +63,7 @@ After refactoring, use a profiler to gather concrete data. As I said before, nin
 issue will be somewhere other than where you thought it was.
 
 And finally, look at its actual usage first. Is it really worth optimizing if it isn't even getting executed in 
-production? You might find that the best way to optimize the code is to eliminate it altogether.
+production? You might find that the best way to optimize the code is simply to delete it.
 
 ## Choose your battles (and bottlenecks) wisely
 
