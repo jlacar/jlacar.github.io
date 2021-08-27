@@ -36,6 +36,7 @@ development. A smattering of things related to martial arts like Aikido, Wing Ch
 ----
 ## Recent Posts
 
+(Aug 27, 2021) - [Refactoring Randori - Nim (Part 1)](refactoring/nim-1.md)
 (Aug 26, 2021) - [Optimization Adventures - Pilot](coding/premature-optimization-1.md)  
 (Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.md)  
 
