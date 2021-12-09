@@ -55,9 +55,10 @@ fun timesIncreased(values: List<Int>): Int = values
 
 Neat, huh? Nine lines of brute force code boiled down to one line of exquisitely elegant expressiveness.
 
+### No, even shorter (and better maybe?)
+
 The function expression that comes after `count` can be written with explicit parameters, too:
 
-### No, even shorter (and better maybe?)
 ```kotlin
 fun timesIncreased(values: List<Int>): Int = values
     .windowed(size = 2).count { a, b -> a < b }
@@ -107,7 +108,7 @@ The first line of the output gives you an idea of what `windowed()` does. In thi
 consecutive elements, because I specified `size=2`. The second line displays the result which is the value returned by
 the `count` function. 
 
-The nice thing about the `also` scope function is that it doesn't interfere with the expression it's added to at all:
+The nice thing about the `also` scoped function is that it doesn't interfere with the expression it's added to at all:
 it's basically a passthrough operation. It's a great way to spy on expressions as they are being evaluated.
 
 ## More lessons to come
