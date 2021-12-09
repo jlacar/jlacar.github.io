@@ -4,44 +4,47 @@
 > &ldquo;_Mindfulness isn't difficult, we just need to remember to do it._&rdquo;
 > &mdash;Sharon Salzberg
 
-## About me, Junilu Lacar
+## About me
 
-I have over thirty years of experience in software development. I'm currently an Agile Technical Coach 
-with Accenture|SolutionsIQ where my official title is "Business Agility Enablement Manager". My main 
-responsibilities are to coach client teams on agile technical practices like TDD/BDD, refactoring, automated 
-testing, pair/mob/ensemble programming. I've been co-facilitating six-week dojos recently and having a lot of fun 
-doing it. 
+Thanks for dropping by! My name is Junilu Lacar and I am a technical coach currently working for Accenture |
+SolutionsIQ.
 
-I'm most comfortable programming in Java but also know other languages like JavaScript, C#, Kotlin, Go, Python, Pascal, 
-Groovy, Scala, and various dialects of SQL. I'm also familiar with Domain-Driven Design, design principles and 
-patterns in general, functional programming, and object-oriented programming. 
+_**Obligatory Disclaimer**: All opinions expressed in this blog are my own and do not necessarily reflect those of my
+employer._
 
-I've used Spring Framework, Spring Boot, Maven, Gradle, git, Eclipse, IntelliJ IDEs like IDEA and WebStorm, and a 
-myriad of other tools I won't bore you with. 
-
-I'm a long-time developer and student of agile software development methods. I am constantly looking for ways to get
-better as a developer, as a coach, as a person. I hope you'll find something useful here. 
+As a long-time developer and student of agile software development techniques, I am constantly looking for ways to
+improve my craft and help others improve as well. I hope you'll find something useful here.
 
 Thanks for visiting!
 
 ----
+
 ## About this blog
 
-This blog is mostly about different approaches for learning and improving. 
+The articles in this blog focus mainly on techniques that I think help enhance technical agility. These include things
+like Test-Driven Development (TDD), refactoring, and pair/mob/ensemble programming. Occasionally, I will write about how
+programming relates to other things I do, like Aikido or solving a Rubik's cube.
 
-A recurring theme will be around techniques for learning and practicing skills in a deliberate, systematic, and 
-disciplined way to maximize retention, accelerate mastery, and minimize churn. Also, stuff about agile software 
-development. A smattering of things related to martial arts like Aikido, Wing Chun, and Jiujitsu.
+I am most comfortable programming in Java so that's what you'll see in most of my code examples. However, I also
+subscribe to the Pragmatic Programmers' practice of learning a new programming language every year so you'll also see me
+use whatever new language I'm learning at any particular moment. So far, I have learned Python, Go, Groovy, Kotlin, and
+Scala. Rust and Haskell are still in the queue.
+
+A recurring theme in the articles is deliberate learning and practice. Deliberate and mindful practice, in my opinion,
+helps instill discipline, maximizes retention, accelerates mastery, and minimizes churn. I also write about agility but
+not so much about Agility and the AIC (Agile Industrial Complex). In other words, this is my safe, not SAFe, place.
 
 ----
+
 ## Recent Posts
 
 (Aug 27, 2021) - [Refactoring Randori - Nim (Part 1)](refactoring/nim-1.md)  
 (Aug 26, 2021) - [Optimization Adventures - Pilot](coding/premature-optimization-1.md)  
-(Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.md)  
+(Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.md)
 
 ----
-## Categories 
+
+## Categories
 
 ### Dojos
 
@@ -51,25 +54,30 @@ development. A smattering of things related to martial arts like Aikido, Wing Ch
 
 [TBD]
 
+### Languages
+
+[TBD]
+
 ### Refactoring
 
-(Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.md)  
+(Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.md)
 
 ### Engineering
 
-(Aug 26, 2021) - [Optimization Adventures - Pilot](coding/premature-optimization-1.md)  
+(Aug 26, 2021) - [Optimization Adventures - Pilot](coding/premature-optimization-1.md)
 
 ### Miscellaneous
 
 (Draft) - GitHub Pages Tips
 
 ----
-## Finding me 
 
-Twitter: @jlacar
+## Where to find me
 
-LinkedIn: /in/jlacar
+Lurking on Twitter: [@jlacar](https://twitter.com/jlacar)
 
-[CodeRanch.com aka JavaRanch.com](https://coderanch.com) where I help out as a Sheriff
+Discussing on LinkedIn: [/in/jlacar](https://linkedin.com/in/jlacar)
 
-You can drop me a line at gmail: junilu dot lacar
+Helping around [CodeRanch.com aka JavaRanch.com](https://coderanch.com), where I'm a Sheriff and sometimes, a Marshall
+
+Or just drop me a line at gmail: junilu dot lacar
