@@ -110,8 +110,8 @@ the `count` function.
 The nice thing about the `also` scope function is that it doesn't interfere with the expression it's added to at all:
 it's basically a passthrough operation. It's a great way to spy on expressions as they are being evaluated.
 
-## More lessons to come (of course)
+## More lessons to come
 
-I'll continue to update this article as I we go through Advent. Stay tuned and in the meantime, stay safe!
+I'll continue to update this article throughout Advent. Stay tuned and in the meantime, stay safe!
 
 {% include post-footer.md %}
