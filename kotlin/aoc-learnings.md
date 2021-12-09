@@ -77,7 +77,7 @@ always easy to take a peek in the middle of things while it's happening, like in
 example. For those kind of things, you usually have to fire up the debugger. Most of the time, I'd rather not.
 
 Kotlin has a very handy and elegant (of course) way to do this more cleanly and keep the messiness under control while
-also giving you a way to get into nooks and crannies that you wouldn't normally able to access in Java. 
+also giving you a way to get into nooks and crannies that you wouldn't normally be able to access in Java. 
 
 They're called [scoped functions](https://kotlinlang.org/docs/scope-functions.html)
 and the one that's really useful for debugging, literally in the moment, is the `also` scoped function. This little
@@ -110,6 +110,30 @@ the `count` function.
 
 The nice thing about the `also` scoped function is that it doesn't interfere with the expression it's added to at all:
 it's basically a passthrough operation. It's a great way to spy on expressions as they are being evaluated.
+
+### Use string interpolation with `println()` for cleaner, clearer messages
+
+Those debug statements can be made even clearer and you can do it much more cleanly than you could with Java. Just use
+Kotlin's handy
+dandy [string interpolation](https://kotlinlang.org/docs/java-to-kotlin-idioms-strings.html#concatenate-strings).
+
+```kotlin
+fun timesIncreased(values: List<Int>): Int = values
+    .windowed(size = 2)
+       .also { println("windowed(2): $it") } // inline debug statement!
+    .count { it.first() < it.last() }
+       .also { println("timesIncreased() == $it") } // inline debug statement!
+
+timesIncreased(listOf(0, 1, 2, 1, 3, 4, 4, 5))
+```
+Here's what the output looks like now:
+```text
+windowed(2): [[0, 1], [1, 2], [2, 1], [1, 3], [3, 4], [4, 4], [4, 5]]
+timesIncreased() == 5
+```
+
+Pretty useful, right? You could `also` say `it`'s pretty _and_ it's useful. (I'm a dad so naturally, I think I'm so
+punny)
 
 ## More lessons to come
 
