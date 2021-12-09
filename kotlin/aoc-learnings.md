@@ -105,7 +105,7 @@ Notice how I indented the `also`s and put them on separate lines. This makes it 
 later when I'm done debugging.
 
 The first line of the output gives you an idea of what `windowed()` does. In this case, it creates a list of pairs of
-consecutive elements, because I specified `size=2`. The second line displays the result which is the value returned by
+consecutive elements, because I specified `size=2`. The second line displays the value returned by
 the `count` function. 
 
 The nice thing about the `also` scoped function is that it doesn't interfere with the expression it's added to at all:
