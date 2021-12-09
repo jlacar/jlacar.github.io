@@ -140,7 +140,7 @@ timesIncreased() == 5
 Pretty useful, right? You could `also` say `it`'s pretty _and_ it's useful. (I'm a dad so naturally, I think I'm so
 punny)
 
-## Use the built-in `check()` function for quick testing
+## Lesson #3 - Use the built-in `check()` function for quick testing
 
 Another thing I learned about was the built-in `check()` function, which takes a boolean expression and throws
 an `IllegalStateException` if the argument evaluates to `false`. This is kind of a poor man's `assert` which I
