@@ -143,15 +143,15 @@ punny)
 ## Use the built-in `check()` function for quick testing
 
 Another thing I learned about was the built-in `check()` function, which takes a boolean expression and throws
-an `IllegalStateException` if the argument evaluates to `false`. This is kind of a poor man's version `assert` which I
-know Kotlin also provides. 
+an `IllegalStateException` if the argument evaluates to `false`. This is kind of a poor man's `assert` which I
+know the [Kotlin standard library](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/assert.html) also provides. 
 
-The jury is still out for me on this one but it was what the 
-[Advent Of Code Kotlin Template](https://github.com/kotlin-hands-on/advent-of-code-kotlin-template) on GitHub
-had in it so I just rolled with it.
+The jury is still out on this one for me but it came out of the box with the  
+[Advent Of Code Kotlin Template](https://github.com/kotlin-hands-on/advent-of-code-kotlin-template) on GitHub so I just
+rolled with it.
 
-In the template, `check()` was used to see if your solution at least matched what the example given in the problem said
-to expect. Out of the box, the solution template had this:
+In the template, `check()` was used to see if your solution matched what the problem's example said
+to expect. Out of the box, this what you got in the template:
 
 ```kotlin
  // test if implementation meets criteria from the description, like:
@@ -163,20 +163,23 @@ to expect. Out of the box, the solution template had this:
  println(part2(input))
 ```
 
-You'd change the number in the condition to match the expected answer given in the problem's example. The idea is that
-you'd first develop a solution and try it out with the example data. Then if it matches, you could continue and solve
-the problem using the actual data set, which is much larger than the example data.
+You'd change the number in the condition to match the problem's example. Presumably, the idea is that you'd first
+develop a solution and try it out with the example data. Then if it matches, you could go ahead and solve the problem
+using the actual data set, which is much larger than the example data.
 
-I found using `check` with `println` and `also` to be convenient both while developing the solution and when refactoring
-the code. Once I solved the problem and got a verified answer, I would do something like this:
+Using `check` with `println` and `also` was convenient both while developing the solution and when refactoring
+the code afterwards. Once I got my solution verified and earned my gold star, I would do this:
 
 ```kotlin
+  println(part1(testInput).also { check(it == 37) }) // from the example
+
+  ...
   println(part1(input).also { check(it == 5608) }) // verified solution
   println(part2(input).also { check(it == 20299) }) // verified solution
 ```
 
-This way, any refactoring I did on the working solution would fail the check and I could revert my changes back to the
-last working version.
+This way, I would know right away if any refactoring I attempted on the already working solution had screwed something
+up and I could then revert to the last working version of the code.
 
 ## More lessons to come
 
