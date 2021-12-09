@@ -15,7 +15,7 @@ at [CodeRanch](https://coderanch.com) in the [Programming Diversions](https://co
 
 ## Lesson #1 - Kotlin is terse but extremely expressive
 
-**If you think there's a better and shorter way to say it in Kotlin, there probably is.**
+_**There's usually a better and shorter way to say it in Kotlin. No, even better and shorter.**_
 
 Case in point: Day 01 of AoC had us solving a relatively simple counting problem. Given a series of numbers, count how
 many times the series increases from one number to the next. For example, the sequence `0,1,2,1,3,4,4,5` increases 5
@@ -54,6 +54,17 @@ fun timesIncreased(values: List<Int>): Int = values
 ```
 
 Neat, huh? Nine lines of brute force code boiled down to one line of exquisitely elegant expressiveness.
+
+The function expression that comes after `count` can be written with explicit parameters, too:
+
+### No, even shorter (and better maybe?)
+```kotlin
+fun timesIncreased(values: List<Int>): Int = values
+    .windowed(size = 2).count { a, b -> a < b }
+```
+
+This is definitely shorter than the previous version. I'll let you decide if this is better or not; maybe it's a matter
+of preference at this point. I like this version, too, but for some reason, I stuck with `it`.
 
 ## Lesson #2 - You can `.also { print(it) }` to debug
 
