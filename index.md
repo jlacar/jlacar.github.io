@@ -38,6 +38,7 @@ not so much about Agility and the AIC (Agile Industrial Complex). In other words
 
 ## Recent Posts
 
+(Dec 9, 2021) - [Things I learned about Kotlin from Advent of Code](kotlin/aoc-learnings.md)
 (Aug 27, 2021) - [Refactoring Randori - Nim (Part 1)](refactoring/nim-1.md)  
 (Aug 26, 2021) - [Optimization Adventures - Pilot](coding/premature-optimization-1.md)  
 (Aug 25, 2021) - [Revisiting the Debt Metaphor](refactoring/revisiting-tech-debt.md)
@@ -45,6 +46,10 @@ not so much about Agility and the AIC (Agile Industrial Complex). In other words
 ----
 
 ## Categories
+
+### Practice
+
+(Dec 9, 2021) - [Things I learned about Kotlin from Advent of Code](kotlin/aoc-learnings.md)
 
 ### Dojos
 
