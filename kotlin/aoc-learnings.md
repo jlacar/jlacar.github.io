@@ -12,7 +12,6 @@ way to brush up on it. In retrospect, that was a great decision. I'm having a lo
 appreciating just how enjoyable it is to program in it. I'm also discussing the solutions with my friends
 at [CodeRanch](https://coderanch.com) in the [Programming Diversions](https://coderanch.com/f/71/Programming) forum.
 
-
 ## Lesson #1 - Kotlin is terse but extremely expressive
 
 _**There's usually a better and shorter way to say it in Kotlin. No, even better and shorter.**_
@@ -39,19 +38,23 @@ fun timesIncreasedBrute(nums: List<Int>): Int {
 
 Of course, that could be written in a much shorter and clearer way.
 
-
 ### Solving it with `windowed()`
 
 The Kotlin `windowed()` function allows you to take snapshots of a collection with a sliding window. You just specify
-the window size and Kotlin will do the heaving lifting of sliding that window over the collection and return a list of
-snapshots, where each snapshot is itself a list of elements in the collection that fell within the sliding window.
+the window size and Kotlin will do the heavy lifting of sliding that window over the collection and return a list of
+snapshots, where each snapshot is itself a list of elements in the collection that fell within the sliding window. By
+default, the window will slide one element at a time but you can specify a different step size. For this problem, the
+default step size of 1 was exactly what I needed.
 
-In Kotlin, the code above could be written using `windowed()` like this:
+In Kotlin, the code using `windowed()` is straightforward and clear:
 
 ```kotlin
 fun timesIncreased(values: List<Int>): Int = values
     .windowed(size = 2).count { it.first() < it.last() }
 ```
+
+The function after count is a predicate that acts as a filter for the items that will be counted. Only the elements that
+satisfy the condition will be counted.
 
 Neat, huh? Nine lines of brute force code boiled down to one line of exquisitely elegant expressiveness.
 
@@ -77,7 +80,7 @@ always easy to take a peek in the middle of things while it's happening, like in
 example. For those kind of things, you usually have to fire up the debugger. Most of the time, I'd rather not.
 
 Kotlin has a very handy and elegant (of course) way to do this more cleanly and keep the messiness under control while
-also giving you a way to get into nooks and crannies that you wouldn't normally be able to access in Java. 
+also giving you a way to get into nooks and crannies that you wouldn't normally be able to access in Java.
 
 They're called [scoped functions](https://kotlinlang.org/docs/scope-functions.html)
 and the one that's really useful for debugging, literally in the moment, is the `also` scoped function. This little
@@ -88,14 +91,15 @@ Here's an example of how to get a window (pun intended) into what was happening 
 ```kotlin
 fun timesIncreased(values: List<Int>): Int = values
     .windowed(size = 2)
-       .also { println(it) } // inline debug statement!
+    .also { println(it) } // inline debug statement!
     .count { it.first() < it.last() }
-       .also { println(it) } // inline debug statement!
+    .also { println(it) } // inline debug statement!
 
 timesIncreased(listOf(0, 1, 2, 1, 3, 4, 4, 5))
 ```
 
 Here's what the output looks like:
+
 ```text
 [[0, 1], [1, 2], [2, 1], [1, 3], [3, 4], [4, 4], [4, 5]]
 5
@@ -105,8 +109,7 @@ Notice how I indented the `also`s and put them on separate lines. This makes it 
 later when I'm done debugging.
 
 The first line of the output gives you an idea of what `windowed()` does. In this case, it creates a list of pairs of
-consecutive elements, because I specified `size=2`. The second line displays the value returned by
-the `count` function. 
+consecutive elements, because I specified `size=2`. The second line displays the value returned by the `count` function.
 
 The nice thing about the `also` scoped function is that it doesn't interfere with the expression it's added to at all:
 it's basically a passthrough operation. It's a great way to spy on expressions as they are being evaluated.
@@ -120,13 +123,15 @@ dandy [string interpolation](https://kotlinlang.org/docs/java-to-kotlin-idioms-s
 ```kotlin
 fun timesIncreased(values: List<Int>): Int = values
     .windowed(size = 2)
-       .also { println("windowed(2): $it") } // inline debug statement!
+    .also { println("windowed(2): $it") } // inline debug statement!
     .count { it.first() < it.last() }
-       .also { println("timesIncreased() == $it") } // inline debug statement!
+    .also { println("timesIncreased() == $it") } // inline debug statement!
 
 timesIncreased(listOf(0, 1, 2, 1, 3, 4, 4, 5))
 ```
+
 Here's what the output looks like now:
+
 ```text
 windowed(2): [[0, 1], [1, 2], [2, 1], [1, 3], [3, 4], [4, 4], [4, 5]]
 timesIncreased() == 5
@@ -134,6 +139,44 @@ timesIncreased() == 5
 
 Pretty useful, right? You could `also` say `it`'s pretty _and_ it's useful. (I'm a dad so naturally, I think I'm so
 punny)
+
+## Use the built-in `check()` function for quick testing
+
+Another thing I learned about was the built-in `check()` function, which takes a boolean expression and throws
+an `IllegalStateException` if the argument evaluates to `false`. This is kind of a poor man's version `assert` which I
+know Kotlin also provides. 
+
+The jury is still out for me on this one but it was what the 
+[Advent Of Code Kotlin Template](https://github.com/kotlin-hands-on/advent-of-code-kotlin-template) on GitHub
+had in it so I just rolled with it.
+
+In the template, `check()` was used to see if your solution at least matched what the example given in the problem said
+to expect. Out of the box, the solution template had this:
+
+```kotlin
+ // test if implementation meets criteria from the description, like:
+ val testInput = readInput("DayXX_test")
+ check(part1(testInput) == 1)
+
+ val input = readInput("DayXX")
+ println(part1(input))
+ println(part2(input))
+```
+
+You'd change the number in the condition to match the expected answer given in the problem's example. The idea is that
+you'd first develop a solution and try it out with the example data. Then if it matches, you could continue and solve
+the problem using the actual data set, which is much larger than the example data.
+
+I found using `check` with `println` and `also` to be convenient both while developing the solution and when refactoring
+the code. Once I solved the problem and got a verified answer, I would do something like this:
+
+```kotlin
+  println(part1(input).also { check(it == 5608) }) // verified solution
+  println(part2(input).also { check(it == 20299) }) // verified solution
+```
+
+This way, any refactoring I did on the working solution would fail the check and I could revert my changes back to the
+last working version.
 
 ## More lessons to come
 
