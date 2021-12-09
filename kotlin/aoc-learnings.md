@@ -81,7 +81,7 @@ also giving you a way to get into nooks and crannies that you wouldn't normally 
 
 They're called [scoped functions](https://kotlinlang.org/docs/scope-functions.html)
 and the one that's really useful for debugging, literally in the moment, is the `also` scoped function. This little
-beauty allows you take a look at just about anything that's happening anywhere, even in the middle of an expression.
+beauty allows you take a peek at just about anything that's happening anywhere, even in the middle of an expression.
 
 Here's an example of how to get a window (pun intended) into what was happening in the code we had earlier.
 
