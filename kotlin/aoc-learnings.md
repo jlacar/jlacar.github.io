@@ -78,11 +78,11 @@ In Java, a quick-and-dirty way to debug code is with `System.out.println()` stat
 of clutter in your code. Also, you often end up doing some really ugly things just to take a peek at what's going on in
 your code like creating lots of temporary variables. And it's not always easy to take a peek while in the middle of
 doing something, like evaluating intermediate calculation results in the middle of an expression. For that, you have
-to fire up the debugger and start stepping through the code. If at all possible, I'd rather not resolt to that.
+to fire up the debugger and start stepping through the code. If at all possible, I'd rather not do that.
 
-Kotlin has a very handy and elegant (of course) way to do that more cleanly and keep the messiness under control while
-also giving you a way to get into nooks and crannies that you wouldn't normally be able to access in Java. The best
-thing about it is that it makes the debugger even less relevant, which is awesome.
+Kotlin has a very handy and elegant (of course) way to do that and keep the messiness under control. It also gives you a
+way to get into nooks and crannies that you wouldn't normally be able to access in Java. The best thing about it is that
+it makes the debugger even less relevant, which is awesome.
 
 They're called [scoped functions](https://kotlinlang.org/docs/scope-functions.html)
 and the one that's really useful for debugging, literally in the moment, is the `also` scoped function. This little
