@@ -74,13 +74,15 @@ of preference at this point. I like this version, too, but for some reason, I st
 
 _See what I did there? ;)_
 
-In Java, quick-and-dirty debugging can be done with `System.out.println()`. This can make code messy and harder to read
-because you often resort to some really ugly things just to take a peek at what's going on in your code. Plus, it's not
-always easy to take a peek in the middle of things while it's happening, like in the middle of an expression, for
-example. For those kind of things, you usually have to fire up the debugger. Most of the time, I'd rather not.
+In Java, a quick-and-dirty way to debug code is with `System.out.println()` statements. However, this can create a lot
+of clutter in your code. Also, you often end up doing some really ugly things just to take a peek at what's going on in
+your code like creating lots of temporary variables. And it's not always easy to take a peek while in the middle of
+doing something, like evaluating intermediate calculation results in the middle of an expression. For that, you have
+to fire up the debugger and start stepping through the code. If at all possible, I'd rather not resolt to that.
 
-Kotlin has a very handy and elegant (of course) way to do this more cleanly and keep the messiness under control while
-also giving you a way to get into nooks and crannies that you wouldn't normally be able to access in Java.
+Kotlin has a very handy and elegant (of course) way to do that more cleanly and keep the messiness under control while
+also giving you a way to get into nooks and crannies that you wouldn't normally be able to access in Java. The best
+thing about it is that it makes the debugger even less relevant, which is awesome.
 
 They're called [scoped functions](https://kotlinlang.org/docs/scope-functions.html)
 and the one that's really useful for debugging, literally in the moment, is the `also` scoped function. This little
@@ -91,9 +93,9 @@ Here's an example of how to get a window (pun intended) into what was happening 
 ```kotlin
 fun timesIncreased(values: List<Int>): Int = values
     .windowed(size = 2)
-    .also { println(it) } // inline debug statement!
+        .also { println(it) } // inline debug statement!
     .count { it.first() < it.last() }
-    .also { println(it) } // inline debug statement!
+        .also { println(it) } // inline debug statement!
 
 timesIncreased(listOf(0, 1, 2, 1, 3, 4, 4, 5))
 ```
@@ -123,9 +125,9 @@ dandy [string interpolation](https://kotlinlang.org/docs/java-to-kotlin-idioms-s
 ```kotlin
 fun timesIncreased(values: List<Int>): Int = values
     .windowed(size = 2)
-    .also { println("windowed(2): $it") } // inline debug statement!
+        .also { println("windowed(2): $it") } // inline debug statement!
     .count { it.first() < it.last() }
-    .also { println("timesIncreased() == $it") } // inline debug statement!
+        .also { println("timesIncreased() == $it") } // inline debug statement!
 
 timesIncreased(listOf(0, 1, 2, 1, 3, 4, 4, 5))
 ```
