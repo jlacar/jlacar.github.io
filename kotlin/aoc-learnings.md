@@ -113,3 +113,5 @@ it's basically a passthrough operation. It's a great way to spy on expressions a
 ## More lessons to come (of course)
 
 I'll continue to update this article as I we go through Advent. Stay tuned and in the meantime, stay safe!
+
+{% include post-footer.md %}
