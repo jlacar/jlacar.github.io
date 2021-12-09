@@ -12,6 +12,7 @@ way to brush up on it. In retrospect, that was a great decision. I'm having a lo
 appreciating just how enjoyable it is to program in it. I'm also discussing the solutions with my friends
 at [CodeRanch](https://coderanch.com) in the [Programming Diversions](https://coderanch.com/f/71/Programming) forum.
 
+
 ## Lesson #1 - Kotlin is terse but extremely expressive
 
 **If you think there's a better and shorter way to say it in Kotlin, there probably is.**
@@ -38,6 +39,7 @@ fun timesIncreasedBrute(nums: List<Int>): Int {
 
 Of course, that could be written in a much shorter and clearer way.
 
+
 ### Solving it with `windowed()`
 
 The Kotlin `windowed()` function allows you to take snapshots of a collection with a sliding window. You just specify
@@ -58,13 +60,18 @@ Neat, huh? Nine lines of brute force code boiled down to one line of exquisitely
 _See what I did there? ;)_
 
 In Java, quick-and-dirty debugging can be done with `System.out.println()`. This can make code messy and harder to read
-because you often have to resort very ugly things to take a peek at what's going on in your code.
+because you often resort to some really ugly things just to take a peek at what's going on in your code. Plus, it's not
+always easy to take a peek in the middle of things while it's happening, like in the middle of an expression, for
+example. For those kind of things, you usually have to fire up the debugger. Most of the time, I'd rather not.
 
-Kotlin has this neat way to keep this under control while also giving you a way to get into nooks and crannies that you
-wouldn't normally able to access in Java. They're
-called [scoped functions](https://kotlinlang.org/docs/scope-functions.html)
-and the one I'm going to show here is the `also` scoped function. It allows you take a look at just about anything
-that's happening anywhere, even in the middle of an expression. Here's an example that uses the previous code we saw.
+Kotlin has a very handy and elegant (of course) way to do this more cleanly and keep the messiness under control while
+also giving you a way to get into nooks and crannies that you wouldn't normally able to access in Java. 
+
+They're called [scoped functions](https://kotlinlang.org/docs/scope-functions.html)
+and the one that's really useful for debugging, literally in the moment, is the `also` scoped function. This little
+beauty allows you take a look at just about anything that's happening anywhere, even in the middle of an expression.
+
+Here's an example of how to get a window (pun intended) into what was happening in the code we had earlier.
 
 ```kotlin
 fun timesIncreased(values: List<Int>): Int = values
