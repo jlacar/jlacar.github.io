@@ -97,12 +97,12 @@ With this change, the function call now becomes this:
     println(frequencyMap2(listOf("three", "one", "two", "three", "three", "two")) { it })
 ```
 
-Since we now pass in the key selector `{ it }` as a parameter, we have to add it to the call. As I mentioned
-before, `{ it }` is the equivalent of `Function.identity()` in Java, which is to say "Treat the element itself as the
-thing we want to count." 
+Since the function now expects a key selector as its second parameter, we have to pass `{ it }` as a parameter. As I
+mentioned before, `{ it }` is the equivalent of `Function.identity()` in Java, which is to say "Treat the element itself
+as the thing to count."
 
 Here's another thing I learned about Kotlin: if the last argument in a function call is a lambda expression, you should
-put it outside of the parentheses. At least that's what the linter will tell you. I'm editing this post in IntelliJ IDEA
+put it outside the parentheses. At least that's what the linter will tell you. I'm editing this post in IntelliJ IDEA
 and the code block below even has a warning on it, which I've added as a comment in the listing.
 
 ```kotlin
@@ -120,6 +120,9 @@ key selectors, like this:
     println(frequencyMap2(listOf(1,2,2,3,7,8,1,0,3,1)) 
         { if (it < 5) "less than 5 " else "greater or equal to 5" } )
 
+    println(frequencyMap2(listOf("three", "one", "two", "three", "three", "two"))
+        { it[0] } )
+
     println(frequencyMap2(listOf(3,5,15,7,30,12,10,25,45,20,18,7,50,11,9))
         { when {
             it % 15 == 0 -> "fizzbuzz"
@@ -127,18 +130,16 @@ key selectors, like this:
             it % 3 == 0 -> "fizz"
             else -> it.toString()
         } } )
-
-    println(frequencyMap2(listOf("three", "one", "two", "three", "three", "two")) 
-        { it[0] } )
 ```
+
+You might recognize that last statement.
 
 This is the output:
 ```text
 {less than 5=8, greater or equal to 5=2}
-{fizz=4, buzz=5, fizzbuzz=3, 7=2, 11=1}
 {t=5, o=1}
+{fizz=4, buzz=5, fizzbuzz=3, 7=2, 11=1}
 ```
-You might recognize that second statement as the classic FizzBuzz problem. 
 
 Super cool, right? Sorry, Java, there's talk on the street is that there's a new, cooler kid in town.
 
