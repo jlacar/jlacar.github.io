@@ -28,9 +28,8 @@ No, seriously, that's all you need to get a frequency map of each unique value i
 
 ### Comparing Kotlin with Java
 
-You can do pretty much the same thing with Java 8 with the streams and functional interfaces. The best examples I could 
-were the ones by [The Mighty Programmer](https://themightyprogrammer.dev/snippet/frequency-map-java). This is what s/he
-has:
+You can do pretty much the same thing with Java 8 with the streams and functional interfaces. The best examples I found 
+the ones by [The Mighty Programmer](https://themightyprogrammer.dev/snippet/frequency-map-java). This is what s/he has:
 
 ```java
 import java.util.stream.*;
@@ -69,19 +68,19 @@ This is the output:
 
 ### But wait, you can still do better
 
-As I learned from Lesson #1 in this series, we can always do it better in Kotlin, even though we think we done great
+As I learned from Lesson #1 in this series, we can always do it better in Kotlin, even though we think we've done great
 already.
 
-What if you wanted to count differently, like numbers that are greater than 5 or by first letter? Well, it turns out
-that it only takes a few tweaks to bubble up the flexibility of the `groupingBy()` function. And it's kind of intuitive
-to figure out if you study the API documentation a little bit.
+What if you wanted to count differently, like numbers that are greater than 5 or by first letter of each word? Well, it
+turns out that it only takes a few tweaks to bubble up the flexibility of the `groupingBy()` function from
+the `frequencyMap()` function. And it's kind of intuitive to figure out if you study
+the [API documentation](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/grouping-by.html) a little bit.
 
 In the first version of `frequencyMap()`, we hard-coded the key selector used by `groupingBy()` to `{ it }`. If we want
-to open it back up and give it the flexibility that `groupingBy` has out of the box, we have to expose that as
-well.
+to open it back up and give it the flexibility that `groupingBy()` has out of the box, we have to expose that as
+well. As it turns out, that's pretty easy to do. 
 
-Turns out, that's pretty easy to do. Let's create a different implementation and add a second parameter, a `keySelector`
-which the [groupingBy()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/grouping-by.html)
+Let's create a different implementation and add a second parameter, a `keySelector`, which is what the `groupingBy()`
 function expects. Then we change the return type accordingly. Then we pass the keySelector to `groupingBy()`.
 
 This is what we have for the second version:
@@ -89,11 +88,13 @@ This is what we have for the second version:
 fun <T, K> frequencyMap2(things: Iterable<T>, keySelector: (T) -> K ): Map<K, Int> =
     things.groupingBy(keySelector).eachCount()
 ```
-We now have to do this:
+
+With change, the call changes and we now have to do this:
 ```kotlin
     println(frequencyMap2(listOf(1,2,2,3,7,8,1,0,3,1)) { it })
     println(frequencyMap2(listOf("three", "one", "two", "three", "three", "two")) { it })
 ```
+
 This gives the same output as before. It's a little more verbose but we now can also do this:
 ```kotlin
     println(frequencyMap2(listOf(1,2,2,3,7,8,1,0,3,1)) 
@@ -102,6 +103,7 @@ This gives the same output as before. It's a little more verbose but we now can 
     println(frequencyMap2(listOf("three", "one", "two", "three", "three", "two")) 
         { it[0] } )
 ```
+
 This is the output:
 ```text
 {less than 5=8, greater or equal to 5=2}
@@ -115,7 +117,7 @@ See all of that in action here: https://replit.com/@jlacar/FrequencyMaps
 
 (Coming soon)
 
-## Packing tips for frequent travellers
+## From left field: Packing tips for frequent travellers
 
 On a somewhat related note, if you like finding ways to pack more into less, try using
 the [Army Roll](https://youtu.be/fuD-ZZydsVg_) method of packing cloths. As a pre-pandemic frequent traveller, I found
