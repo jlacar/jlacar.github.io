@@ -89,16 +89,29 @@ fun <T, K> frequencyMap2(things: Iterable<T>, keySelector: (T) -> K ): Map<K, In
     things.groupingBy(keySelector).eachCount()
 ```
 
-With change, the call changes and we now have to do this:
+With this change, the function call now becomes this:
 ```kotlin
     println(frequencyMap2(listOf(1,2,2,3,7,8,1,0,3,1)) { it })
     println(frequencyMap2(listOf("three", "one", "two", "three", "three", "two")) { it })
 ```
 
-This gives the same output as before. It's a little more verbose but we now can also do this:
+In Kotlin, if the last parameter to a function is itself a function, you should put the function literal or lambda
+expression outside of the parentheses.
+
+The output is the same as before and the code is a little more verbose but we can now also have the flexibility of
+specifying different key selectors, like this:
+
 ```kotlin
     println(frequencyMap2(listOf(1,2,2,3,7,8,1,0,3,1)) 
         { if (it < 5) "less than 5 " else "greater or equal to 5" } )
+
+    println(frequencyMap2(listOf(3,5,15,7,30,12,10,25,45,20,18,7,50,11,9))
+        { when {
+            it % 15 == 0 -> "fizzbuzz"
+            it % 5 == 0 -> "buzz"
+            it % 3 == 0 -> "fizz"
+            else -> it.toString()
+        } } )
 
     println(frequencyMap2(listOf("three", "one", "two", "three", "three", "two")) 
         { it[0] } )
@@ -107,9 +120,10 @@ This gives the same output as before. It's a little more verbose but we now can 
 This is the output:
 ```text
 {less than 5=8, greater or equal to 5=2}
+{fizz=4, buzz=5, fizzbuzz=3, 7=2, 11=1}
 {t=5, o=1}
 ```
-Super cool, right? Sorry, Java but there's a cooler kid in town.
+Super cool, right? Sorry, Java, there's talk on the street is that there's a new, cooler kid in town.
 
 See all of that in action here: https://replit.com/@jlacar/FrequencyMaps
 
