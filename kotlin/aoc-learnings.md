@@ -204,4 +204,6 @@ is but if you're curious, try looking [here](https://kotlinlang.org/docs/lambdas
 
 I'll continue to update this article throughout Advent. Stay tuned and in the meantime, stay safe!
 
+### [Next article >>](kotlin-oneliners.md)
+
 {% include post-footer.md %}

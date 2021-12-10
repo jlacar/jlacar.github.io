@@ -38,6 +38,7 @@ not so much about Agility and the AIC (Agile Industrial Complex). In other words
 
 ## Recent Posts
 
+(Dec 10, 2021) - [Frequency maps and other Kotlin one-liners](kotlin/kotlin-oneliners.md)
 (Dec 9, 2021) - [Things I learned about Kotlin from Advent of Code](kotlin/aoc-learnings.md)
 
 (Aug 27, 2021) - [Refactoring Randori - Nim (Part 1)](refactoring/nim-1.md)  
@@ -50,6 +51,7 @@ not so much about Agility and the AIC (Agile Industrial Complex). In other words
 
 ### Practice
 
+(Dec 10, 2021) - [Frequency maps and other Kotlin one-liners](kotlin/kotlin-oneliners.md)
 (Dec 9, 2021) - [Things I learned about Kotlin from Advent of Code](kotlin/aoc-learnings.md)
 
 ### Dojos
