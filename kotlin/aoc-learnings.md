@@ -187,10 +187,7 @@ up and I could then revert to the last working version of the code.
 
 I soon figured out, however, that even though that incantation looked nice, it didn't quite work the way I wanted it to
 work. The problem was that if I did mess up my refactoring, `check()` threw an exception _before_
-`println()` had a chance to display the value. I needed the value displayed first, _then_ checked to see if it was still
-what I expected.
-
-Essentially, what I wanted was this:
+`println()` had a chance to display the value. Essentially, what I wanted was this:
 - call `part1(testInput)`
 - then `println` the result
 - then check if the value is `37`
@@ -199,10 +196,10 @@ The way to say that in Kotlin is:
 ```kotlin
   part1(testInput).also(::println).also { check(it == 37) }
 ```
-This is a little wordier, yes, but it actually does what I intended. 
+A little wordier, yes, but it actually does what I intended. 
 
 Notice how `.also(::println)` is equivalent to `.also { println(it) }`. I won't go into the ins and outs of why that
-is but if you just have to know, try looking [here](https://kotlinlang.org/docs/lambdas.html) for answers.
+is but if you're curious, try looking [here](https://kotlinlang.org/docs/lambdas.html) for answers.
 
 ## More lessons to come
 
