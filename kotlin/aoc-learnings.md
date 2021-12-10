@@ -152,7 +152,7 @@ The jury is still out on this one for me but it came out of the box with the
 rolled with it.
 
 In the template, `check()` was used to see if your solution matched what the problem's example said
-to expect. Out of the box, this what you got in the template:
+to expect. With a few minor tweaks I made, this is essentially what you got with the template:
 
 ```kotlin
  // test if implementation meets criteria from the description, like:
