@@ -182,6 +182,39 @@ looks like that new kid is here to stay.
 
 You can run these examples yourself here: [https://replit.com/@jlacar/FrequencyMaps](https://replit.com/@jlacar/FrequencyMaps)
 
+## One final note, to be clear
+
+I should have mentioned from the start that you don't even need to write an intermediary function like `frequencyMap` as
+I showed here. If you have any value that can be broken down into smaller parts, like an array, collection, or a
+CharSequence, you can do it directly with a one-liner as shown in the TL;DR section. No need to write your own function for it.
+
+These work just as well out of the box:
+```kotlin
+   println(listOf(1,2,2,3,7,8,1,0,3,1).groupingBy { it }.eachCount())
+
+   println(listOf(1,2,2,3,7,8,1,0,3,1).groupingBy { 
+       if (it < 5) "less than 5 " else "greater or equal to 5" }.eachCount())
+
+   println(arrayOf(3,4,5,3,4,5,1,2,3).groupingBy { it }.eachCount())
+
+   println("supercalifragilisticexpealidocious".groupingBy { it }.eachCount())
+
+   println("SuperCaliFragilisticExpealidocious".groupingBy { 
+       if (it.isUpperCase()) "UPPER" else "lower" }.eachCount())
+```
+
+There are a couple of reasons I wrote an intermediate `frequencyMap()` function. 
+
+First, I wanted to have a more apples-to-apples comparison with Java. I wanted to give Java a fair shake, even
+though it's pretty clear that Kotlin is the head-to-head winner when it comes to brevity and clarity.
+
+Second, and perhaps more compelling for me, is that I'm kind of obsessed with writing expressive code. My first urge
+when I see something like `things.groupingBy { it }.eachCount()` is to make it more expressive. For me, a name
+like `frequencyMap()` helps make the intent clearer, even though the one-liner is already pretty sweet.
+
+But that's just me. Feel free to by-pass the extra layer of abstraction if you feel it doesn't add much value for you.
+For me, anything that makes the code more expressive is generally more of a good thing than bad.
+
 ## From left field: Packing tips for frequent travellers
 
 On a somewhat related note, if you like finding ways to pack more into less, try using
