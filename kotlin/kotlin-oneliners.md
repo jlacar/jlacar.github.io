@@ -141,13 +141,46 @@ This is the output:
 {fizz=4, buzz=5, fizzbuzz=3, 7=2, 11=1}
 ```
 
-Super cool, right? Sorry, Java, there's talk on the street is that there's a new, cooler kid in town.
+### What about other types?
 
-See all of that in action here: https://replit.com/@jlacar/FrequencyMaps
+After experimenting with this a bit, I found that arrays and strings weren't supported by the function I had so far. No
+worries, a quick look at how the standard library does things gave me some ideas of how I might overload this for Arrays
+and Strings, or more appropriately it seems, CharSequences. I don't know if this is the best way to do it but it seems
+to work:
 
-### More examples 
+```kotlin
+fun <T, K> frequencyMap2(arrOfThings: Array<T>, keySelector: (T) -> K): Map<K, Int> =
+   arrOfThings.groupingBy(keySelector).eachCount()
 
-(Coming soon)
+fun <K> frequencyMap2(charSequence: CharSequence, keySelector: (Char) -> K): Map<K, Int> =
+   charSequence.groupingBy(keySelector).eachCount()
+```
+With those overloads, I can now do this:
+```kotlin
+// arrays
+println(frequencyMap2(arrayOf(3,4,5,3,4,5,1,2,3)) { it } )  
+
+// Output: {3=3, 4=2, 5=2, 1=1, 2=1}
+
+// strings
+println(frequencyMap2("supercalifragilisticexpealidocious") { it })
+
+// Output: {s=3, u=2, p=2, e=3, r=2, c=3, a=3, l=3, i=6, f=1, g=1, t=1, x=1, d=1, o=2} 
+
+println(frequencyMap2("SuperCaliFragilisticExpealidocious") { if (it.isUpperCase()) "UPPER" else "lower" })
+
+// Output: {UPPER=4, lower=30}
+```
+
+### There's a new kid in town
+
+It seems like all this is just scratching the surface of the power of Kotlin and its ability to do so much with so
+little. Super cool, right? Sorry, Java, but there's talk on the street that there's a new, cooler kid in town and it
+looks like that new kid is here to stay.
+
+### See it in action
+
+You can run these examples yourself here: [https://replit.com/@jlacar/FrequencyMaps](https://replit.com/@jlacar/FrequencyMaps)
 
 ## From left field: Packing tips for frequent travellers
 
