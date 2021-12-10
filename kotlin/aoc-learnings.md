@@ -190,21 +190,19 @@ work. The problem was that if I did mess up my refactoring, `check()` threw an e
 `println()` had a chance to display the value. I needed the value displayed first, _then_ checked to see if it was still
 what I expected.
 
-So a better way to say it Kotlin is this:
-```kotlin
-  part1(testInput).also(::println).also { check(it == 37) }
-```
-This is a little wordier but it's better, because it actually does what I want it to. 
-
-Essentially, that line of code is saying:
+Essentially, what I wanted was this:
 - call `part1(testInput)`
 - then `println` the result
 - then check if the value is `37`
 
-Notice how `.also(::println)` is equivalent to `.also { println(it) }`
+The way to say that in Kotlin is:
+```kotlin
+  part1(testInput).also(::println).also { check(it == 37) }
+```
+This is a little wordier, yes, but it actually does what I intended. 
 
-I won't go into the ins and outs of why that is—if you just have to know, try looking 
-[here](https://kotlinlang.org/docs/lambdas.html) for answers—but... That. Is. So. Darn. Cool. Isn't it?
+Notice how `.also(::println)` is equivalent to `.also { println(it) }`. I won't go into the ins and outs of why that
+is but if you just have to know, try looking [here](https://kotlinlang.org/docs/lambdas.html) for answers.
 
 ## More lessons to come
 
