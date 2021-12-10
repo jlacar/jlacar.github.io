@@ -28,8 +28,9 @@ No, seriously, that's all you need to get a frequency map of each unique value i
 
 ### Comparing Kotlin with Java
 
-You can do pretty much the same thing with Java 8 with the streams and functional interfaces. The best examples I found 
-the ones by [The Mighty Programmer](https://themightyprogrammer.dev/snippet/frequency-map-java). This is what s/he has:
+Starting from Java 8, you can do pretty much the same thing with streams and functional interfaces. The best examples I
+found are the ones by [The Mighty Programmer](https://themightyprogrammer.dev/snippet/frequency-map-java). This is what
+s/he has:
 
 ```java
 import java.util.stream.*;
@@ -73,15 +74,16 @@ already.
 
 What if you wanted to count differently, like numbers that are greater than 5 or by first letter of each word? Well, it
 turns out that it only takes a few tweaks to bubble up the flexibility of the `groupingBy()` function from
-the `frequencyMap()` function. And it's kind of intuitive to figure out if you study
-the [API documentation](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/grouping-by.html) a little bit.
+the `frequencyMap()` function.
 
-In the first version of `frequencyMap()`, we hard-coded the key selector used by `groupingBy()` to `{ it }`. If we want
-to open it back up and give it the flexibility that `groupingBy()` has out of the box, we have to expose that as
-well. As it turns out, that's pretty easy to do. 
+In the first version of `frequencyMap()`, we hard-coded the key selector used by `groupingBy()` to `{ it }`, which
+serves the same purpose as `Function.identity()` in the Java version. We want to open our interface back up to expose
+the flexibility the `groupingBy()` function allows out of the box. As it turns out, that's pretty easy to do with
+information we can get from the `groupingBy()`
+[API documentation](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/grouping-by.html).
 
 Let's create a different implementation and add a second parameter, a `keySelector`, which is what the `groupingBy()`
-function expects. Then we change the return type accordingly. Then we pass the keySelector to `groupingBy()`.
+function expects. We'll then change the return type of the function accordingly.
 
 This is what we have for the second version:
 ```kotlin
@@ -95,11 +97,21 @@ With this change, the function call now becomes this:
     println(frequencyMap2(listOf("three", "one", "two", "three", "three", "two")) { it })
 ```
 
-In Kotlin, if the last parameter to a function is itself a function, you should put the function literal or lambda
-expression outside of the parentheses.
+Since we now pass in the key selector `{ it }` as a parameter, we have to add it to call. As I mentioned
+before, `{ it }` is the equivalent of `Function.identity()` in Java, which is to say "Treat the element itself as the
+thing we want to count." In Kotlin, if the last argument in a function call is a lambda expression, you'll be told to
+put it outside of the parentheses.
 
-The output is the same as before and the code is a little more verbose but we can now also have the flexibility of
-specifying different key selectors, like this:
+```kotlin
+   // non-idiomatic: lambda argument should be moved outside of parentheses
+   frequencyMap2(someList, { it })
+
+   // preferred
+   frequencyMap2(someList) { it }   
+```
+
+The output is the same as before. Sure, the code is a little more verbose, but we now also specify different 
+key selectors, like this:
 
 ```kotlin
     println(frequencyMap2(listOf(1,2,2,3,7,8,1,0,3,1)) 
