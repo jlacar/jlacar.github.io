@@ -97,20 +97,23 @@ With this change, the function call now becomes this:
     println(frequencyMap2(listOf("three", "one", "two", "three", "three", "two")) { it })
 ```
 
-Since we now pass in the key selector `{ it }` as a parameter, we have to add it to call. As I mentioned
+Since we now pass in the key selector `{ it }` as a parameter, we have to add it to the call. As I mentioned
 before, `{ it }` is the equivalent of `Function.identity()` in Java, which is to say "Treat the element itself as the
-thing we want to count." In Kotlin, if the last argument in a function call is a lambda expression, you'll be told to
-put it outside of the parentheses.
+thing we want to count." 
+
+Here's another thing I learned about Kotlin: if the last argument in a function call is a lambda expression, you should
+put it outside of the parentheses. At least that's what the linter will tell you. I'm editing this post in IntelliJ IDEA
+and the code block below even has a warning on it, which I've added as a comment in the listing.
 
 ```kotlin
-   // non-idiomatic: lambda argument should be moved outside of parentheses
+   // IDEA message: Lambda argument should be moved outside of parentheses
    frequencyMap2(someList, { it })
 
    // preferred
    frequencyMap2(someList) { it }   
 ```
 
-The output is the same as before. Sure, the code is a little more verbose, but we now also specify different 
+The output is the same as before. Sure, the code is a little more verbose, but we can now also specify different 
 key selectors, like this:
 
 ```kotlin
@@ -135,6 +138,8 @@ This is the output:
 {fizz=4, buzz=5, fizzbuzz=3, 7=2, 11=1}
 {t=5, o=1}
 ```
+You might recognize that second statement as the classic FizzBuzz problem. 
+
 Super cool, right? Sorry, Java, there's talk on the street is that there's a new, cooler kid in town.
 
 See all of that in action here: https://replit.com/@jlacar/FrequencyMaps
