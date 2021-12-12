@@ -38,6 +38,8 @@ not so much about Agility and the AIC (Agile Industrial Complex). In other words
 
 ## Recent Posts
 
+(Dec 12, 2021 - [From Zero to One in Five Minutes](kotlin/0to1in5.md)
+
 (Dec 10, 2021) - [Frequency maps and other Kotlin one-liners](kotlin/kotlin-oneliners.md)
 
 (Dec 9, 2021) - [Things I learned about Kotlin from Advent of Code](kotlin/aoc-learnings.md)
@@ -51,6 +53,8 @@ not so much about Agility and the AIC (Agile Industrial Complex). In other words
 ## Categories
 
 ### Practice
+
+(Dec 12, 2021 - [From Zero to One in Five Minutes](kotlin/0to1in5.md)
 
 (Dec 10, 2021) - [Frequency maps and other Kotlin one-liners](kotlin/kotlin-oneliners.md)
 
