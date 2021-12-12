@@ -272,7 +272,7 @@ separate the four words from each other. For that, we use `split(" ")`. At this 
 > SIDEBAR: When working with a long chain of calls, it's not always easy to figure out what you have at a specific point in the expression. I found that if you use the handy dandy `also()` function, you can get IDEA to tell you exactly what you have at that point. Just insert `.also { it }` where you want to check what kind of thing you have and then hover over `it`: IDEA will then show you a hint that tells you exactly what `it` is.
 
 We're really only interested in the Strings as a collective; the nesting just complicates things. This is
-where `flatMap()` can be used to the nested `List<List<String>>` into a "flattened" `List<String>`.
+where `flatMap()` can be used to convert the nested `List<List<String>>` into a "flattened" `List<String>`.
 
 For example, if you have `[[fdgacbe, cefdb, cefbgd, gcbe], [fcgedb, cgb, dgebacf, gc], [cg, cg, fdcagb, cbg]]`,
 flattening it would give us this `[fdgacbe, cefdb, cefbgd, gcbe, fcgedb, cgb, dgebacf, gc, cg, cg, fdcagb, cbg]`
@@ -298,9 +298,9 @@ Steven Wright would be proud.
 
 On a somewhat related note, if you like finding ways to pack more into less, try using
 the [Army Roll](https://youtu.be/fuD-ZZydsVg_) method of packing cloths. As a pre-pandemic frequent traveller, I found
-it quite effective in fitting a week's worth of cloths into one carry-on bag. And if you hate paying extra for
-checked-in bags, you can always do a courtesy check at the gate. Those are always free as long as your bag is small
-enough to fit in the overhead compartment.
+it was a great way to fit a week's worth of cloths into one carry-on bag. And if you hate paying extra fees for
+checked-in bags, you can always courtesy check your carry-on at the gate. That's always been free as long as your bag is
+small enough to fit in the overhead compartment.
 
 ### [<< Previous article](aoc-learnings.md)
 
