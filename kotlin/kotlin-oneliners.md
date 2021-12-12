@@ -282,9 +282,9 @@ Initially, I had this, which I thought was pretty darn good:
             .count()
 ```
 
-But of course, we learned from Lesson #1 that there's probably and even better and shorter way to say it. IntelliJ IDEA
-quietly informed me what that way was by suggesting that I merge the call chain to `count()`, which of course totally
-makes sense. Why say more when you can do it with less? Steven Wright would be proud.
+Of course, Lesson #1 says there's probably an even better and shorter way to say it. IntelliJ IDEA quietly suggested
+that the call chain on the collection type could be simplified to `count()`, which totally makes sense. Why say more
+when you can do it with less? Steven Wright would be proud.
 
 ## From left field: Packing tips for frequent travellers
 
