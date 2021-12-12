@@ -242,21 +242,21 @@ operations but it's still just one line of code. Well, okay, two lines if you in
 
 Here's how that works.
 
-Each line in the input looks something like this: `be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe`. For Part 1, we're only
-want the words after the "|" separator. The `it.split(" | ")` separates each line in the input into its two parts. 
-
-We can get to the second part, the substring after the "|", with the `last()` function. It returns the last element of
+Each line in the input looks something like
+this: `be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe`. For Part 1, we're only
+interested in the second group of words, the ones after the "|" separator. The `it.split(" | ")` separates each line in
+the input into its two parts. We can get to the second part with the `last()` function. It returns the last element of
 any collection of things.
 
-Alternatively, we could have used `lastIndex()` but that would make the expression more complicated than it needs to be.
-Since all we're interested in is the last element, `last()` is the shortest and quickest way to get to it.
+Alternatively, we could have used `lastIndex()` but that would lead to an expression that's more complicated than it
+needs to be. Since we're only interested in the last element, `last()` is the shortest and quickest way to get to it.
 
-We could have also done it using indexed access, like so:
+We could have also gotten to the second element from the split using indexed access, like so:
 ```kotlin
 it.split(" | ")[1] // gives back the second group of words
 ```
 
-Because of Kent Beck's Rule #2 of Simple Design that says the code must clearly express its intent, I prefer the more
+Because of Kent Beck's Rule #2 of Simple Design that says that code must clearly express its intent, I prefer the more
 expressive `last()` over `[1]`.
 
 Now that we've isolated the second part of each line in the input, we need to split it again, this time to
