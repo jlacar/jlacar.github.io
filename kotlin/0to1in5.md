@@ -28,7 +28,7 @@ The first baby step I chose to make was to split the input strings into these tw
 | "). Using the lessons I learned about using also(), this was my first cut:
 
 ```kotlin
-fun result(input: List<String) = input
+fun result(input: List<String>) = input
     .map { it.split(" | ") }
 
 val testInput = readInput("Day08_test")
