@@ -4,14 +4,17 @@ _(December 2021)_
 
 > _"I think it's wrong that only one company makes the game Monopoly."_—Steven Wright
 
-If programming languages were comedians, Kotlin would be a Steven Wright. There aren't many comedians out there who can
-pack irony and comedic genius into a one-liner like Steven Wright does. When it comes to programming, there aren't many
-languages out there that can pack as much logic and expressiveness into a one-liner as Kotlin does.
+If programming languages were comedians, Kotlin would be a Steven Wright. When it comes to comedy, there aren't many
+comedians out there who can pack irony and comedic genius into a one-liner as Steven Wright does. When it comes to
+programming, there aren't many languages out there that can pack as much logic and expressiveness into a one-liner as
+Kotlin does.
 
 Brushing up on [Kotlin](https://kotlinlang.org) while doing [Advent of Code 2021](https://adventofcode.com/) has given
-me a great appreciation for Kotlin's ability to express the solution to a problem with so little code. I've already
-mentioned the `windowed()` and `also()` functions in [the first post of this series](aoc-learnings.md). In this post,
-I'll show you how to easily create frequency maps with one line in Kotlin.
+me a renewed appreciation for Kotlin's expressiveness. I've already mentioned the `windowed()` and `also()` functions
+in [the first post of this series](aoc-learnings.md). In this post, I'll show you how a few more one-liners I've used to
+solve AoC problems.
+
+Let's start with creating frequency maps with a one-liner in Kotlin.
 
 ## Lesson #4 - Creating frequency maps with `groupingBy()` and `eachCount()`
 
