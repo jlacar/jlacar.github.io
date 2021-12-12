@@ -21,7 +21,7 @@ solutions are messy and confusing, if you can even get to a solution that actual
 Instead of trying to solve a complex problem all at once, I like to break it down into smaller, more easily digestible
 problems. That's the approach I took with this problem: break it down and step into the solution, one baby step at a time.
 
-### Baby step #1: split each input line in two
+## Baby step #1: split each input line in two
 
 Each input line has two groups of words: a group of ten words separated by " | " from the second group of four words.
 The first baby step I chose to make was to split the input strings into these two groups. That can be done with split("
@@ -54,12 +54,12 @@ This is what the output looked like using the data from the problem example (for
 
 Great, it's clear that I've got separation of the two groups of words working now.
 
-### Baby step #2: extract the second group of words.
+## Baby step #2: extract the second group of words.
 
 This one is pretty easy: just use the `last()` function. We could use `[1]` but that's not as expressive.
 
 ```kotlin
-fun result(input: List<String) = input
+fun result(input: List<String>) = input
     .map { it.split(" | ").last() }
 
 val testInput = readInput("Day08_test")
@@ -85,12 +85,12 @@ This is the output:
 
 Cool. Exactly what I wanted. Next baby step.
 
-### Baby step #3: split into individual words
+## Baby step #3: split into individual words
 
 Again, this one is pretty easy: we step in another split(), this time on " ":
 
 ```kotlin
-fun result(input: List<String) = input
+fun result(input: List<String>) = input
     .map { it.split(" | ").last().split(" ") }
 
 val testInput = readInput("Day08_test")
@@ -116,13 +116,13 @@ Now we have a List<List<String>>.
 
 Next baby step.
 
-### Baby step #4: flatten it
+## Baby step #4: flatten it
 
 This was the hard part. I had to spend a couple of minutes looking through flatMap() API documentation to make sure it
 does what I think it does. But a minute or two later, I had this:
 
 ```kotlin
-fun result(input: List<String) = input
+fun result(input: List<String>) = input
     .flatMap { it.split(" | ").last().split(" ") }
 
 val testInput = readInput("Day08_test")
@@ -145,13 +145,13 @@ Here, too, I get the expected output:
 ```
 Next.
 
-### Baby step #5: count 'em'
+## Baby step #5: count 'em'
 
 This one is super easy. Just filter on the criteria and use `count()`.
 ```kotlin
 val digitLengths = listOf(2, 3, 4, 7)
 
-fun result(input: List<String) = input
+fun result(input: List<String>) = input
     .flatMap { it.split(" | ").last().split(" ") }
     .filter { it.length in digitLengths }
     .count()
@@ -161,7 +161,7 @@ result(testInput).also(::println)
 ```
 This got me the expected output of 26.
 
-### Baby step #6 - protect against regressions
+## Baby step #6 - protect against regressions
 
 So now that I had the solution, I added my guardrail to protect me from myself:
 
@@ -179,7 +179,7 @@ result(testInput).also(::println).also { check(it == 26) }
 
 Now that we have guard rail, let's move on to refactoring.
 
-### Refactoring #1 - simplify the call chain
+## Refactoring #1 - simplify the call chain
 
 As noted in the previous article, IDEA was telling me that I could simplify the call chain. Ok.
 
@@ -196,7 +196,7 @@ result(testInput).also(::println).also { check(it == 26) }
 
 Running again, I see I didn't break anything. Awesome! Great, IDEA, thanks for the tip!
 
-### Refactoring #2 - rename to clearly express intent
+## Refactoring #2 - rename to clearly express intent
 
 I don't know if I succeeded with this one but anyway, I went with this:
 
@@ -212,7 +212,7 @@ result(testInput).also(::println).also { check(it == 26) }
 ```
 Still works. Next refactoring.
 
-### Refactoring #3 - eliminate scaffolding
+## Refactoring #3 - eliminate scaffolding
 
 Now I need to pull the solution together and clean up the code. So far, I had this:
 
@@ -257,8 +257,9 @@ val input = readInput("Day01")
 part1(input).also(::println).also { check(it == 421) } // verified solution
 ```
 
-That's it. It took way longer for me to write about it that to actually do it. Done in real time, the whole process took
-about 5 minutes (maybe less).
+That's it. It took longer for me to write about it than to actually do it. In real time, the whole process took about 5
+minutes (maybe less). You might call that process a quick-and-dirty TDD with the `check()` being my test that was
+driving the whole process.
 
 ### [<< Previous article](kotlin-oneliners.md)
 
