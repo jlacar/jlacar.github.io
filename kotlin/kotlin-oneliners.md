@@ -9,12 +9,12 @@ comedians out there who can pack irony and comedic genius into a one-liner as St
 programming, there aren't many languages out there that can pack as much logic and expressiveness into a one-liner as
 Kotlin does.
 
-Brushing up on [Kotlin](https://kotlinlang.org) while doing [Advent of Code 2021](https://adventofcode.com/) has given
-me a renewed appreciation for Kotlin's expressiveness. I've already mentioned the `windowed()` and `also()` functions
+Doing [Advent of Code 2021](https://adventofcode.com/) in [Kotlin](https://kotlinlang.org) has given me a renewed
+appreciation for its expressiveness. I've already mentioned the `windowed()` and `also()` functions
 in [the first post of this series](aoc-learnings.md). In this post, I'll show you a few more one-liners I've used to
 solve the AoC problems.
 
-Let's start with creating frequency maps with a one-liner in Kotlin.
+Let's start with creating a frequency map with one line of Kotlin.
 
 ## Lesson #4 - Creating frequency maps with `groupingBy()` and `eachCount()`
 
