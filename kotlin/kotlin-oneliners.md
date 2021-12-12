@@ -252,10 +252,10 @@ function returns the last element of any collection of things. When we split a l
 a `List<String>`. In this case, we get a list of two strings, the string before the "|" and the one after it. `last()`
 gives us the second one.
 
-Alternatively, I could have used `lastIndex()` but that would make the expression more complicated than it needs to be;
-all we're interested in is, well, the last element so `last()` does the job with the least chatter.
+Alternatively, I could have used `lastIndex()` but that would make the expression more complicated than it needs to be.
+Since all we're interested in is the last element, `last()` is shortest and quickest way to get to it.
 
-We could also do it by using an index instead of `last()`, like so:
+We could have also done it using an index instead of `last()`, like so:
 ```kotlin
 it.split(" | ")[1] // gives back the second group of words
 ```
@@ -283,8 +283,10 @@ Once you have the flattened list of words, it's a straightforward affair to `cou
             .count()
 ```
 
-But then IntelliJ IDEA quietly reminded me that I was saying too much and suggested I combine `filter()` with `count()`,
-which of course totally makes sense. Why say more when you can do it with less? Steven Wright would be proud.
+But then IntelliJ IDEA quietly reminded me that I was saying too much and suggested I merge
+the `filter { predicate }.count()`
+call chain to `count { predicate }`, which of course totally makes sense. Why say more when you can do it with less?
+Steven Wright would be proud.
 
 ## From left field: Packing tips for frequent travellers
 
