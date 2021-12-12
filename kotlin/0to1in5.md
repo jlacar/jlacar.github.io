@@ -111,7 +111,7 @@ This is the output:
  [fgae, cfgab, fg, bagce]]
 ```
 
-Now we have a List<List<String>>.
+Now we have a `List<List<String>>`.
 
 Next baby step.
 
