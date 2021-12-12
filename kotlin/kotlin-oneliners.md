@@ -255,8 +255,18 @@ gives us the second one.
 Alternatively, I could have used `lastIndex()` but that would make the expression more complicated than it needs to be;
 all we're interested in is, well, the last element so `last()` does the job with the least chatter.
 
+We could also do it by using an index instead of `last()`, like so:
+```kotlin
+it.split(" | ")[1] // gives back the second group of words
+```
+
+I prefer `last()` because it's more expressive. Kent Beck's Rule #2 of Simple Design: the code clearly expresses its
+intent.
+
 Now that we've isolated the second part of each line in the input, we need to split it again, this time so we can
 separate the four words from each other. That's what `split(" ")` does. At this point, we have a `List<List<String>>`. 
+
+> SIDEBAR: When working with a long chain of calls, it's not always easy to figure out what you have at a specific point in the expression. I found that if you use the handy dandy `also()` function, you can get IDEA to tell you exactly what you have at that point. Just insert `.also { it }` where you want to check what kind of thing you have and then hover over `it`: IDEA will then show you a hint that tells you exactly what `it` is.
 
 We're really only interested in the entire collection of Strings so the nesting is just getting in the way of directly
 accessing the words as a collective. This is where `flatMap()` comes in. As I mentioned before, `flatMap()` will turn a
@@ -265,9 +275,7 @@ nested structure like `List<List<String>>` into a "flattened" `List<String>`.
 That is, if you have this `[[fdgacbe, cefdb, cefbgd, gcbe], [fcgedb, cgb, dgebacf, gc], [cg, cg, fdcagb, cbg]]`,
 flattening it would give you this `[fdgacbe, cefdb, cefbgd, gcbe, fcgedb, cgb, dgebacf, gc, cg, cg, fdcagb, cbg]`
 
-> SIDEBAR: When working with a long chain of calls, it's not always easy to figure out what you have at a specific point in the expression. I found that if you use the handy dandy `also()` function, you can get IDEA to tell you exactly what you have at that point. Just insert `.also { it }` where you want to check what kind of thing you have and then hover over `it`: IDEA will then show you a hint that tells you exactly what `it` is.
-
-Once you have the flattened list of words, it's a straightforward affair to count them with `count()`. Initially, I had this:
+Once you have the flattened list of words, it's a straightforward affair to `count()` them. Initially, I had this:
 ```kotlin
     fun part1(input: List<String>): Int = input
             .flatMap { it.split(" | ").last().split(" ") }
