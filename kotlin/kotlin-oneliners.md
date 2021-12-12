@@ -93,18 +93,18 @@ fun <T, K> frequencyMap2(things: Iterable<T>, keySelector: (T) -> K ): Map<K, In
     things.groupingBy(keySelector).eachCount()
 ```
 
-With this change, the function call now becomes this:
+With this change, the function call becomes this:
 ```kotlin
     println(frequencyMap2(listOf(1,2,2,3,7,8,1,0,3,1)) { it })
     println(frequencyMap2(listOf("three", "one", "two", "three", "three", "two")) { it })
 ```
 
-We now have to pass we have to explicitly pass in `{ it }` as the key selector to say "Treat the element itself as the
-thing to count."
+We now have to explicitly pass in `{ it }` as the key selector to say "use the element itself as the basis for
+uniqueness."
 
 Here's another thing I learned: if the last argument in a function call is a lambda expression, you should put it
-outside the parentheses. I'm editing this post in IntelliJ IDEA and it's giving me warning which I've added as a comment 
-in the code listing below.
+outside the parentheses. I'm editing this post in IntelliJ IDEA and it's giving me the warning that I've added as a
+comment in the code listing below.
 
 ```kotlin
    // IDEA message: Lambda argument should be moved outside of parentheses
@@ -145,8 +145,8 @@ This is the output:
 ### What about other types?
 
 After experimenting with this a bit, I realized that arrays and strings weren't supported by the function I had so far.
-No biggie because the standard library gives us examples how to overload this for Arrays and Strings, or more
-appropriately maybe, CharSequences. I don't know if this is the best way to do it, but it seems to work:
+No biggie because the standard library gives us examples of how to overload this for Arrays and Strings, or more
+appropriately, CharSequences. I don't know if this is the best way to do it, but it seems to work:
 
 ```kotlin
 fun <T, K> frequencyMap2(arrOfThings: Array<T>, keySelector: (T) -> K): Map<K, Int> =
@@ -155,7 +155,7 @@ fun <T, K> frequencyMap2(arrOfThings: Array<T>, keySelector: (T) -> K): Map<K, I
 fun <K> frequencyMap2(charSequence: CharSequence, keySelector: (Char) -> K): Map<K, Int> =
    charSequence.groupingBy(keySelector).eachCount()
 ```
-With those overloads, I can now do this:
+We can now do this:
 ```kotlin
 // arrays
 println(frequencyMap2(arrayOf(3,4,5,3,4,5,1,2,3)) { it } )  
@@ -196,9 +196,8 @@ as easily inlined it wherever I needed a frequency map. These work just as well 
 
 There are a couple of reasons I wrote an intermediate `frequencyMap()` function. 
 
-First, I wanted to have a more apples-to-apples comparison with Java. Given the Java example I cited, I wanted to give
-Java a fair shake, even though it seems clear that Kotlin is the head-to-head winner when it comes to brevity and
-clarity.
+First, I wanted to have a more apples-to-apples comparison with Java. I wanted to the Java example I cited a fair shake,
+even though it seems clear that Kotlin is the head-to-head winner when it comes to brevity and clarity.
 
 Second, and perhaps more compelling for me, is that I'm kind of obsessed with writing expressive code. My gut reaction 
 to something like `things.groupingBy { it }.eachCount()` is to refactor it to be more expressive. For me, a function
@@ -213,10 +212,10 @@ I fell behind on solving the puzzles this week because of work- and life-related
 it's a couple of hours into Day 12 and I am just about to start looking into Part 2 of the Day 8 problem. Before I do
 that, I wanted share my solution for Part 1.
 
-Part 1 of AoC Day 8 is essentially about counting words that have a specific length. The input consists of a list of
-strings, each one containing fourteen words of different lengths. To complicate things, the fourteen words are in two
-groups, the first group of ten words separated by " | " from the second group of four words. The task is to count how
-many words in the second group, the one with four words, have a length of either 2, 3, 4, or 7.
+Part 1 of AoC Day 8 is essentially about counting words that have specific lengths. The input is a list of strings, each
+one containing fourteen words of different lengths. To complicate things, the fourteen words are in two groups, with the
+first group of ten words separated by " | " from the second group of four words. The task is to count how many words in
+the second group, the one with four words, have a length of either 2, 3, 4, or 7.
 
 Solving this in Kotlin was pretty easy. The hardest part was looking through the API documentation to verify
 that `flatMap()` worked like I thought it does.
@@ -257,21 +256,21 @@ We could have also done it using indexed access, like so:
 it.split(" | ")[1] // gives back the second group of words
 ```
 
-Because of Kent Beck's Rule #2 of Simple Design: the code must clearly
-express its intent, I prefer the more expressive `last()` over `[1]`.
+Because of Kent Beck's Rule #2 of Simple Design that says the code must clearly express its intent, I prefer the more
+expressive `last()` over `[1]`.
 
 Now that we've isolated the second part of each line in the input, we need to split it again, this time to
 separate the four words from each other. For that, we use `split(" ")`. At this point, we have a `List<List<String>>`. 
 
 > SIDEBAR: When working with a long chain of calls, it's not always easy to figure out what you have at a specific point in the expression. I found that if you use the handy dandy `also()` function, you can get IDEA to tell you exactly what you have at that point. Just insert `.also { it }` where you want to check what kind of thing you have and then hover over `it`: IDEA will then show you a hint that tells you exactly what `it` is.
 
-We're really only interested in the Strings as a collective, not as nested list of lists. The `flatMap()` function
+We're really only interested in the Strings as a collective, not as a nested list of lists. The `flatMap()` function
 lets us convert the nested `List<List<String>>` into a "flattened" `List<String>`.
 
-For example, if you have `[[fdgacbe, cefdb, cefbgd, gcbe], [fcgedb, cgb, dgebacf, gc], [cg, cg, fdcagb, cbg]]`,
-`flatMap`-ping this gives us `[fdgacbe, cefdb, cefbgd, gcbe, fcgedb, cgb, dgebacf, gc, cg, cg, fdcagb, cbg]`
+For example, given `[[fdgacbe, cefdb, cefbgd, gcbe], [fcgedb, cgb, dgebacf, gc], [cg, cg, fdcagb, cbg]]`,
+flatMap() will return `[fdgacbe, cefdb, cefbgd, gcbe, fcgedb, cgb, dgebacf, gc, cg, cg, fdcagb, cbg]`.
 
-From here, getting a `count()` based on word length is straightforward.
+From there, getting a `count()` based on word length is straightforward.
 
 ### Just say what you need to say, and no more.
 
@@ -283,9 +282,9 @@ Initially, I had this, which I thought was pretty darn good:
             .count()
 ```
 
-But of course, Lesson #1 says you can always say it better and shorter in Kotlin. IntelliJ IDEA quietly reminded me that
-I was saying too much and suggested I merge the `filter { predicate }.count()` call chain to `count { predicate }`,
-which of course totally makes sense. Why say more when you can do it with less? Steven Wright would be proud.
+But of course, we learned from Lesson #1 that there's probably and even better and shorter way to say it. IntelliJ IDEA
+quietly informed me what that way was by suggesting that I merge the call chain to `count()`, which of course totally
+makes sense. Why say more when you can do it with less? Steven Wright would be proud.
 
 ## From left field: Packing tips for frequent travellers
 
