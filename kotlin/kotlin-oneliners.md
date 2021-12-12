@@ -171,24 +171,14 @@ println(frequencyMap2("SuperCaliFragilisticExpealidocious") { if (it.isUpperCase
 
 // Output: {UPPER=4, lower=30}
 ```
-
-### There's a new kid in town
-
-It seems like all this is just scratching the surface of the power of Kotlin and its ability to do so much with so
-little. Super cool, right? Sorry, Java, but there's talk on the street that there's a new, cooler kid in town and it
-looks like that new kid is here to stay.
-
 ### See it in action
 
 You can run these examples yourself here: [https://replit.com/@jlacar/FrequencyMaps](https://replit.com/@jlacar/FrequencyMaps)
 
-## One final note, to be clear
+### Ruthless Refactoring
 
-I should have mentioned from the start that you don't even need to write an intermediary function like `frequencyMap` as
-I showed here. If you have any value that can be broken down into smaller parts, like an array, collection, or a
-CharSequence, you can do it directly with a one-liner as shown in the TL;DR section. No need to write your own function for it.
-
-These work just as well out of the box:
+I should have mentioned from the start that you don't need to write a function like `frequencyMap`; I could have just
+as easily inlined the one-liner where I need it. These work just as well out of the box:
 ```kotlin
    println(listOf(1,2,2,3,7,8,1,0,3,1).groupingBy { it }.eachCount())
 
@@ -209,11 +199,84 @@ First, I wanted to have a more apples-to-apples comparison with Java. I wanted t
 though it's pretty clear that Kotlin is the head-to-head winner when it comes to brevity and clarity.
 
 Second, and perhaps more compelling for me, is that I'm kind of obsessed with writing expressive code. My first urge
-when I see something like `things.groupingBy { it }.eachCount()` is to make it more expressive. For me, a name
-like `frequencyMap()` helps make the intent clearer, even though the one-liner is already pretty sweet.
+when I see something like `things.groupingBy { it }.eachCount()` is to refactor it to be more expressive. For me, a name
+like `frequencyMap()` expresses the intent more clearly, even though the one-liner is already pretty sweet.
 
 But that's just me. Feel free to by-pass the extra layer of abstraction if you feel it doesn't add much value for you.
 For me, anything that makes the code more expressive is generally more of a good thing than bad.
+
+## Lesson #5: Using `flatMap()`, `last()`, and `count()`
+
+I fell behind on solving the puzzles this week because of work- and life-related stuff. As I'm writing this section,
+it's a couple of hours into Day 12 and I am just about to start looking into Part 2 of the Day 8 problem. Before I do
+that, I want to take a few minutes to share my solution for Part 1.
+
+Part 1 of Day 8 of [The Advent of Code 2021](https://adventofcode.com/2021) essentially requires counting words that
+have a specific length. The input consists of a list of strings, each one containing fourteen words of different
+lengths. To complicate things, the fourteen words are in two groups, the first group of ten words separated from the
+remaining four words by " | ". The task is to count how many of the words from the second part, the one with four words,
+had a length of either 2, 3, 4, or 7.
+
+Solving this in Kotlin was pretty easy. The hardest part was looking through the API documentation to verify
+that `flatMap()` worked like I thought it does.
+
+### What does it mean to "flatten" something?
+
+I seldom use `flatMap()` but it was perfect for this problem. Essentially, it unnests or "flattens" a nested data
+structure. For example, if you have a `List<List<String>>`, flattening that would give you a `List<String>`. That's
+exactly what I needed to solve Day 8, Part 1.
+
+### Day 8, Part 1 of the Advent of Code 2021 (Spoiler Alert!)
+
+Here's my solution:
+```kotlin
+    val lengthsOfDigits1478 = listOf(2, 3, 4, 7)
+
+    fun part1(input: List<String>): Int = input
+            .flatMap { it.split(" | ").last().split(" ") }
+            .count { it.length in lengthsOfDigits1478 }
+```
+
+Once again, Kotlin allowed me to pack a lot of logic and expressiveness into just one line of code. Sure, it's a chain of
+operations but it's still just one line of code. Well, okay, two lines if you include the one for `lengthsOfDigits1478`.
+
+Here's how that works.
+
+Each line in the input looks something like
+this: `be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe`. For Part 1, we're only
+interested in the words after the "|" separator. The `it.split(" | ")` separates each line in the input into two
+strings. 
+
+We're only interested in the second group of words, the ones after the "|". That's what `last()` gives us. The `last()`
+function returns the last element of any collection of things. When we split a line into two parts, we get
+a `List<String>`. In this case, we get a list of two strings, the string before the "|" and the one after it. `last()`
+gives us the second one.
+
+Alternatively, I could have used `lastIndex()` but that would make the expression more complicated than it needs to be;
+all we're interested in is, well, the last element so `last()` does the job with the least chatter.
+
+Now that we've isolated the second part of each line in the input, we need to split it again, this time so we can
+separate the four words from each other. That's what `split(" ")` does. At this point, we have a `List<List<String>>`. 
+
+We're really only interested in the entire collection of Strings so the nesting is just getting in the way of directly
+accessing the words as a collective. This is where `flatMap()` comes in. As I mentioned before, `flatMap()` will turn a
+nested structure like `List<List<String>>` into a "flattened" `List<String>`.
+
+That is, if you have this `[[fdgacbe, cefdb, cefbgd, gcbe], [fcgedb, cgb, dgebacf, gc], [cg, cg, fdcagb, cbg]]`,
+flattening it would give you this `[fdgacbe, cefdb, cefbgd, gcbe, fcgedb, cgb, dgebacf, gc, cg, cg, fdcagb, cbg]`
+
+> SIDEBAR: When working with a long chain of calls, it's not always easy to figure out what you have at a specific point in the expression. I found that if you use the handy dandy `also()` function, you can get IDEA to tell you exactly what you have at that point. Just insert `.also { it }` where you want to check what kind of thing you have and then hover over `it`: IDEA will then show you a hint that tells you exactly what `it` is.
+
+Once you have the flattened list of words, it's a straightforward affair to count them with `count()`. Initially, I had this:
+```kotlin
+    fun part1(input: List<String>): Int = input
+            .flatMap { it.split(" | ").last().split(" ") }
+            .filter { it.length in lengthsOfDigits1478 }
+            .count()
+```
+
+But then IntelliJ IDEA quietly reminded me that I was saying too much and suggested I combine `filter()` with `count()`,
+which of course totally makes sense. Why say more when you can do it with less? Steven Wright would be proud.
 
 ## From left field: Packing tips for frequent travellers
 
