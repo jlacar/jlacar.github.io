@@ -15,7 +15,7 @@ an cute story behind it at the Advent of Code website.
 
 One problem I try to avoid is something I see all the time with developers I coach: many of them try to solve
 a problem all at one go. I call it "eyes too big for the stomach" syndrome. This doesn't tend to go very well and the
-solution, if you can even get to one that works, is invariable messy and confusing.
+solution, if you can even get to one that works, is invariably messy and confusing.
 
 Instead of trying to solve a complex problem all at once, I like to break it down into smaller, more easily digestible
 problems. That's the approach I took with this one: break it down and step into the solution, one baby step at a time.
