@@ -1,25 +1,24 @@
 # From Zero to One in Five minutes
 
-In the previous article, I showed how I solved Part 1 of the Day 8 problem in the Advent of Code.
+In the [previous article](oneliners.md), I showed how I solved Part 1 of the Day 8 problem in the [Advent of Code 2021](https://adventofcode.com).
 
 Here, I'll go into some details of the process I went through in coming up with that solution. I wanted to do this
-partly because I've kind of been flexing on my friends at JavaRanch who have been sharing their Java solutions. I'm not
-trying to be a jerk or show off, but I can't help feel that by showing my Kotlin solution, it does come off as some
-serious peacocking. That's the furthest thing from my mind and I hope that by sharing my process, it'll help you learn
-something about Kotlin and how to quickly solve problems with it.
+partly because I've [kind of been flexing on my friends](https://coderanch.com/t/747889/AoC-Day-Solutions-Spoilers) at
+JavaRanch who have been sharing their Java solutions. I'm not trying to show off or anything, but I can't help but feel
+that it still comes off as peacocking. That's the furthest thing from my mind, so I hope that by sharing my process,
+it'll help you learn something about Kotlin and how to quickly solve problems with it.
 
-To recap the problem, we basically need to count how many words in a list had lengths of either 2, 3, 4, or 7. There's
-an interesting story behind that but if you want to know what it is, go to the Advent of Code Day 8 problem and read it
-for yourself.
+To recap the problem, we're asked to count how many words in a list have lengths of either 2, 3, 4, or 7. There's
+an cute story behind it at the Advent of Code website.
 
 ## Baby steps, baby.
 
-One of the problems I try to avoid is something I see all the time with developers I coach: they seem to want to solve
-the problem all at one go. I call it "eyes too big for the stomach" syndrome. Invariably, this doesn't go well and the
-solutions are messy and confusing, if you can even get to a solution that actually works.
+One problem I try to avoid is something I see all the time with developers I coach: many of them try to solve
+a problem all at one go. I call it "eyes too big for the stomach" syndrome. This doesn't tend to go very well and the
+solution, if you can even get to one that works, is invariable messy and confusing.
 
 Instead of trying to solve a complex problem all at once, I like to break it down into smaller, more easily digestible
-problems. That's the approach I took with this problem: break it down and step into the solution, one baby step at a time.
+problems. That's the approach I took with this one: break it down and step into the solution, one baby step at a time.
 
 ## Baby step #1: split each input line in two
 
