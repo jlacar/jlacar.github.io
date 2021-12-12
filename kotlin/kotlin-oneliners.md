@@ -11,8 +11,8 @@ Kotlin does.
 
 Brushing up on [Kotlin](https://kotlinlang.org) while doing [Advent of Code 2021](https://adventofcode.com/) has given
 me a renewed appreciation for Kotlin's expressiveness. I've already mentioned the `windowed()` and `also()` functions
-in [the first post of this series](aoc-learnings.md). In this post, I'll show you how a few more one-liners I've used to
-solve AoC problems.
+in [the first post of this series](aoc-learnings.md). In this post, I'll show you a few more one-liners I've used to
+solve the AoC problems.
 
 Let's start with creating frequency maps with a one-liner in Kotlin.
 
@@ -53,7 +53,7 @@ return elements.collect(
 }
 ```
 
-If you think that's nice, check out how you'd do it in Kotlin:
+That's nice, but check out how you'd do that in Kotlin:
 
 ```kotlin
 fun <T> frequencyMap(things: Iterable<T>): Map<T, Int> =
@@ -72,12 +72,12 @@ This is the output:
 
 ### But wait, you can still do better
 
-As I learned from Lesson #1 in this series, we can always do it better in Kotlin, even though we think we've done great
+As I learned from Lesson #1 in this series, we can always do it better in Kotlin, even though we've done pretty well
 already.
 
-What if you wanted to count differently, like numbers that are greater than 5 or by first letter of each word? Well, it
-turns out that it only takes a few tweaks to bubble up the flexibility of the `groupingBy()` function from
-the `frequencyMap()` function.
+What if you wanted to count differently, like count how many numbers are greater than 5 or count the frequency of the
+first letters of each word? Well, it turns out that it only takes a few tweaks to bubble up the flexibility of
+the `groupingBy()` function from the `frequencyMap()` function.
 
 In the first version of `frequencyMap()`, we hard-coded the key selector used by `groupingBy()` to `{ it }`, which
 serves the same purpose as `Function.identity()` in the Java version. We want to open our interface back up to expose
@@ -170,7 +170,8 @@ println(frequencyMap2("supercalifragilisticexpealidocious") { it })
 
 // Output: {s=3, u=2, p=2, e=3, r=2, c=3, a=3, l=3, i=6, f=1, g=1, t=1, x=1, d=1, o=2} 
 
-println(frequencyMap2("SuperCaliFragilisticExpealidocious") { if (it.isUpperCase()) "UPPER" else "lower" })
+println(frequencyMap2("SuperCaliFragilisticExpealidocious") 
+   { if (it.isUpperCase()) "UPPER" else "lower" } )
 
 // Output: {UPPER=4, lower=30}
 ```
