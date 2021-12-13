@@ -17,7 +17,7 @@ programs can be.
 To ease my feelings of _diyahe_, I wanted to share the details of how I ate what I thought was going to be an elephant-sized problem with
 relative ease in a very short amount of time.
 
-> *_diyahe_ is a Filipino term that refers to a feeling of awkward embarrassment, not exactly shame, but closer to what some other Asian cultures describe as "losing face," except it's felt by the person who causes the loss of face. Essentially, it's feeling bad for making someone feel bad.
+> *_diyahe_ is a Filipino term that can be used to refer to that feeling that's not exactly shame but more of that awkward embarrassment when you feel bad about making someone feel bad.
 
 ## Baby steps, baby.
 
