@@ -216,8 +216,14 @@ Still works. Next refactoring.
 
 ## Refactoring #3 - eliminate scaffolding
 
-Now I needed to pull the solution together and clean up the code. So far, I had this:
+Now I needed to pull the solution together and clean up the code. So far, I only had confirmation that the solution
+worked with the sample data. I still didn't have the solution to the actual problem though.
 
+All this while, I had been working with the `result()` function to incrementally build out a solution. Essentially, it
+was scaffolding I used to build confidence and understanding in what I was trying to do. Now that I was confident I had
+the right solution, it was time to tear down the scaffolding and solve the problem for real.
+
+This is what my work in progress so far looked like:
 ```kotlin
 val lengthsOfDigits1478 = listOf(2, 3, 4, 7)
 
@@ -236,8 +242,8 @@ val input = readInput("Day01")
 println(part1(input))
 ```
 
-After mirroring `result()` to `part1()`, I redirected the execution path to `part1()` and eliminating the now
-unused `result()` function. I now had this:
+So I made `part1()` mirror `result()`, then redirected execution to `part1()`. This made `result()` redundant and
+therefore safe to delete. After the cleanup, I now had this:
 
 ```kotlin
 val lengthsOfDigits1478 = listOf(2, 3, 4, 7)
@@ -253,8 +259,8 @@ val input = readInput("Day01")
 println(part1(input))
 ```
 
-One final run produced my Day 8 Part 1 solution, which was 421 for my data set. With the final answer to Part 1 copied
-to my clipboard, I pasted back into the Advent of Code website and claimed my gold star.
+One final run and I had my Day 8 Part 1 solution, which was 421 for my data set. With the final answer to Part 1 copied
+to my clipboard, I pasted it back into the Advent of Code website and claimed my gold star.
 
 ## Close out: add the final guardrail for the solution
 
@@ -268,11 +274,11 @@ part1(input).also(::println).also { check(it == 421) } // verified solution
 That's it. 
 
 It took me longer to write about it than to actually do it. In real time, the whole process took about five minutes,
-maybe even less. 
+maybe even less. What seemed like an elephant at first turned out to be a mouse. Well, maybe a few mice. 
 
 I don't know if you could call that process TDD but it certainly was incremental and involved a lot of feedback. And
 that, my friends, is how you eat an elephant in Kotlin: one small bite at a time, with generous helpings of feedback and
-checking of your understanding.
+checks of your understanding.
 
 ### [<< Previous article](kotlin-oneliners.md)
 
