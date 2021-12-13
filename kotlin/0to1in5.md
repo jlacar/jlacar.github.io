@@ -186,7 +186,7 @@ eliminated.
 ```kotlin
 val digitLengths = listOf(2, 3, 4, 7)
 
-fun result(input: List<String) = input
+fun result(input: List<String>) = input
     .flatMap { it.split(" | ").last().split(" ") }
     .count { it.length in digitLengths }
 
