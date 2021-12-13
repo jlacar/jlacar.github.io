@@ -1,5 +1,7 @@
 # From Zero to One in Five minutes - How to Eat an Elephant in Kotlin
 
+_(December 12, 2021)_
+
 This is the third of a series of posts about things I've learned about Kotlin while doing
 the [Advent of Code 2021](https://adventofcode.com). In the [previous post](kotlin-oneliners.md), I shared my one-liner
 solution to Part 1 of the Day 8 problem. In this post, I'll go over the process I followed to get that solution.
@@ -234,7 +236,7 @@ val testInput = readInput("Day08_test")
 result(testInput).also(::println).also { check(it == 26) }
 ```
 
-Still works. Next refactoring.
+Still works. Now on to the next step toward the final answer and the gold star.
 
 ## Baby step #7 - eliminate scaffolding
 
@@ -286,7 +288,7 @@ println(part1(input))
 One final run and I had my Day 8 Part 1 solution, which was 421 for my data set. With the final answer to Part 1 copied
 to my clipboard, I pasted it back into the Advent of Code website and claimed my gold star.
 
-"What? Done already?" I thought, pleasantly surprised. Cool.
+"What? Done already?" I thought, pleasantly surprised. Cool, another one-liner.
 
 ## Close out: add the final guardrail for the solution
 
@@ -309,7 +311,7 @@ helpings of feedback and checks of my understanding.
 
 ## Postblog
 
-In retrospect, I could have used a whale instead of an elephant in keeping with the theme of this year's Advent of Code.
+In retrospect, I should have used a whale instead of an elephant in keeping with the theme of this year's Advent of Code.
 Oh well, too late now. It's on to Part 2 of Day 8. That seems to be a much bigger problem from the looks of it. Let's
 see if I can eat a whale this time.
 
