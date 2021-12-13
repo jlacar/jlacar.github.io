@@ -242,7 +242,7 @@ fun part1(input: List<String>) = input
     .count { it.length in lengthsOfDigits1478 }
 
 val testInput = readInput("Day08_test")
-result(testInput).also(::println).also { check(it == 26) }
+part1(testInput).also(::println).also { check(it == 26) }
 
 val input = readInput("Day01")
 println(part1(input))
@@ -263,7 +263,7 @@ With the final answer to Part 1 copied to my clipboard, I went back to the Adven
 That's it. It took longer for me to write about it than to actually do it. In real time, the whole process took about 5
 minutes (maybe less). I don't know if you could call that process TDD but it certainly was incremental and involved a
 lot of feedback. And that, my friends, is how you eat an elephant in Kotlin: one small bite at a time with plenty of
-feedback.
+feedback and checking of your understanding.
 
 ### [<< Previous article](kotlin-oneliners.md)
 
