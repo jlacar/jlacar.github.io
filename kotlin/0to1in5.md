@@ -156,9 +156,12 @@ Oh yeah, next step, baby.
 This one was super easy. Part 1 needed me to count how many of these words had specific lengths. These words were
 supposed to correspond to digits (0-9) on a display and some of them had unique lengths by which you could identify the
 digit being represented. The unique lengths were 2 (for a word representing 1), 3 (for a word representing 4), 4 (for 7)
-, and 7 (for 8). Probably clear as mud to but again, go read the problem at the AoC website to get the whole story.
+, and 7 (for 8). 
 
-To get a count of words that were any of those lengths, I could apply a `filter` and then `count()` how many there were
+If that's clear as mud to you, just read the problem at the AoC website to get the whole story because
+they probably tell it far better than I can.
+
+Anyway, to get a count of words that were any of those lengths, I could apply a `filter` and then `count()` how many there were
 that satisfied the predicate.
 
 This time, I was confident enough with what I was doing to take two steps instead of the usual one. But first, I defined
