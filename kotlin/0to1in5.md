@@ -24,8 +24,8 @@ elephant-sized problem with relative ease in a very short amount of time.
 ## Baby steps, baby.
 
 When I solve a non-trivial problem, I typically start by breaking it down to smaller, more manageable problems that I
-can attack one at a time. This way I can usually avoid being overwhelmed by complexity. It's that whole eating an
-elephant one bite at a time thing. This problem was no different.
+can attack one at a time. This way I can usually avoid being overwhelmed by complexity. It's that whole [eating an
+elephant one bite at a time](https://youtu.be/a4fsTh4oyKo) thing. This problem was no different.
 
 First, I started with the input, which was a list of strings read from a file.
 
