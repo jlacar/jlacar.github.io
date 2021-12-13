@@ -155,14 +155,14 @@ Oh yeah, next step, baby.
 
 This one was super easy. Part 1 needed me to count how many of these words had specific lengths. These words were
 supposed to correspond to digits (0-9) on a display and some of them had unique lengths by which you could identify the
-digit being represented. The unique lengths were 2 (for the word representing 1), 3 (for the word representing 4), 4 (
-for 7), and 7 (for 8). That's probably clear as mud but that's what it was. 
+digit being represented. The unique lengths were 2 (for a word representing 1), 3 (for a word representing 4), 4 (for 7)
+, and 7 (for 8). Probably clear as mud to but again, go read the problem at the AoC website to get the whole story.
 
-To get a count of words that were any of those lengths, I could just apply a `filter` and
-then `count()` how many there were that satisfied the predicate.
+To get a count of words that were any of those lengths, I could apply a `filter` and then `count()` how many there were
+that satisfied the predicate.
 
-This time, I was confident enough with what I was doing to take two steps instead of just one. But first, I defined the
-criteria as an immutable list since it was essentially a constant.
+This time, I was confident enough with what I was doing to take two steps instead of the usual one. But first, I defined
+the criteria as an immutable list since it was essentially a constant.
 
 ```kotlin
 val digitLengths = listOf(2, 3, 4, 7)
