@@ -23,7 +23,7 @@ relative ease in a very short amount of time.
 
 When I solve a non-trivial problem, I typically start by breaking it down to smaller, more manageable problems that I can
 attack one at a time. This way I can usually avoid being overwhelmed by complexity. It's that whole eating an elephant
-one bite a time thing. This problem was no different.
+one bite at a time thing. This problem was no different.
 
 First, I started with the input, which was a list of strings read from a file.
 
@@ -163,8 +163,9 @@ This finally got me the expected output of 26, the answer to the sample problem.
 
 ## Baby step #6 - protect against regressions
 
-The first thing to do after arriving at the solution was to add a guardrail to protect me from myself, in case I messed
-anything up while refactoring.
+The first thing to do after arriving at the solution was to add `.also { check(it == 26) }` as a guardrail to protect me
+from myself, in case I messed anything up while refactoring.
+
 ```kotlin
 val digitLengths = listOf(2, 3, 4, 7)
 
@@ -193,7 +194,7 @@ fun result(input: List<String>) = input
 val testInput = readInput("Day08_test")
 result(testInput).also(::println).also { check(it == 26) }
 ```
-Nothing broken here, move on to the next refactoring.
+Didn't break anything with this, so I moved on to the next refactoring.
 
 ## Refactoring #2 - rename to clearly express intent
 
@@ -235,7 +236,8 @@ val input = readInput("Day01")
 println(part1(input))
 ```
 
-Redirecting execution back to `part1()` and eliminating the now unused `result()` function, I arrived at this:
+After mirroring `result()` to `part1()`, I redirected the execution path to `part1()` and eliminating the now
+unused `result()` function. I now had this:
 
 ```kotlin
 val lengthsOfDigits1478 = listOf(2, 3, 4, 7)
@@ -250,25 +252,27 @@ part1(testInput).also(::println).also { check(it == 26) }
 val input = readInput("Day01")
 println(part1(input))
 ```
-One final run and I got my Day 8 Part 1 solution, which was 421 for my data set.
 
-## Close out: add the final solution guardrail and claim your gold star
+One final run produced my Day 8 Part 1 solution, which was 421 for my data set. With the final answer to Part 1 copied
+to my clipboard, I pasted back into the Advent of Code website and claimed my gold star.
 
-Finally, I added a guardrail for my final solution to fully protect myself from regressions during future attempts to
-refactor.
+## Close out: add the final guardrail for the solution
+
+Finally, I added another guardrail, `.also { check(it == 421) }`, to fully protect myself from regressions during any
+future attempts to refactor.
 
 ```kotlin
 val input = readInput("Day01")
 part1(input).also(::println).also { check(it == 421) } // verified solution
 ```
-With the final answer to Part 1 copied to my clipboard, I went back to the Advent of Code website to claim my gold star. 
-
 That's it. 
 
-It took longer for me to write about it than to actually do it. In real time, the whole process took about 5
-minutes (maybe less). I don't know if you could call that process TDD but it certainly was incremental and involved a
-lot of feedback. And that, my friends, is how you eat an elephant in Kotlin: one small bite at a time with plenty of
-feedback and checking of your understanding.
+It took me longer to write about it than to actually do it. In real time, the whole process took about five minutes,
+maybe even less. 
+
+I don't know if you could call that process TDD but it certainly was incremental and involved a lot of feedback. And
+that, my friends, is how you eat an elephant in Kotlin: one small bite at a time, with generous helpings of feedback and
+checking of your understanding.
 
 ### [<< Previous article](kotlin-oneliners.md)
 
