@@ -311,9 +311,13 @@ helpings of feedback and checks of my understanding.
 
 ## Postblog
 
-In retrospect, I should have used a whale instead of an elephant in keeping with the theme of this year's Advent of Code.
-Oh well, too late now. It's on to Part 2 of Day 8. That seems to be a much bigger problem from the looks of it. Let's
-see if I can eat a whale this time.
+In retrospect, I should have used a whale instead of an elephant in keeping with the theme of this year's Advent of
+Code. I also realized that I've been mixing metaphors: baby steps and eating elephants. Babies and elephants don't mix
+well in real life or in metaphors. Oh well, too late now; sorry about that. Rest assured that no babies or elephants
+were harmed in the making of this blog post.
+
+Now it's on to Part 2 of Day 8. That seems to be a much bigger problem from the looks of it. Let's
+see if I can eat a whale this time and start making up some of the lost time.
 
 ### [<< Previous article](kotlin-oneliners.md)
 
