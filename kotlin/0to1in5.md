@@ -307,6 +307,12 @@ I don't know if you could call that process TDD, but it certainly was incrementa
 that, my friends, is how I ate (what I thought was) an elephant in Kotlin: one small bite at a time, with generous
 helpings of feedback and checks of my understanding.
 
+## Postblog
+
+In retrospect, I could have used a whale instead of an elephant in keeping with the theme of this year's Advent of Code.
+Oh well, too late now. It's on to Part 2 of Day 8. That seems to be a much bigger problem from the looks of it. Let's
+see if I can eat a whale this time.
+
 ### [<< Previous article](kotlin-oneliners.md)
 
 {% include post-footer.md %}
