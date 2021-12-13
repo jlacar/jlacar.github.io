@@ -197,7 +197,7 @@ Nothing broken here, move on to the next refactoring.
 
 ## Refactoring #2 - rename to clearly express intent
 
-The `digitLengths` name seemed a little too general so I decided to rename it to make it more express its purpose
+The `digitLengths` name seemed a little too general so I decided to rename it to express its purpose
 better. I don't know if I succeeded, but I went with this:
 
 ```kotlin
