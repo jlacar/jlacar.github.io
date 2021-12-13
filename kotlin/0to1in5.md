@@ -1,30 +1,43 @@
-# From Zero to One in Five minutes
+# From Zero to One in Five minutes - How to Eat an Elephant in Kotlin
 
-In the [previous article](oneliners.md), I showed how I solved Part 1 of the Day 8 problem in the [Advent of Code 2021](https://adventofcode.com).
+This is the third of a series of posts about things I've learned about Kotlin while doing
+the [Advent of Code 2021](https://adventofcode.com). In the [previous post](kotlin-oneliners.md), I shared my one-liner
+solution to Part 1 of the Day 8 problem. In this post, I'll go over the process I followed to get that solution.
 
-Here, I'll go into some details of the process I went through in coming up with that solution. I wanted to do this
-partly because I've [kind of been flexing on my friends](https://coderanch.com/t/747889/AoC-Day-Solutions-Spoilers) at
-JavaRanch who have been sharing their Java solutions. I'm not trying to show off or anything, but I can't help but feel
-that it still comes off as peacocking. That's the furthest thing from my mind, so I hope that by sharing my process,
-it'll help you learn something about Kotlin and how to quickly solve problems with it.
+I had fallen a few days behind on the puzzles and only got around to starting on the Day 8 problem earlier today, just a
+couple of hours into Day 12. I was prepared to spend an hour or so working on a solution but was pleasantly surprised
+when I got the answer in about five minutes.
 
-To recap the problem, we're asked to count how many words in a list have lengths of either 2, 3, 4, or 7. There's
-an cute story behind it at the Advent of Code website.
+I posted my one-liner solution
+to [the Day 8 Solutions thread at CodeRanch](https://coderanch.com/t/747889/AoC-Day-Solutions-Spoilers) but felt a
+little [_diyahe_*](https://hinative.com/en-US/questions/145497) about the brevity of my solution compared to some of the ones my
+friends at the ranch had shared. But I was still very happy to have found yet another way to show how expressive Kotlin
+programs can be.
+
+To ease my feelings of _diyahe_, I wanted to share the details of how I ate what I thought was going to be an elephant-sized problem with
+relative ease in a very short amount of time.
+
+> *_diyahe_ is a Filipino term that refers to a feeling of awkward embarrassment, not exactly shame, but closer to what some other Asian cultures describe as "losing face," except it's felt by the person who causes the loss of face. Essentially, it's feeling bad for making someone feel bad.
 
 ## Baby steps, baby.
 
-One problem I try to avoid is something I see all the time with developers I coach: many of them try to solve
-a problem all at one go. I call it "eyes too big for the stomach" syndrome. This doesn't tend to go very well and the
-solution, if you can even get to one that works, is invariably messy and confusing.
+When I solve a non-trivial problem, I typically start by breaking it down to smaller, more manageable problems that I can
+attack one at a time. This way I can usually avoid being overwhelmed by complexity. It's that whole eating an elephant
+one bite a time thing. This problem was no different.
 
-Instead of trying to solve a complex problem all at once, I like to break it down into smaller, more easily digestible
-problems. That's the approach I took with this one: break it down and step into the solution, one baby step at a time.
+First, I started with the input, which was a list of strings read from a file.
 
 ## Baby step #1: split each input line in two
 
-Each input line has two groups of words: a group of ten words separated by " | " from the second group of four words.
-The first baby step I chose to make was to split the input strings into these two groups. That can be done with split("
-| "). Using the lessons I learned about using also(), this was my first cut:
+Each line in the input was made up of two groups of words: a group of ten words separated by " | " from a second group
+of four words. If you want to know the whole story behind this peculiar format, go to the Advent of Code website and read the Day 8 problem.
+
+The first baby step I chose to make was splitting each line in the input into these two parts. That can be done
+with `split(" | ")`. I expected this to produce a `List<List<String>>` where each nested list of strings would have two
+elements, one for each part.
+
+I learned from previous days that the `also()` function is a great debugging tool so I used it to see what the
+intermediate result was. This was my first cut:
 
 ```kotlin
 fun result(input: List<String>) = input
@@ -34,7 +47,7 @@ val testInput = readInput("Day08_test")
 result(testInput).also(::println)
 ```
 
-> Developer Note: I use `also(::println)` because I already learned from previous days that it's an easy way to debug my code. When I get to the final solution, all I have to do is tack on also { check(...) } to add a safety net against regressions.
+> Developer Note: Eventually, once I found the solution, I would tack on an `.also { check() }` after `.also(::println)` to act as a guardrail against regressions. This is a pattern I had established while solving the problems in previous days.
 
 This is what the output looked like using the data from the problem example (formatted for clarity):
 
@@ -51,23 +64,21 @@ This is what the output looked like using the data from the problem example (for
  [gcafb gcf dcaebfg ecagb gf abcdeg gaef cafbge fdbac fegbdc, fgae cfgab fg bagce]]
 ```
 
-Great, it's clear that I've got separation of the two groups of words working now.
+Great, I got what I expected, now on to the next step.
 
 ## Baby step #2: extract the second group of words.
 
-This one is pretty easy: just use the `last()` function. We could use `[1]` but that's not as expressive.
+The next step was to focus on the second group on each line, the group that had four words. For this, I used the 
+`last()` function. I could have used `[1]` but that's not as expressive. Now we have this:
 
 ```kotlin
 fun result(input: List<String>) = input
     .map { it.split(" | ").last() }
-
-val testInput = readInput("Day08_test")
-result(testInput).also(::println)
 ```
 
-> Developer Note: I didn't specify an explicit return type for the result() function because I don't want to have to keep changing it as I build out the solution. Kotlin can infer the return type and that will carry over to the rest of the code that uses the function. If I don't say it, Kotlin will know how to interpret it. Then I can just check if what I expect matches what Kotlin actually does. This gives me rapid feedback about my understanding of the solution that I'm growing.
+> Developer Note: I didn't specify an explicit return type for the `result()` function because I didn't want to have to keep changing it as I built out the solution. By letting Kotlin infer the return type, I could check my understanding of what I had written so far. If Kotlin inferred the type I expected it to infer, then I knew I understood what was going on. Otherwise, there was some kind of misunderstanding on my part that I needed to clarify immediately so I could avoid moving forward with the wrong idea.
 
-This is the output:
+This is the output after adding `.last()` to the solution:
 
 ```text
 [fdgacbe cefdb cefbgd gcbe, 
@@ -86,18 +97,14 @@ Cool. Exactly what I wanted. Next baby step.
 
 ## Baby step #3: split into individual words
 
-Again, this one is pretty easy: we step in another split(), this time on " ":
+This was also straightforward: I step in `split(" ")` because the words are separated by a space. I now had this:
 
 ```kotlin
 fun result(input: List<String>) = input
     .map { it.split(" | ").last().split(" ") }
-
-val testInput = readInput("Day08_test")
-result(testInput).also(::println)
 ```
 
 This is the output:
-
 ```text
 [[fdgacbe, cefdb, cefbgd, gcbe], 
  [fcgedb, cgb, dgebacf, gc],
@@ -111,24 +118,21 @@ This is the output:
  [fgae, cfgab, fg, bagce]]
 ```
 
-Now we have a `List<List<String>>`.
+This was as expected and now we have a `List<List<String>>`.
 
 Next baby step.
 
 ## Baby step #4: flatten it
 
-This was the hard part. I had to spend a couple of minutes looking through flatMap() API documentation to make sure it
-does what I think it does. But a minute or two later, I had this:
+This was the hard part. I had to spend a couple of minutes looking through the `flatMap()` API documentation to make
+sure it does what I thought it does. A minute or two later, I had this:
 
 ```kotlin
 fun result(input: List<String>) = input
     .flatMap { it.split(" | ").last().split(" ") }
-
-val testInput = readInput("Day08_test")
-result(testInput).also(::println)
 ```
 
-Here, too, I get the expected output:
+This, too, gave the expected output:
 
 ```text
 [fdgacbe, cefdb, cefbgd, gcbe, 
@@ -142,11 +146,11 @@ Here, too, I get the expected output:
  gbdfcae, bgc, cg, cgb, 
  fgae, cfgab, fg, bagce]
 ```
-Next.
+Oh yeah, next step, baby.
 
 ## Baby step #5: count 'em'
 
-This one is super easy. Just filter on the criteria and use `count()`.
+This one was super easy. Just filter on the criteria and use `count()`.
 ```kotlin
 val digitLengths = listOf(2, 3, 4, 7)
 
@@ -154,16 +158,13 @@ fun result(input: List<String>) = input
     .flatMap { it.split(" | ").last().split(" ") }
     .filter { it.length in digitLengths }
     .count()
-
-val testInput = readInput("Day08_test")
-result(testInput).also(::println)
 ```
-This got me the expected output of 26.
+This finally got me the expected output of 26, the answer to the sample problem. 
 
 ## Baby step #6 - protect against regressions
 
-So now that I had the solution, I added my guardrail to protect me from myself:
-
+The first thing to do after arriving at the solution was to add a guardrail to protect me from myself, in case I messed
+anything up while refactoring.
 ```kotlin
 val digitLengths = listOf(2, 3, 4, 7)
 
@@ -176,12 +177,12 @@ val testInput = readInput("Day08_test")
 result(testInput).also(::println).also { check(it == 26) }
 ```
 
-Now that we have guard rail, let's move on to refactoring.
+With that guardrail in place, I could safely move on to refactoring.
 
 ## Refactoring #1 - simplify the call chain
 
-As noted in the previous article, IDEA was telling me that I could simplify the call chain. Ok.
-
+IDEA was telling me that I could simplify the call chain. In other words, `filter()` was redundant and could be
+eliminated.
 ```kotlin
 val digitLengths = listOf(2, 3, 4, 7)
 
@@ -192,17 +193,17 @@ fun result(input: List<String) = input
 val testInput = readInput("Day08_test")
 result(testInput).also(::println).also { check(it == 26) }
 ```
-
-Running again, I see I didn't break anything. Awesome! Great, IDEA, thanks for the tip!
+Nothing broken here, move on to the next refactoring.
 
 ## Refactoring #2 - rename to clearly express intent
 
-I don't know if I succeeded with this one but anyway, I went with this:
+The `digitLengths` name seemed a little too general so I decided to rename it to make it more express its purpose
+better. I don't know if I succeeded, but I went with this:
 
 ```kotlin
 val lengthsOfDigits1478 = listOf(2, 3, 4, 7)
 
-fun result(input: List<String) = input
+fun result(input: List<String>) = input
     .flatMap { it.split(" | ").last().split(" ") }
     .count { it.length in lengthsOfDigits1478 }
 
@@ -213,7 +214,7 @@ Still works. Next refactoring.
 
 ## Refactoring #3 - eliminate scaffolding
 
-Now I need to pull the solution together and clean up the code. So far, I had this:
+Now I needed to pull the solution together and clean up the code. So far, I had this:
 
 ```kotlin
 val lengthsOfDigits1478 = listOf(2, 3, 4, 7)
@@ -232,7 +233,7 @@ fun part1(input: List<String>): Int {
 val input = readInput("Day01")
 println(part1(input))
 ```
-Merging the two and eliminating `result()`, I got this:
+Merging the two and eliminating `result()`, I arrived at this:
 ```kotlin
 val lengthsOfDigits1478 = listOf(2, 3, 4, 7)
 
@@ -246,19 +247,23 @@ result(testInput).also(::println).also { check(it == 26) }
 val input = readInput("Day01")
 println(part1(input))
 ```
-One final run and I get my solution result, which for my data set, is 421
+One final run and I get my solution result, which was 421 for my data set.
 
-## Close out: add the final solution guardrail
+## Close out: add the final solution guardrail and claim your gold star
 
-Finally, I add a guardrail for my final solution, to support further refactoring.
+Finally, I add a guardrail for my final solution, to fully protect myself from regressions during future attempts to
+refactor.
+
 ```kotlin
 val input = readInput("Day01")
 part1(input).also(::println).also { check(it == 421) } // verified solution
 ```
+With the final answer to Part 1 copied to my clipboard, I went back to the Advent of Code website to claim my gold star. 
 
 That's it. It took longer for me to write about it than to actually do it. In real time, the whole process took about 5
-minutes (maybe less). You might call that process a quick-and-dirty TDD with the `check()` being my test that was
-driving the whole process.
+minutes (maybe less). I don't know if you could call that process TDD but it certainly was incremental and involved a
+lot of feedback. And that, my friends, is how you eat an elephant in Kotlin: one small bite at a time with plenty of
+feedback.
 
 ### [<< Previous article](kotlin-oneliners.md)
 
