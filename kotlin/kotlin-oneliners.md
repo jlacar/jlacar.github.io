@@ -207,7 +207,7 @@ But that's just me. Feel free to by-pass the extra layer of abstraction if you f
 For me, anything that makes the code more expressive is generally more of a good thing than bad.
 
 **EDITORIAL NOTE**: My friend from JavaRanch, Piet Souris, rightly pointed out that I wasn't actually comparing apples
-to apples with the examples I gave above. If I really wanted to give Java a fair shake as I claimed above, I should show this
+to apples with the examples I gave above. If I really wanted to give Java a fair shake as I claimed, I should show this
 way of writing the equivalent:
 
 ```java
