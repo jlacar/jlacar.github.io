@@ -206,6 +206,23 @@ like `frequencyMap()` expresses the intent more clearly, even though the straigh
 But that's just me. Feel free to by-pass the extra layer of abstraction if you feel it doesn't add much value for you.
 For me, anything that makes the code more expressive is generally more of a good thing than bad.
 
+**EDITORIAL NOTE**: My friend from JavaRanch, Piet Souris, rightly pointed out that I wasn't actually comparing apples
+to apples with the examples I gave above. If I really wanted to give Java a fair shake as I claimed above, I should show this
+way of writing the equivalent:
+
+```java
+public <T> Map<T, Long> frequencyMap(Stream<T> elements) {
+    return elements.collect(groupingBy(i -> i, counting());
+}
+
+public <T> Map<R, Long> frequencyMap2(Stream<T> elements, Function<T, R> keyExtractor) {
+    return elements.collect(groupingBy(keyExtractor, counting());
+}
+```
+
+Written this way, it's obvious you can do the same thing in Java just as clearly and concisely as in Kotlin. Thanks for
+keeping me honest and fair, Piet.
+
 ## Lesson #5: Using `flatMap()`, `last()`, and `count()`
 
 I fell behind on solving the puzzles this week because of work- and life-related stuff. As I'm writing this section,
