@@ -196,8 +196,8 @@ as easily inlined it wherever I needed a frequency map. These work just as well 
 
 There are a couple of reasons I wrote an intermediate `frequencyMap()` function. 
 
-First, I wanted to have a more apples-to-apples comparison with Java. I wanted to the Java example I cited a fair shake,
-even though it seems clear that Kotlin is the head-to-head winner when it comes to brevity and clarity.
+First, I wanted to have a more apples-to-apples comparison with Java. I wanted to give the Java example I cited a fair
+shake, even though it seems clear that Kotlin is the head-to-head winner when it comes to brevity and clarity.
 
 Second, and perhaps more compelling for me, is that I'm kind of obsessed with writing expressive code. My gut reaction 
 to something like `things.groupingBy { it }.eachCount()` is to refactor it to be more expressive. For me, a function
