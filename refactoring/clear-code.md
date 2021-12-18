@@ -13,14 +13,14 @@ Until now, that is. But before we get to that, let's take a closer look at this 
 
 ## Getting a Cue from the Code
 
-The origin story of the term "code smell" is summed up in Chapter 3 of Martin Fowler's book Refactoring: Improving the
-Design of Existing Code.
+The origin story of the term "code smell" is summed up in Chapter 3 of Martin Fowler's book _Refactoring: Improving the
+Design of Existing Code_.
 
 > If it stinks, change it. — Grandma Beck, discussing child-rearing philosophy
 
 It's kind of ironic that we use the sense of smell to describe things that cue us in to possible problems in the code.
 Because unless you have a 4D theme park ride computer that can give off malodorous puffs of air when poorly factored
-code is displayed, you can't literally smell code. It's just a figurative term.
+code is displayed, you can't literally _smell_ code. It's just a figurative term.
 
 There are, however, other senses that can quite literally be associated with possible problems in our code. I categorize
 them as Visual, Temporal, and Audible refactoring cues. The names aren't quite as catchy or as visceral as "code smell"
@@ -175,10 +175,10 @@ And if you use it, please try to remember my name: Junilu Lacar. (grin)
 You may not have noticed this, but there are three refactoring techniques mentioned here that are usually involved with
 the three categories of cues: Rename, Extract, and Compose.
 
-I have found that I use these three refactorings about eighty percent of the time (a SWAG, of course). Most, if not all,
-IDEs have Rename and Extract in their automatic refactoring toolbox. And Compose is usually achieved by a series of
-Extract and Renames, so really, you only need to employ Rename and Extract most of the time to keep your code clean and
-CLEAR.
+I have found that I use these three refactorings about eighty percent of the time (
+a [SWAG](https://en.wikipedia.org/wiki/Scientific_wild-ass_guess), of course). Most, if not all, IDEs have Rename and
+Extract in their automatic refactoring toolbox. And Compose is usually achieved by a series of Extract and Renames, so
+really, you only need to employ Rename and Extract most of the time to keep your code clean and CLEAR.
 
 If you just use the three visual cues and these three refactorings, you'll usually get your code to a much better place
 than it would be otherwise.
