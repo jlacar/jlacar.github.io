@@ -1,7 +1,7 @@
-# To make your code CLEAR, make it conversational
+# Make it CLEAR, Make it Conversational
 
-I first heard the idea of code telling a story from Kent Beck in [SE Radio Episode #167](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/). Kent was explaining how a test should have an arc of a story, with a clear beginning, middle, and end. Ever since
-then, I have used that idea in my conversations about design and code. These are the kind of things I often say:
+I first heard the idea of code telling a story from Kent Beck in [SE Radio Episode #167](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/). Kent was explaining how a test should have an arc of a story, with a clear beginning, middle, and end. Since
+then, I have used that in my conversations about design and code. These are some things I often say:
 
 "Make the code tell a story" 
 
