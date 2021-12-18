@@ -123,8 +123,8 @@ things. For example, read this code:
 
 Now read it out loud.
 
-Did you hear yourself stutter? Why does the code say "student" so many times? How about we refactor that so it doesn't
-sound like Porky Pig's rendition of "Blue Christmas?"
+Did you hear yourself stutter? Why does the code say "student" so many times? How about we refactor that to make it
+clearer?
 
 Now read this out loud:
 
