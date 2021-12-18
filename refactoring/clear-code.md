@@ -168,7 +168,7 @@ Yeah, I realize the grammar is a little peculiar and that "CLEAR code" ironicall
 get over that minor grammatical idiosyncrasy because it makes for really cool refactoring-speak: "How about we CLEAR
 this up?" aptly means "How about we make this code clearly express its intent?" Cool, right?
 
-And if you use it, please try to remember my name: Junilu Lacar. <grin>
+And if you use it, please try to remember my name: Junilu Lacar. (grin)
 
 ## Postblog
 
