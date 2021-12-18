@@ -61,6 +61,11 @@ There are other things that can visually indicate problems. Developers use white
 code to separate different responsibilities or groups of statements related to the same task. Groupings like that could
 be Misassigned Responsibility. Multiple dereferences of the same variable might indicate Feature Envy.
 
+One smell in particular that easily qualifies as a Visual cue
+is [Arrow Code](https://blog.codinghorror.com/flattening-arrow-code/). Surprisingly, many developers don't know about
+this one. I always warn people that once they see it, they'll never be able to unsee it. Then it's goodbye blissful
+ignorance, hello harsh realization that this has been right in front of them all the time.
+
 All these refactoring candidates can usually be addressed with some kind of Extraction. [Compose Method](https://www.informit.com/articles/article.aspx?p=1398607) refactoring can
 also come into play when dealing with visual cues, especially with Long Methods.
 
@@ -198,9 +203,11 @@ Laptop with code displayed
 
 ## References
 
-Kent Beck's Four Rules of Simple
-Design: [https://martinfowler.com/bliki/BeckDesignRules.html](https://martinfowler.com/bliki/BeckDesignRules.html)
+Fowler, M. (2015) *BeckDesignRules*, Bliki article:
+[https://martinfowler.com/bliki/BeckDesignRules.html](https://martinfowler.com/bliki/BeckDesignRules.html)
 
 Fowler, M. (1999). _Refactoring: Improving the Design of Existing Code_, Addison-Wesley. 1st Edition.
+
+Atwood, J. (Jan 2006) _Flattening Arrow Code_. Blog article: [https://blog.codinghorror.com/flattening-arrow-code/](https://blog.codinghorror.com/flattening-arrow-code/)
 
 Also published on [LinkedIn](https://www.linkedin.com/pulse/how-write-clear-code-get-better-refactoring-junilu-lacar)
