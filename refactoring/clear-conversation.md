@@ -1,4 +1,4 @@
-# Make your code CLEAR and Conversational
+# To make your code CLEAR, make it conversational
 
 I first heard the idea of code telling a story from Kent Beck in [SE Radio Episode #167](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/). Kent was explaining how a test should have an arc of a story, with a clear beginning, middle, and end. Ever since
 then, I have used that idea in my conversations about design and code. These are the kind of things I often say:
@@ -46,31 +46,31 @@ agreed it should.
 ```kotlin
     val knownSignalLengths = mapOf(1 to 2, 4 to 4, 7 to 3, 8 to 7)
 
-fun MutableList<Set<Char>>.setKnownSignalPatterns(signals: List<Set<Char>>) {
-    knownSignalLengths.forEach { (digit, length) ->
-        this[digit] = signals.first { it.size == length }
+    fun MutableList<Set<Char>>.setKnownSignalPatterns(signals: List<Set<Char>>) {
+        knownSignalLengths.forEach { (digit, length) ->
+            this[digit] = signals.first { it.size == length }
+        }
     }
-}
-
-fun MutableList<Set<Char>>.deduceSegments(signals: List<Set<Char>>, 
-                                          selectors: Map<Int, (Set<Char>) -> Boolean>) =
-    selectors.forEach { (digit, deduce) -> this[digit] = signals.first { deduce(it) } }
-
-fun MutableList<Set<Char>>.deduce5and6Segment(signals: List<Set<Char>>) {
-    deduceSegments(signals, selectors = mapOf<Int, (Set<Char>) -> Boolean>(
-        2 to { signal -> signal.size == 5 && (this[4] - signal).size == 2 },
-        3 to { signal -> signal.size == 5 && (this[7] - signal).isEmpty() },
-        6 to { signal -> signal.size == 6 && (this[7] - signal).size == 1 },
-        9 to { signal -> signal.size == 6 && (this[4] - signal).isEmpty() }
-    ))
-}
-
-fun MutableList<Set<Char>>.deduceRemaining(signals: List<Set<Char>>) {
-    deduceSegments(signals, selectors = mapOf<Int, (Set<Char>) -> Boolean>(
-        5 to { signal -> signal.size == 5 && signal !in this.slice(listOf(2, 3)) },
-        0 to { signal -> signal.size == 6 && signal !in this.slice(setOf(6, 9)) }
-    ))
-}
+    
+    fun MutableList<Set<Char>>.deduceSegments(signals: List<Set<Char>>, 
+                                              selectors: Map<Int, (Set<Char>) -> Boolean>) =
+        selectors.forEach { (digit, deduce) -> this[digit] = signals.first { deduce(it) } }
+    
+    fun MutableList<Set<Char>>.deduce5and6Segment(signals: List<Set<Char>>) {
+        deduceSegments(signals, selectors = mapOf<Int, (Set<Char>) -> Boolean>(
+            2 to { signal -> signal.size == 5 && (this[4] - signal).size == 2 },
+            3 to { signal -> signal.size == 5 && (this[7] - signal).isEmpty() },
+            6 to { signal -> signal.size == 6 && (this[7] - signal).size == 1 },
+            9 to { signal -> signal.size == 6 && (this[4] - signal).isEmpty() }
+        ))
+    }
+    
+    fun MutableList<Set<Char>>.deduceRemaining(signals: List<Set<Char>>) {
+        deduceSegments(signals, selectors = mapOf<Int, (Set<Char>) -> Boolean>(
+            5 to { signal -> signal.size == 5 && signal !in this.slice(listOf(2, 3)) },
+            0 to { signal -> signal.size == 6 && signal !in this.slice(setOf(6, 9)) }
+        ))
+    }
 ```
 
 The intent of the above function is to deduce the mappings for 5- and 6-segment signals. This is the context from which
