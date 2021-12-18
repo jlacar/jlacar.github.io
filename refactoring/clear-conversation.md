@@ -52,7 +52,8 @@ fun MutableList<Set<Char>>.setKnownSignalPatterns(signals: List<Set<Char>>) {
     }
 }
 
-fun MutableList<Set<Char>>.deduceSegments(signals: List<Set<Char>>, selectors: Map<Int, (Set<Char>) -> Boolean>) =
+fun MutableList<Set<Char>>.deduceSegments(signals: List<Set<Char>>, 
+                                          selectors: Map<Int, (Set<Char>) -> Boolean>) =
     selectors.forEach { (digit, deduce) -> this[digit] = signals.first { deduce(it) } }
 
 fun MutableList<Set<Char>>.deduce5and6Segment(signals: List<Set<Char>>) {
