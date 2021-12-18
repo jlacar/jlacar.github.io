@@ -64,12 +64,12 @@ be Misassigned Responsibility. Multiple dereferences of the same variable might 
 All these refactoring candidates can usually be addressed with some kind of Extraction. Compose Method refactoring can
 also come into play when dealing with visual cues, especially with Long Methods.
 
-## Temporal Cues 
+## Temporal Cues
 
-Temporal cues have to do with the passing of time. The more time it takes to do something, the more likely
-it is you are dealing with code that needs to be refactored. After all, refactoring is about making the code easier to
-work with and understand. If it takes you a long time to understand code, it more than likely means you have accumulated
-debt and are already paying interest.
+Temporal cues have to do with the passing of time. The more time it takes to do something, the more likely it is you are
+dealing with code that needs to be refactored. After all, refactoring is about making the code easier to work with and
+understand. If it takes you a long time to understand code, it more than likely means you have accumulated debt and are
+already paying interest.
 
 How long does it take you to understand a small section of code? If it takes you more than a few seconds to understand
 what a variable represents or what its purpose is, maybe it needs to be Renamed. How long does it take to connect the
@@ -99,7 +99,7 @@ need to break the problem down into smaller chunks. Maybe your solution is just 
 time keeping track of many different concepts in your head. Maybe you haven't refactored in a while. Maybe it's time to
 simplify and do some Extracting.
 
-## Audible Cues 
+## Audible Cues
 
 I have saved the best, and possibly the hardest to learn and leverage, for last: the Audible cues.
 
@@ -141,21 +141,20 @@ call it out and say "You weren't making any sense just now. That's not what the 
 technical debt which, by Ward Cunningham's definition, is a lack of understanding reflected in the code. The code is
 creating confusion by not reading like it sounds.
 
+### Listen for what you're not hearing
+
 Possibly the most difficult part about audible cues is listening for what's not being said. Any relevant information
-that is not explicitly written in the code will be either assumed or implied by people listening to code being read out
-loud. But that will only happen if people listening to the code have the context with which to fill in that missing
-information.
+that is not explicitly written in the code will be either assumed or inferred by those listening to the code being read
+out loud. But this only happens if they already know the information, because their brains will automatically fill in
+the missing context.
 
 Unfortunately, those who don't already have that part of the context in their heads will miss out on the tacit
 information. This is a gap in the code that can cause confusion and misunderstanding. This is where bugs can insidiously
-get into your code. This missing information that is not readily available from reading the code is also technical debt
-because people who don't have the missing information will take longer to understand the code.
+get into your code.
 
-If you already know it, your brain will automatically fill in the missing information for you as you read the code. But
-if it's not in the code, people who don't already know it will need to acquire it before the code will make sense to
-them the way it does to you. That information needs to get out of people's heads and be embodied in the code so that
-anyone else reading the code at a later time can readily acquire that information and the understanding that goes with
-it.
+Information that is not readily available from reading the code is also technical debt because people who don't have it
+will take longer to understand the code. It needs to get out of people's heads and be embodied in the code so that
+anyone else reading the code later on can readily gain the understanding that goes with it.
 
 ## Writing CLEAR code
 
@@ -171,10 +170,10 @@ this up?" aptly means "How about we make this code clearly express its intent?" 
 
 And if you use it, please try to remember my name: Junilu Lacar. <grin>
 
-## Postblog 
+## Postblog
 
-You may not have noticed this, but there are three refactoring techniques mentioned here that are usually
-involved with the three categories of cues: Rename, Extract, and Compose.
+You may not have noticed this, but there are three refactoring techniques mentioned here that are usually involved with
+the three categories of cues: Rename, Extract, and Compose.
 
 I have found that I use these three refactorings about eighty percent of the time (a SWAG, of course). Most, if not all,
 IDEs have Rename and Extract in their automatic refactoring toolbox. And Compose is usually achieved by a series of
@@ -196,7 +195,7 @@ Man reading and listening
 Photo
 by [Oskar Yildiz](https://unsplash.com/@oskaryil?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 on [Unsplash](https://unsplash.com/s/photos/computer-code?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText):
-Laptop on desktop
+Laptop with code displayed
 
 ## References
 
