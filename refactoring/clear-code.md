@@ -1,6 +1,6 @@
 # How to Write CLEAR Code and Get Better at Refactoring
 
-![Banner image of man reading James Clear Book Atomic Habits](docs/assets/nubelson-fernandes-XWn6m_oxvSM-unsplash.jpeg)
+![Banner image of man reading James Clear Book Atomic Habits](/docs/assets/nubelson-fernandes-XWn6m_oxvSM-unsplash.jpeg)
 
 In Kent Beck's four rules of simple design, Rule #2 "Reveals intention" could also be written as "Clearly expresses
 intent" or simply, "Clear."
@@ -42,7 +42,7 @@ have to refer back to Chapter 3 to refresh my memory for that.
 Some problems can be detected right off the bat without even reading the code. Just look at the shape of the code and
 how it's organized.
 
-![Image of Laptop with code displayed](https://unsplash.com/s/photos/computer-code?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+![Image of Laptop with code displayed](/docs/assets/oskar-yildiz-cOkpTiJMGzA-unsplash.jpeg)
 
 Even the color of the code in your IDE can tell you that something might be a candidate for refactoring. Modern IDEs
 like IntelliJ IDEA and other similar products are a great help in this. They will subtly cue you in to a refactoring
