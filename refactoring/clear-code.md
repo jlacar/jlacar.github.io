@@ -61,7 +61,7 @@ There are other things that can visually indicate problems. Developers use white
 code to separate different responsibilities or groups of statements related to the same task. Groupings like that could
 be Misassigned Responsibility. Multiple dereferences of the same variable might indicate Feature Envy.
 
-All these refactoring candidates can usually be addressed with some kind of Extraction. Compose Method refactoring can
+All these refactoring candidates can usually be addressed with some kind of Extraction. [Compose Method](https://www.informit.com/articles/article.aspx?p=1398607) refactoring can
 also come into play when dealing with visual cues, especially with Long Methods.
 
 ## Temporal Cues
@@ -173,10 +173,9 @@ And if you use it, please try to remember my name: Junilu Lacar. (grin)
 ## Postblog
 
 You may not have noticed this, but there are three refactoring techniques mentioned here that are usually involved with
-the three categories of cues: Rename, Extract, and Compose.
+the three categories of cues: Rename, Extract, and [Compose](https://www.informit.com/articles/article.aspx?p=1398607).
 
-I have found that I use these three refactorings about eighty percent of the time (
-a [SWAG](https://en.wikipedia.org/wiki/Scientific_wild-ass_guess), of course). Most, if not all, IDEs have Rename and
+I have found that I use these three refactorings about eighty percent of the time (a [SWAG](https://en.wikipedia.org/wiki/Scientific_wild-ass_guess), of course). Most, if not all, IDEs have Rename and
 Extract in their automatic refactoring toolbox. And Compose is usually achieved by a series of Extract and Renames, so
 really, you only need to employ Rename and Extract most of the time to keep your code clean and CLEAR.
 
