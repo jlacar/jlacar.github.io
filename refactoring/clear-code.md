@@ -66,8 +66,9 @@ is [Arrow Code](https://blog.codinghorror.com/flattening-arrow-code/). Surprisin
 this one. I always warn people that once they see it, they'll never be able to unsee it. Then it's goodbye blissful
 ignorance, hello harsh realization that this has been right in front of them all the time.
 
-All these refactoring candidates can usually be addressed with some kind of Extraction. [Compose Method](https://www.informit.com/articles/article.aspx?p=1398607) refactoring can
-also come into play when dealing with visual cues, especially with Long Methods.
+All these refactoring candidates can usually be addressed with some kind of
+Extraction. [Compose Method](https://www.informit.com/articles/article.aspx?p=1398607) refactoring can also come into
+play when dealing with visual cues, especially with Long Methods.
 
 ## Temporal Cues
 
@@ -175,19 +176,23 @@ this up?" aptly means "How about we make this code clearly express its intent?" 
 
 And if you use it, please try to remember my name: Junilu Lacar. (grin)
 
-## Postblog
+## CLEAR away cruft before you Clean
 
-You may not have noticed this, but there are three refactoring techniques mentioned here that are usually involved with
-the three categories of cues: Rename, Extract, and [Compose](https://www.informit.com/articles/article.aspx?p=1398607).
+There are three refactoring techniques mentioned here that are usually involved with the three categories of cues:
+Rename, Extract, and [Compose](https://www.informit.com/articles/article.aspx?p=1398607).
 
-I have found that I use these three refactorings about eighty percent of the time (a [SWAG](https://en.wikipedia.org/wiki/Scientific_wild-ass_guess), of course). Most, if not all, IDEs have Rename and
-Extract in their automatic refactoring toolbox. And Compose is usually achieved by a series of Extract and Renames, so
-really, you only need to employ Rename and Extract most of the time to keep your code clean and CLEAR.
+I have found that I use these three refactorings about eighty percent of the time (just
+a [SWAG](https://en.wikipedia.org/wiki/Scientific_wild-ass_guess), of course). Most IDEs have Rename and Extract in
+their automatic refactoring toolbox. And Compose usually involves a series of Extract and Renames, so really, you only
+need to use Rename and Extract to keep your code clean and CLEAR. The best thing is that these are typically safe
+refactorings that the IDE can automatically do for you.
 
-If you just use the three visual cues and these three refactorings, you'll usually get your code to a much better place
-than it would be otherwise.
+By just paying attention to Visual, Temporal, and Audible cues, and employing Rename, Extract, and Compose for the
+initial passes of refactoring, I have found that I can eliminate a significant amount of noise and complexity in the
+code. With that top layer of cruft cleared away, it's easier to spot problems that lie deeper in the code and design. 
 
-But remember, you first heard about CLEAR code right here, from me.
+Therefore, strive to get your code to CLEAR first, before you go for _clean_. This is how I developed my refactoring
+habit and continue to get better at it. Hopefully, it can help you get better, too.
 
 ## Credits
 
@@ -208,6 +213,7 @@ Fowler, M. (2015) *BeckDesignRules*, Bliki article:
 
 Fowler, M. (1999). _Refactoring: Improving the Design of Existing Code_, Addison-Wesley. 1st Edition.
 
-Atwood, J. (Jan 2006) _Flattening Arrow Code_. Blog article: [https://blog.codinghorror.com/flattening-arrow-code/](https://blog.codinghorror.com/flattening-arrow-code/)
+Atwood, J. (Jan 2006) _Flattening Arrow Code_. Blog
+article: [https://blog.codinghorror.com/flattening-arrow-code/](https://blog.codinghorror.com/flattening-arrow-code/)
 
 Also published on [LinkedIn](https://www.linkedin.com/pulse/how-write-clear-code-get-better-refactoring-junilu-lacar)
