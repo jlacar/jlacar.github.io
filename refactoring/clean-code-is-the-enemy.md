@@ -248,8 +248,9 @@ Use tests as your story board. Experiment. Don't agonize over what the best opti
 down. See each option in code and call it for what it is. Practice radical candor and remember to be kind. Make any
 criticism about the code, not the person writing it.
 
-Be willing to spend five minutes choosing a good name for something. Again, don't agonize of choices. Write them down
-and let each option stand or fall on its own merit. It'll pay off, I promise. 
+Be willing to spend five minutes choosing a good name for something. Again, don't agonize over which of the different
+choices is best. Try each choice out in the code and let each one stand or fall on its own merit. It'll pay off, I
+promise.
 
 Follow [Kent Beck's Four Rules of Simple Design](https://martinfowler.com/bliki/BeckDesignRules.html). These are really good guidelines; all kinds of goodness and important principles spring from them.
 
@@ -265,7 +266,7 @@ call stack. Remember, premature optimization is also a good intention and we all
 
 Commit to writing [CLEAR code](./clear-code.md). Telling the story of the code helps with that. Use your eyes, ears, and
 sense of time as well. You can't literally smell code problems, but you can certainly use your other senses to spot
-them. See my CLEAR Code article for more on this.
+them. My CLEAR Code article has more on this.
 
 Arlo said that the most common cause of bugs is illegible code. I absolutely agree with that. So does Ward. Understand
 that technical debt, at its core, is really about a lack of understanding. Have everybody watch the video and
