@@ -20,6 +20,8 @@ Thanks for visiting!
 ----
 
 ## Recent Posts
+(Dec 28, 2021) - [Clean Code is the enemy of Better Code](/refactoring/clean-code-is-the-enemy.md)
+
 (Dec 17, 2021) - [How to write CLEAR code and get better at refactoring](refactoring/clear-code.md)
 
 (Dec 12, 2021 - [From Zero to One in Five Minutes - How to Eat an Elephant in Kotlin](kotlin/0to1in5.md)
@@ -57,6 +59,8 @@ Thanks for visiting!
 [TBD]
 
 ### Refactoring
+
+(Dec 28, 2021) - [Clean Code is the enemy of Better Code](/refactoring/clean-code-is-the-enemy.md)
 
 (Dec 17, 2021) - [How to write CLEAR code and get better at refactoring](refactoring/clear-code.md)
 
