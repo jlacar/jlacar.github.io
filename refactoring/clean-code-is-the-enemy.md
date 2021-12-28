@@ -1,10 +1,10 @@
 # Clean Code is the Enemy of Better Code
 
-_Perfect is the enemy of good_—Voltaire
+_Perfect is the enemy of good_ —Voltaire
 
-_Good is the enemy of slightly less terrible_—Arlo Belshee
+_Good is the enemy of slightly less terrible_ —Arlo Belshee
 
-_For anything to change, someone has to start acting differently._—Chip Heath and Dan Heath in _Switch_
+_For anything to change, someone has to start acting differently._ —Chip Heath and Dan Heath in _Switch_
 
 In his "[Master Legacy Code Incrementally](https://youtu.be/9YxQzjtPdtw)" presentation, Arlo Belshee gives some
 extremely valuable advice about refactoring and unit testing. I have discovered many of the same things in my own
