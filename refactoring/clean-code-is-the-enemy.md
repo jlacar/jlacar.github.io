@@ -292,16 +292,18 @@ Good luck!
 
 ## References
 
-_Master Legacy Code Incrementally_ (December 2020), presented by Arlo Belshee. YouTube video. [https://youtu.be/9YxQzjtPdtw](https://youtu.be/9YxQzjtPdtw)
+Belshee, A. (May 2016). _The Core 6 Refactorings_. Blog post. [https://arlobelshee.com/the-core-6-refactorings/](https://arlobelshee.com/the-core-6-refactorings/)
 
-_BeckDesignRules_ (March 2015), Fowler, M. Bliki article. [https://martinfowler.com/bliki/BeckDesignRules.html](https://martinfowler.com/bliki/BeckDesignRules.html)
+Belshee, A. (December 2020). _Master Legacy Code Incrementally_. YouTube video. [https://youtu.be/9YxQzjtPdtw](https://youtu.be/9YxQzjtPdtw)
 
-_Debt Metapho_ (Feb 2009), Cunningham, W. YouTube video. [https://www.youtube.com/watch?v=pqeJFYwnkjE](https://www.youtube.com/watch?v=pqeJFYwnkjE)
+Clear, J. (2018). _Atomic Habits_. Penguin Random House, LLC.
 
-_Single Level of Abstraction Principle_ (Oct 2021), Web article. [http://principles-wiki.net/principles:single_level_of_abstraction](http://principles-wiki.net/principles:single_level_of_abstraction)
+Cunnigham, W. (Feb 2009). _Debt Metaphor_. YouTube video. [https://www.youtube.com/watch?v=pqeJFYwnkjE](https://www.youtube.com/watch?v=pqeJFYwnkjE)
 
-_The Core 6 Refactorings_ (May 2016), Belshee, A. Blog post. [https://arlobelshee.com/the-core-6-refactorings/](https://arlobelshee.com/the-core-6-refactorings/)
+Fowler, M. (March 2015). _BeckDesignRules_. Blog post. [https://martinfowler.com/bliki/BeckDesignRules.html](https://martinfowler.com/bliki/BeckDesignRules.html)
 
-_How to write CLEAR Code and get better at refactoring_ (Dec 2021), Lacar, J. Blog post. [https://jlacar.github.io/refactoring/clear-code.html](https://jlacar.github.io/refactoring/clear-code.html)
+(Oct 2021). _Single Level of Abstraction Principle_ (Oct 2021), Web article. [http://principles-wiki.net/principles:single_level_of_abstraction](http://principles-wiki.net/principles:single_level_of_abstraction)
+
+Lacar, J. (Dec 2021). _How to write CLEAR Code and get better at refactoring_ Mindful Practice Blog. [https://jlacar.github.io/refactoring/clear-code.html](https://jlacar.github.io/refactoring/clear-code.html)
 
 {% include post-footer.md %}
