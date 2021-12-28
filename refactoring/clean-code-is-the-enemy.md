@@ -298,12 +298,12 @@ Belshee, A. (December 2020). _Master Legacy Code Incrementally_. YouTube video. 
 
 Clear, J. (2018). _Atomic Habits_. Penguin Random House, LLC.
 
-Cunnigham, W. (Feb 2009). _Debt Metaphor_. YouTube video. [https://www.youtube.com/watch?v=pqeJFYwnkjE](https://www.youtube.com/watch?v=pqeJFYwnkjE)
+Cunningham, W. (Feb 2009). _Debt Metaphor_. YouTube video. [https://www.youtube.com/watch?v=pqeJFYwnkjE](https://www.youtube.com/watch?v=pqeJFYwnkjE)
 
 Fowler, M. (March 2015). _BeckDesignRules_. Blog post. [https://martinfowler.com/bliki/BeckDesignRules.html](https://martinfowler.com/bliki/BeckDesignRules.html)
 
 (Oct 2021). _Single Level of Abstraction Principle_ (Oct 2021), Web article. [http://principles-wiki.net/principles:single_level_of_abstraction](http://principles-wiki.net/principles:single_level_of_abstraction)
 
-Lacar, J. (Dec 2021). _How to write CLEAR Code and get better at refactoring_ Mindful Practice Blog. [https://jlacar.github.io/refactoring/clear-code.html](https://jlacar.github.io/refactoring/clear-code.html)
+Lacar, J. (Dec 2021). _How to write CLEAR Code and get better at refactoring_. Mindful Practice Blog. [https://jlacar.github.io/refactoring/clear-code.html](https://jlacar.github.io/refactoring/clear-code.html)
 
 {% include post-footer.md %}
