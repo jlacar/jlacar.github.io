@@ -216,15 +216,17 @@ venture out of their comfort zones, be willing to fail, and be comfortable with 
 
 They need to set aside their egos. Nothing impedes learning and improvement more than thinking that there's nothing
 anyone can teach you about how to get better at doing your work, that maybe the things you've learned and come to depend
-upon for success are outdates, outmoded, and in dire need of replacement.
+upon for success are outdated, outmoded, and in dire need of replacement.
 
 ## Our keys to Slightly Less Terrible on the road to Better Code
 
 So, how did my team and I survive eleven years of maintaining a legacy app that didn't have automated tests, was very
-poorly written and designed, and still manage to make keep our product viable and our sanity more or less intact?
+poorly written and designed, and still manage to make keep our product viable and our sanity more or less intact? (The
+hair situation was a total loss for me though. Ah well, you win some, you lose some.)
 
 First, you need good people on your team, people who are willing and eager to learn, who can set aside their egos and
-accept that no matter how many years they've been in this business, they still have room left to grow.
+accept that no matter how many years they've been in this business, they still have plenty of room left to grow. For the
+most part, I lucked out in this department. I had a great team of learners and doers.
 
 If you need to lose or replace people, have the courage and intestinal fortitude to make the choice. It's better to lose
 someone who isn't a fit than try to make it work against all odds. There's no time for that and it's not fair to anyone.
