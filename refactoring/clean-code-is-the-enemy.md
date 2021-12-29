@@ -235,7 +235,14 @@ If you do boot someone off the island, do it with kindness and empathy.
 Second, you need management to play their part. I've already gone over what's involved there.
 
 Third, learn to be okay with ugly. Things are going to get worse before they get better. Don't aim for Good, much less
-Perfect. Be okay with Slightly Less Terrible but don't be okay with living with Shitty Code.
+Perfect. Be okay with Slightly Less Terrible but don't be okay with living with Shitty Code. 
+
+And by "shitty" I mean code that's unclear, complex, confusing, hard to understand, slows you down, or makes you scrunch your face up
+or scratch your head and wonder "WTF?!" 
+
+That's it. 
+
+Anything else is just ugly and can wait until after you [make the code CLEAR](./clear-code.md)er.
 
 Fourth, be a team. Mob, or as they prefer to say these days, ensemble or whatever the verb form of that is. The best way
 to learn something is to try to teach it. Teach each other. Retrospect after every collaboration session, not just at
