@@ -135,7 +135,7 @@ No, wait, it's not even sorted! Who does that? 5, 3, 10, 3, 1, 5, 9, 3. It all s
 
 Let's see how he explains this:
 
-> I determine these values by starting with Labrador retriever. This breed seems medium-size to me, so I give it a five. Great Danes seem about twice as tall, so I give them a ten. Saint Bernards seem a little less that twice as tall, so I give them a nine. A dachshund seems about as short as a dog gets, so I give them a one. Bulldogs are short, so I gave them a three. However, if I had been estimating dog points based on weight, I would have given bulldogs a higher number.
+> I determine these values by starting with Labrador retriever. This breed seems medium-size to me, so I give it a five. Great Danes seem about twice as tall, so I give them a ten. Saint Bernards seem a little less than twice as tall, so I give them a nine. A dachshund seems about as short as a dog gets, so I give them a one. Bulldogs are short, so I gave them a three. However, if I had been estimating dog points based on weight, I would have given bulldogs a higher number.
 
 Ok, so it's a relative size again. But stories, they don't have a height. How do you eyeball a story's height? I still have no clue what size is about. 
 
