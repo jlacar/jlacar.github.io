@@ -209,7 +209,7 @@ That's it, I give up. This is ridiculous.
 
 As you can see, I am unable to make sense of Story Points and Velocity, much less do any calculations with them using dimensional analysis. That whole exercise was a non-starter because without clear units of measure, dimensional analysis or any calculation involving Story Points and Velocity is literally impossible.
 
-I therefore conclude that from a mathematical perspective, Velocity and Story Point calculations make no sense. Since logic is mathematical, it also follows that Velocity and Story Points are also illogical.
+I therefore conclude that from a mathematical perspective, Velocity and Story Point calculations make no sense. Since logic is mathematical, it follows that Velocity and Story Points are also illogical.
 
 Please prove me wrong.
 
