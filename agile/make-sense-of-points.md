@@ -89,7 +89,7 @@ First, we need to know what kind of units we're dealing with. Let's start with V
 The [glossary at scrum.org](https://www.scrum.org/resources/scrum-glossary) defines Velocity as
 > an **indication of the amount of Product Backlog** turned into an Increment of product during a Sprint
 
-Okay... an indication of the amount of Product Backlog. A Product Backlog Item is usually a story, so the amount of stories? What's the unit for a story? That would story points, right?
+Okay... an indication of the amount of Product Backlog. A Product Backlog Item is usually a story, so the amount of stories? What's the unit for a story? That would be a point, right?
 
 The [glossary at agilealliance.org](https://www.agilealliance.org/glossary/velocity/) has this in its entry for Velocity:
 > the user stories remaining represent a total of 40 points.
@@ -101,9 +101,9 @@ Maybe this article about [improving estimation with story points](https://www.ag
 
 So points are a relative measurement. Okay, so like a ratio or a percentage. A percentage of what? Size and complexity?
 
-What are the units for size? For complexity? It can't be points, because that would be a circular definition. You can't define a unit by itself. 
+What are the units for size? For complexity? It can't be points, because that would make it a circular definition. You can't define a unit by itself. You can't say a foot is a foot, or a pound is a pound. A foot is twelve inches. It's a third of a yard. And a pound, well, it's sixteen ounces, or one hundred pence, depending on what kind of pound we're talking about.
 
-This is getting confusing as heck.
+But what is a point?! This is getting confusing as heck.
 
 Wait, let's check Mike Cohn's _Agile Estimation and Planning_ book. That's kind of the handbook for Agile estimation and planning, right? There's gotta be some definitive answer in there.
 
@@ -121,17 +121,17 @@ Complexity. There it is again, but what are the units for it?
 
 Risk. What's the unit of measure for risk?
 
-And... oh nuts. What the heck is "and so on"? How do you assign units to that?!
+And... oh NUTs. (apparently, that's [what Josh Kerievsky said](https://www.industriallogic.com/blog/stop-using-story-points/), too) 
+
+What the heck is this "and so on"? How do you assign units to that?!
 
 Looking further down the page, Mike starts talking about dog points. What?! He's got a list of eight dogs that he assigns "dog points" to.
 
-According to this, a dog point is the height of the dog at the shoulder. So why not just say inches or feet? Why do we have to say "dog points"? What's the point of that?
+According to this, a dog point is the height of the dog at the shoulder. So why not just use inches or feet? Why "dog points"? What's the point of that?
 
 Ooh, there's a table on the next page. Maybe this'll clear things up.
 
-No, wait, it's not even sorted! Who does that? 5, 3, 10, 3, 1, 5, 9, 3. What is that, height in inches? 
-
-Wait, he's got three 3s and two 5s there! What is going on here? I'm confused as heck now.
+No, wait, it's not even sorted! Who does that? 5, 3, 10, 3, 1, 5, 9, 3. It all seems so random. And he's got three 3s and two 5s there! What is going on here? I'm confused as heck now.
 
 Let's see how he explains this:
 
@@ -143,11 +143,11 @@ Man, this guy's all over the place! Not only does he _not_ sort the table by siz
 
 No, wait, further down he does mention the terrier and the poodle and they're supposed to have the same number of dog points because they're about the same size. He says something about a loosely-defined story (or dog). 
 
-Stories and dogs, hmmm. The analogy seems flawed. Aren't these two as comparable as video games and shoes? I mean how do you size a video game? 
+Stories and dogs, hmmm. The analogy seems flawed. Aren't these two as comparable as video games and shoes? I mean what's the size of a video game? How do you quantify a video game's complexity?
 
-These are called _incommensurable quantities_ in dimensional analysis, like how you can't compare miles to pounds or hours to inches. It doesn't make sense. None of this does! Ahhhgh!
+If I remember right, these things are called _incommensurable quantities_ in dimensional analysis, like how miles and pounds or hours and inches. It makes no sense to compare them. None of this make sense! Ahhhgh!
 
-Ok, so with dogs, he estimates by height (i.e. inches), but then he says he could have also estimated by weight (pounds) and that would have given different numbers. Well, duh! Incommensurable, buddy. And it seems kind of random to me to pick one or the other.
+Back to Mike. Ok, so with dogs, he estimates by height (inches), but then he says he could have also estimated by weight (pounds) and that would have given different numbers. Well, duh! Incommensurable, buddy. And it seems kind of random to me to pick one or the other.
 
 I don't know about this, it's not clearing up anything for me. So what now?
 
@@ -157,25 +157,25 @@ Let's go back to [agilealliance.org](https://www.agilealliance.org/) and that [p
 
 What? So Velocity is a dimensionless quantity?!
 
-(checks notes) scrum.org says that it's an "indication of the amount of Product Backlog turned into an Increment of product."
+(checks notes) And earlier, scrum.org said that it's an "indication of the amount of Product Backlog turned into an Increment of product."
 
 Are we supposed to amalgamate those into "Velocity is a dimensionless indication of the amount of Product Backlog turned into an increment of product"?
 
-Now we have Velocity as a "dimensionless indication of the amount"? Looking up the meaning of amount, it's defined as
+Now we have Velocity as a "dimensionless indication of the amount"? Looking up amount, it's defined as
 
 > the quantity of something, especially the total of a thing or things in number, size, value, or extent.
 
-That last word, extent, might be something there. Extent, as in the amount of pain, confusion, and frustration this exercise is causing me? Yeah, I'm feeling quite a bit of that right now.
+That last word, extent, might be something there. Extent, as in the amount of pain, confusion, and frustration this exercise is causing me? Yeah, I'm feeling that to quite an extent right now.
 
 So is that how we're supposed to quantify Velocity? With dimensionless indications of amount like "a lot", "a little", "a bit", or "a bunch"?
 
-"We delivered _a lot_ of stories this increment."
+    "We delivered _a lot_ of stories this increment."
 
-"We completed _a bunch_ of stories that the customer needed."
+    "We completed _a bunch_ of stories that the customer needed."
 
-"We had _a few_ bugs that escaped into production."
+    "We had _a few_ bugs that escaped into production."
 
-Well, at least it makes sense, but I don't think it's going to fly, and certainly not in a math equation.
+Well, at least that makes sense, but I don't think it's going to fly, and certainly not in a math equation.
 
 Let's take yet another tack. The [agilealliance.org entry on Velocity](https://www.agilealliance.org/glossary/velocity/) says
 
@@ -185,29 +185,29 @@ Great, so now we're back to time. "How long it will take to complete" is time, r
 
 So Velocity is also an indication of time. But if it's a dimensionless indication of amount, how can it also be the amount of time? Time isn't dimensionless; we have seconds, hours, days, weeks, months, _and so on_. Right, Mike?
 
-One last tack. I heard somebody say Velocity is value. Value to the customer, that is.
+One more tack. I heard somebody say Velocity is value. Value to the customer, that is.
 
 Ok, but then what about [this article](https://www.scrum.org/resources/blog/scrum-myths-velocity-value) that says
 
 >  Velocity and value are very different things.
 
-And then it goes on to say
+And it also say
 
 > In the context of a Scrum Team, value is only created when the product (increment) reaches the customers... the real value can only be measured once the product has been released and is being used.
 
-So, value isn't even real until the product is actually being used by the customers. So, what, are we measuring _fake_ value when we're still planning and estimating?
+So, value isn't even real until the product is actually being used by the customers. So, what are we measuring when we're still planning and estimating, _fake_ value? Pretend value? Potential value?
 
 One last try. [This article](https://scrum.courses/2019/03/26/what-is-scrum-team-velocity-measurement/) says:
 
 > velocity is a measure of the team’s ability to deliver value to the custom
 
-Yeah, well buddy, it was just established that value isn't a thing until the software is in the hands of the customer and is being used. So how do we measure value if the software is still in our hands and we haven't completed anything yet?
+Yeah, well buddy, it was just established that value isn't a thing until the software is in the hands of the customer and is being used. So how do we measure value if the software is still in our hands and we haven't even made anything yet? Is this going be another one of those point things?
 
 That's it, I give up. This is ridiculous.
 
 ## Conclusion
 
-As you can see, I am unable to make sense of Story Points and Velocity, much less do any calculations with them using dimensional analysis. That whole exercise was a non-starter because without clear units of measure, dimensional analysis or any calculation involving Story Points and Velocity is literally impossible.
+As you can see, I am unable to make sense of Story Points and Velocity, much less do any calculations with them, or do any dimensional analysis. The things are dimensionless, for crying out loud. That whole exercise was a non-starter because without clear units of measure, dimensional analysis or any calculation involving Story Points and Velocity is literally impossible.
 
 I therefore conclude that from a mathematical perspective, Velocity and Story Point calculations make no sense. Since logic is mathematical, it follows that Velocity and Story Points are also illogical.
 
