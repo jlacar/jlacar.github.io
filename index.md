@@ -20,6 +20,9 @@ Thanks for visiting!
 ----
 
 ## Recent Posts
+
+(Dec 30, 2021) - [Making sense of Story Points using Dimensional Analysis](/agile/make-sense-of-points.md)
+
 (Dec 28, 2021) - [Clean Code is the enemy of Better Code](/refactoring/clean-code-is-the-enemy.md)
 
 (Dec 17, 2021) - [How to write CLEAR code and get better at refactoring](refactoring/clear-code.md)
