@@ -288,7 +288,7 @@ name here right now. Look around and you'll know who they are.
 
 That's about it. 
 
-No wait, there's one last thing, and I'm embarrassed I didn't close with this in the version I first posted. And I'm not kissing up to him because he happened to be one of the first people to read this and endorsement it. 
+No wait, there's one last thing, and I'm embarrassed I didn't close with this in the version I first posted. And I'm not kissing up to him because he happened to be one of the first people to read this and endorse it. 
 
 I'm dead serious when I say it's an injustice that there aren't a million more views of Arlo's video about menders and setting the bar lower. If you haven't seen it yet, [go and watch Arlo's video now](https://youtu.be/9YxQzjtPdtw). You owe it to yourself and your fellow developers.
 
