@@ -137,7 +137,7 @@ Let's see how he explains this:
 
 > I determine these values by starting with Labrador retriever. This breed seems medium-size to me, so I give it a five. Great Danes seem about twice as tall, so I give them a ten. Saint Bernards seem a little less than twice as tall, so I give them a nine. A dachshund seems about as short as a dog gets, so I give them a one. Bulldogs are short, so I gave them a three. However, if I had been estimating dog points based on weight, I would have given bulldogs a higher number.
 
-Ok, so it's a relative size again. But stories, they don't have a height. How do you eyeball a story's height? I still have no clue what size is about. 
+Ok, so it's a relative size again. But stories, they don't have a height. How do you eyeball a story's height? I still have no clue what story size is about or how to wrap my brain around it. 
 
 Man, this guy's all over the place! Not only does he _not_ sort the table by size, he randomly jumps around the list when he explains his "dog point" choices. He doesn't explain all of them either: he said nothing about the Terrier, Poodle, or German Shepherd! 
 
