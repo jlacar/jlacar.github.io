@@ -145,17 +145,21 @@ No, wait, further down he does mention the terrier and the poodle and they're su
 
 Stories and dogs, hmmm. The analogy seems flawed. Aren't these two as comparable as video games and shoes? I mean what's the size of a video game? How do you quantify a video game's complexity?
 
-If I remember right, these things are called _incommensurable quantities_ in dimensional analysis, like how miles and pounds or hours and inches. It makes no sense to compare them. None of this make sense! Ahhhgh!
+If I remember right, these things are called _incommensurable quantities_ in dimensional analysis, like miles and pounds or hours and inches. It makes no sense to compare them to each other. 
 
-Back to Mike. Ok, so with dogs, he estimates by height (inches), but then he says he could have also estimated by weight (pounds) and that would have given different numbers. Well, duh! Incommensurable, buddy. And it seems kind of random to me to pick one or the other.
+Most of all, you can't do math with incommensurable quantities. Unless you're some kind of magical Agile Alchemist, you can't just "amalgamate" hours and inches, much less effort, complexity, and risk. Not without commensurable units. And certainly not with dimensionless units. There's no formula in the world that will let you do that. How does that even make sense? Ahhhgh!
 
-I don't know about this, it's not clearing up anything for me. So what now?
+Let's get back to Mike. 
+
+Ok, so with dogs, he estimates by height (inches), but then he says he could have also estimated by weight (pounds) and that would have given different numbers. Well, duh! Incommensurable, buddy. And it seems kind of random to me to pick one or the other.
+
+I don't know about this, nothing's clearing up for me. So what now?
 
 Let's go back to [agilealliance.org](https://www.agilealliance.org/) and that [points estimation article](https://www.agilealliance.org/glossary/points-estimates-in/). It says here that
 
 > "Velocity,” in the sense Agile teams use the term, has no preferred unit of measurement, **it is a dimensionless quantity**.
 
-What? So Velocity is a dimensionless quantity?!
+So Velocity is a dimensionless quantity?!
 
 (checks notes) And earlier, scrum.org said that it's an "indication of the amount of Product Backlog turned into an Increment of product."
 
@@ -169,17 +173,17 @@ That last word, extent, might be something there. Extent, as in the amount of pa
 
 So is that how we're supposed to quantify Velocity? With dimensionless indications of amount like "a lot", "a little", "a bit", or "a bunch"?
 
-    "We delivered _a lot_ of stories this increment."
+    "We delivered A LOT of stories this increment."
 
-    "We completed _a bunch_ of stories that the customer needed."
+    "We completed A BUNCH of stories that the customer needed."
 
-    "We had _a few_ bugs that escaped into production."
+    "We had A FEW bugs that escaped into production."
 
 Well, at least that makes sense, but I don't think it's going to fly, and certainly not in a math equation.
 
 Let's take yet another tack. The [agilealliance.org entry on Velocity](https://www.agilealliance.org/glossary/velocity/) says
 
-> Knowing velocity, the team can compute (or revise) an estimate of how long the project will take to complete
+> Knowing velocity, the team can compute (or revise) **an estimate of how long the project will take to complete**
 
 Great, so now we're back to time. "How long it will take to complete" is time, right? I thought these things aren't supposed to be about time. Gah.
 
@@ -191,17 +195,17 @@ Ok, but then what about [this article](https://www.scrum.org/resources/blog/scru
 
 >  Velocity and value are very different things.
 
-And it also say
+And it also says
 
-> In the context of a Scrum Team, value is only created when the product (increment) reaches the customers... the real value can only be measured once the product has been released and is being used.
+> In the context of a Scrum Team, value is only created when the product (increment) reaches the customers... **the real value can only be measured once the product has been released and is being used**.
 
-So, value isn't even real until the product is actually being used by the customers. So, what are we measuring when we're still planning and estimating, _fake_ value? Pretend value? Potential value?
+So, value isn't even real until the product is actually being used by the customers. What are we measuring when we're still planning and estimating then, _fake_ value? Pretend value? Potential value? Much anticipated value?
 
 One last try. [This article](https://scrum.courses/2019/03/26/what-is-scrum-team-velocity-measurement/) says:
 
-> velocity is a measure of the team’s ability to deliver value to the custom
+> velocity is a measure of the team’s ability to deliver value to the customer
 
-Yeah, well buddy, it was just established that value isn't a thing until the software is in the hands of the customer and is being used. So how do we measure value if the software is still in our hands and we haven't even made anything yet? Is this going be another one of those point things?
+Yeah, guess what, it was just established that value isn't a thing until the software is in the hands of the customer and is being used. So how do we measure value if the software is still in our hands and we haven't even made anything yet? Is this going be another one of those point things?
 
 That's it, I give up. This is ridiculous.
 
