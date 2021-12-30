@@ -286,7 +286,15 @@ Wake, Tim Ottinger, Joshua Kerievski, Michael Feathers, Nat Pryce and Steve Free
 Neal Ford, Venkat Subramaniam, The Gang of Four, Eric Evans, they were all our teachers. So were a bunch of other folks they know, too many of them to
 name here right now. Look around and you'll know who they are.
 
-That's about it. Anything else I haven't mentioned you'll probably discover along the way anyway.
+That's about it. 
+
+No wait, there's one last thing, and I'm embarrassed I didn't close with this in the version I first posted. And I'm not kissing up to him because he happened to be one of the first people to read this and endorsement it. 
+
+I'm dead serious when I say it's an injustice that there aren't a million more views of Arlo's video about menders and setting the bar lower. If you haven't seen it yet, [go and watch Arlo's video now](https://youtu.be/9YxQzjtPdtw). You owe it to yourself and your fellow developers.
+
+And if you've managed to read to this point, know that you probably have what it takes to take back control of your code like we did. It takes patience, and perseverance. It takes a willingness to wait for all those 1%-or-less improvements to get to critical mass and really start paying off. Stick with it. It will come. Maybe sooner than you think.  
+
+Ok, now I'm done. Anything else I haven't mentioned you'll probably discover along the way anyway.
 
 ## Promises to keep, and many miles to go...
 
