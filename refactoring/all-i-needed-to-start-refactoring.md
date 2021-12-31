@@ -29,11 +29,19 @@ The second one is probably what you'd immediately associate with refactoring but
 
 Let's start with the obvious one. When it comes to writing first-time code, we developers are like kindergarteners with their first coloring book: we use the wrong colors, we color outside the lines, we don't fill everything up, and color in things that shouldn't be colored in. And then, when we're marginally satisfied with our work, we quickly turn the page and start on the next picture.
 
-I'm sure if you had a chance to flip through one of your old coloring books from kindergarten, you'd chuckle at how crude and unrefined your motor skills and sense of art were back then.
+Code-wise, it means that there's always something off or not-quite-right with our initial cut, or cuts, of the code and design. 
 
-But If you had a chance to travel back in time and help your young self, would you teach yourself the nuances of shadow and light, of the significance of space, negative space, perspective, and depth? I doubt it.
+This is because when we start, we naturally don't much about what the design _should_ be until we've actually written something down and see that it's _not_ as good as we thought it would be. 
 
-If anything, you'd probably start with what a typical kindergartner could handle: stick with the basic tools and try not to color outside the lines.
+I'm sure if you had a chance to flip through one of your old coloring books from kindergarten, you'd chuckle at how crude and unrefined your motor skills and sense of art were back then. 
+
+That's the same thing with our code and designs, only it shouldn't take years before we realize we could do better. 
+
+But If you had a chance to travel back in time and help your younger self, would you teach yourself the nuances of shadow and light, of the significance of space, negative space, perspective, and depth? I doubt it.
+
+If anything, you'd probably start with what a typical kindergartner could handle: stick with the basic tools and try not to color outside the lines. 
+
+Again, it's the same thing when it comes to teaching our just minutes-ago younger selves what we could do better in our code: Start with the basic tools and techniques. 
 
 ### The basic refactoring tools
 
