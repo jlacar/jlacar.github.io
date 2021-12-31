@@ -21,6 +21,8 @@ Thanks for visiting!
 
 ## Recent Posts
 
+(Dec 31, 2021) - [All I Really Needed to Start Refactoring I Learned in Kindergarten](/refactoring/all-i-needed-to-start-refactoring.md)
+
 (Dec 30, 2021) - [Making sense of Story Points using Dimensional Analysis](/agile/make-sense-of-points.md)
 
 (Dec 28, 2021) - [Clean Code is the enemy of Better Code](/refactoring/clean-code-is-the-enemy.md)
@@ -62,6 +64,8 @@ Thanks for visiting!
 [TBD]
 
 ### Refactoring
+
+(Dec 31, 2021) - [All I Really Needed to Start Refactoring I Learned in Kindergarten](/refactoring/all-i-needed-to-start-refactoring.md)
 
 (Dec 28, 2021) - [Clean Code is the enemy of Better Code](/refactoring/clean-code-is-the-enemy.md)
 
