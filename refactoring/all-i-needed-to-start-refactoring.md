@@ -15,13 +15,13 @@ If this sounds like more of what I've said before, I think it's an important mes
 ## Basic Sanitation
 
 Of the sixteen rules in Fulghum's Kindergarten Credo, a quarter of them are about basic sanitation:
-* Put things back where you found them
-* Clean up your own mess
-* Wash your hands before you eat
-* Flush.
+  - Put things back where you found them
+  - Clean up your own mess
+  - Wash your hands before you eat
+  - Flush.
 
-You're likely to associate the second one with refactoring but all of them are related in some way. I would even add, as a companion to all four of them, this one:
-* And then remember the Dick-and-Jane books and the first word you learned—the biggest word of all—LOOK.
+The second one is probably would you'd immediately associate with refactoring but all of them are related in some way. As a companion to all four of them, I would add this one:
+  - And then remember the Dick-and-Jane books and the first word you learned—the biggest word of all—LOOK.
 
 ### Clean up your own mess
 
