@@ -61,7 +61,7 @@ Modern IDEs can warn you of any potential problems in renaming or extracting cod
 
 To stay inside the lines, use Compose. If you're not clear on how this helps you do that, read up on SLAP ([Single Level of Abstraction Principle](https://www.google.com/search?q=single+level+of+abstraction+principle)). Jumping from one level of abstraction to another inside the same method is like coloring outside the lines. It's messy and it's distracting.
 
-![squiggly lines]ure/docs/assets/andrew-donovan-valdivia-DSnAH3SgGbI-unsplash.jpeg)
+![Squiggly lines](/docs/assets/andrew-donovan-valdivia-DSnAH3SgGbI-unsplash.jpeg)
 
 You don't need to pay for an expensive coach or go to a training class to grok this. Just [look it up](https://www.google.com/search?q=compose+method+refactoring).
 
@@ -164,14 +164,14 @@ Pencil and eraser. Photo by <a href="https://unsplash.com/@kimgorga?utm_source=u
 
 Kid holding hand. Photo by <a href="https://unsplash.com/@guillaumedegermain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Guillaume de Germain</a> on <a href="https://unsplash.com/s/photos/kids-crossing-street?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
+Squiggly lines. Photo by <a href="https://unsplash.com/@donovan_valdivia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrew "Donovan" Valdivia</a> on <a href="https://unsplash.com/s/photos/coloring-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Inside the lines. Photo by <a href="https://unsplash.com/@funjabi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sandeep Singh</a> on <a href="https://unsplash.com/s/photos/coloring-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
 Nice and tidy toys. Photo by <a href="https://unsplash.com/@prochurchmedia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pro Church Media</a> on <a href="https://unsplash.com/s/photos/coloring-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 Donkey behind a wall. Photo by <a href="https://unsplash.com/@annakaminova?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anna Kaminova</a> on <a href="https://unsplash.com/s/photos/donkey-clown?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 Toys and friends. Photo by <a href="https://unsplash.com/@hannahrodrigo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hannah Rodrigo</a> on <a href="https://unsplash.com/s/photos/coloring-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-Squiggly lines. Photo by <a href="https://unsplash.com/@donovan_valdivia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrew "Donovan" Valdivia</a> on <a href="https://unsplash.com/s/photos/coloring-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-Inside the lines. Photo by <a href="https://unsplash.com/@funjabi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sandeep Singh</a> on <a href="https://unsplash.com/s/photos/coloring-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 {% include post-footer.md %}
