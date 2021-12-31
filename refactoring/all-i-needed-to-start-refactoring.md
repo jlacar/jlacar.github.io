@@ -53,13 +53,13 @@ Modern IDEs can warn you of any potential problems in renaming or extracting cod
 
 To stay inside the lines, use Compose. If you're not clear on how this helps you do that, read up on SLAP ([Single Level of Abstraction Principle](https://www.google.com/search?q=single+level+of+abstraction+principle)). Jumping from one level of abstraction to another inside the same method is like coloring outside the lines. It's messy and it's distracting.
 
-![squiggly lines](/docs/assets/andrew-donovan-valdivia-DSnAH3SgGbI-unsplash.jpeg)
+![squiggly lines]ure/docs/assets/andrew-donovan-valdivia-DSnAH3SgGbI-unsplash.jpeg)
 
 You don't need to pay for an expensive coach or go to a training class to grok this. Just [look it up](https://www.google.com/search?q=compose+method+refactoring).
 
 Compose mainly uses Rename and Extract. Learning how to Compose will take all of half an hour to read up on and maybe a couple of hours to practice and get a hang of. 
 
-Start using Compose and use it to paint a clearer pictures in your code that other people can easily understand.
+Start using Compose and use it to paint a clearer picture of what's going on in your code. This will help people makes sense of the code and easily understand it.
 
 ![Inside the lines](/docs/assets/sandeep-singh-Qito7fJMOEo-unsplash.jpeg)
 
@@ -74,7 +74,7 @@ This means that you shouldn't put good code on top of bad code. Refactor the are
 
 This is how Kent Beck says it:
 
-![Kent Beck tweet](/docs/assets/kent-beck-easy.png)
+![Kent Beck tweet](/docs/assets/kent-beck-easy.p
 
 A corollary to this is related to the good old 3-second rule. Remember that one? The one that says if a thing hasn't been on the ground for more than three seconds then it's still good to pick up and eat? Seems like a lot of us developers have never outgrown the 3-second rule. But seriously, don't follow that rule, because it's gross. Grow up already.
 
