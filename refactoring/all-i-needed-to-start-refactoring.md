@@ -31,7 +31,7 @@ Let's start with the obvious one. When it comes to writing first-time code, we d
 
 Code-wise, it means that there's always something off or not-quite-right with our initial cut, or cuts, of the code and design. 
 
-This is because when we start, we naturally don't much about what the design _should_ be until we've actually written something down and see that it's _not_ as good as we thought it would be. 
+This is because when we start, we naturally don't know much about what the design _should_ be until we've actually written something down and see all its gory details. We have to actually see it as code to discern that it's _not_ as good as we thought it would be. 
 
 I'm sure if you had a chance to flip through one of your old coloring books from kindergarten, you'd chuckle at how crude and unrefined your motor skills and sense of art were back then. 
 
