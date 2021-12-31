@@ -1,5 +1,7 @@
 # All I Needed to Start Refactoring I Learned in Kindergarten
 
+_(December 31, 2021)_
+
 ![Girl painting picture](/docs/assets/nicole-leeper-GfF9fYvmVTU-unsplash.jpeg)
 
 In the discussion of a poll on refactoring that I recently posted on LinkedIn, Gregor Riegler offered this: "I think it also demonstrates that lacking know-how is a key bottleneck."
