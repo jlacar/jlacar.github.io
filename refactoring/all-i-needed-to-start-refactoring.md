@@ -4,8 +4,6 @@ _(December 31, 2021)_
 
 ![Girl painting picture](/docs/assets/nicole-leeper-GfF9fYvmVTU-unsplash.jpeg)
 
-In the discussion of a poll on refactoring that I recently posted on LinkedIn, Gregor Riegler offered this: "I think it also demonstrates that lacking know-how is a key bottleneck."
-
 In [a previous post](./clean-code-is-the-enemy.md), I wrote that if the lack of training and know-how is the main thing that's keeping us from refactoring ourselves out of the messes we find ourselves mired in, then we're all doomed.
 
 In this post, I borrow heavily from Robert Fulghum's _AlI I Really Need to Know I Learned In Kindergarten_ to get to the heart of what I think developers need to start on the journey back to healthier codebases. 
