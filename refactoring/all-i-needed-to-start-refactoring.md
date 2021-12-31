@@ -154,8 +154,8 @@ certain contexts), and other things that are not worth the effort it takes to ke
 Don't be afraid to delete any and all manner of cruft. You have a source control system, right? So you can always get
 something back if you find out you really need it. You'll find you'll hardly ever need it back once you delete it.
 
-So keep your cognitive load light and get rid of old baggage. There's a good reason the delete button is bigger than
-most other keys on your keyboard. Use it.
+So keep your cognitive load light and dump excess waste from your code. There's a good reason the delete key is bigger
+than most other keys on your keyboard. Use it.
 
 ## With all of these, LOOK
 
