@@ -58,11 +58,14 @@ it right away, while the code and the reasons you wrote it that way are still fr
 When it comes to teaching our just minutes-ago younger selves what we could do better in our code, we shouldn't start
 out with the deep design problems. Start with the simple and obvious ones and fix them using basic tools and techniques.
 
+What are the simple and obvious problems? Arlo Belshee puts it simply: illegible code. That's what causes the most
+confusion, most problems, and most bugs.
+
 ### The basic refactoring tools
 
-The basic tools for refactoring are Rename and Extract. Arlo Belshee
-has [a few other ones you can use](https://arlobelshee.com/the-core-6-refactorings/) but these two are the essential
-ones, in my opinion. Think of them as your basic pencil and eraser.
+The only tools you need to refactor illegible code are Rename and Extract. Arlo
+has [a few other ones you can use](https://arlobelshee.com/the-core-6-refactorings/) but Rename and Extract are the
+essential ones, in my opinion. Think of them as your basic pencil and eraser.
 
 ![Pencil and eraser](/docs/assets/kim-gorga-2Zl80uqruUU-unsplash.jpeg)
 
