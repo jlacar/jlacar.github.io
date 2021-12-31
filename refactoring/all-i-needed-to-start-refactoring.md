@@ -82,7 +82,7 @@ This means that you shouldn't put good code on top of bad code. Refactor the are
 
 This is how Kent Beck says it:
 
-![Kent Beck tweet](/docs/assets/kent-beck-easy.p
+![Kent Beck tweet](/docs/assets/kent-beck-easy.png)
 
 A corollary to this is related to the good old 3-second rule. Remember that one? The one that says if a thing hasn't been on the ground for more than three seconds then it's still good to pick up and eat? Seems like a lot of us developers have never outgrown the 3-second rule. But seriously, don't follow that rule, because it's gross. Grow up already.
 
