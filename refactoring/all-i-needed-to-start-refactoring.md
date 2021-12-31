@@ -22,7 +22,7 @@ Of the sixteen rules in Fulghum's Kindergarten Credo, a quarter of them are abou
   - Wash your hands before you eat
   - Flush.
 
-The second one is probably would you'd immediately associate with refactoring but all of them are related in some way. As a companion to all four of them, I would add this one:
+The second one is probably what you'd immediately associate with refactoring but all of them are related in some way. As a companion to all four of them, I would add this one:
   - And then remember the Dick-and-Jane books and the first word you learned—the biggest word of all—LOOK.
 
 ### Clean up your own mess
