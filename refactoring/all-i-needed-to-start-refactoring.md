@@ -2,8 +2,6 @@
 
 ![Girl painting picture](/docs/assets/nicole-leeper-GfF9fYvmVTU-unsplash.jpeg)
 
-> _Everything you need to know is in there somewhere._ —Robert  Fulghum
-
 In the discussion of a poll on refactoring that I recently posted on LinkedIn, Gregor Riegler offered this: "I think it also demonstrates that lacking know-how is a key bottleneck."
 
 In [a previous post](/refactoring/clean-code-is-the-enemy.md), I wrote that if training and know-how is the main thing needed to get us out of the messes we find ourselves mired in, then we're all doomed.
@@ -11,6 +9,8 @@ In [a previous post](/refactoring/clean-code-is-the-enemy.md), I wrote that if t
 In this post, I borrow heavily from Robert Fulghum's _AlI I Really Need to Know I Learned In Kindergarten_ to get to the heart of what I think developers need to start on the journey back to healthier codebases. 
 
 If this sounds like more of what I've said before, I think it's an important message that bears repeating.
+
+> _Everything you need to know is in there somewhere._ —Robert  Fulghum
 
 ## Basic Sanitation
 
@@ -43,6 +43,8 @@ Rename and Extract are arguably the most commonly-used items in your IDE's refac
 
 Do you remember getting buddied up with someone when you go on a field trip or even just crossing the street? Well, your IDE is your best buddy for crossing Refactoring Street on the way to Better Code Town.
 
+![Kid holding hand](/docs/assets/guillaume-de-germain-fgmLRBlUIpc-unsplash.jpeg)
+
 Modern IDEs can warn you of any potential problems in renaming or extracting code. Trust your IDE to do its job and watch out for any danger. A good IDE will tell you when it's safe to go ahead and it will even do all the heavy lifting for you!
 
 ### Stay inside the lines
@@ -53,7 +55,9 @@ To stay inside the lines, use Compose. If you're not clear on how this helps you
 
 You don't need to pay for an expensive coach or go to a training class to grok this. Just [look it up](https://www.google.com/search?q=compose+method+refactoring).
 
-Compose mainly uses Rename and Extract. Learning how to Compose will take all of half an hour to read up on and maybe a couple of hours to practice and get a hang of. Learn how to use it to start painting a clearer picture that other people can easily understand.
+Compose mainly uses Rename and Extract. Learning how to Compose will take all of half an hour to read up on and maybe a couple of hours to practice and get a hang of. 
+
+Start using Compose and use it to paint a clearer pictures in your code that other people can easily understand.
 
 ![Inside the lines](/docs/assets/sandeep-singh-Qito7fJMOEo-unsplash.jpeg)
 
@@ -70,9 +74,11 @@ This is how Kent Beck says it:
 
 ![Kent Beck tweet](/docs/assets/kent-beck-easy.png)
 
-A corollary to this is the good old 3-second rule. Remember that one? The one that says if a thing hasn't been on the ground for more than three seconds then it's still good to pick up and eat? Seems like a lot of us developers have never outgrown the 3-second rule. But seriously, it's gross. You need to grow up already.
+A corollary to this is related to the good old 3-second rule. Remember that one? The one that says if a thing hasn't been on the ground for more than three seconds then it's still good to pick up and eat? Seems like a lot of us developers have never outgrown the 3-second rule. But seriously, don't follow that rule, because it's gross. Grow up already.
 
-This means that you shouldn't just take something that you picked up from God only knows where and just plop it into your codebase. Make sure you understand any piece of code you didn't write before you copy-paste it in. Don't just blindly copy things off of stackoverflow or any other place without first properly vetting for fit for purpose and functionality.
+All this means is that you shouldn't just take something that you picked up from God only knows where and just plop it into your codebase. 
+
+Make sure you understand any piece of code you didn't write before you copy-paste it in. Don't just blindly copy things off of stackoverflow or any other place without first properly vetting for fit for purpose and functionality. And make sure to write some tests around it.
 
 ### Put things back where you found them
 
@@ -112,6 +118,8 @@ Missing context, tacit information, implicit assumptions, things that only Alice
 
 Never assume other people will see these traps or figure out that they exist. You know what happens when we [assume](https://www.urbandictionary.com/define.php?term=Assume) things, right?
 
+![Donkey behind a wall](/docs/assets/anna-kaminova-eNNLkFPt8zA-unsplash.jpeg)
+
 Look before you flush, too. We said that most comments should be flushed away but before you do that, also make sure there's nothing in them that are meant to warn unwary programmers of potential dangers.
 
 Sometimes you'll find well-intentioned reminders and warnings from people who cared enough about others who might get tripped up by the code. But just because there's something useful in the comment, doesn't mean you shouldn't flush it. Find out what the gap is and either write a test that clearly expresses the danger as an exceptional case or refactor the code to eliminate the danger altogether.
@@ -128,7 +136,11 @@ Let me leave you with the same thought that Robert Fulghum ended with in his boo
 
 When you start on your refactoring journey, you'll be like a kindergartner, able to do some simple things with just a pencil and eraser (Rename and Extract). Then you learn how to stay inside the lines with Compose, and draw pictures that make sense, that aren't just a bunch of scratches and squiggles. This is how you start.
 
-But there's also a very important rule that you should remember. It's the one about sticking with your buddies. That's about team. Always work with your team when you refactor. And make the code part of it. The code is a person, too, you know. In fact, if you all pour yourselves into it, the code is _all_ of you. Those are your collective thoughts and your collective words. The code is _your_ story. Own it, and stick with it.
+But there's also a very important rule that you should remember. It's the one about sticking with your buddies. That's about team. Always work with your team when you refactor. 
+
+And make the code part of it. In a way, the code is its own person, too, you know. In fact, if you all pour yourselves into it, the code is _all_ of you. Those are your collective thoughts and your collective words. 
+
+The code is _your_ story. Own it, and stick with it.
 
 > So it's still true, no matter how old you are—when you go out into the world, it is best to hold hands and stick together. —Robert  Fulghum
 
@@ -140,7 +152,11 @@ Girl painting picture. Photo by <a href="https://unsplash.com/@worldorphans?utm_
 
 Pencil and eraser. Photo by <a href="https://unsplash.com/@kimgorga?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kim Gorga</a> on <a href="https://unsplash.com/s/photos/pencil-eraser?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
+Kid holding hand. Photo by <a href="https://unsplash.com/@guillaumedegermain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Guillaume de Germain</a> on <a href="https://unsplash.com/s/photos/kids-crossing-street?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
 Nice and tidy toys. Photo by <a href="https://unsplash.com/@prochurchmedia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pro Church Media</a> on <a href="https://unsplash.com/s/photos/coloring-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Donkey behind a wall. Photo by <a href="https://unsplash.com/@annakaminova?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anna Kaminova</a> on <a href="https://unsplash.com/s/photos/donkey-clown?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 Toys and friends. Photo by <a href="https://unsplash.com/@hannahrodrigo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hannah Rodrigo</a> on <a href="https://unsplash.com/s/photos/coloring-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
@@ -148,4 +164,4 @@ Squiggly lines. Photo by <a href="https://unsplash.com/@donovan_valdivia?utm_sou
 
 Inside the lines. Photo by <a href="https://unsplash.com/@funjabi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sandeep Singh</a> on <a href="https://unsplash.com/s/photos/coloring-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
-  
+{% include post-footer.md %}
