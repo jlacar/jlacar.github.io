@@ -37,7 +37,7 @@ I'm sure if you had a chance to flip through one of your old coloring books from
 
 That's the same thing with our code and designs, only it shouldn't take years before we realize we could do better. 
 
-But If you had a chance to travel back in time and help your younger self, would you teach yourself the nuances of shadow and light, of the significance of space, negative space, perspective, and depth? I doubt it.
+But if you had a chance to travel back in time and help your younger self with coloring in that flower or truck, would you teach yourself the nuances of shadow and light, of the significance of space, negative space, perspective, and depth? I doubt it.
 
 If anything, you'd probably start with what a typical kindergartner could handle: stick with the basic tools and try not to color outside the lines. 
 
