@@ -7,7 +7,7 @@ _(December 31, 2021)_
 In [a previous post](./clean-code-is-the-enemy.md), I wrote that if the lack of training and know-how is the main thing
 that's keeping us from refactoring ourselves out of the messes we find ourselves mired in, then we're all doomed.
 
-In this post, I borrow heavily from Robert Fulghum's _AlI I Really Need to Know I Learned In Kindergarten_ to get to the
+In this post, I borrow heavily from Robert Fulghum's _All I Really Need to Know I Learned In Kindergarten_ to get to the
 heart of what I think developers need to start on the journey back to healthier codebases.
 
 If this sounds like more of what I've said before, I think it's an important message that bears repeating.
