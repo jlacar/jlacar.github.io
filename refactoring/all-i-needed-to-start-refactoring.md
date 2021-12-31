@@ -43,7 +43,7 @@ good as we thought it would be.
 If you had a chance to flip through one of your old coloring books from kindergarten, you'd probably chuckle at how
 crude and unrefined your motor skills and sense of art were back then.
 
-But if you had a chance to travel back in time and help your younger self with coloring in that flower or truck, would
+But if you could travel back in time and help your younger self with coloring in that flower or truck, would
 you teach yourself the nuances of shadow and light, of the significance of space, negative space, perspective, and
 depth? I doubt it.
 
