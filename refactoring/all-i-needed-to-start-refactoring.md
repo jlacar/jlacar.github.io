@@ -180,7 +180,7 @@ accidentally step on it.
 Look for gaps as well, otherwise known as pitfalls or gotchas. You'll need a little bit of sophistication here and a bit
 of effort to learn how to spot things that aren't there. In art, they sometimes call this "negative space."
 
-Missing context, tacit information, implicit assumptions, things that only Alice or Bob knows, these are all things that
+Missing context, tacit information, implicit assumptions, things that only Alice or Bob know, these are all things that
 are NOT reflected in the code. They can cause confusion and misunderstanding. These are traps that unsuspecting
 newcomers to the code can easily fall into. Even experienced hands can fall into them, too, if they're not careful or
 forget about them.
