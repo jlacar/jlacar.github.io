@@ -104,9 +104,11 @@ Basically, just get rid of crap when you see it.
 
 Don't be afraid to double or triple flush either. Heck, flush every two or three minutes if you need to. That's what the TDD cycle should feel like. Think of the mantra as Red-Green-Flush instead. And don't worry, frequent flushing actually helps the environment when it comes to code.
 
-This applies mostly to old code and comments. But it also applies to duplication, complex logic, temporary variables (in certain contexts), and other stuff that generally costs more than their worth the effort to keep around. Don't be afraid to delete any and all of that stuf. You use source control, right? You can always get something back if you find out you really need it. Most of the time you never do. So keep your cognitive load light and get rid of old baggage.
+This applies mostly to old code and comments. But it also applies to duplication, complex logic, temporary variables (in certain contexts), and other things that are not worth the effort it takes to keep. 
 
-There's a good reason the delete button is bigger than most other keys on your keyboard. Use it.
+Don't be afraid to delete any and all manner of cruft. You have a source control system, right? So you can always get something back if you find out you really need it. You'll find you'll hardly ever need it back once you delete it. 
+
+So keep your cognitive load light and get rid of old baggage. There's a good reason the delete button is bigger than most other keys on your keyboard. Use it.
 
 ## With all of these, LOOK
 
