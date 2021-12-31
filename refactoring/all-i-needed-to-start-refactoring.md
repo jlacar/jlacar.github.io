@@ -130,12 +130,12 @@ sure to write some tests around it.
 ![Nice and tidy toys](/docs/assets/pro-church-media-2DTE3ePfnD8-unsplash.jpeg)
 
 For me, this is really about keeping things nice and tidy. If you have to play around and make a bit of a mess here and
-there, that's fine. Play around, make a mess. Experiment. Learn. Have fun. But when you're done playing and
-experimenting and learning, make sure to put all the puzzle pieces back in the box, the toys back on the shelf, and all
-the blocks back in the box. Give the other kids a chance to play, experiment, and learn, too.
+there, that's fine. Play around, make a mess. Experiment. Learn. Have fun. When you're done, put everything back in its
+place. Don't just leave the mess for someone else to deal with.
 
-This is basically the Boy Scout Rule: never leave the campsite any worse than you found it. And it's best if you can
-leave it a little better, so the next person can benefit from it.
+This is essentially the Boy Scout Rule: Always leave the campsite cleaner than you found it.
+
+Be kind to the next person who has to work with the code. It could be you.
 
 ### Flush
 
