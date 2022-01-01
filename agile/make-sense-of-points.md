@@ -1,4 +1,8 @@
+{% include post-header.md %}
+
 # Making sense of Story Points using Dimensional Analysis
+
+_(December 30, 2021)_
 
 [Dimensional analysis](https://en.wikipedia.org/wiki/Dimensional_analysis) is something I learned in school while studying mechanical engineering. We used the technique to convert quantities from one system of measurement to another, say from imperial to metric. It's also a useful way to sanity check calculations based on basic rules of algebra and the units of the quantities involved.
 
