@@ -1,4 +1,8 @@
+{% include post-header.md %}
+
 # How to Write CLEAR Code and Get Better at Refactoring
+
+_(December 17, 2021)_
 
 ![Banner image of man reading James Clear Book Atomic Habits](/docs/assets/nubelson-fernandes-XWn6m_oxvSM-unsplash.jpeg)
 

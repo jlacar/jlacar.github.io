@@ -5,21 +5,6 @@
 > &ldquo;_Mindfulness isn't difficult, we just need to remember to do it._&rdquo;
 > &mdash;Sharon Salzberg
 
-## About me
-
-Thanks for dropping by! My name is Junilu Lacar and I am a technical coach currently working for Accenture |
-SolutionsIQ.
-
-_**Obligatory Disclaimer**: All opinions expressed in this blog are my own and do not necessarily reflect those of my
-employer._
-
-As a long-time developer and student of agile software development techniques, I am constantly looking for ways to
-improve my craft and help others improve as well. I hope you'll find something useful here.
-
-Thanks for visiting!
-
-----
-
 ## Recent Posts
 
 (Dec 31, 2021) - [All I Really Needed to Start Refactoring I Learned in Kindergarten](/refactoring/all-i-needed-to-start-refactoring.md)
@@ -81,6 +66,21 @@ Thanks for visiting!
 ### Miscellaneous
 
 (Draft) - GitHub Pages Tips
+
+----
+
+## About me
+
+Thanks for dropping by! My name is Junilu Lacar and I am a technical coach currently working for Accenture |
+SolutionsIQ.
+
+_**Obligatory Disclaimer**: All opinions expressed in this blog are my own and do not necessarily reflect those of my
+employer._
+
+As a long-time developer and student of agile software development techniques, I am constantly looking for ways to
+improve my craft and help others improve as well. I hope you'll find something useful here.
+
+Thanks for visiting!
 
 ----
 

@@ -1,4 +1,8 @@
+{% include post-header.md %}
+
 # Clean Code is the Enemy of Better Code
+
+_(December 28, 2021)_
 
 _Perfect is the enemy of good_ —Voltaire
 
@@ -11,7 +15,7 @@ extremely valuable advice about refactoring and unit testing. I have discovered 
 practice and what Arlo says is particularly validating for me because my outlook on refactoring has evolved along the
 same lines that he describes.
 
-For me, the desert island takeaway of Arlo's talk is this:
+This is the desert island takeaway of Arlo's talk:
 
 > _Good fails with technical debt. We just can't afford it; we can't get there in one step. Menders set their sights lower, and by setting their sights lower, we can repair damaged codebases in place while adding features. We can perform that miracle._
 

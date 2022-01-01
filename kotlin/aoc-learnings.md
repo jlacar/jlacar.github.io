@@ -1,3 +1,5 @@
+{% include post-header.md %}
+
 # Things I learned about Kotlin from Advent of Code
 
 _(December 2021)_

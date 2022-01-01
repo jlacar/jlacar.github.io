@@ -1,3 +1,5 @@
+{% include post-header.md %}
+
 # Frequency maps and other Kotlin one-liners
 
 _(December 2021)_

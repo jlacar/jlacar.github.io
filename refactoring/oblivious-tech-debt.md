@@ -1,3 +1,5 @@
+{% include post-header.md %}
+
 # Unconscious Tech Debt isn't really a thing
 
 > _You always have two choices: your commitment versus your fear_—Sammy Davis, Jr.
