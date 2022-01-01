@@ -1,3 +1,2 @@
 ###### 2X CLICK HEADER TO ADJUST PAGE WIDTH
-#### &laquo; [Index](index.md) &raquo; 
-&nbsp;
+#### &laquo; [Index]({{site.baseurl}}/index.md) 1 &raquo;
