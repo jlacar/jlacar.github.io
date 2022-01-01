@@ -1,5 +1,5 @@
 remote_theme: pages-themes/modernist@v0.2.0
 title: Mindful Practice Blog
-description: deliberately getting better 1% @aTime
+description: deliberately getting 1% better
 plugins:
 - jekyll-remote-theme
