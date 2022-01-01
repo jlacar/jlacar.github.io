@@ -1,3 +1,5 @@
+{% include post-header.md %}
+
 # All I Needed to Start Refactoring I Learned in Kindergarten
 
 _(December 31, 2021)_
