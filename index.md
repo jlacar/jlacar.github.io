@@ -1,3 +1,5 @@
+###### 2X CLICK HEADER TO TOGGLE PAGE WIDTH
+
 > &ldquo;_Success has to do with deliberate practice. Practice must be focused,
 > determined, and in an environment where there's feedback._&rdquo;&mdash;Malcolm Gladwell
 
