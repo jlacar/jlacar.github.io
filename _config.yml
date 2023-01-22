@@ -1,5 +1,5 @@
-remote_theme: pages-themes/modernist@v0.2.0
+remote_theme: pages-themes/cayman@v0.2.0
 title: Mindful Practice Blog
-description: deliberately getting 1% better
+description: An ongoing quest to suck less every day
 plugins:
 - jekyll-remote-theme
