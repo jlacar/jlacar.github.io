@@ -9,7 +9,7 @@ _(December 31, 2021)_
 
 ![Girl painting picture](/docs/assets/nicole-leeper-GfF9fYvmVTU-unsplash.jpeg)
 
-In [a previous post](./clean-code-is-the-enemy.md), I wrote that if the lack of training and know-how is the main thing
+In a previous post, I wrote that if the lack of training and know-how is the main thing
 that's keeping us from refactoring ourselves out of the messes we find ourselves mired in, then we're all doomed.
 
 In this post, I borrow heavily from Robert Fulghum's _All I Really Need to Know I Learned In Kindergarten_ to get to the
@@ -280,5 +280,3 @@ by <a href="https://unsplash.com/@hannahrodrigo?utm_source=unsplash&utm_medium=r
 Hannah Rodrigo</a>
 on <a href="https://unsplash.com/s/photos/coloring-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
 Unsplash</a>
-
-{% include post-footer.md %}
