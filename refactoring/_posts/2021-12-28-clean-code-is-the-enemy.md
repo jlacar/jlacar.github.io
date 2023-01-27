@@ -25,29 +25,21 @@ This is the desert island takeaway of Arlo's talk:
 ## The future is now and it ain't too bright
 
 Since it was published on YouTube just a little over a year ago, the video of Arlo's presentation has garnered a piddly
-333 views (as of this writing), at least three of which are mine. That is quite pathetic and disappointing if you ask
-me. But far from being a mark against Arlo and the validity of his message, those low numbers are a woeful indictment of
-our industry.
+333 views (as of this writing), at least three of which are mine. Comparatively, that's a really small reach and those 
+low numbers are a sad indictment of the state of our industry. Except for a few lonely voices in the wilderness,  nobody
+really cares about finding ways to get better at legacy code maintenance.
 
-In stark contrast, a search for "react tutorials" turns up many videos that have significantly more views—in the
-hundreds of thousands and millions—many of them published more recently. A search for videos on refactoring reflects the
-same disturbing trend: far more developers are interested in new and popular technologies than there are developers who
-want to learn about techniques like refactoring and unit testing. The former, people who create things, are the "makers"
-that Arlo mentions. The latter, people who, unlike the makers, find unraveling knots in gnarly balls of yarn soothing,
-are the "menders."
-
-As this trend of makers outnumbering menders continues—and it will probably grow—I fear new generations of developers
-are doomed to keep making the same mistakes past generations have made. I also think the related problems we'll all have
-to deal with are going to keep getting more complex and more impactful. The future, I'm afraid, doesn't look bright at
-all.
+A search for videos on refactoring reflects the same disturbing trend: very few developers are interested in techniques 
+like refactoring and unit testing. In stark contrast, React tutorials get views in the hundreds of thousands and millions 
+very quickly. As Arlo says, the menders are greatly outnumbered by the makers. That doesn't bode well for the future.
 
 ## A Ray of Hope
 
-There might still be hope.
+There might still be hope though.
 
-If you're reading this, you're likely to be part of the solution, not the problem. You're probably a mender yourself, or
-someone who guides menders, or aspires to turn more makers into menders. I won't claim to have the answers; that would
-be too presumptuous. These are just ideas, but I think they're good ideas to try. I hope you do, and I hope you find
+If you're reading this, you're probably part of the solution. You're probably a mender yourself, or
+someone who guides menders, or aspires to turn more makers into menders. I don't claim to have all the answers but 
+I think some of these ideas help or are at least worth a try. I hope you do try them out, and I hope you find
 them useful.
 
 ## Messy code is inevitable; living with it is unacceptable
