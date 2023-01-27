@@ -1,0 +1,21 @@
+current directory: /Users/jlacar/Development/github/mygithubpages/vendor/bundle/ruby/2.6.0/gems/racc-1.6.2/ext/racc/cparse
+/Users/jlacar/.rvm/rubies/ruby-2.6.0/bin/ruby -I /Users/jlacar/.rvm/rubies/ruby-2.6.0/lib/ruby/site_ruby/2.6.0 extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/jlacar/Development/github/mygithubpages/vendor/bundle/ruby/2.6.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230127-71837-e017h3 sitelibdir\=./.gem.20230127-71837-e017h3 clean
+
+current directory: /Users/jlacar/Development/github/mygithubpages/vendor/bundle/ruby/2.6.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230127-71837-e017h3 sitelibdir\=./.gem.20230127-71837-e017h3
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/jlacar/Development/github/mygithubpages/vendor/bundle/ruby/2.6.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230127-71837-e017h3 sitelibdir\=./.gem.20230127-71837-e017h3 install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 cparse.bundle ./.gem.20230127-71837-e017h3/racc
+
+current directory: /Users/jlacar/Development/github/mygithubpages/vendor/bundle/ruby/2.6.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230127-71837-e017h3 sitelibdir\=./.gem.20230127-71837-e017h3 clean

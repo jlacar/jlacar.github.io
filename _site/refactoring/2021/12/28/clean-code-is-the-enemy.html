@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    
+    
+    <!-- Non social metatags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    
+    <title>Clean Code is the Enemy of Better Code</title>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Place this data between the <head> tags of your website -->
+
+<meta name="description" content="Don’t get carried away with the idea of clean code, sometimes doesn’t suck as much is good enough." />
+
+
+
+  <meta name="keywords" itemprop="categories" content="refactoring" />
+
+
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image" />
+
+
+
+<meta name="twitter:title" content="Clean Code is the Enemy of Better Code" />
+<meta name="twitter:description" content="Don’t get carried away with the idea of clean code, sometimes doesn’t suck as much is good enough." />
+
+
+
+<!-- Twitter summary card with large image must be at least 280x150px -->
+
+<meta name="twitter:url" content="http://localhost:4000//refactoring/2021/12/28/clean-code-is-the-enemy.html" />
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Clean Code is the Enemy of Better Code" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:4000//refactoring/2021/12/28/clean-code-is-the-enemy.html" />
+
+
+<meta property="og:description" content="Don’t get carried away with the idea of clean code, sometimes doesn’t suck as much is good enough." />
+<meta property="og:site_name" content="Mindful Practice" />
+
+
+<meta property="og:locale" content="" />
+
+
+  <meta property="article:published_time" content="2021-12-28T00:00:00-05:00" />
+
+
+
+
+  
+
+
+
+
+
+  
+    <meta property="article:tag" content="refactoring" />
+  
+
+
+
+
+
+    
+    
+    <link rel="canonical" href="http://localhost:4000/refactoring/2021/12/28/clean-code-is-the-enemy.html">
+    
+    
+    <link rel="alternate" type="application/rss+xml" title="Mindful Practice" href="http://localhost:4000/feed.xml">
+    
+    
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta name="robots" content="noarchive">
+    
+    <!-- <link rel="alternate" media="only screen and (max-width: 640px)" href="">
+        <link rel="alternate" media="handheld" href=""> -->
+        
+        
+        <link rel="stylesheet" href="http://localhost:4000/assets/css/style.css?v=HEAD">
+    </head>
+    <body>
+        
+        <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+
+    
+      <a class="site-title" href="http://localhost:4000/">Mindful Practice</a>
+    
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+              
+                <a class="page-link" href="http://localhost:4000/topics.html">Topics</a>
+              
+            
+          
+            
+            
+              
+                <a class="page-link" href="http://localhost:4000/about.html">About</a>
+              
+            
+          
+            
+            
+              
+                <a class="page-link" href="http://localhost:4000/contact.html">Contact</a>
+              
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+        
+        
+        
+        
+        
+        <section class="page-header">
+            <h1 class="project-name">Clean Code is the Enemy of Better Code</h1>
+            <h2 class="project-tagline"></h2>
+            
+            <!-- Post tagline -->
+            
+            <h2 class="project-date">
+                <time datetime="2021-12-28T00:00:00-05:00" itemprop="datePublished">
+                    
+                    Dec 28, 2021
+                </time>
+                
+                
+            </h2>
+            
+            <!-- End: Post tagline -->
+        </section>
+        
+        <section class="main-content">
+            
+            <article itemscope itemtype="http://schema.org/BlogPosting">
+
+  <!-- <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Clean Code is the Enemy of Better Code</h1>
+    <p class="post-meta">
+      <time datetime="2021-12-28T00:00:00-05:00" itemprop="datePublished">
+        
+        Dec 28, 2021
+      </time>
+      </p>
+  </header> -->
+
+  <div itemprop="articleBody">
+    <p>Don’t get carried away with the idea of clean code, sometimes doesn’t suck as much is good enough.</p>
+
+<!---more--->
+
+<p><em>Perfect is the enemy of good</em> —Voltaire</p>
+
+<p><em>Good is the enemy of slightly less terrible</em> —Arlo Belshee</p>
+
+<p><em>For anything to change, someone has to start acting differently.</em> —Chip Heath and Dan Heath in <em>Switch</em></p>
+
+<p>In his “<a href="https://youtu.be/9YxQzjtPdtw">Master Legacy Code Incrementally</a>” presentation, Arlo Belshee gives some
+extremely valuable advice about refactoring and unit testing. I have discovered many of the same things in my own
+practice and what Arlo says is particularly validating for me because my outlook on refactoring has evolved along the
+same lines that he describes.</p>
+
+<p>This is the desert island takeaway of Arlo’s talk:</p>
+
+<blockquote>
+  <p><em>Good fails with technical debt. We just can’t afford it; we can’t get there in one step. Menders set their sights lower, and by setting their sights lower, we can repair damaged codebases in place while adding features. We can perform that miracle.</em></p>
+</blockquote>
+
+<h2 id="the-future-is-now-and-it-aint-too-bright">The future is now and it ain’t too bright</h2>
+
+<p>Since it was published on YouTube just a little over a year ago, the video of Arlo’s presentation has garnered a piddly
+333 views (as of this writing), at least three of which are mine. That is quite pathetic and disappointing if you ask
+me. But far from being a mark against Arlo and the validity of his message, those low numbers are a woeful indictment of
+our industry.</p>
+
+<p>In stark contrast, a search for “react tutorials” turns up many videos that have significantly more views—in the
+hundreds of thousands and millions—many of them published more recently. A search for videos on refactoring reflects the
+same disturbing trend: far more developers are interested in new and popular technologies than there are developers who
+want to learn about techniques like refactoring and unit testing. The former, people who create things, are the “makers”
+that Arlo mentions. The latter, people who, unlike the makers, find unraveling knots in gnarly balls of yarn soothing,
+are the “menders.”</p>
+
+<p>As this trend of makers outnumbering menders continues—and it will probably grow—I fear new generations of developers
+are doomed to keep making the same mistakes past generations have made. I also think the related problems we’ll all have
+to deal with are going to keep getting more complex and more impactful. The future, I’m afraid, doesn’t look bright at
+all.</p>
+
+<h2 id="a-ray-of-hope">A Ray of Hope</h2>
+
+<p>There might still be hope.</p>
+
+<p>If you’re reading this, you’re likely to be part of the solution, not the problem. You’re probably a mender yourself, or
+someone who guides menders, or aspires to turn more makers into menders. I won’t claim to have the answers; that would
+be too presumptuous. These are just ideas, but I think they’re good ideas to try. I hope you do, and I hope you find
+them useful.</p>
+
+<h2 id="messy-code-is-inevitable-living-with-it-is-unacceptable">Messy code is inevitable; living with it is unacceptable</h2>
+
+<p>Bob Martin used to have a bit where he asks his audience “Who has ever had to work with messy code?” to which,
+invariably, many hands are raised. Bob then asks “Then why did you write it?” Most people laugh at that, probably
+because it’s true: we are often our own worst enemy.</p>
+
+<p>I think who made the mess matters less than what we do about it. A better question to ask, therefore, is “Why did you
+leave it like that?”</p>
+
+<p>Writing messy code is inevitable; it’s a natural consequence of the nature of knowledge work and the inescapable fact
+that we know far less early on than we do later. Sadly, most developers will just move on to the next task as soon as
+they get their code to work, leaving messy code behind without so much as an afterthought or eyelid batted.</p>
+
+<p>Dealing with the same messy code over and over again is not something we have to accept as a developer’s lot in life.
+It’s unacceptable. We should do better. We <em>can</em> do better.</p>
+
+<h2 id="why-dont-developers-refactor-more-often">Why don’t developers refactor more often?</h2>
+
+<p>What prevents developers from refactoring their code more often, as a matter of course? The answers to that question
+seem to be consistently along these lines:</p>
+
+<ol>
+  <li>Not enough time / too much pressure to deliver</li>
+  <li>Too risky / fear of breaking things or introducing bugs</li>
+  <li>Lack of training/skills in refactoring, good engineering</li>
+  <li>Lack of motivation/incentive to do it</li>
+</ol>
+
+<p>There are many more reasons you could cite but these four are probably the most fundamental. Before we dissect each of
+these, let’s take a closer look at a common underpinning: the need for Clean Code.</p>
+
+<h2 id="clean-code-sets-a-high-bar-maybe-too-high-for-most">Clean Code sets a high bar; maybe too high for most.</h2>
+
+<p>Robert Martin’s book, <em>Clean Code</em>, is arguably the touchstone for writing good quality and relatively problem-free
+code. If only everyone followed all of its advice, our code would be in much better shape and our work would be much
+easier. Yet, here we are, twelve years since it was published, and most of us are still struggling with buggy and messy
+code as much as ever, if not more.</p>
+
+<p>Here’s the sad fact we need to face as an industry: clean code is just too high of a bar. It’s a great ideal to aspire
+to but if it’s the standard we have to meet, we’re setting ourselves up for disappointment and, ultimately, failure.</p>
+
+<p>As Arlo said, we need to set our sights lower. We need to aim lower than Good, for code that’s Slightly Less Terrible
+and Less Shitty.</p>
+
+<h2 id="aint-nobody-got-time-for-that">Ain’t nobody got time for that!</h2>
+
+<p>“Later, if and when we have more time” is probably the biggest lie we habitually tell ourselves about refactoring. We
+know there’s little to no chance we’ll be able to get to it later. That time hardly ever comes. Well, I probably
+shouldn’t say hardly ever because it does eventually come, just not under the circumstances we hoped it would nor with
+the desired outcomes.</p>
+
+<p>Time for refactoring is often forced on us under the least ideal conditions, when things are desperate, when both the
+stakes and risks are high, and the survival of the product and the company that pays us to make it is on the line. We’ve
+all seen that movie: Never enough time to refactor it now, always time enough to fix it in production later.</p>
+
+<p>Deep down we know, probably more than anyone else, that Sweet Brown was wrong: there’s always time for that, just not in
+the way you hoped and usually by then, it’s too late.</p>
+
+<h2 id="high-risk-low-reward">High risk, low reward</h2>
+
+<p>Another bit that Bob does is where he says “Have you ever looked at some code and said ‘Ugh, that’s a mess! We should
+fix that!’ and then in the next breath say, ‘I’m not touching it!’”</p>
+
+<p>“Why?” Bob continues, “because if you do, and you break it, it’ll be yours!”</p>
+
+<p>Again, chuckles all around, because it’s true. We live in fear of our code, afraid to make even the slightest change
+lest we break something and get saddled with the burden of the consequences. Rather than being masters of the code,
+we’re slaves to it and its whims and idiosyncrasies.</p>
+
+<p>We acquiesce to the code and its poor design. We learn how to live with its many warts and smells, no matter how awful
+they are. “It’s not that bad, we can live with it,” we tell ourselves.</p>
+
+<p>We figure out how to navigate all the tricky parts and avoid pitfalls and tripwires. We become experts in its
+topography, and become practiced at jumping through all the various hoops its gnarly design puts in front of us.</p>
+
+<p>We put up guardrails and gates to avoid nasty surprises and prevent well-meaning but naive newcomers from inadvertently
+messing things up. Sure, making changes is much harder, and total cost of ownership goes through the roof. But at least
+uncertainty and risk are kept to a minimum and we’re still moving along, albeit at a much slower pace. That’s a good
+thing, right?</p>
+
+<p>Arlo said something very interesting in his presentation:</p>
+
+<blockquote>
+  <p>Products make lots and lots of money or they make almost no money at all. And if you’re making lots of money, you can afford a slight increase in costs. If you’re making no money at all, you can’t afford the costs anyway, so who cares? The result is that cost doesn’t matter very much, but bugs, uncertainty, and risk, those kill products.</p>
+</blockquote>
+
+<p>This is the cage we build for ourselves, the road we pave with all good intentions, gladly paying the toll to avoid
+uncertainty and risk. The costs, as Arlo said, are affordable. Moving at a snail’s pace is fine. Until it isn’t.</p>
+
+<h2 id="the-atomic-option">The Atomic Option</h2>
+
+<p>We’re also too greedy. We’re impatient. Our eyes are too big for our stomachs. If not that, we’re too exacting for our
+own good. We want our efforts to mean something. We don’t want to waste time on things that have no immediate or
+significant impact. Again with the good intentions and the road they pave.</p>
+
+<p>Many think that refactoring has to be a big effort, that it’s too important to be as simple as renaming something or
+extracting a few lines of code to a private method. To many, those little gestures seem trivial, borderline wasteful
+even. They look like gold plating, something to satisfy a pedantic itch.</p>
+
+<p>“It’s bookish,” is a comment that often gets my goat. No, it’s not. It’s as practical as it can be.</p>
+
+<p>Read James Clear’s <em>Atomic Habits</em>. That’s what refactoring is: an atomic habit. Taken individually, any small
+improvement you make to the code seems inconsequential. Taken as a whole and compounded over time, 1% better every day
+turns out to be almost 38% better over a year.</p>
+
+<h2 id="our-school-of-hard-knocks">Our school of hard knocks</h2>
+
+<p>I’ve experienced this on a legacy product my team and I once inherited and maintained for almost eleven years. When we
+got it, there were no unit tests. The code was horrible. No, it was horrific. We were scared to touch the code because
+any small change we made had a disproportionately large blast radius. Maintenance was a slog and debugging was a
+nightmare. Deployments were a big deal and lasted hours, often going into the wee hours of the morning. Many Friday
+evenings were given up and weekend plans postponed or cancelled.</p>
+
+<p>As frustrated developers are wont to do, we bitched and moaned, and cursed our predecessors. We wished them interesting
+lives and multiple visits by Karma. If only we knew where they lived…</p>
+
+<p>Finally, we had to face the fact that as cathartic as complaining felt in the moment, it really did nothing to ease our
+pain or improve our situation. So we started taking back control. We committed to a protracted Boy Scout Rule campaign
+and with a few small steps, steeled determination, and a fully supportive manager behind us, we embarked on our journey.</p>
+
+<p>It took us two years, but after many group programming sessions over WebEx—mobbing wasn’t a thing yet, much less virtual
+mobbing—we eventually gained a reasonable measure of control over the code. Once again, we, the developers were the
+masters. Well, not of all the code, but at least the parts we had to touch most often. Those parts were brought to heel.
+We even got some dependency injection and automated system and smoke tests going.</p>
+
+<p>Best of all, we were having fun as a team again. We were continuously learning to get better. Our sole tester was
+writing smoke tests in Fitnesse which he ran on deployment night with a mere click of a button. Five minutes later, we’d
+be done. Our deployments went from high ceremony to almost perfunctory. Pager duty was a free hundred bucks extra in
+your paycheck every few weeks.</p>
+
+<p>Read on to the end and I’ll tell you what we did that just might work for you, too.</p>
+
+<h2 id="if-more-training-is-the-key-were-doomed">If more training is the key, we’re doomed</h2>
+
+<p>I hear many teams complain that they’re not given the requisite training on refactoring, TDD, pairing, unit testing,
+yada, yada, yada. “We don’t know how to do it! We tried it and it’s too hard. It doesn’t work for us.”</p>
+
+<p>Is the key to better code really just a matter of know-how? Do we just need to train more developers on clean code, good
+engineering practices, and their practical applications? If that’s the biggest obstacle to making improvements, I’m
+afraid we’re fighting a losing battle. As far as I can tell, there just aren’t enough competent coaches and trainers out
+there to get to everyone. Or to teach everything that teams feel would make a difference.</p>
+
+<p>Schools and academia aren’t much help either. Sure, there are a few educators out there who keep up with industry
+practices but the majority of those teaching the next generation of software professionals are still teaching things
+that students will have to unlearn when they start working in the real world. But that’s a whole ‘nother story.</p>
+
+<h2 id="theyre-just-not-that-into-it">They’re just not that into it</h2>
+
+<p>What’s really troubling is the sneaky suspicion that there aren’t many developers who will invest the time and effort
+needed to learn all there is to know about refactoring, testing, and all these other good engineering practices.</p>
+
+<p>In a somewhat testy exchange on LinkedIn about technical debt and refactoring, an ex-colleague wrote:</p>
+
+<blockquote>
+  <p>“I’m saying ditch the magic theology talk, stop citing the thinkers, most developers want to support their families and go home at 4pm - not be craftspeople or whatever the word is now. If your statement requires reading and agreement of an entire book; rethink it.”</p>
+</blockquote>
+
+<p>“The thinkers” he referred to were most likely Ron Jeffries and Ward Cunningham, whom I have a propensity to quote. But
+as disappointing as That Guy’s statement may be to anyone who holds themselves to a higher standard, it’s hard to
+refute. It also resonates with what my wife, who is a Scrum Master at a large financial institution, often tells me: “
+There aren’t many developers who will spend as much time and effort to learn and practice all the things that you do.”
+She does have a point, and as much as I hate to admit it, so does my ex-colleague.</p>
+
+<h2 id="intrinsic-or-extrinsic-motivation">Intrinsic or extrinsic motivation?</h2>
+
+<p>For me, it’s not a question of either/or; teams need both intrinsic and extrinsic motivators to start improving their
+situations.</p>
+
+<p>These days, more managers seem to understand the need to give their teams the space and the air cover to fail and learn
+from failure. They understand the need to create and nurture environments for their teams that support rather than
+suppress desired behaviors and practices. They know the importance of providing proper coaching, mentoring, on-the-job
+training, and continuous learning opportunities. They are willing to fight for budgets that include good tooling and
+enabling infrastructure.</p>
+
+<p>But developers need to do their part and step up to the plate, too. They need to let go of old habits and be willing to
+venture out of their comfort zones, be willing to fail, and be comfortable with learning from failure.</p>
+
+<p>They need to set aside their egos. Nothing impedes learning and improvement more than thinking that there’s nothing
+anyone can teach you about how to get better at doing your work, that maybe the things you’ve learned and come to depend
+upon for success are outdated, outmoded, and in dire need of replacement.</p>
+
+<h2 id="our-keys-to-slightly-less-terrible-on-the-road-to-better-code">Our keys to Slightly Less Terrible on the road to Better Code</h2>
+
+<p>So, how did my team and I survive eleven years of maintaining a legacy app that didn’t have automated tests, was very
+poorly written and designed, and still manage to make keep our product viable and our sanity more or less intact? (The
+hair situation was a total loss for me though. Ah well, you win some, you lose some.)</p>
+
+<p>First, you need good people on your team, people who are willing and eager to learn, who can set aside their egos and
+accept that no matter how many years they’ve been in this business, they still have plenty of room left to grow. For the
+most part, I lucked out in this department. I had a great team of learners and doers.</p>
+
+<p>If you need to lose or replace people, have the courage and intestinal fortitude to make the choice. It’s better to lose
+someone who isn’t a fit than try to make it work against all odds. There’s no time for that and it’s not fair to anyone.
+If you do boot someone off the island, do it with kindness and empathy.</p>
+
+<p>Second, you need management to play their part. I’ve already gone over what’s involved there.</p>
+
+<p>Third, learn to be okay with ugly. Things are going to get worse before they get better. Don’t aim for Good, much less
+Perfect. Be okay with Slightly Less Terrible but don’t be okay with living with Shitty Code.</p>
+
+<p>And by “shitty” I mean code that’s unclear, complex, confusing, hard to understand, slows you down, or makes you scrunch your face up
+or scratch your head and wonder “WTF?!”</p>
+
+<p>That’s it.</p>
+
+<p>Anything else is just ugly and can wait until after you <a href="./clear-code.md">make the code CLEAR</a>er.</p>
+
+<p>Fourth, be a team. Mob, or as they prefer to say these days, ensemble or whatever the verb form of that is. The best way
+to learn something is to try to teach it. Teach each other. Retrospect after every collaboration session, not just at
+the end of each iteration. Share your experience with other teams. Learn from others, too.</p>
+
+<p>Tell the story of the code. Keep telling it to each other until all your stories are consistent and it
+makes sense to everyone.</p>
+
+<p>Use tests as your story board. Experiment. Don’t agonize over what the best option is to take. Try them all, write them
+down. See each option in code and call it for what it is. Practice radical candor and remember to be kind. Make any
+criticism about the code, not the person writing it.</p>
+
+<p>Be willing to spend five minutes choosing a good name for something. Again, don’t agonize over which of the different
+choices is best. Try each choice out in the code and let each one stand or fall on its own merit. It’ll pay off, I
+promise.</p>
+
+<p>Follow <a href="https://martinfowler.com/bliki/BeckDesignRules.html">Kent Beck’s Four Rules of Simple Design</a>. These are really good guidelines; all kinds of goodness and important principles spring from them.</p>
+
+<p>Learn your tools: Rename, Extract, and Compose. These are the main ones we used. Arlo has
+a <a href="https://arlobelshee.com/the-core-6-refactorings/">few more good ones</a>. Honestly, I think Rename and Extract are
+enough for any team to hit the Slightly Less Terrible target. Compose is just a bunch of Renames and Extracts but use it
+anyway. It’s a force multiplier for Rename and Extract.</p>
+
+<p>Speaking of Compose, don’t hesitate to SLAP your code
+around. <a href="http://principles-wiki.net/principles:single_level_of_abstraction">Single Level of Abstraction Principle</a>, that
+is. Slowing down to understand code is much more costly in the long run than the overhead of a few extra frames on the
+call stack. Remember, premature optimization is also a good intention and we all know where that road leads.</p>
+
+<p>Commit to writing <a href="./clear-code.md">CLEAR code</a>. Telling the story of the code helps with that. Use your eyes, ears, and
+sense of time as well. You can’t literally smell code problems, but you can certainly use your other senses to spot
+them. My CLEAR Code article has more on this.</p>
+
+<p>Arlo said that the most common cause of bugs is illegible code. I absolutely agree with that. So does Ward. Understand
+that technical debt, at its core, is really about a lack of understanding. Have everybody watch the video and
+understand <a href="https://youtu.be/pqeJFYwnkjE">what Ward meant when he coined the Debt Metaphor</a>.</p>
+
+<p>And lastly, listen to the thinkers, no matter how geeky or fanboi-ey that may seem or what Some Guys will say.</p>
+
+<p>Ward Cunningham, Ron Jeffries, Martin Fowler, Kent Beck, Bob Martin, Alistair Cockburn, James Grenning, Andy Hunt, Bill
+Wake, Tim Ottinger, Joshua Kerievski, Michael Feathers, Nat Pryce and Steve Freeman, Corey Haines, J.B. Rainsberger,
+Neal Ford, Venkat Subramaniam, The Gang of Four, Eric Evans, they were all our teachers. So were a bunch of other folks they know, too many of them to
+name here right now. Look around and you’ll know who they are.</p>
+
+<p>That’s about it.</p>
+
+<p>No wait, there’s one last thing, and I’m embarrassed I didn’t close with this in the version I first posted. And I’m not kissing up to him because he happened to be one of the first people to read this and endorse it.</p>
+
+<p>I’m dead serious when I say it’s an injustice that there aren’t a million more views of Arlo’s video about menders and setting the bar lower. If you haven’t seen it yet, <a href="https://youtu.be/9YxQzjtPdtw">go and watch Arlo’s video now</a>. You owe it to yourself and your fellow developers.</p>
+
+<p>And if you’ve managed to read to this point, know that you probably have what it takes to take back control of your code like we did. It takes patience, and perseverance. It takes a willingness to wait for all those 1%-or-less improvements to get to critical mass and really start paying off. Stick with it. It will come. Maybe sooner than you think.</p>
+
+<p>Ok, now I’m done. Anything else I haven’t mentioned you’ll probably discover along the way anyway.</p>
+
+<h2 id="promises-to-keep-and-many-miles-to-go">Promises to keep, and many miles to go…</h2>
+
+<p>Like I said before, I won’t presume to claim that what worked for us will also work for you. You have your own context
+and that’s what makes you different. But we’re not all that different, I don’t think. If what you’ve read above
+resonates with you, then we probably have a lot more in common than not.</p>
+
+<p>So buckle up and knuckle up. It’s going to be a bumpy ride. That’s a given. But if you keep at it and don’t lose
+faith, you’ll get there, too. And maybe, just maybe, after many miles of going, you’ll finally get a chance to catch up
+on your sleep.</p>
+
+<p>Good luck!</p>
+
+<h2 id="references">References</h2>
+
+<p>Belshee, A. (May 2016). <em>The Core 6 Refactorings</em>. Blog post. <a href="https://arlobelshee.com/the-core-6-refactorings/">https://arlobelshee.com/the-core-6-refactorings/</a></p>
+
+<p>Belshee, A. (December 2020). <em>Master Legacy Code Incrementally</em>. YouTube video. <a href="https://youtu.be/9YxQzjtPdtw">https://youtu.be/9YxQzjtPdtw</a></p>
+
+<p>Clear, J. (2018). <em>Atomic Habits</em>. Penguin Random House, LLC.</p>
+
+<p>Cunningham, W. (Feb 2009). <em>Debt Metaphor</em>. YouTube video. <a href="https://www.youtube.com/watch?v=pqeJFYwnkjE">https://www.youtube.com/watch?v=pqeJFYwnkjE</a></p>
+
+<p>Fowler, M. (March 2015). <em>BeckDesignRules</em>. Blog post. <a href="https://martinfowler.com/bliki/BeckDesignRules.html">https://martinfowler.com/bliki/BeckDesignRules.html</a></p>
+
+<p>(Oct 2021). <em>Single Level of Abstraction Principle</em> (Oct 2021), Web article. <a href="http://principles-wiki.net/principles:single_level_of_abstraction">http://principles-wiki.net/principles:single_level_of_abstraction</a></p>
+
+<p>Lacar, J. (Dec 2021). <em>How to write CLEAR Code and get better at refactoring</em>. Mindful Practice Blog. <a href="https://jlacar.github.io/refactoring/clear-code.html">https://jlacar.github.io/refactoring/clear-code.html</a></p>
+
+<hr />
+
+<h3 id="about-the-author">About the author</h3>
+
+<p><em>Junilu Lacar likes to spend his time learning, practicing, and helping others learn and practice things that he believes
+help software development teams deliver value in a sustainable and humane way.</em></p>
+
+
+  </div>
+
+  
+</article>
+
+
+            
+            <footer class="site-footer">
+                <!-- SVG icons from https://iconmonstr.com -->
+                
+                <!-- Github icon -->
+                <span class="my-span-icon">
+                    <a href="https://github.com/jlacar" aria-label="jlacar's GitHub" title="jlacar's GitHub">
+                        <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </span>
+                
+                <!-- Twitter icon -->
+                <span class="my-span-icon">
+                    <a href="https://twitter.com/" aria-label="jlacar's Twitter" title="jlacar's Twitter">
+                        <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg>
+                    </a>
+                </span>
+                
+                <!-- RSS icon -->
+                
+                <span class="my-span-icon">
+                    <a href="http://localhost:4000/feed.xml" aria-label="RSS feed" title="jlacar's RSS feed">
+                        <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.374 17c-.897 0-1.626-.727-1.626-1.624s.729-1.624 1.626-1.624 1.626.727 1.626 1.624-.729 1.624-1.626 1.624zm3.885 0c-.03-3.022-2.485-5.474-5.511-5.504v-2.406c4.361.03 7.889 3.555 7.92 7.91h-2.409zm4.081 0c-.016-5.297-4.303-9.571-9.592-9.594v-2.406c6.623.023 11.985 5.384 12 12h-2.408z"/></svg>
+                    </a>
+                </span>
+                
+                
+                <!-- Contact icon -->
+                
+                
+                <span class="my-span-icon">
+                    <a href="http://localhost:4000/contact.html" aria-label="Contact" title="Contact jlacar">
+                        <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"/></svg>
+                    </a>
+                </span>
+                
+                
+            </footer>
+        </section>
+        
+        <script>
+            var menu = document.querySelector("nav.site-nav");
+            var checkbox = document.getElementById("nav-trigger");
+            
+            // close menu if click outside menu
+            document.addEventListener("click", function(e) {
+                if (menu != e.target &&
+                        !isDescendant(menu, e.target)) {
+                    checkbox.checked = false;
+                }
+            }, false);
+            
+            function isDescendant(parent, child) {
+                var node = child.parentNode;
+                while (node != null) {
+                    if (node == parent) {
+                        return true;
+                    }
+                    node = node.parentNode;
+                }
+                return false;
+            }  
+        </script>
+        
+    </body>
+    </html>
+    
