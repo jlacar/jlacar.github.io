@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Contact
-tagline: Create a contact form and you are good to go
+tagline: How to reach out to me
 ref: contact
 order: 10
 ---
 
-Jekyll is a great tool to create static sites but with static site, there's no backend to send your data to: that is why you need a third party service.
+I usually hang out at [CodeRanch](https://coderanch.com] in my free time. Otherwise, I'm kind of active on LinkedIn and a little bit on Twitter. I'm trying to move to Mastodon but haven't posted a lot there yet. If you search my name, there aren't that many people who will turn up besides me.
 
 [Go to the Home Page]({{ '/' | absolute_url }})
