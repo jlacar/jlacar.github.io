@@ -13,7 +13,7 @@ layout: default
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
-        ({{ page.date | date: date_format }})
+        ({{ page.date | date: date_format }} &mdash; {% include read-time.html post-content=content -%})
       </time>
     </p>
   </header>
