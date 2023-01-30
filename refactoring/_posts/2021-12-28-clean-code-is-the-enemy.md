@@ -2,8 +2,9 @@
 layout: post
 title: Clean Code is the Enemy of Better Code
 excerpt-separator: <!---more--->
+banner: 
 ---
-Don't get carried away with the idea of clean code, sometimes doesn't suck as much is good enough.
+Clean code is good but sometimes doesn't suck as much is good enough.
 
 <!---more--->
 
@@ -24,79 +25,44 @@ This is the desert island takeaway of Arlo's talk:
 
 ## The future is now and it ain't too bright
 
-Since it was published on YouTube just a little over a year ago, the video of Arlo's presentation has garnered a piddly
-333 views (as of this writing), at least three of which are mine. Comparatively, that's a really small reach and those 
-low numbers are a sad indictment of the state of our industry. Except for a few lonely voices in the wilderness,  nobody
-really cares about finding ways to get better at legacy code maintenance.
+Since it was published on YouTube just a little over a year ago as of this writing, the video of Arlo's presentation has garnered a piddly 333 views, at least three of which are mine. Comparatively, that's a very small reach and those low numbers are a sad indictment of the state of our industry. Except for a few lonely voices in the wilderness, nobody seems to really care about getting better at maintaining legacy code.
 
-A search for videos on refactoring reflects the same disturbing trend: very few developers are interested in techniques 
-like refactoring and unit testing. In stark contrast, React tutorials get views in the hundreds of thousands and millions 
-very quickly. As Arlo says, the menders are greatly outnumbered by the makers. That doesn't bode well for the future.
-
-## A Ray of Hope
-
-There might still be hope though.
-
-If you're reading this, you're probably part of the solution. You're probably a mender yourself, or
-someone who guides menders, or aspires to turn more makers into menders. I don't claim to have all the answers but 
-I think some of these ideas help or are at least worth a try. I hope you do try them out, and I hope you find
-them useful.
+A search for videos on refactoring reflects the same trend: very few developers are interested in techniques like refactoring and unit testing. In stark contrast, React tutorials very quickly get to the hundreds of thousands and millions of views. This shows the truth in what Arlo says: the menders are greatly outnumbered by the makers. This doesn't bode well for the future.
 
 ## Messy code is inevitable; living with it is unacceptable
 
-Bob Martin used to have a bit where he asks his audience "Who has ever had to work with messy code?" to which,
-invariably, many hands are raised. Bob then asks "Then why did you write it?" Most people laugh at that, probably
-because it's true: we are often our own worst enemy.
+Bob Martin used to have a bit where he asks his audience "Who has ever had to work with messy code?" to which, invariably, many hands are raised. Bob then asks "Then why did you write it?" Most people laugh at that, probably because it's true: we are often our own worst enemy.
 
-I think who made the mess matters less than what we do about it. A better question to ask, therefore, is "Why did you
-leave it like that?"
+I think who made the mess matters less than what we do about it. Maybe a better question to ask is "Why did you leave it like that?"
 
-Writing messy code is inevitable; it's a natural consequence of the nature of knowledge work and the inescapable fact
-that we know far less early on than we do later. Sadly, most developers will just move on to the next task as soon as
-they get their code to work, leaving messy code behind without so much as an afterthought or eyelid batted.
+Messy code is inevitable because we know far less in the beginning than we do in the end. Sadly, most developers don't take the time to go back and adjust their code to reflect what they've learned. There's more work to do and there's little time to do it. We have to keep moving on. Of course, this leaves a lot of messy code behind for the next person (it could be you), to deal with.
 
-Dealing with the same messy code over and over again is not something we have to accept as a developer's lot in life.
-It's unacceptable. We should do better. We _can_ do better.
+Dealing with the same messy code over and over again is not something we have to accept.
+We can do better. We _should_ do better.
 
 ## Why don't developers refactor more often?
 
-What prevents developers from refactoring their code more often, as a matter of course? The answers to that question
-seem to be consistently along these lines:
+What prevents developers from refactoring their code more often? The answers to that question
+seem to fall consistently along these lines:
 
-1. Not enough time / too much pressure to deliver
-2. Too risky / fear of breaking things or introducing bugs
+1. Not enough time, too much pressure to deliver
+2. Too risky, fear of breaking things or introducing bugs
 3. Lack of training/skills in refactoring, good engineering
 4. Lack of motivation/incentive to do it
 
-There are many more reasons you could cite but these four are probably the most fundamental. Before we dissect each of
-these, let's take a closer look at a common underpinning: the need for Clean Code.
+There are many more reasons you could cite but these four are probably the most fundamental.
 
-## Clean Code sets a high bar; maybe too high for most.
+## Clean Code sets a high bar, too high for most.
 
-Robert Martin's book, _Clean Code_, is arguably the touchstone for writing good quality and relatively problem-free
-code. If only everyone followed all of its advice, our code would be in much better shape and our work would be much
-easier. Yet, here we are, twelve years since it was published, and most of us are still struggling with buggy and messy
-code as much as ever, if not more.
+Despite everything that's been said about clean code, most of us still struggling with buggy and messy code as much as ever, if not more. The sad fact is that clean code is just too high of a bar. It's a great ideal to aspire to but if it's the standard we have to meet, we've set ourselves up for disappointment and failure.
 
-Here's the sad fact we need to face as an industry: clean code is just too high of a bar. It's a great ideal to aspire
-to but if it's the standard we have to meet, we're setting ourselves up for disappointment and, ultimately, failure.
-
-As Arlo said, we need to set our sights lower. We need to aim lower than Good, for code that's Slightly Less Terrible
-and Less Shitty.
+As Arlo said, we need to set our sights lower. We need to aim lower than Good, for code that's Slightly Less Terrible and Less Shitty.
 
 ## Ain't nobody got time for that!
 
-"Later, if and when we have more time" is probably the biggest lie we habitually tell ourselves about refactoring. We
-know there's little to no chance we'll be able to get to it later. That time hardly ever comes. Well, I probably
-shouldn't say hardly ever because it does eventually come, just not under the circumstances we hoped it would nor with
-the desired outcomes.
+"Later, if and when we have more time" is probably the biggest lie we consistently tell ourselves about refactoring. We know there's little to no chance we'll be able to get to it later. When we do get serious about refactoring, it's usually under less than ideal circumstances where it has become a do or die situation.
 
-Time for refactoring is often forced on us under the least ideal conditions, when things are desperate, when both the
-stakes and risks are high, and the survival of the product and the company that pays us to make it is on the line. We've
-all seen that movie: Never enough time to refactor it now, always time enough to fix it in production later.
-
-Deep down we know, probably more than anyone else, that Sweet Brown was wrong: there's always time for that, just not in
-the way you hoped and usually by then, it's too late.
+For many teams, time refactoring is often only afforded to them under the least ideal conditions, when things are desperate, when both the stakes and risks are high, and reputations or even survival is at risk. We've all seen that movie: There's never enough time to refactor when we're still in development, but there's always time to fix problems when things are blowing up in production.
 
 ## High risk, low reward
 

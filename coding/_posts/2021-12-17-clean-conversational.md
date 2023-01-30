@@ -2,6 +2,10 @@
 layout: post
 title: CLEAR code is Conversational
 tagline: Gaining clarity with code that tells stories
+banner-img: /assets/images/socialcut-stories.jpg
+banner-alt: Image by Social Cut on Unsplash.com
+banner-width: 640
+banner-height: 397
 ---
 
 I first heard the idea of telling a story in code from Kent Beck in [SE Radio Episode #167](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/). Kent was explaining how a test should have an arc of a story, with a clear beginning, middle, and end. Since
@@ -21,14 +25,11 @@ _"How can we tell that story with this code?"_
 
 ## Technical Debt Detector
 
-I've paired this concept of code telling a story with the idea of a User Story. I try to make my code's story match the
-User Story as closely as possible. When I start programming for a new User Story, I'll say "Ok, let's tell that story in the code."
+Telling stories in code also helps you find technical debt that needs to be addressed. 
 
-I've tied this kind of perspective to technical debt, with the meaning of that term taken from Ward Cunningham's
-explanation of The Debt Metaphor, where debt is essentially the gap between what the code says and what it should say.
-As Tim Ottinger put it recently, technical debt is the difference between what we know now and what we knew when we wrote the code.
+Ward Cunningham, who coined [the Debt Metaphor](https://www.youtube.com/watch?v=pqeJFYwnkjE), defines technical debt as essentially any lack of understanding in the code. As Tim Ottinger puts it, technical debt is the difference between what we know now and what we knew when we wrote the code. In other words, technical debt is any gap in what the code says and what it _should_ say.
 
-I find that the gaps of understanding in the code are more easily detected by reading the code out loud. Telling code's story is really good way to find technical debt. The less coherent the code's story is, the more technical debt you have.
+I find it easier to detect those gaps of understanding in the code's story when we read it out loud. When we read the code silently, our brains will compensate for those gaps by filling in the context. When you're listening to yourself or someone else tell the story, however, the gaps become clear.
 
 ## How does that work?
 

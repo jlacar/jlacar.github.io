@@ -65,6 +65,7 @@
         {% endif %}
         
         <section class="page-header">
+            {%- unless page.layout == 'post' %}
             <h1 class="project-name">{{ page-title }}</h1>
             <h2 class="project-tagline">{{ page-tagline }}</h2>
             {% if page.layout == 'home' and site.github.is_project_page %}
@@ -74,20 +75,35 @@
             <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
             {% endif %}
             {% endif %}
+            {% else %}
+            {%- if page.banner-img -%}
+            <img src="{{ page.banner-img | absolute_url }}"
+                 {% if page.banner-alt -%}
+                 alt="{{ page.banner-alt }}"
+                 {%- endif -%}
+                 {% if page.banner-width -%}
+                 width="{{ page.banner-width}}"
+                 {%- endif -%}}
+                 {% if page.banner-height -%}
+                 height="{{ page.banner-height}}"
+                 {%- endif -%}}
+            />
+            {%- endif -%}
             <!-- Post tagline -->
-            {% if page.layout == 'post' %}
-            <h2 class="project-date">
-                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                    {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
-                    {{ page.date | date: date_format }}
-                </time>
-                {% assign page_author = page.author | default: site.author | default: nil | escape %}
-                {% if page_author %}
-                • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page_author }}</span></span>
-                {% endif %}
-            </h2>
-            {% endif %}
+            <!--            {% if page.layout == 'post' %}-->
+            <!--            <h2 class="project-date">-->
+            <!--                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">-->
+            <!--                    {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}-->
+            <!--                    {{ page.date | date: date_format }}-->
+            <!--                </time>-->
+            <!--                {% assign page_author = page.author | default: site.author | default: nil | escape %}-->
+            <!--                {% if page_author %}-->
+            <!--                • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page_author }}</span></span>-->
+            <!--                {% endif %}-->
+            <!--            </h2>-->
+            <!--            {% endif %}-->
             <!-- End: Post tagline -->
+            {% endunless -%}
         </section>
         
         <section class="main-content">
