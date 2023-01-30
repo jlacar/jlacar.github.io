@@ -1,6 +1,7 @@
 ---
 layout: post
-title: To Write Better Code, Tell a Story
+title: Better Code Tells a Story
+author: Junilu Lacar
 banner-img: /assets/images/socialcut-stories.jpg
 banner-alt: Image by Social Cut on Unsplash.com
 banner-width: 640
