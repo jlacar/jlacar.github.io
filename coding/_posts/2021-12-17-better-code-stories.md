@@ -1,17 +1,24 @@
 ---
 layout: post
-title: CLEAR code is Conversational
-tagline: Gaining clarity with code that tells stories
+title: To Write Better Code, Tell a Story
 banner-img: /assets/images/socialcut-stories.jpg
 banner-alt: Image by Social Cut on Unsplash.com
 banner-width: 640
 banner-height: 397
 ---
 
-I first heard the idea of telling a story in code from Kent Beck in [SE Radio Episode #167](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/). Kent was explaining how a test should have an arc of a story, with a clear beginning, middle, and end. Since
-then, I have used that in my conversations about design and code. 
+I first heard the idea of telling a story in code from Kent Beck in [SE Radio Episode #167](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/). Kent was explaining how a test should have an arc of a story, with a clear beginning, middle, and end. 
 
-These are some things I often say:
+Thinking of code as a story you're trying to tell adds another dimension to how you approach a problem and how you design and organize the solution. 
+
+Context
+Coherence
+Consistency
+Conciseness
+
+
+
+. These are some things I often say:
 
 _"Make the code tell a story"_
 
