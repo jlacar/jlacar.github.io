@@ -60,7 +60,7 @@ fun of(hand: String): HandType {
     }
 }
 ```
-I think the name "kinds" fits better in this particular part of the code, especially since the enum type `HandType` uses "OF_A_KIND". I realize that "rank" is problematic because it's also used elsewhere but with a different meaning, one that indicates the relative order of a hand's strength with respect to other hands, which is an entirely different idea from the one we're dealing with in the `HandType.of()` function.
+I think the name "kinds" fits better in this particular part of the code, especially since the enum type `HandType` uses "OF_A_KIND". I realize that "rank" is problematic because it's also used elsewhere in the code, but with a different meaning and an entirely different idea from the one we're dealing with here in the `HandType.of()` function.
 
 With `distinctKinds`, the idea in the code now matches the idea in my head. Gone is that subtle little bit of dissonance between "rank" and "kind". The code is now more consistent and coherent. "Rank" was, as they say, a loose thread that we have just tied off.
 
