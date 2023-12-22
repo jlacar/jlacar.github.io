@@ -160,7 +160,7 @@ If I'm reading out loud to non-techies, I'll probably say "We count how many of 
 
 The point is, rather than a literal reading of the code, I think about what the code means and verbalize my understanding. This verbalization is adjusted according to how I think it will be best received by whoever is listening at the moment.
 
-Listening to myself just now helped me find another refactoring. This happens to me quite often. I think it has to do with using two different channels of sensory input: the visual alongside the aural. When I _hear_ something that doesn't quite match what I'm _seeing_, it tells me there might be something off in the code.
+Listening to myself speaking for the code just now helped me find yet another opportunity to refactor. This happens to me quite often. I think it has to do with using two different channels of sensory input: the visual alongside the aural. When I _hear_ something that doesn't quite match what I'm _seeing_, it tells me there might be something off in the code.
 
 ### Getting on the same page
 
