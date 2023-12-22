@@ -127,7 +127,7 @@ fun String.charCounts(): Map<Char, Int> = mutableMapOf<Char, Int>()
         countOf
     }
 ```
-The difference between `charCounts(hand)` and `hand.charCounts()` may seem trivial but in my opinion, the latter reads much better. I like to read code out loud so I can literally hear what it's saying. Maybe it's just me but something in my brain seems to click more cleanly when I hear myself say "count of cards in this hand" as I read `hand.cardCounts()` versus when I read `cardCount(hand)`.
+The difference between `charCounts(hand)` and `hand.charCounts()` may seem trivial but in my opinion, the latter reads much better. I like to read code out loud so I can literally hear what it's saying. Maybe it's just me but something in my brain seems to click more cleanly when I hear myself say "count of cards in this hand" as I read `hand.cardCounts()` versus when I read `cardCounts(hand)`.
 
 Wait, did you notice what just happened? I just heard myself say "_card_ counts" but my eyes are reading "**char**Counts()". In fact, I just _wrote_ `cardCounts()` instead of `charCounts()`. 
 
