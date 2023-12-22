@@ -131,7 +131,7 @@ The difference between `charCounts(hand)` and `hand.charCounts()` may seem trivi
 
 Wait, did you notice what just happened? I just heard myself say "_card_ counts" but my eyes are reading "**char**Counts()". In fact, I just _wrote_ `cardCounts()` instead of `charCounts()`. 
 
-We've just found some dissonance in the code! I was _thinking_ "card counts" but the code was _saying_ "**char** counts". Good thing I was trying to explain it to you. No problem, we can always alias `charCounts()` with an extension function. 
+We've just found some dissonance in the code! I was _thinking_ "**card** counts" but the code was _saying_ "**char** counts". Good thing I was trying to explain it to you. No problem, we can always alias `charCounts()` with an extension function. 
 ```kotlin
     // local String extension for story consistency
     private fun String.cardCounts(): Map<Char, Int> = this.charCounts()
