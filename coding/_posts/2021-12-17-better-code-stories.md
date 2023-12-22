@@ -13,12 +13,10 @@ I first heard the idea of telling a story in code from Kent Beck in [SE Radio Ep
 Thinking of code as a story you're trying to tell adds another dimension to how you approach a problem and how you design and organize a solution around it. 
 
 These are the Four Cs that help me tell a good story in code.
-- **Context** - there should be enough information in the immediate area that around an interesting section of code that can give meaning to  a piece of code 
-Coherence
-Consistency
-Conciseness
-
-
+- **Context** - there should be enough information in the immediate area around an interesting section of code that helps the reader attach the correct meaning to it. 
+- **Coherence** - the ideas should make sense. It all needs to come together, with each part contributing to the understanding of the whole.
+- **Consistency** - the ideas in the code need to have some level of consistency. They should follow some kind of theme or style, a train of thought, a structure that creates a discernible and congruent pattern.
+- **Conciseness** - the story needs to be told in as directly as possible, without extraneous bits that don't add to the main idea.
 
 . These are some things I often say:
 
