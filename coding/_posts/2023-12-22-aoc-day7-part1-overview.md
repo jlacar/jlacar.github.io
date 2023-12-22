@@ -16,6 +16,10 @@ I do plan on releasing the prequels for Days 1 through 6, by the way. Just don't
 
 We join our intrepid Kotlin adventurer in the middle of their quest to help fix global snow production. On Day 7, the puzzle is all about Camel Cards, which is like poker, except with a few twists. There are seven type of hands, the strongest of which is **five of a kind** where you have, well, five cards of the same kind. Saying that out loud just now gave me an idea for refactoring. 
 
+By the way, if you just want to check out my Kotlin code for AoC 2023, you can find it all here: https://github.com/jlacar/aoc-2023-kotlin/tree/main/src
+
+Caveat: I'm still learning Kotlin. There's some good Kotlin in there but there's also quite a bit of not-so-good Kotlin. Feel free to browse, but use at your own risk. You have been warned.
+
 ### What's in a name?
 
 I first heard Kent Beck say that "code should tell a story" in a Software Engineering Radio podcast from 2010, [Episode 167: The History of JUnit and the Future of Testing with Kent Beck](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/).
