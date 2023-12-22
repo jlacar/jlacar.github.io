@@ -2,8 +2,8 @@
 layout: post
 title: Advent of Code 2023, Day 7 - Camel Cards Part 1.a
 author: Junilu Lacar
-banner-img: /assets/images/camel-cards.jpg
-banner-alt: Image by DALL-E3 on Bing.com
+banner-img: /assets/images/camels/camel-cards-0.jpg
+banner-alt: Image created by DALL-E3 on Bing.com
 banner-width: 270
 banner-height: 270
 ---
@@ -16,7 +16,7 @@ I do plan on releasing the prequels for Days 1 through 6, by the way. Just don't
 
 We join our intrepid Kotlin adventurer in the middle of their quest to help fix global snow production. On Day 7, the puzzle is all about Camel Cards, which is like poker, except with a few twists. 
 
-First, there are seven types of hands in Camel Cards, the strongest of which is **five of a kind** where you have, well, five of the same kind of card. For example, the hand `TTTTT` has five of the Ten (T) kind. Similarly, `A7222` is **three of a kind** because it has three of the Two (2) kind of card, and `88Q88` is a **four of a kind** hand because of the four Eight (8) kind cards.
+First, there are seven types of hands in Camel Cards, the strongest of which is **five of a kind** where you have, well, five of the same kind of card. For example, the hand `TTTTT` has five of the Ten (T) kind. Similarly, `A7222` is a **three of a kind** hand because it has three of the `2` kind of card, and `88Q88` is a **four of a kind** hand because of the four `8` kind cards.
 
 Saying that out loud just now gave me another idea for refactoring. 
 
@@ -60,13 +60,15 @@ fun of(hand: String): HandType {
     }
 }
 ```
-I think the name "kinds" fits better in this particular part of the code, especially since the enum type `HandType` uses "OF_A_KIND". "Rank" is problematic because it's used elsewhere but with a different meaning, one that indicates the relative order of a hand's strength with respect to other hands, which is an entirely different idea from the one we have in the `HandType.of()` function.
+I think the name "kinds" fits better in this particular part of the code, especially since the enum type `HandType` uses "OF_A_KIND". I realize that "rank" is problematic because it's also used elsewhere but with a different meaning, one that indicates the relative order of a hand's strength with respect to other hands, which is an entirely different idea from the one we're dealing with in the `HandType.of()` function.
 
-With `distinctKinds`, the code now matches the ideas in my head and gone is that subtle little bit of dissonance. It was, as they say, a loose thread that we just tied off.
+With `distinctKinds`, the idea in the code now matches the idea in my head. Gone is that subtle little bit of dissonance between "rank" and "kind". The code is now more consistent and coherent. "Rank" was, as they say, a loose thread that we have just tied off.
+
+That's what's in a name.
 
 ### Use names from the problem domain
 
-Speaking of names, a rich source of good names for our programs is the problem domain itself. You can tap into what Eric Evans and the Domain Driven Design community call "the Ubiquitous Language", a set of terms that is used to give context and meaning to ideas related to the problem at hand.
+Speaking of names, a rich source of good ones for our programs is the problem domain itself. You can tap into what Eric Evans and the Domain Driven Design folks call "the Ubiquitous Language", a set of words and terms used to give context and meaning to ideas related to the problem at hand.
 
 Engineers, being technical by nature, love to use technical-sounding names. That's just what we do. However, techie-speak often creates problems in communication, especially when it comes to non-engineers.
 
@@ -136,9 +138,15 @@ Wait, I just heard myself say "_card_ counts" but my eyes are reading "**char**C
 ```
 Pretty cool, right? Now the Kotlin code also says "**card** counts" just like I was reading it out.
 
+Remember what I said before about techie-speak and words in the problem domain? "Char" is techie-speak, whereas "Card" is not; it comes from the problem domain.
+
+Say it out loud: `hand.cardCounts()`. That is fluency.
+
 ### How to read code out loud
 
-I probably should say something about this idea of reading code out loud. By that I don't mean reading it out literally, as in "private val count of equals hand dot char counts." No, that would be kind of silly. When I read the code out loud, I try to be "the voice" of the code. I imagine the code as its own person, someone who's trying to explain an idea to others.
+I probably should say something about this idea of reading code out loud. By that I don't mean reading it out literally, as in "private val count of equals hand dot card counts." No, that would be kind of silly. 
+
+When I read the code out loud, I try to be "the voice" of the code. I imagine the code as its own person, someone who's trying to explain an idea to others.
 
 When I read code like `private val countOf = hand.cardCounts()` out loud, I'll typically _verbalize_ it as something like "the variable `countOf` gets assigned the count of each kind of card in the hand." I imagine that's how "the code" would say it.
 
