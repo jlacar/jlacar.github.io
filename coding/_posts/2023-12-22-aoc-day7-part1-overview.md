@@ -166,7 +166,7 @@ Listening to myself just now helped me find another refactoring. This happens to
 
 Martin Fowler is often quoted as saying "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
 
-This idea is key to writing readable code. You have to consider your audience, which we musn't always assume will be tuned in to techie-speak. When we do mob programming, or "ensemble" or "software teaming" if that's what you like to call it, it's not always just programmers we're working with. Thinking about enabling non-programmers to read and understand the ideas in the code helps get and keep everyone on the same page.
+This idea is key to writing readable code. You have to consider your audience, which we musn't always assume will be tuned in to techie-speak. When we do mob programming, or "ensemble" or "software teaming" if that's what you like to call it, it's not always just programmers we're working with. Enabling non-programmers to read the code and understand the ideas in it helps get and keep everyone on the same page.
 
 ## Conclusion
 
