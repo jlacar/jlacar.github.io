@@ -119,6 +119,15 @@ fun String.charCounts(): Map<Char, Int> = mutableMapOf<Char, Int>()
 ```
 The difference between `cardCounts(hand)` and `hand.cardCounts()` may seem trivial but in my opinion, the latter reads much better. I like to read code out loud so I can literally hear what it's saying. Maybe it's just me but something in my brain seems to click more cleanly when I hear myself say "count of cards in this hand" as I read `hand.cardCounts()` versus when I read `cardCount(hand)`.
 
+Wait, I just heard myself say "_card_ counts" but my eyes are reading "**char**Counts()". Good thing I was paying attention. No problem, we can always alias `charCounts()` with an extension function.
+```kotlin
+    // local String extension for story consistency
+    private fun String.cardCounts(): Map<Char, Int> = this.charCounts()
+
+    private val countOf = hand.cardCounts()
+```
+Pretty cool, right? Now the Kotlin code also says "**card** counts" just like I was reading it out.
+
 ### How to read code out loud
 
 I probably should say something about this idea of reading code out loud. By that I don't mean reading it out literally, as in "private val count of equals hand dot char counts." No, that would be kind of silly. When I read the code out loud, I try to be "the voice" of the code. I imagine the code as its own person, someone who's trying to explain an idea to others.
@@ -130,6 +139,8 @@ Of course, the exact phrasing also depends on who's listening. If I'm reading ou
 If I'm reading out loud to non-techies, I might just say "We count how many of each kind of card there are in this hand."
 
 The point is, rather than a literal reading of the code, I think about what the code means and verbalize my understanding. This verbalization is adjusted according to how I think it will be best received by whomever is listening at the moment.
+
+Listening to myself just now helped me find another refactoring. This happens to me quite often. I think it has to do with using two different channels of sensory input: the visual alongside the aural. When I _hear_ something that doesn't quite match what I'm _seeing_, it tells me there might be something off in the code.
 
 ### Getting on the same page
 
