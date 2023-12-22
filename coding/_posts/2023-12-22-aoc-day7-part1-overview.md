@@ -18,11 +18,11 @@ We join our intrepid Kotlin adventurer in the middle of their quest to help fix 
 
 ### What's in a name?
 
-I first heard Kent Beck say that code should tell a story in a SE Radio podcast from 2010, [Episode 167: The History of JUnit and the Future of Testing with Kent Beck](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/).
+I first heard Kent Beck say that "code should tell a story" in a Software Engineering Radio podcast from 2010, [Episode 167: The History of JUnit and the Future of Testing with Kent Beck](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/).
 
-Names are the fibers of ideas in our programs. We spin them into threads that we then weave into the fabric that we cut and sew together around the problem, to cloth it with what we understand to be the correct solution.
+Names are the fibers of ideas in our programs. We spin them into threads that we then weave into the fabric that we cut and sew together around the problem, to clothe it with what we understand to be the correct solution.
 
-Ok, that was a little deep and dramatic, I admit. But names _are_ an important part of our programs and we should take care to choose them wisely or run the risk of detracting or distracting from the story the code is trying to tell.
+Ok, that was a little deep and dramatic, I admit. But names _are_ an important part of our programs and we would be well-advised to take care and choose them wisely, or run the risk of detracting or distracting from the story the code is trying to tell.
 
 When I highlighted "five of a kind" a few paragraphs ago, it occurred to me that instead of `rank`, I could have used `kind` instead in my Day 7 solution. 
 
