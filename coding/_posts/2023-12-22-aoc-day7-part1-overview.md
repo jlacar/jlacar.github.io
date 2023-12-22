@@ -28,7 +28,7 @@ Caveat: I'm still learning Kotlin. There's some good Kotlin in there but there's
 
 I first heard Kent Beck say that "code should tell a story" in a Software Engineering Radio podcast from 2010, [Episode 167: The History of JUnit and the Future of Testing with Kent Beck](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/).
 
-Names are the fibers of ideas in our programs. We spin them into threads that we then weave into the fabric that we cut and sew together around the problem, to clothe it with what we understand to be the correct solution.
+Names are the stuff of stories, the fibers of ideas in our programs. We spin them into threads that we then weave into the fabric that we cut and sew together around the problem, to clothe it with what we understand to be the correct solution.
 
 Ok, that was a little deep and dramatic, I admit. But names _are_ an important part of our programs and we would be well-advised to take care and choose them wisely, or run the risk of detracting or distracting from the story the code is trying to tell.
 
