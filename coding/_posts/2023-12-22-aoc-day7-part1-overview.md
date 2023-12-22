@@ -152,7 +152,7 @@ I probably should say something about this idea of reading code out loud. By tha
 
 When I read the code out loud, I try to be "the voice" of the code. I imagine the code as its own person, someone who's trying to explain an idea to others.
 
-When I read code like `private val countOf = hand.cardCounts()` out loud, I'll typically _verbalize_ it as something like "the variable `countOf` gets assigned the count of each kind of card in the hand." I imagine that's how "the code" would say it.
+When I read code like `private val countOf = hand.cardCounts()` out loud, I'll typically express it as something like "the variable `countOf` gets assigned the count of each kind of card in the hand." I imagine that's really what "the code" is saying. In reality, it's what I _understand_ the code is saying.
 
 Of course, the exact phrasing also depends on who's listening. If I'm reading out loud to programmers, I might color it a little technical: "Create an immutable variable `countOf` for the count of each kind of card in the hand." Or leave out the "immutable variable" part if I know they already understand what `val countOf` is saying.
 
