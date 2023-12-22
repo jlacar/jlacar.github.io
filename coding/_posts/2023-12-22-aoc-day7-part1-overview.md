@@ -24,7 +24,7 @@ Names are the fibers of ideas in our programs. We spin them into threads that we
 
 Ok, that was a little deep and dramatic, I admit. But names _are_ an important part of our programs and we would be well-advised to take care and choose them wisely, or run the risk of detracting or distracting from the story the code is trying to tell.
 
-When I highlighted "five of a kind" a few paragraphs ago, it occurred to me that instead of `rank`, I could have used `kind` instead in my Day 7 solution. 
+When I highlighted "five of a kind" a few paragraphs ago, it occurred to me that rather than using `rank`, I could have used `kind` instead in my Day 7 solution.
 
 That is, I should refactor-rename this:
 ```kotlin
