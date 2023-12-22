@@ -127,9 +127,13 @@ fun String.charCounts(): Map<Char, Int> = mutableMapOf<Char, Int>()
         countOf
     }
 ```
-The difference between `cardCounts(hand)` and `hand.cardCounts()` may seem trivial but in my opinion, the latter reads much better. I like to read code out loud so I can literally hear what it's saying. Maybe it's just me but something in my brain seems to click more cleanly when I hear myself say "count of cards in this hand" as I read `hand.cardCounts()` versus when I read `cardCount(hand)`.
+The difference between `charCounts(hand)` and `hand.charCounts()` may seem trivial but in my opinion, the latter reads much better. I like to read code out loud so I can literally hear what it's saying. Maybe it's just me but something in my brain seems to click more cleanly when I hear myself say "count of cards in this hand" as I read `hand.cardCounts()` versus when I read `cardCount(hand)`.
 
-Wait, I just heard myself say "_card_ counts" but my eyes are reading "**char**Counts()". Good thing I was paying attention. No problem, we can always alias `charCounts()` with an extension function.
+Wait, did you notice what just happened? I just heard myself say "_card_ counts" but my eyes are reading "**char**Counts()". In fact, I just _wrote_ `cardCounts()` instead of `charCounts()`. 
+
+We've just found some dissonance in the code! I was _thinking_ "card counts" but the code was _saying_ "**char** counts". Good thing I was trying to explain it to you.
+
+No problem, we can always alias `charCounts()` with an extension function.
 ```kotlin
     // local String extension for story consistency
     private fun String.cardCounts(): Map<Char, Int> = this.charCounts()
