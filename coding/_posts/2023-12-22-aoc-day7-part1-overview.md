@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Advent of Code 2023: Day 7 - Camel Cards Part 1.a
+title: Advent of Code 2023, Day 7 - Camel Cards Part 1.a
 author: Junilu Lacar
 banner-img: /assets/images/camel-cards.jpg
 banner-alt: Image by DALL-E3 on Bing.com
