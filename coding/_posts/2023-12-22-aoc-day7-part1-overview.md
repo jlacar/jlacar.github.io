@@ -4,8 +4,8 @@ title: Advent of Code 2023, Day 7 - Camel Cards Part 1.a
 author: Junilu Lacar
 banner-img: /assets/images/camels/camel-cards-0.jpg
 banner-alt: Image created by DALL-E3 on Bing.com
-banner-width: 270
-banner-height: 270
+banner-width: 400
+banner-height: 400
 ---
 
 If you're wondering why we're already on Day 7, don't worry, think of this as something like [_Star Wars: Episode IV - A New Hope_](https://en.wikipedia.org/wiki/Star_Wars_(film)) when it came out as the first of the series. If you really must have all the context before moving on and don't want to wait for the prequels, just go to the [Advent of Code 2023 event page](https://adventofcode.com/2023/) and read the backstory there.
