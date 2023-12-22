@@ -138,7 +138,7 @@ We've just found some dissonance in the code! I was _thinking_ "card counts" but
 
     private val countOf = hand.cardCounts()
 ```
-Ironically, `charCounts()` was already an extension function, one that I created to clarify what a `fold()` operation was doing. Now we're using an extension function to align `charCounts()` to the problem domain language by calling it `cardCounts()` instead. 
+Ironically, `charCounts()` is already an extension function, one that I created to clarify what a `forEach {}` operation was doing. Now we're using an extension function to align the name `charCounts()` to the problem domain language by referring to it as `cardCounts()`. 
 
 Remember what I said before about techie-speak and words in the problem domain? "Char" is techie-speak, whereas "Card" is not; it comes from the problem domain.
 
