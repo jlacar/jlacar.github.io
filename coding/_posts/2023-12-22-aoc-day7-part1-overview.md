@@ -14,7 +14,11 @@ I do plan on releasing the prequels for Days 1 through 6, by the way. Just don't
 
 ## Advent of Code (AoC) 2023
 
-We join our intrepid Kotlin adventurer in the middle of their quest to help fix global snow production. On Day 7, the puzzle is all about Camel Cards, which is like poker, except with a few twists. There are seven type of hands, the strongest of which is **five of a kind** where you have, well, five cards of the same kind. Saying that out loud just now gave me an idea for refactoring. 
+We join our intrepid Kotlin adventurer in the middle of their quest to help fix global snow production. On Day 7, the puzzle is all about Camel Cards, which is like poker, except with a few twists. 
+
+First, there are seven types of hands in Camel Cards, the strongest of which is **five of a kind** where you have, well, five of the same kind of card. For example, the hand `TTTTT` has five of the Ten (T) kind. Similarly, `A7222` is **three of a kind** because it has three of the Two (2) kind of card, and `88Q88` is a **four of a kind** hand because of the four Eight (8) kind cards.
+
+Saying that out loud just now gave me another idea for refactoring. 
 
 By the way, if you just want to check out my Kotlin code for AoC 2023, you can find it all here: [https://github.com/jlacar/aoc-2023-kotlin/tree/main/src](https://github.com/jlacar/aoc-2023-kotlin/tree/main/src)
 
@@ -28,7 +32,7 @@ Names are the fibers of ideas in our programs. We spin them into threads that we
 
 Ok, that was a little deep and dramatic, I admit. But names _are_ an important part of our programs and we would be well-advised to take care and choose them wisely, or run the risk of detracting or distracting from the story the code is trying to tell.
 
-When I highlighted "five of a kind" a few paragraphs ago, it occurred to me that rather than using `rank`, I could have used `kind` instead in my Day 7 solution.
+When I highlighted "five of a kind" a few paragraphs ago, and explained the "of a kind" hand type, it occurred to me that rather than using `rank`, I should use `kind` instead in that part of my Day 7 solution.
 
 That is, I should refactor-rename this:
 ```kotlin
