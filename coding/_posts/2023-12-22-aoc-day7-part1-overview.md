@@ -154,11 +154,11 @@ When I read the code out loud, I try to be "the voice" of the code. I imagine th
 
 When I read code like `private val countOf = hand.cardCounts()` out loud, I'll typically _verbalize_ it as something like "the variable `countOf` gets assigned the count of each kind of card in the hand." I imagine that's how "the code" would say it.
 
-Of course, the exact phrasing also depends on who's listening. If I'm reading out loud to programmers, I might color it a little technical: "Create an immutable variable `countOf` for the count of each kind of card in the hand." Or leave out the "immutable variable" part if I know they already understand what `val countOf` part is saying.
+Of course, the exact phrasing also depends on who's listening. If I'm reading out loud to programmers, I might color it a little technical: "Create an immutable variable `countOf` for the count of each kind of card in the hand." Or leave out the "immutable variable" part if I know they already understand what `val countOf` is saying.
 
-If I'm reading out loud to non-techies, I might just say "We count how many of each kind of card there are in this hand."
+If I'm reading out loud to non-techies, I'll probably say "We count how many of each kind of card there are in this hand."
 
-The point is, rather than a literal reading of the code, I think about what the code means and verbalize my understanding. This verbalization is adjusted according to how I think it will be best received by whomever is listening at the moment.
+The point is, rather than a literal reading of the code, I think about what the code means and verbalize my understanding. This verbalization is adjusted according to how I think it will be best received by whoever is listening at the moment.
 
 Listening to myself just now helped me find another refactoring. This happens to me quite often. I think it has to do with using two different channels of sensory input: the visual alongside the aural. When I _hear_ something that doesn't quite match what I'm _seeing_, it tells me there might be something off in the code.
 
