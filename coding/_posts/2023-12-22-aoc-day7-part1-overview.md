@@ -131,20 +131,20 @@ The difference between `charCounts(hand)` and `hand.charCounts()` may seem trivi
 
 Wait, did you notice what just happened? I just heard myself say "_card_ counts" but my eyes are reading "**char**Counts()". In fact, I just _wrote_ `cardCounts()` instead of `charCounts()`. 
 
-We've just found some dissonance in the code! I was _thinking_ "card counts" but the code was _saying_ "**char** counts". Good thing I was trying to explain it to you.
-
-No problem, we can always alias `charCounts()` with an extension function.
+We've just found some dissonance in the code! I was _thinking_ "card counts" but the code was _saying_ "**char** counts". Good thing I was trying to explain it to you. No problem, we can always alias `charCounts()` with an extension function. 
 ```kotlin
     // local String extension for story consistency
     private fun String.cardCounts(): Map<Char, Int> = this.charCounts()
 
     private val countOf = hand.cardCounts()
 ```
-Pretty cool, right? Now the Kotlin code also says "**card** counts" just like I was reading it out.
+Ironically, `charCounts()` was already an extension function, one that I created to clarify what a `fold()` operation was doing. Now we're using an extension function to align `charCounts()` to the problem domain language by calling it `cardCounts()` instead. 
 
 Remember what I said before about techie-speak and words in the problem domain? "Char" is techie-speak, whereas "Card" is not; it comes from the problem domain.
 
-Say it out loud: `hand.cardCounts()`. That is fluency.
+Pretty cool, right? Now the Kotlin code also says "**card** counts" just like how I was reading it out loud: `hand.cardCounts()`. 
+
+This is what I refer to as "listening to what the code wants to say." That is fluency, and getting it requires some sensitivity and paying attention.
 
 ### How to read code out loud
 
