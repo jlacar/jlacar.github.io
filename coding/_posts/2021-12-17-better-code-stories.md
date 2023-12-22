@@ -10,9 +10,10 @@ banner-height: 397
 
 I first heard the idea of telling a story in code from Kent Beck in [SE Radio Episode #167](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/). Kent was explaining how a test should have an arc of a story, with a clear beginning, middle, and end. 
 
-Thinking of code as a story you're trying to tell adds another dimension to how you approach a problem and how you design and organize the solution. 
+Thinking of code as a story you're trying to tell adds another dimension to how you approach a problem and how you design and organize a solution around it. 
 
-Context
+These are the Four Cs that help me tell a good story in code.
+- **Context** - there should be enough information in the immediate area that around an interesting section of code that can give meaning to  a piece of code 
 Coherence
 Consistency
 Conciseness
