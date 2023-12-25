@@ -79,10 +79,10 @@ Kotlin's [extension functions](https://kotlinlang.org/docs/extensions.html) come
 
 An extension function is defined just like a normal function except we prefix the name with the receiver type, the type we're extending. In this case, the type we're extending is `List<CamelCard>` so we'll create a new extension function, `totalWinnings()`, for it. 
 ```kotlin
-override fun part1(): Int = totalWinnings(plays.sortedWith( compareBy { it.normalStrength } ))
+override fun part1(): Int = totalWinningsOLD(plays.sortedWith( compareBy { it.normalStrength } ))
 // the code could say...  = plays.rankedWith(normalRules).totalWinnings()
 
-override fun part2(): Int = totalWinnings(plays.sortedWith( compareBy { it.jokerStrength } ))
+override fun part2(): Int = totalWinningsOLD(plays.sortedWith( compareBy { it.jokerStrength } ))
 // ...this more fluently  = plays.rankedWith(jokerRules).totalWinnings()
 
 // this becomes unused and can be safely deleted
@@ -96,7 +96,7 @@ private fun List<CamelCardPlay>.totalWinnings(): Int =
 Note that I've renamed the old function to facilitate switching to the new one. We can now try the new extension function with `part1()`:
 ```kotlin
 override fun part1(): Int = plays.sortedWith( compareBy { it.normalStrength } ).totalWinnings()
-// override fun part1(): Int = totalWinnings(plays.sortedWith( compareBy { it.normalStrength } ))
+// override fun part1(): Int = totalWinningsOLD(plays.sortedWith( compareBy { it.normalStrength } ))
 // the code could say...  = plays.rankedWith(normalRules).totalWinnings()
 ```
 We see that all tests still pass so we apply the same change to `part2()`. Again, all the tests pass. 
