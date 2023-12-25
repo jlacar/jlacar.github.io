@@ -71,7 +71,7 @@ Likewise when refactoring, it's better to avoid simply tearing up the code and t
 > 
 >  Refactoring is a very specific technique, founded on using small behavior-preserving transformations (themselves called refactorings). If you are doing refactoring your system should not be broken for more than a few minutes at a time...
 
-Keeping to this discipline can lead you to TCR, a recent development from Kent Beck. TCR stands for [Test && (Commit || Revert)](https://xp123.com/articles/tdd-tcr-commits/). I'll look deeper into TCR in a future article.
+Keeping to this discipline can lead you to TCR, a recent development from Kent Beck. TCR stands for [Test and (Commit or Revert)](https://xp123.com/articles/tdd-tcr-commits/). I'll look deeper into TCR in a future article.
 
 Our next step, therefore, is to add a new function before we do anything about the old one. If the new function works, we'll switch to it immediately. If it breaks the program, we'll keep the old and try again with something else.
 
