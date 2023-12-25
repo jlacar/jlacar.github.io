@@ -17,7 +17,7 @@ The Wikipedia entry for [fluent interface](https://en.wikipedia.org/wiki/Fluent_
 
 > "a **fluent interface** is an [object-oriented](https://en.wikipedia.org/wiki/Object_oriented_design) [API](https://en.wikipedia.org/wiki/Application_Programming_Interface) whose design relies extensively on method chaining. Its goal is to increase code legibility by creating a [domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language) (DSL). The term was coined in 2005 by Eric Evans and [Martin Fowler](https://en.wikipedia.org/wiki/Martin_Fowler_(software_engineer)).
 
-To be honest, I never knew that it was Evans and Fowler who coined the term before I saw it in Wikipedia. You'd think I would have known because I even mentioned them both the other day in [the first installment of this series](/coding/2023-12-22-aoc-day7-part1-overview.md) of articles, in the context of a fluent API. 
+To be honest, I never knew that it was Evans and Fowler who coined the term before I saw it in Wikipedia. You'd think I would have known because I even mentioned them both the other day in [the first installment of this series](/coding/2023/12/22/aoc-day7-part1-overview.html) of articles, in the context of a fluent API. 
 
 Of course, it makes sense that _they_ would come up with the term because a fluent API typically comes out of [refactoring](https://refactoring.com/) code to make it more readable, a Fowler thing, by using a [ubiquitous language](https://martinfowler.com/bliki/UbiquitousLanguage.html) to make it relatable, an Evans thing. I guess this is the universe telling me something again. See what I did with the anthropomorphism?
 
