@@ -77,7 +77,7 @@ Our next step, therefore, is to add a new function before we do anything about t
 
 Kotlin's [extension functions](https://kotlinlang.org/docs/extensions.html) come in handy in this situation. Extension functions allow us to add functionality to an existing class, even ones we can't edit, without having to create a subclass. 
 
-An extension function is defined just like a normal function except we prefix the name with the receiver type, the type we're extending. In this case, the receiver type we're extending is `List<CamelCard>` so we'll create a new extension function, `totalWinnings()`, for this type. 
+An extension function is defined just like a normal function except we prefix the name with the receiver type, the type we're extending. In this case, the type we're extending is `List<CamelCard>` so we'll create a new extension function, `totalWinnings()`, for it. 
 ```kotlin
 override fun part1(): Int = totalWinnings(plays.sortedWith( compareBy { it.normalStrength } ))
 // the code could say...  = plays.rankedWith(normalRules).totalWinnings()
