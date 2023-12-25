@@ -7,7 +7,7 @@ banner-alt: Image created by DALL-E3 on Bing.com
 banner-width: 400
 banner-height: 400
 ---
-I've noticed a bit of a buzz on my social-vine lately about code talking, and that we should listen to it. Of course, that's just a figure of speech, what my high school English teacher, Ms. Dinopol, taught us is an [anthropomorphization](https://dictionary.cambridge.org/dictionary/english/anthropomorphize), where we give human characteristics to something non-human.
+I've noticed a bit of a buzz on my social-vine lately about code talking, and us listening to what it's saying. Of course, that's just a figure of speech, what my high school English teacher, Ms. Dinopol, taught us is an [anthropomorphization](https://dictionary.cambridge.org/dictionary/english/anthropomorphize), where we give human characteristics to something non-human.
 
 Developers have a proclivity for anthropomorphizing because it's useful in many ways. It's a way to cope with the many complex and abstract ideas rolling around in our heads all the time. It helps us solve difficult problems. [Rubber ducking](https://en.wikipedia.org/wiki/Rubber_duck_debugging) immediately comes to mind as a good example of this. Fluent APIs are another.
 
