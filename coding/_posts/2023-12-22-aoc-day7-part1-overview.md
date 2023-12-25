@@ -2,7 +2,7 @@
 layout: post
 title: Advent of Code 2023, Day 7 - Camel Cards Part 1.a
 author: Junilu Lacar
-banner-img: /assets/images/camels/camel-cards-0.jpg
+banner-img: /assets/images/aoc2023/07-camels/camel-cards-0.jpg
 banner-alt: Image created by DALL-E3 on Bing.com
 banner-width: 400
 banner-height: 400
