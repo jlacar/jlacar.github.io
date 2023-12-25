@@ -75,7 +75,7 @@ Keeping to this discipline can lead you to TCR, a recent development from Kent B
 
 Our next step, therefore, is to add a new function before we do anything about the old one. If the new function works, we'll switch to it immediately. If it breaks the program, we'll keep the old and try again with something else.
 
-Kotlin's [extension functions](https://kotlinlang.org/docs/extensions.html) comes in handy in this situation. Extension functions allow us to add functionality to an existing class, even ones we can't edit, without having to create a subclass. 
+Kotlin's [extension functions](https://kotlinlang.org/docs/extensions.html) come in handy in this situation. Extension functions allow us to add functionality to an existing class, even ones we can't edit, without having to create a subclass. 
 
 An extension function is defined just like a normal function except we prefix the name with the receiver type, the type we're extending. In this case, the receiver type we're extending is `List<CamelCard>` so we'll create a new extension function, `totalWinnings()`, for this type. 
 ```kotlin
@@ -119,9 +119,9 @@ We're now one step closer to our intended destination.
 
 If we stopped here, we'd have a working program but the code still tells its story somewhat inconsistently.
 
-`sortedWith()`, a general purpose function provided by the Kotlin Standard Library, is sitting between two domain-specific ideas expressed by `plays` and `totalWinnings()`. The call chain goes from domain-specific to general, then back to domain-specific (`totalWinnings()`). Thus, it's not consistently fluent. Remember, a fluent interface uses domain-specific terms.
+`sortedWith()`, a general purpose function provided by the Kotlin Standard Library, is sitting between two domain-specific ideas expressed by `plays` and `totalWinnings()`. The call chain goes from domain-specific to general, then back to domain-specific. Remember, a fluent interface uses domain-specific terms so alternating between domain and generic isn't consistently fluent.
 
-If we could replace `sortedWith()` with a domain-specific term like `rankedWith()`, the code would tell a more consistently fluent story. Let's keep refactoring and help the code do this.
+If we could replace `sortedWith()` with a domain-specific term like `rankedWith()`, the code would tell a consistently fluent story. Let's keep refactoring and help the code do this.
 
 ### Step 3 - Using extension functions to alias other functions 
 
@@ -130,18 +130,18 @@ Since the `sortedWith()` part already works, we really only need to assign it an
 First, we rough out the extension function:
 ```kotlin
 private fun List<CamelCardPlay>.rankedWith() : List<CamelCardPlay> {
-    return sorted
+    return sortedWith { it.normalStrength }
 }
 ```
 Since we'll be calling `rankedWith()` on the `plays` object, the extension function receiver needs to be `List<CamelCardPlay>`. Likewise, `totalWinnings()` needs a `List<CamelCardPlay>` as its receiver, so `rankedWith()` needs to return a `List<CamelCardPlay>`. This is consistent with the types involved in the `sortedWith()` call.
 
 `sortedWith()` takes a `Comparator` argument, so we declare that too:
 ```kotlin
-private fun List<CamelCardPlay>.rankedWith(comparator: Comparator<in CamelCardPlay>) : List<CamelCardPlay> {
-    return sorted
-}
+private fun List<CamelCardPlay>.rankedWith(
+    comparator: Comparator<in CamelCardPlay>
+): List<CamelCardPlay> = sortedWith(comparator)
 ```
-I won't go into the details of the `in` in the generic type declaration of `Comparator<in CamelCardPlay>` right now. If you want to know more, look up [Kotlin generics and declaration site variance](https://kotlinlang.org/docs/generics.html#declaration-site-variance).
+I won't go into the details of the `in` in the generic type declaration of `Comparator<in CamelCardPlay>` right now. If you want to know more, look up [Kotlin generics and declaration site variance](https://kotlinlang.org/docs/generics.html#declaration-site-variance). Note also that it's now a [single-expression function](https://kotlinlang.org/docs/idioms.html#single-expression-functions).
 
 Let's try our new extension function alias for `sortWith()` in `part1()`. Remember: step small, mess up small. We see it works so we change `part2()` to say the same thing. Great, everything still works!
 
@@ -155,9 +155,9 @@ override fun part2(): Int = plays.rankedWith( compareBy { it.jokerStrength } ).t
 
 // ...
 
-private fun List<CamelCardPlay>.rankedWith(comparator: Comparator<in CamelCardPlay>) : List<CamelCardPlay> {
-    return sortedWith(comparator)
-}
+private fun List<CamelCardPlay>.rankedWith(
+    comparator: Comparator<in CamelCardPlay>
+): List<CamelCardPlay> = sortedWith(comparator)
 ```
 That's another small step toward a more fluent interface.
 
