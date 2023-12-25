@@ -121,8 +121,6 @@ While the program works, the code still tells its story somewhat inconsistently.
 
 If we could replace `sortedWith()` with a domain-specific term like `rankedWith()`, the code would tell a consistently fluent story. Let's keep refactoring and help the code do this.
 
-### Step 3 - Using extension functions to alias other functions 
-
 Since the `sortedWith()` part already works, we really only need to assign it an alternative domain-specific name. Extension functions are also very handy for this. Let's see how we can assign `rankedWith()` as an alias for `sortedWith()` using an extension function.
 
 First, we rough out the extension function:
@@ -159,7 +157,7 @@ private fun List<CamelCardPlay>.rankedWith(
 ```
 That's another small step toward a more fluent interface.
 
-### Step 4 - Extracting an explaining variable
+### Step 3 - Extracting an explaining variable
 
 We're on the final stretch now! There's one more thing in the call chain that can be more fluent: `compareBy { ... }`. This is again a generic function provided by the standard Kotlin library. To make it domain-specific, we extract it to an explaining variable:
 ```kotlin
