@@ -59,13 +59,13 @@ Last time, I used the analogy of taking a road trip to explain my thought proces
 
 Nothing is written in stone either. The end result expressed in the comment is still tentative and it's entirely possible we'd end up with something different. As we make changes, we'll keep listening to the code to see if we're on the right track and make any necessary course corrections.
 
-Did you noticed the fair amount of anthropomorphization there? I'll stop calling out examples of my using that language device now but I hope you'll start to recognize when I'm doing it.
+Did you noticed the anthropomorphization? I'll stop calling out examples of my using this device now but I hope you'll still recognize when I'm doing it.
 
 ### Step 1 - Lay out the new beside the old
 
 Sticking with the road analogy, the first refactoring step is similar to how a new road is built parallel to the old road it's meant to replace. Doing this minimizes inconvenience to travelers and keeps traffic flowing normally until the new road is ready to use. The alternative is to fix the old road in place, closing some or all lanes and diverting traffic to a detour. The latter approach is more disruptive and causes more grief. 
 
-Likewise when refactoring, it's better to avoid simply tearing up the code and trying to fix it in place. In "[Refactoring Malapropism](https://martinfowler.com/bliki/RefactoringMalapropism.html)," Martin Fowler writes:
+Likewise when refactoring, it's better to avoid simply tearing up the code and trying to fix it in place. This can cause problems if you're not careful. In "[Refactoring Malapropism](https://martinfowler.com/bliki/RefactoringMalapropism.html)," Martin Fowler writes:
 
 >  If somebody talks about a system being broken for a couple of days while they are refactoring, you can be pretty sure they are not refactoring...
 > 
@@ -121,7 +121,7 @@ While the program works, the code still tells its story somewhat inconsistently.
 
 If we could replace `sortedWith()` with a domain-specific term like `rankedWith()`, the code would tell a consistently fluent story. Let's keep refactoring and help the code do this.
 
-Since the `sortedWith()` part already works, we really only need to assign it an alternative domain-specific name. Extension functions are also very handy for this. Let's see how we can assign `rankedWith()` as an alias for `sortedWith()` using an extension function.
+Since the `sortedWith()` part already works, we need only assign an alternative domain-specific name to it. Extension functions are also very handy for this. Let's see how we can assign `rankedWith()` as an alias for `sortedWith()` using an extension function.
 
 First, we rough out the extension function:
 ```kotlin
@@ -131,7 +131,7 @@ private fun List<CamelCardPlay>.rankedWith() : List<CamelCardPlay> {
 ```
 Since we'll be calling `rankedWith()` on the `plays` object, the extension function receiver needs to be `List<CamelCardPlay>`. Likewise, `totalWinnings()` needs a `List<CamelCardPlay>` as its receiver, so `rankedWith()` needs to return a `List<CamelCardPlay>`. This is consistent with the types involved in the `sortedWith()` call.
 
-`sortedWith()` takes a `Comparator` argument, so we declare that too:
+`sortedWith()` takes a `Comparator<CamelCardPlay>` argument, so we declare that too:
 ```kotlin
 private fun List<CamelCardPlay>.rankedWith(
     comparator: Comparator<in CamelCardPlay>
@@ -139,7 +139,7 @@ private fun List<CamelCardPlay>.rankedWith(
 ```
 I won't go into the details of the `in` in the generic type declaration of `Comparator<in CamelCardPlay>` right now. If you want to know more, look up [Kotlin generics and declaration site variance](https://kotlinlang.org/docs/generics.html#declaration-site-variance). Note also that it's now a [single-expression function](https://kotlinlang.org/docs/idioms.html#single-expression-functions).
 
-Let's try our new extension function alias for `sortWith()` in `part1()`. Remember: step small, mess up small. We see it works so we change `part2()` to say the same thing. Great, everything still works!
+Let's try our new extension function alias in `part1()`. Remember: make small steps, make small mistakes. All tests passing tells us we're good so we change `part2()` to say the same thing. We run the tests again and see that everything still works.
 
 We now have this:
 ```kotlin
@@ -159,7 +159,7 @@ That's another small step toward a more fluent interface.
 
 ### Step 3 - Extracting an explaining variable
 
-We're on the final stretch now! There's one more thing in the call chain that can be more fluent: `compareBy { ... }`. This is again a generic function provided by the standard Kotlin library. To make it domain-specific, we extract it to an explaining variable:
+We're on the final stretch now! There's one more thing in the call chain that can be more fluent: `compareBy { ... }`. This is another generic function provided by the standard Kotlin library. To make it domain-specific, we can extract it to a local explaining variable:
 ```kotlin
 override fun part1(): Int {
     val normalRules: Comparator<CamelCardPlay> = compareBy { it.normalStrength }
@@ -168,7 +168,7 @@ override fun part1(): Int {
     // the code could say...  = plays.rankedWith(normalRules).totalWinnings()
 } 
 ```
-This works! It looks like we've arrived! We can now delete the comment that has been made redundant by the code. After applying the change to `part2()`, the code now tells a very fluent story.
+This works! It looks like we've arrived! The comment we added at the start to serve as a guide is now redundant, so we delete it. After applying the change to `part2()`, the code now tells a very fluent story.
 
 ```kotlin
 override fun part1(): Int {
