@@ -117,9 +117,7 @@ We're now one step closer to our intended destination.
 
 ### Step 2 - Refactoring for consistency
 
-If we stopped here, we'd have a working program but the code still tells its story somewhat inconsistently.
-
-`sortedWith()`, a general purpose function provided by the Kotlin Standard Library, is sitting between two domain-specific ideas expressed by `plays` and `totalWinnings()`. The call chain goes from domain-specific to general, then back to domain-specific. Remember, a fluent interface uses domain-specific terms so alternating between domain and generic isn't consistently fluent.
+While the program works, the code still tells its story somewhat inconsistently. `sortedWith()` is a general purpose function provided by the Kotlin Standard Library. It's sitting between two domain-specific ideas expressed by `plays` and `totalWinnings()`. Remember, a fluent interface uses domain-specific terms so alternating between domain-specific and general isn't consistently fluent.
 
 If we could replace `sortedWith()` with a domain-specific term like `rankedWith()`, the code would tell a consistently fluent story. Let's keep refactoring and help the code do this.
 
