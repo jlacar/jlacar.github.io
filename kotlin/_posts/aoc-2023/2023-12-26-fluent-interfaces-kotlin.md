@@ -22,7 +22,7 @@ A DSL can also make it easier for developers to organize their thoughts and idea
 
 ### A short introduction to the Camel Cards domain
 
-The full description and rules for Camel Cards can be found on the [AoC 2023 Day 7 puzzle page](https://adventofcode.com/2023/day/7). For our purposes in this article, you just need to know that Camel Cards is like Poker, except with a few twists. There are different **types of hands**, like **five of a kind** and **full house**. Hands are **ranked** relative to each other according to certain rules on how to assign **strength** to a hand. **Winnings** are calculated based on a hand's **rank** and the **bid** made for it.
+The full description and rules for Camel Cards can be found on the [AoC 2023 Day 7 puzzle page](https://adventofcode.com/2023/day/7). For our purposes in this article, you just need to know that Camel Cards is like Poker, except with a few twists. There are different **types of hands**, like **five of a kind** and **full house**. Hands are **ranked** relative to each other according to **rules** that governed how **strength** is assigned to each hand. **Winnings** are calculated based on a hand's **rank** and the **bid** made for it.
 
 ### The non-fluent solution
 
