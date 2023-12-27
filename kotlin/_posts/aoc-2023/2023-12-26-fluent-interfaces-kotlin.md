@@ -179,7 +179,9 @@ ____
 
 We can now shift our attention to the next bit of non-fluency in the call chain: the call to `sortedWith(...)`. This is a general-purpose function provided by the Kotlin Standard Library and it's currently sitting between the two domain-specific ideas of `plays` and `totalWinnings()`. This makes the call chain inconsistently fluent.
 
-We'll define another extension function to make it more fluent. Since it's already working, the extension function only serves as an aliasing mechanism that allows us to use a more domain-centric name in place of the general name. The receiver type for this extension function, which we'll call `rankedWith()`, is the type of the `plays` object, `List<CamelCardPlay>`. Likewise, its return type also needs to be `List<CamelCardPlay>` for us to be able to chain it with `totalWinnings()`.
+We'll define another extension function to make it more fluent. Since the `sortedWith()` parts work, the new extension function will only serve as an alias that allows us to use a more domain-centric name in place of the general name. 
+
+The receiver type for this extension function, which we'll call `rankedWith()`, is the type of the `plays` object, `List<CamelCardPlay>`. Likewise, its return type also needs to be `List<CamelCardPlay>` because we're chaining it with `totalWinnings()`.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this 
@@ -195,7 +197,7 @@ override fun part2(): Int =
 private fun List<CamelCardPlay>.totalWinnings(): Int =
     mapIndexed { rank, play -> (rank + 1) * play.bid }.sum()
 
-// *new* - extension function
+// *new* - extension function to alias sortedWith()
 private fun List<CamelCardPlay>.rankedWith(): List<CamelCardPlay> =
     comparator: Comparator<in CamelCardPlay>
 ): List<CamelCardPlay> = sortedWith(comparator)   
@@ -206,7 +208,7 @@ ____
 
 Note that the new `rankedWith()` extension function takes a parameter of type `Comparator<in CamelCardPlay>`. I won't go into the details of this but if you're curious, read up on [Kotlin generics and declaration site variance](https://kotlinlang.org/docs/generics.html#declaration-site-variance).
 
-Taking another small step, we try it with `part1()` first to see if it works. It does, so we make the same change to `part2()`.
+Taking another small step, we try it with `part1()` first to see if it works. It does, so we make the same change to `part2()`. Then we tidy up.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this 
@@ -235,7 +237,7 @@ The end, as we mapped it out when we began, is now in sight.
 
 ### Step 3 - Extracting to an explaining variable
 
-The story the code is telling is still a little inconsistent. The `compareBy {...}` parts are once again calls to a general-purpose function provided by the Standard Kotlin Library. We'd like to use a domain-specific term in its place to make the story told by the call chain completely fluent.
+The story the code tells now is still a little inconsistent. The `compareBy {...}` parts are once again calls to a general-purpose function provided by the Standard Kotlin Library. We'd like to use a domain-specific term in its place to make the story told by the call chain completely fluent.
 
 We can do this by [extracting the expression to an explaining variable](https://refactoring.guru/extract-variable).
 
