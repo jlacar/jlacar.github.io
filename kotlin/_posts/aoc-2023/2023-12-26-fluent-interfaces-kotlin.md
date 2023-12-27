@@ -84,7 +84,7 @@ Keeping with the discipline of refactoring as described above can lead you to Te
 
 ### Mapping out where we want to go
 
-When I go on a road trip, I don't just start driving in any random direction. When I head out, I have a good idea of the general direction I'm going. These days, it's easy. I just enter an address in my GPS app and I'll get turn-by-turn guidance all the way to my destination.
+When I go on a road trip, I don't just start driving in any random direction. When I head out, I have a good idea of the general direction I'm going. These days, it's easy. I just enter a destination address in my GPS app and I'll get turn-by-turn guidance all the way there.
 
 Likewise, when embarking on a non-trivial refactoring, I find it useful to have a general sense of where I'm going. Unfortunately, for anything larger and more complicated than the simple refactorings my IDE can do automatically, I don't get the kind of step-by-step guidance a GPS app gives me. I have to figure out how to string many small refactoring steps together so I can reach my final destination. This can be challenging, especially when the way is unclear.
 
