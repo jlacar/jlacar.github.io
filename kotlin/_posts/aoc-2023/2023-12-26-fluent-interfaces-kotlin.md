@@ -22,13 +22,14 @@ A DSL can also make it easier for developers to organize their thoughts and idea
 
 ### A short introduction to the Camel Cards domain
 
-The full description and rules for Camel Cards can be found on the [AoC 2023 Day 7 puzzle page](https://adventofcode.com/2023/day/7). For our purposes in this article, you just need to know that Camel Cards is like Poker, except with a few twists. There are different **types of hands**, like **five of a kind** and **full house**. Hands are **ranked** relative to each other according to **rules** that govern how **strength** is assigned to each hand. **Winnings** are calculated based on a hand's **rank** and the **bid** made for it.
+The full description and rules for Camel Cards can be found on the [AoC 2023 Day 7 puzzle page](https://adventofcode.com/2023/day/7). For our purposes here, you just need to know that Camel Cards is like Poker, except with a few twists. There are different **types of hands**, like **five of a kind** and **full house**. Hands are **ranked** relative to each other according to **rules** that govern how **strength** is assigned to each hand. **Winnings** are calculated based on a hand's **rank** and the **bid** made for it. 
+
+The emphasized words and phrases in the previous paragraph are specific to the domain of the Camel Cards puzzle and help define a domain-specific language for it.
 
 ### The non-fluent solution
 
-I was quite happy with the solution I had ended up using to submit my answers to the Day 7 puzzle. Not only did it produce the correct answers that earned me a couple of gold stars, I thought the code was quite clear and expressive because it used language from the puzzle's description. 
+Listing 1 below shows the code I used to earn two more gold stars for AoC 2023 with correct answers to the Day 7 puzzle. As an added bonus, I thought the code was quite clear and expressive because it used language from the puzzle's description. 
 
-This is what I had in the main solution class:
 ```kotlin
 class Day07(private val plays: List<CamelCardPlay>): AocSolution() {
 
@@ -56,39 +57,41 @@ class Day07(private val plays: List<CamelCardPlay>): AocSolution() {
 #### **Listing 1**. The code to be refactored to a more fluent interface
 ____
 
-As I said, I was quite happy with the code until I realized that the call to `totalWinnings()` could be written in a more fluent style, one that would probably be a more idiomatic way to write it in Kotlin. 
+I was quite happy with this code until I realized that the call to `totalWinnings()` could be written in a more fluent style, one that would probably be a more idiomatic way to write it in Kotlin. 
 
-Time for some refactoring. Before we do that though, let's get something straight about the term "refactoring."
+Time for some refactoring. 
+
+Before we do that though, let's get something straight about the term "refactoring."
 
 ### You keep using that word. I don't think it means what you think it means
 
-The term refactoring suffers quite a bit from what Martin Fowler calls [semantic defusion](https://martinfowler.com/bliki/SemanticDiffusion.html). This is unfortunate, so I try to do my part to correct the [common malapropism of refactoring](https://martinfowler.com/bliki/RefactoringMalapropism.html) and do it in the way that Fowler describes it. 
+As a technical term whose use has spread far and wide, refactoring suffers quite a bit from what Martin Fowler calls [semantic defusion](https://martinfowler.com/bliki/SemanticDiffusion.html). This is unfortunate, so I try to do my part to correct the [common malapropism of refactoring](https://martinfowler.com/bliki/RefactoringMalapropism.html) and practice the technique in the way that Fowler actually means for it to be done. 
 
-Fowler writes this about mischaracterizing any act of changing code as "refactoring":
+Fowler writes this about mischaracterizing _any_ act of changing code as "refactoring," as people who misuse the term often do:
 
 >  If somebody talks about a system being broken for a couple of days while they are refactoring, you can be pretty sure they are not refactoring...
 > 
 > Refactoring is a very specific technique, founded on using small behavior-preserving transformations (themselves called refactorings). If you are doing refactoring your system should not be broken for more than a few minutes at a time...
 
-I want to emphasize some things Fowler says about refactoring:
+I want to emphasize some things Fowler says there about refactoring:
 
-1. _It's founded on **small** transformations_. Refactoring is done in small steps. Usually, smaller than what you think "small" is. [Renaming](https://www.jetbrains.com/help/idea/rename-refactorings.html) is usually a small change that can be done in one step with most modern IDEs that support automated refactoring. [Replacing conditionals with polymorphism](https://refactoring.guru/replace-conditional-with-polymorphism) typically cannot be done in one step, requiring several interconnected steps to complete. Unfortunately, most programmers have neither the patience nor the discipline to do this safely, so this refactoring is seldom performed and the opportunity to improve the design often passed up.
+1. _It's founded on **small** transformations_. Refactoring is done in small steps. Usually, smaller than what you think "small" is. [Renaming](https://www.jetbrains.com/help/idea/rename-refactorings.html) is usually a small change that can be done in one step with most modern IDEs that support automated refactoring. More complex refactorings, like [replacing conditionals with polymorphism](https://refactoring.guru/replace-conditional-with-polymorphism), typically cannot be performed in one step, requiring several interconnected steps to complete. Unfortunately, most programmers have neither the patience nor the discipline to do this safely, so these kinds of refactorings are performed less frequently and the opportunity to improve the design often missed.
 
-2. _It's founded on **behavior-preserving** transformations_. Refactoring does not change a program's externally observable behavior. That means that to refactor properly and safely, the program should pass all its tests _before_ any change is made to it and continue to pass all its tests _after_ the refactoring is done.
+2. _It's founded on **behavior-preserving** transformations_. Refactoring does not change a program's externally observable behavior. Refactoring properly and safely means the program should pass all its tests _before_ and _after_ the change is made to it.
 
-3. _Your system **should not be broken** for more than a few minutes at a time_. I would even go farther and assert that ideally, it shouldn't be broken at all. Sometimes, however, having your program in a broken state for a few minutes can expedite the work. I would advise you to be careful in doing this: the longer the code stays broken, the longer it takes to get useful feedback from it. It's usually better to revert your changes and try again before you make things worse.
+3. _Your system **should not be broken** for more than a few minutes at a time_. I would even go farther and assert that ideally, it shouldn't be broken at all. Sometimes, however, having the program in a broken state for a few minutes can expedite the work. I would advise you to be careful in doing this: the longer the code stays broken, the longer it takes to get useful feedback from it. It's usually better to revert the breaking changes and try again before things get worse.
 
-Keeping with the discipline of refactoring as described above can lead you to Test and (Commit or Revert). TCR is a workflow [introduced a few years ago by Kent Beck](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864). I'll take a more detailed look at this alternative workflow relative to TDD in a future article.
+Keeping with the discipline of refactoring as described above can lead to Test and (Commit or Revert). TCR is a workflow [introduced a few years ago by Kent Beck](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864). I'll take a more detailed look at this TDD-related alternative workflow in a future article.
 
 ### Mapping out where we want to go
 
-When I go on a road trip, I don't just start driving in any random direction. When I head out, I have a good idea of the general direction I'm going. Modern technology has made road trips more or less worry-free: just enter the destination address into your phone's GPS app and you'll get turn-by-turn directions all the way there. You even get warned about hazards and detours that might slow you down.
+When I go on a road trip, I don't just start driving in any random direction. When I head out, I usually have a good idea of the general direction I'm going. Modern technology has made road trips more or less worry-free: just enter the destination address into your phone's GPS app and you'll get turn-by-turn directions all the way there. You even get warned about hazards and detours that might slow you down.
 
 Modern IDEs like IntelliJ IDEA and Eclipse have come a long way to make refactoring easier and safer. Many small refactorings can be easily performed automatically and safely with a few keystrokes or mouse clicks. Unfortunately, larger and more complex refactorings that involve multiple steps still require a fair amount of skill, experience, and often, serendipity to get the code to a better place.
 
-Large refactorings can be quite challenging, especially when the transitions from one step to the next are not obvious. To stay on track and maintain a general sense of direction, I'll typically sketch a path in the code. When doing TDD, I use tests to do these sketches. 
+Large refactorings can be quite challenging, especially when the transitions from one step to the next are not very obvious. To stay on track and maintain a general sense of direction, I'll typically sketch a path in the code. When doing TDD, I use tests to do these sketches. 
 
-Luckily, in this case there weren't that many steps needed to refactor to a fluent interface. It was enough to use comments to remind me of my final destination, so I didn't get off track as I baby-stepped my way toward it. 
+Luckily, in this case there weren't that many steps needed to refactor the code to a fluent interface. It was enough to imagine the end state and use comments to remind me of my final destination, so I didn't wander off track as I slowly worked my way toward it. 
 
 Listing 2 below shows the comments I added to guide my refactoring journey.
 
@@ -104,7 +107,7 @@ override fun part1(): Int =
 override fun part2(): Int = 
     totalWinnings(plays.sortedWith( compareBy { it.jokerStrength } ))
 ```
-#### **Listing 2**. Mapping out our intent, to guide refactoring
+#### **Listing 2**. Using comments to map out intent and guide refactoring
 ____
 
 ### Step 1 - Use an extension function to add to the call chain
