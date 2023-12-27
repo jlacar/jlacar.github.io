@@ -159,26 +159,24 @@ ____
 
 Note that the only difference so far is the call to `totalWinnings()`. The rest of the call chain remains the same. We'll deal with those parts later. Right now, our focus is on using the extension function that calculates the total winnings for all the `CamelCardPlay`s in the puzzle input.
 
-We run the tests that were already passing before and confirm we haven't broken anything. Great, we can now apply the same change to `part2()`. Doing so makes `totalWinningsOLD()` unused so we can safely delete it:
+We run the tests that were already passing before and confirm we haven't broken anything. Great, we can now apply the same change to `part2()`. Doing so makes `totalWinningsOLD()` unused so we can safely delete it. We tidy up and get the code shown below in Listing 5.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this... 
 // override fun part1() = plays.rankedWith(normalRules).totalWinnings()
 // override fun part2() = plays.rankedWith(jokerRules).totalWinnings()
 
-// Step 1 - move call to totalWinnings() to the end of the chain
 override fun part1(): Int = 
     plays.sortedWith( compareBy { it.normalStrength } ).totalWinnings()
 
 override fun part2(): Int = 
     plays.sortedWith( compareBy { it.jokerStrength } ).totalWinnings()
 
-// *new* - extension function 
 private fun List<CamelCardPlay>.totalWinnings(): Int =
     mapIndexed { rank, play -> (rank + 1) * play.bid }.sum()
 
 ```
-#### **Listing 5**. Completing Step 1 and tidying up
+#### **Listing 5**. After completing Step 1 and tidying up
 ____
 
 ### Step 2 - Refactoring the code to make it consistently fluent
@@ -212,11 +210,11 @@ private fun List<CamelCardPlay>.rankedWith(): List<CamelCardPlay> =
 #### **Listing 6**. Adding the `rankedWith()` extension function
 ____
 
-Note that we've declared the parameter to `rankedWith()` as having the type `Comparator<in CamelCardPlay>`, the type of the `compareBy()` expression currently passed to `sortedWith()`. The `rankedWith()` function will take the same parameter. 
+Note that we've declared the parameter for `rankedWith()` as a `Comparator<in CamelCardPlay>`, the type of the `compareBy()` expression currently passed to `sortedWith()`. The `rankedWith()` function will take the same parameter. 
 
-I won't go into the details of generic `Comparator<in CamelCardPlay>` declaration but if you're curious, you can [read more about Kotlin generics and declaration site variance](https://kotlinlang.org/docs/generics.html#declaration-site-variance).
+I won't go into the details of the generic `Comparator<in CamelCardPlay>` declaration but if you're curious, you can [read more about Kotlin generics and declaration site variance](https://kotlinlang.org/docs/generics.html#declaration-site-variance).
 
-Taking another small step, we try it with `part1()` first to see if it works. It does, so we make the same change to `part2()`. Then we tidy up.
+Taking another small step, we try `rankedWith()` in `part1()` to see if it works. It does, so we make the same change to `part2()`. We then tidy up.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this... 
@@ -232,16 +230,15 @@ override fun part2(): Int =
 private fun List<CamelCardPlay>.totalWinnings(): Int =
     mapIndexed { rank, play -> (rank + 1) * play.bid }.sum()
 
-// *new* - extension function
 private fun List<CamelCardPlay>.rankedWith(
     comparator: Comparator<in CamelCardPlay>
 ): List<CamelCardPlay> = sortedWith(comparator)   
 
 ```
-#### **Listing 7**. Replacing `sortedWith()` with `rankedWith()`
+#### **Listing 7**. Tidied up code after replacing `sortedWith()` with `rankedWith()`
 ____
 
-The end, as we mapped it out when we began, is now in sight.
+The end, as we mapped it out when we began this refactoring journey, is now in sight.
 
 ### Step 3 - Extracting to an explaining variable
 
@@ -287,7 +284,7 @@ class Day07(private val plays: List<CamelCardPlay>): AoCSolution() {
     }
 }
 ```
-#### **Listing 8**. The tidied up code with a more fluent interface
+#### **Listing 8**. The tidied up code, refactored to a fluent interface
 ____
 
 ### Optimize for reading first 
