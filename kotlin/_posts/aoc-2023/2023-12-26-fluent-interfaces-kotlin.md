@@ -16,7 +16,7 @@ You can see the full code in [my GitHub repo for AoC 2023](https://github.com/jl
 The [Wikipedia entry for "fluent interface"](https://en.wikipedia.org/wiki/Fluent_interface) starts with this short paragraph:
 > In software engineering, a **fluent interface** is an [object-oriented API](https://en.wikipedia.org/wiki/Object_oriented_design) whose design relies extensively on [method chaining](https://en.wikipedia.org/wiki/Method_chaining). Its goal is to increase code legibility by creating a [domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language) (DSL). The term was coined in 2005 by Eric Evans and [Martin Fowler](https://en.wikipedia.org/wiki/Martin_Fowler_(software_engineer)).
 
-In [another article](/coding/2023/12/22/aoc-day7-part1-overview.html), I mentioned how a DSL can help align people's understanding by giving them a common set of terms and phrases to use for communicating ideas. The more aligned a program is to the language of the domain, the less translation needs to happen between one set of terms and another, i.e., from techie-speak to nontechie-speak and vice versa.
+In [another article](/coding/2023/12/22/aoc-day7-part1-overview.html), I mentioned how a DSL can help align people's understanding by giving them a common set of words and phrases to use for communicating ideas. The more aligned a program is to the language of the domain, the less translation needs to happen between one set of terms and another, i.e., from techie-speak to nontechie-speak and vice versa.
 
 A DSL can also make it easier for developers to organize their thoughts and ideas in the program by suggesting logical groupings of logic and data. This can lead to more coherent and cohesive code.
 
@@ -183,11 +183,11 @@ ____
 
 ### Step 2 - Refactoring the code to make it consistently fluent
 
-We can now shift our attention to the next bit of non-fluency in the call chain: the call to `sortedWith(...)`. This is a general-purpose function provided by the Kotlin Standard Library and it's currently sitting between the two domain-specific ideas of `plays` and `totalWinnings()`. This makes the call chain inconsistently fluent.
+We can now shift our attention to the next bit of non-fluency in the call chain: the call to `sortedWith(...)`. This is a general-purpose function provided by the Kotlin Standard Library and it's currently sitting between the two domain-specific ideas of `plays` and `totalWinnings()`. This alternating shift of context from domain-specific to general and back to domain-specific makes the call chain's fluency inconsistent.
 
-We'll define another extension function to make it more fluent. Since the `sortedWith()` parts work, the new extension function will only serve as an alias that allows us to use a more domain-centric name in place of the general name. 
+To make the chain more consistently fluent, we'll define another extension function to use instead of `sortedWith()`. This new extension function, we'll call `rankedWith()` as suggested by our refactoring map, will only serve as an alias to use instead of the general-purpose name. 
 
-The receiver type for this extension function, which we'll call `rankedWith()`, is the type of the `plays` object, `List<CamelCardPlay>`. Likewise, its return type also needs to be `List<CamelCardPlay>` because we're chaining it with `totalWinnings()`.
+The receiver type for `rankedWith()` is the type of the `plays` object, `List<CamelCardPlay>`. Its return type also needs to be `List<CamelCardPlay>` because we're chaining it with `totalWinnings()`.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this...
