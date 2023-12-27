@@ -84,23 +84,25 @@ Keeping with the discipline of refactoring as described above can lead you to Te
 
 ### Mapping out where we want to go
 
-When I go on a road trip, I don't just start driving in any random direction. Rather, I have a good idea of the general direction I'm headed, the major highways I'll be taking, the kind of road and weather conditions I'll be dealing with, and approximately how long it's going to take to get to wherever I'm going. This helps me plan things like where to stop for gas, food, and rest/relief.
+When I go on a road trip, I don't just start driving in any random direction. When I head out, I have a good idea of the general direction I'm going. These days, it's easy. I just enter an address in my GPS app and I'll get turn-by-turn guidance all the way to my destination.
 
-Likewise, before embarking on a non-trivial refactoring, I find it useful to have a general sense of where I'm going and the kind of things I have to deal with along the way. To help me stay on track, I'll typically sketch a path in the code. When I'm doing TDD, I'll usually use tests as my sketches. For this problem, however, I'll simply use comments to remind me of the final destination, so I don't lose sight of it as I refactor my way there.
+Likewise, when embarking on a non-trivial refactoring, I find it useful to have a general sense of where I'm going. Unfortunately, for anything larger and more complicated than the simple refactorings my IDE can do automatically, I don't get the kind of step-by-step guidance a GPS app gives me. I have to figure out how to string many small refactoring steps together so I can reach my final destination. This can be challenging, especially when the way is unclear.
+
+To help me stay on track, I'll typically sketch a path in the code. When I'm doing TDD, I use tests to do these sketches. Luckily, for this problem it was enough to use comments to remind me of my final destination, so I didn't lose sight of it as I refactored my way toward it.
 
 ```kotlin
-// try to make the code tell its story more fluently, like this 
+// try to make the code tell its story more fluently, like this...
 // override fun part1() = plays.rankedWith(normalRules).totalWinnings()
 // override fun part2() = plays.rankedWith(jokerRules).totalWinnings()
 
-// instead of this
+// ...instead of this
 override fun part1(): Int =
     totalWinnings(plays.sortedWith( compareBy { it.normalStrength } ))
 
 override fun part2(): Int = 
     totalWinnings(plays.sortedWith( compareBy { it.jokerStrength } ))
 ```
-#### **Listing 2**. Mapping out our intent to guide refactoring
+#### **Listing 2**. Mapping out our intent, to guide refactoring
 ____
 
 ### Step 1 - Use an extension function to add to the call chain
@@ -112,7 +114,7 @@ Extension functions are defined just like normal functions except we prefix the 
 In this case, we want to extend the behavior of `List<CamelCardPlay>`, so we're going to create an extension function with that as its receiver.
 
 ```kotlin
-// instead of this
+// ...instead of this
 override fun part1(): Int = 
     totalWinningsOLD(plays.sortedWith( compareBy { it.normalStrength } ))
 
@@ -135,7 +137,7 @@ Note that I renamed the old `totalWinnings()` function to facilitate switching t
 Remembering to take small steps, we first try the new function with `part1()`:
 
 ```kotlin
-// try to make the code tell its story more fluently, like this 
+// try to make the code tell its story more fluently, like this...
 // override fun part1() = plays.rankedWith(normalRules).totalWinnings()
 // override fun part2() = plays.rankedWith(jokerRules).totalWinnings()
 
@@ -143,7 +145,7 @@ Remembering to take small steps, we first try the new function with `part1()`:
 override fun part1(): Int = 
     plays.sortedWith( compareBy { it.normalStrength } ).totalWinnings()
 
-// instead of this
+// ...instead of this
 //override fun part1(): Int = 
 //    totalWinningsOLD(plays.sortedWith( compareBy { it.normalStrength } ))
 
@@ -156,7 +158,7 @@ Note that the only difference so far is the call to `totalWinnings()`. The rest 
 We run the tests that were already passing before and confirm we haven't broken anything. Great, we can now apply the same change to `part2()`. Doing so makes `totalWinningsOLD()` unused so we can safely delete it:
 
 ```kotlin
-// try to make the code tell its story more fluently, like this 
+// try to make the code tell its story more fluently, like this... 
 // override fun part1() = plays.rankedWith(normalRules).totalWinnings()
 // override fun part2() = plays.rankedWith(jokerRules).totalWinnings()
 
@@ -184,7 +186,7 @@ We'll define another extension function to make it more fluent. Since the `sorte
 The receiver type for this extension function, which we'll call `rankedWith()`, is the type of the `plays` object, `List<CamelCardPlay>`. Likewise, its return type also needs to be `List<CamelCardPlay>` because we're chaining it with `totalWinnings()`.
 
 ```kotlin
-// try to make the code tell its story more fluently, like this 
+// try to make the code tell its story more fluently, like this...
 // override fun part1() = plays.rankedWith(normalRules).totalWinnings()
 // override fun part2() = plays.rankedWith(jokerRules).totalWinnings()
 
@@ -211,7 +213,7 @@ Note that the new `rankedWith()` extension function takes a parameter of type `C
 Taking another small step, we try it with `part1()` first to see if it works. It does, so we make the same change to `part2()`. Then we tidy up.
 
 ```kotlin
-// try to make the code tell its story more fluently, like this 
+// try to make the code tell its story more fluently, like this... 
 // override fun part1() = plays.rankedWith(normalRules).totalWinnings()
 // override fun part2() = plays.rankedWith(jokerRules).totalWinnings()
 
