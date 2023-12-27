@@ -9,7 +9,7 @@ banner-height: 400
 ---
 In this second installment of a planned series of articles, I'll demonstrate how I created a simple fluent interface and domain-specific language (DSL) in Kotlin. I'll do this in the context of my initial solution to the [Day 7 puzzle](https://adventofcode.com/2023/day/7) of [Advent of Code (AoC) 2023](https://adventofcode.com/2023).
 
-You can see the full code in [my GitHub repo for AoC 2023](https://github.com/jlacar/aoc-2023-kotlin/blob/main/src/Day07.kt).
+You can see the full code and its change history in [my GitHub repo for AoC 2023](https://github.com/jlacar/aoc-2023-kotlin/blob/main/src/Day07.kt).
 
 ## A fluent interface for Camel Cards
 
