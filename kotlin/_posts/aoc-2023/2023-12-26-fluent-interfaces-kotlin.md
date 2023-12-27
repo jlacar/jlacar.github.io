@@ -84,9 +84,9 @@ Keeping with the discipline of refactoring as described above can lead you to Te
 
 ### Mapping out where we want to go
 
-Before I start refactoring, I like to have a good idea of the direction I'm going. Just as when going on a road trip, I don't just start driving in any random direction. I have an idea of what major highways I'll be taking, what kind of road and weather conditions I'll be dealing with, and approximately how long it's going to take to get there. This helps me plan things like where I to stop for gas, food, and rest/relief.
+When I go on a road trip, I don't just start driving in any random direction. Rather, I have a good idea of the general direction I'm headed, the major highways I'll be taking, the kind of road and weather conditions I'll be dealing with, and approximately how long it's going to take to get to wherever I'm going. This helps me plan things like where to stop for gas, food, and rest/relief.
 
-Likewise, before embarking on a non-trivial refactoring, I like to have a general idea of where I'd like the code to end up. I'll typically do this by outlining the story in the code. When I'm doing TDD, I'll usually use tests for outlining ideas. In the case of this AoC solution code, I just used comments to map out a plan:
+Likewise, before embarking on a non-trivial refactoring, I find it useful to have a general sense of where I'm going and the kind of things I have to deal with along the way. To help me stay on track, I'll typically sketch a path in the code. When I'm doing TDD, I'll usually use tests as my sketches. For this problem, however, I'll simply use comments to remind me of the final destination, so I don't lose sight of it as I refactor my way there.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this 
@@ -284,19 +284,23 @@ ____
 
 ### Optimize for reading first 
 
-I'm sure there are those who will point out that this refactoring ended up adding more lines to the code, implying this is a bad thing. 
+I'm sure there will be someone who will question the value of this refactoring because it ended up with more lines of code, implying that having more code is a bad thing. 
 
-While simplicity favors less code, more code is not necessarily always a bad thing. Try reading [Martin Fowler's books on refactoring](https://martinfowler.com/books/refactoring.html) and you'll see many examples like this, particularly in the first long refactoring example he gives at the beginning of the book. 
+Certainly, simplicity favors less code, but more code is not necessarily always a bad thing. Look through [Martin Fowler's books on refactoring](https://martinfowler.com/books/refactoring.html) and you'll see a few examples like this, particularly in the first long refactoring example he gives at the beginning of the book. 
 
-The primary objective is readability, and sometimes that comes at the cost of brevity. I think it's misguided to make judgements based solely on the number of lines of code or even the number of function or method calls made. As Kent Beck wrote in his recently released book, [_Tidy First?_](https://tidyfirst.substack.com/):
+The primary objective is readability, and sometimes that comes at the cost of brevity. I think it's misguided to make judgements based solely on the number of lines of code or even the number of function or method calls made. 
+
+In his recently released book, [_Tidy First?_](https://tidyfirst.substack.com/), Kent Beck wrote:
 > The biggest cost of code is the cost of reading and understanding it, not the cost of writing it.
 
-Our main priority as developers should be to make the code as easy to read and understand as possible. Optimizing for performance comes later, and only when it's clear that the program's performance is not acceptable. Remember what Sir Tony Hoare (popularized by Donald Knuth) said:
+Our main priority as developers should be to make the code as easy to read and understand as possible. Optimizing for performance comes later, and only when there's clear and compelling evidence that the program's performance is not acceptable. 
+
+Remember what Sir Tony Hoare (popularized by Donald Knuth) said:
 > Premature optimization is the root of all evil.
 
-As developers, we generally suck at optimizing for performance based on gut feeling and intuition. Any decision to optimize for performance at the cost of readability should be based on quantitative measures. If it's really a concern, use a profiler to gather empirical data that shows there really is a problem with a program's performance. Profiling will help you find where the true performance bottlenecks are, and they're usually not where you _think_ they are. 
+As developers, we generally suck at using gut feeling and intuition for performance tuning. Any decision to optimize for performance at the cost of readability should be based on quantitative measures. Use a profiler to gather empirical data that clearly shows a problem. Profiling will help you find where the true performance bottlenecks are, and they're usually not where you _think_ they are. 
 
-Make readability and understandability a priority. Optimize for performance later, only when necessary, and only after using a profiler to objectively identify the performance bottlenecks in the code.
+Make readability and understandability the priority. Optimize for performance later, only when necessary, and only when the major bottlenecks are identified through an objective and quantitative analysis of the problem.
 
 ____
 ## Conclusion
