@@ -88,7 +88,7 @@ When I go on a road trip, I don't just start driving in any random direction. Wh
 
 Likewise, when embarking on a non-trivial refactoring, I find it useful to have a general sense of where I'm going. Unfortunately, for anything larger and more complicated than the simple refactorings my IDE can do automatically, I don't get the kind of step-by-step guidance a GPS app gives me. I have to figure out how to string many small refactoring steps together so I can reach my final destination. This can be challenging, especially when the way is unclear.
 
-To help me stay on track, I'll typically sketch a path in the code. When I'm doing TDD, I use tests to do these sketches. Luckily, for this problem it was enough to use comments to remind me of my final destination, so I didn't lose sight of it as I refactored my way toward it.
+To help me stay on track, I'll typically sketch a path in the code. When I'm doing TDD, I use tests to do these sketches. Luckily, for this problem it was enough to use comments to remind me of my final destination, so I didn't get off track as I refactored my way toward it.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this...
