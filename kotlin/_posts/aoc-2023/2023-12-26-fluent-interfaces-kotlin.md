@@ -286,15 +286,15 @@ ____
 
 I'm sure there are those who will point out that this refactoring ended up adding more lines to the code, implying this is a bad thing. 
 
-While simplicity favors less code, more code is not necessarily a bad thing. Try reading [Martin Fowler's books on refactoring](https://martinfowler.com/books/refactoring.html) and you'll see many examples of this, particular in the first long refactoring example he gives at the start. The primary objective is readability, and sometimes that comes at the cost of brevity.
+While simplicity favors less code, more code is not necessarily always a bad thing. Try reading [Martin Fowler's books on refactoring](https://martinfowler.com/books/refactoring.html) and you'll see many examples like this, particularly in the first long refactoring example he gives at the beginning of the book. 
 
-I think it's misguided to make judgements based solely on the number of lines of code or even the number of function or method calls made. As Kent Beck wrote in his recently released book, [_Tidy First?_](https://tidyfirst.substack.com/):
+The primary objective is readability, and sometimes that comes at the cost of brevity. I think it's misguided to make judgements based solely on the number of lines of code or even the number of function or method calls made. As Kent Beck wrote in his recently released book, [_Tidy First?_](https://tidyfirst.substack.com/):
 > The biggest cost of code is the cost of reading and understanding it, not the cost of writing it.
 
 Our main priority as developers should be to make the code as easy to read and understand as possible. Optimizing for performance comes later, and only when it's clear that the program's performance is not acceptable. Remember what Sir Tony Hoare (popularized by Donald Knuth) said:
 > Premature optimization is the root of all evil.
 
-As developers, we generally suck at optimizing for performance based on gut feeling and intuition. Any decision to optimize for performance at the cost of readability should be based on quantitative measures. If it's really a concern, use a profiler to gather empirical data that shows there really is a problem with a program's performance. Profiling will help you find where the performance bottlenecks are, and they're usually not where you _think_ they are. 
+As developers, we generally suck at optimizing for performance based on gut feeling and intuition. Any decision to optimize for performance at the cost of readability should be based on quantitative measures. If it's really a concern, use a profiler to gather empirical data that shows there really is a problem with a program's performance. Profiling will help you find where the true performance bottlenecks are, and they're usually not where you _think_ they are. 
 
 Make readability and understandability a priority. Optimize for performance later, only when necessary, and only after using a profiler to objectively identify the performance bottlenecks in the code.
 
