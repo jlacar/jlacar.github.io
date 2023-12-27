@@ -91,7 +91,7 @@ Modern IDEs like IntelliJ IDEA and Eclipse have come a long way to make refactor
 
 Large refactorings can be quite challenging, especially when the transitions from one step to the next are not very obvious. To stay on track and maintain a general sense of direction, I'll typically sketch a path in the code. When doing TDD, I use tests to do these sketches. 
 
-Luckily, in this case there weren't that many steps needed to refactor the code to a fluent interface. It was enough to imagine the end state and use comments to remind me of my final destination, so I didn't wander off track as I slowly worked my way toward it. 
+Luckily, in this case there weren't that many steps needed to refactor the code to a fluent interface. It was enough to imagine the end state and use comments to guide me to the final destination and keep me from wandering off track as I slowly worked my way toward it. 
 
 Listing 2 below shows the comments I added to guide my refactoring journey.
 
