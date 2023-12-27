@@ -84,11 +84,11 @@ Keeping with the discipline of refactoring as described above can lead you to Te
 
 ### Mapping out where we want to go
 
-When I go on a road trip, I don't just start driving in any random direction. When I head out, I have a good idea of the general direction I'm going. Modern technology has made road trips more or less worry-free: just enter a destination address into your phone's GPS and and you'll get turn-by-turn directions all the way there. You'll even get warned about hazards and traffic that might slow you down.
+When I go on a road trip, I don't just start driving in any random direction. When I head out, I have a good idea of the general direction I'm going. Modern technology has made road trips more or less worry-free: just enter the destination address into your phone's GPS app and you'll get turn-by-turn directions all the way there. You even get warned about hazards and detours that might slow you down.
 
-Modern IDEs like IntelliJ IDEA and Eclipse have come a long way to make refactoring easier and safer. Many small refactorings can be performed automatically and safely with a few keystrokes or mouse clicks. Unfortunately, larger and more complex refactorings that involve multiple steps strung together still require a fair amount of skill, experience, and often, serendipity to get the code to a better place.
+Modern IDEs like IntelliJ IDEA and Eclipse have come a long way to make refactoring easier and safer. Many small refactorings can be easily performed automatically and safely with a few keystrokes or mouse clicks. Unfortunately, larger and more complex refactorings that involve multiple steps still require a fair amount of skill, experience, and often, serendipity to get the code to a better place.
 
-Large refactorings can be quite challenging, especially when the transitions from one step to the next are not obvious. To maintain a general sense of direction and stay on track, I'll typically sketch a path in the code. When I'm doing TDD, I use tests to do these sketches. 
+Large refactorings can be quite challenging, especially when the transitions from one step to the next are not obvious. To stay on track and maintain a general sense of direction, I'll typically sketch a path in the code. When doing TDD, I use tests to do these sketches. 
 
 Luckily, in this case there weren't that many steps needed to refactor to a fluent interface. It was enough to use comments to remind me of my final destination, so I didn't get off track as I baby-stepped my way toward it. 
 
