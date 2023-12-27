@@ -80,13 +80,13 @@ I want to emphasize some things Fowler says about refactoring:
 
 3. _Your system **should not be broken** for more than a few minutes at a time_. I would even go farther and assert that ideally, it shouldn't be broken at all. Sometimes, however, having your program in a broken state for a few minutes can expedite the work. I would advise you to be careful in doing this: the longer the code stays broken, the longer it takes to get useful feedback from it. It's usually better to revert your changes and try again before you make things worse.
 
-Keeping with the discipline of refactoring as described above can lead you to Test and (Commit or Revert), an alternative flow to TDD [introduced a few years ago by Kent Beck](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864). I'll look at the in detail in a future article.
+Keeping with the discipline of refactoring as described above can lead you to Test and (Commit or Revert). TCR is a workflow [introduced a few years ago by Kent Beck](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864). I'll take a more detailed look at this alternative workflow relative to TDD in a future article.
 
 ### Mapping out where we want to go
 
-Before I start refactoring, I like to have a good idea of the direction I'm going. Just as when I go on a road trip, I don't just start driving in a random direction. I know what major highways I'm taking, have an idea of what kind of road and weather conditions I'll have to deal with, and a good idea of how long it's going to take. This helps me plan things like where I should stop for gas, food, and rest/relief.
+Before I start refactoring, I like to have a good idea of the direction I'm going. Just as when going on a road trip, I don't just start driving in any random direction. I have an idea of what major highways I'll be taking, what kind of road and weather conditions I'll be dealing with, and approximately how long it's going to take to get there. This helps me plan things like where I to stop for gas, food, and rest/relief.
 
-Likewise, before embarking on a non-trivial refactoring, I like to have a good idea of where I want to end up with the code. I'll typically do this by outlining the story in the code. When I'm TDD-ing, I'll write this outline in the form of tests. In the case of this AoC solution code, I used some comments to map out a plan:
+Likewise, before embarking on a non-trivial refactoring, I like to have a general idea of where I'd like the code to end up. I'll typically do this by outlining the story in the code. When I'm doing TDD, I'll usually use tests for outlining ideas. In the case of this AoC solution code, I just used comments to map out a plan:
 
 ```kotlin
 // try to make the code tell its story more fluently, like this 
@@ -105,7 +105,11 @@ ____
 
 ### Step 1 - Use an extension function to add to the call chain
 
-Kotlin's [extension functions](https://kotlinlang.org/docs/extensions.html) give us a way to easily extend the functionality of an existing class, even one we can't edit. This comes in really handy for creating DSLs. Extension functions are defined just like normal functions except we prefix the name with the receiver type, the type whose behavior we're extending. In this case, we want to extend the behavior of `List<CamelCardPlay>`, so we're going to create an extension function with that as its receiver.
+Kotlin's [extension functions](https://kotlinlang.org/docs/extensions.html) give us a way to easily extend the functionality of an existing class, even one we can't edit. This comes in really handy for creating DSLs and fluent interfaces. 
+
+Extension functions are defined just like normal functions except we prefix the name with the receiver type, the type whose behavior we're extending. 
+
+In this case, we want to extend the behavior of `List<CamelCardPlay>`, so we're going to create an extension function with that as its receiver.
 
 ```kotlin
 // instead of this
@@ -147,7 +151,7 @@ override fun part1(): Int =
 #### **Listing 4**. Trying out the new extension function
 ____
 
-Note that the only difference so far is in the call to `totalWinnings()`. The rest of the call chain stays intact. We'll deal with those parts later. Right now, our focus is on using the extension function that calculates the total winnings for all the `CamelCardPlay`s in the puzzle input.
+Note that the only difference so far is the call to `totalWinnings()`. The rest of the call chain remains the same. We'll deal with those parts later. Right now, our focus is on using the extension function that calculates the total winnings for all the `CamelCardPlay`s in the puzzle input.
 
 We run the tests that were already passing before and confirm we haven't broken anything. Great, we can now apply the same change to `part2()`. Doing so makes `totalWinningsOLD()` unused so we can safely delete it:
 
@@ -173,9 +177,9 @@ ____
 
 ### Step 2 - Refactoring the code to make it consistently fluent
 
-With the code still passing its tests after this first change, we shift our attention to the next bit of non-fluency in the call chain: the call to `sortedWith(...)`. This is a general-purpose function provided by the Kotlin Standard Library and it's currently sitting between the two domain-specific ideas of `plays` and `totalWinnings()`. This makes the call chain inconsistently fluent.
+We can now shift our attention to the next bit of non-fluency in the call chain: the call to `sortedWith(...)`. This is a general-purpose function provided by the Kotlin Standard Library and it's currently sitting between the two domain-specific ideas of `plays` and `totalWinnings()`. This makes the call chain inconsistently fluent.
 
-We'll define another extension function to make it more fluent. Since it's already working, the extension only serves as an aliasing mechanism that allows us to use a more domain-centric name in place of the generic name. The receiver type for this extension function, which we'll call `rankedWith()`, is the type of the `plays` object, `List<CamelCardPlay>`. Likewise, its return type also needs to be `List<CamelCardPlay>` for us to be able to chain it with `totalWinnings()`.
+We'll define another extension function to make it more fluent. Since it's already working, the extension function only serves as an aliasing mechanism that allows us to use a more domain-centric name in place of the general name. The receiver type for this extension function, which we'll call `rankedWith()`, is the type of the `plays` object, `List<CamelCardPlay>`. Likewise, its return type also needs to be `List<CamelCardPlay>` for us to be able to chain it with `totalWinnings()`.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this 
@@ -227,7 +231,7 @@ private fun List<CamelCardPlay>.rankedWith(
 #### **Listing 7**. Replacing `sortedWith()` with `rankedWith()`
 ____
 
-The end, as we mapped out at the start, is now in sight.
+The end, as we mapped it out when we began, is now in sight.
 
 ### Step 3 - Extracting to an explaining variable
 
@@ -237,7 +241,7 @@ We can do this by [extracting the expression to an explaining variable](https://
 
 Again, we try it with `part1()` first and see all tests pass before we make a similar change to `part2()`. 
 
-The code now says the same thing the comments at the top say. We've achieved our refactoring goal and can delete those comments. After tidying up, we end up with this:
+The code now says the same thing the comments at the top say. We've achieved our refactoring goal and can delete those guiding comments. After tidying up, we end up with this:
 
 ```kotlin
 class Day07(private val plays: List<CamelCardPlay>): AoCSolution() {
@@ -280,15 +284,15 @@ ____
 
 I'm sure there are those who will point out that this refactoring ended up adding more lines to the code, implying this is a bad thing. 
 
-While simplicity favors less code, more code is not necessarily a bad thing. Try reading [Martin Fowler's books on refactoring](https://martinfowler.com/books/refactoring.html) and you'll see many examples of this, particular in the first long refactoring example he gives at the start. The primary objective is readability, and that sometimes comes at the cost of brevity.
+While simplicity favors less code, more code is not necessarily a bad thing. Try reading [Martin Fowler's books on refactoring](https://martinfowler.com/books/refactoring.html) and you'll see many examples of this, particular in the first long refactoring example he gives at the start. The primary objective is readability, and sometimes that comes at the cost of brevity.
 
-I think it's misguided to make judgements based solely on the number of lines of code or even from the number of function or method calls made. As Kent Beck wrote in his recently released book, [_Tidy First?_](https://tidyfirst.substack.com/):
+I think it's misguided to make judgements based solely on the number of lines of code or even the number of function or method calls made. As Kent Beck wrote in his recently released book, [_Tidy First?_](https://tidyfirst.substack.com/):
 > The biggest cost of code is the cost of reading and understanding it, not the cost of writing it.
 
 Our main priority as developers should be to make the code as easy to read and understand as possible. Optimizing for performance comes later, and only when it's clear that the program's performance is not acceptable. Remember what Sir Tony Hoare (popularized by Donald Knuth) said:
 > Premature optimization is the root of all evil.
 
-As developers, we generally suck at optimizing for performance based on gut feeling and intuition. Any decision to optimize for performance at the cost of readability should be based on quantitative measures. If it's really a concern, use a profiler to gather data about a program's performance to prove there really is an issue. Otherwise, prioritize for readability and understandability.
+As developers, we generally suck at optimizing for performance based on gut feeling and intuition. Any decision to optimize for performance at the cost of readability should be based on quantitative measures. If it's really a concern, use a profiler to gather empirical data that shows there really is a problem with a program's performance. Otherwise, prioritize for readability and understandability.
 
 ____
 ## Conclusion
