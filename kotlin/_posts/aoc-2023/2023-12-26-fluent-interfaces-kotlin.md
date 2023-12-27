@@ -22,13 +22,11 @@ A DSL can also make it easier for developers to organize their thoughts and idea
 
 ### A short introduction to the Camel Cards domain
 
-As an overview, Camel Cards is like Poker, except with a few twists. There are also different **types of hands**, like **five of a kind** and **full house**. Hands are **ranked** relative to each other, and **winnings** are calculated based on the hand's **rank** and the **bid** made with it.
-
-Please go to the [AoC 2023 Day 7 puzzle page](https://adventofcode.com/2023/day/7) to read the full description and rules of Camel Cards.
+The full description and rules for Camel Cards can be found on the [AoC 2023 Day 7 puzzle page](https://adventofcode.com/2023/day/7). For our purposes in this article, you just need to know that Camel Cards is like Poker, except with a few twists. There are different **types of hands**, like **five of a kind** and **full house**. Hands are **ranked** relative to each other according to certain rules on how to assign **strength** to a hand. **Winnings** are calculated based on a hand's **rank** and the **bid** made for it.
 
 ### The non-fluent solution
 
-I was quite happy with the solution I had ended up using to submit my answers to the Day 7 puzzle. Not only did it produce the correct answers that earned me a couple of gold stars, I thought the code was quite clear and expressive. 
+I was quite happy with the solution I had ended up using to submit my answers to the Day 7 puzzle. Not only did it produce the correct answers that earned me a couple of gold stars, I thought the code was quite clear and expressive because it used language from the puzzle's description. 
 
 This is what I had in the main solution class:
 ```kotlin
@@ -55,10 +53,10 @@ class Day07(private val plays: List<CamelCardPlay>): AocSolution() {
     }
 }
 ```
-#### **Listing 1**. The code to be refactored to a fluent interface
+#### **Listing 1**. The code to be refactored to a more fluent interface
 ____
 
-As I said, I was quite happy with the code until I realized that the call to `totalWinnings()` could be written in a more fluent style. A more fluent style would probably be a more idiomatic way to write the Kotlin code. 
+As I said, I was quite happy with the code until I realized that the call to `totalWinnings()` could be written in a more fluent style, one that would probably be a more idiomatic way to write it in Kotlin. 
 
 Time for some refactoring. Before we do that though, let's get something straight about the term "refactoring."
 
