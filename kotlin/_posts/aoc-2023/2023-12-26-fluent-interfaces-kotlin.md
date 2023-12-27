@@ -212,7 +212,9 @@ private fun List<CamelCardPlay>.rankedWith(): List<CamelCardPlay> =
 #### **Listing 6**. Adding the `rankedWith()` extension function
 ____
 
-Note that the new `rankedWith()` extension function takes a parameter of type `Comparator<in CamelCardPlay>`. I won't go into the details of this but if you're curious, read up on [Kotlin generics and declaration site variance](https://kotlinlang.org/docs/generics.html#declaration-site-variance).
+Note that we've declared the parameter to `rankedWith()` as having the type `Comparator<in CamelCardPlay>`, the type of the `compareBy()` expression currently passed to `sortedWith()`. The `rankedWith()` function will take the same parameter. 
+
+I won't go into the details of generic `Comparator<in CamelCardPlay>` declaration but if you're curious, you can [read more about Kotlin generics and declaration site variance](https://kotlinlang.org/docs/generics.html#declaration-site-variance).
 
 Taking another small step, we try it with `part1()` first to see if it works. It does, so we make the same change to `part2()`. Then we tidy up.
 
