@@ -92,7 +92,7 @@ Large refactorings can be quite challenging, especially when the transitions fro
 
 Luckily, in this case there weren't that many steps needed to refactor to a fluent interface. It was enough to use comments to remind me of my final destination, so I didn't get off track as I baby-stepped my way toward it. 
 
-Listing 2 below shows the comments I added to guide my refactoring.
+Listing 2 below shows the comments I added to guide my refactoring journey.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this...
