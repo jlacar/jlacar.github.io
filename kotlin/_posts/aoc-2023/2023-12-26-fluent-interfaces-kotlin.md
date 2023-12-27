@@ -185,9 +185,9 @@ ____
 
 We can now shift our attention to the next bit of non-fluency in the call chain: the call to `sortedWith(...)`. This is a general-purpose function provided by the Kotlin Standard Library and it's currently sitting between the two domain-specific ideas of `plays` and `totalWinnings()`. This alternating shift of context from domain-specific to general and back to domain-specific makes the call chain's fluency inconsistent.
 
-To make the chain more consistently fluent, we'll define another extension function to use instead of `sortedWith()`. This new extension function, we'll call `rankedWith()` as suggested by our refactoring map, will only serve as an alias to use instead of the general-purpose name. 
+To make the chain more consistently fluent, we'll define another extension function to use instead of `sortedWith()`. This new extension function, which we'll name `rankedWith()` as suggested by our refactoring map, will serve as an alias for the general-purpose name. 
 
-The receiver type for `rankedWith()` is the type of the `plays` object, `List<CamelCardPlay>`. Its return type also needs to be `List<CamelCardPlay>` because we're chaining it with `totalWinnings()`.
+The receiver type for `rankedWith()` is the type of the `plays` object, `List<CamelCardPlay>`. Its return type needs to be `List<CamelCardPlay>` because we're chaining it with `totalWinnings()`.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this...
