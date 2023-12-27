@@ -158,9 +158,9 @@ override fun part1(): Int =
 #### **Listing 4**. Trying out the new extension function
 ____
 
-Note that the only difference so far is the call to `totalWinnings()`. The rest of the call chain remains the same. We'll deal with those parts later. Right now, our focus is on using the extension function that calculates the total winnings for all the `CamelCardPlay`s in the puzzle input.
+Note that the only difference so far is the call to `totalWinnings()`. The rest of the call chain remains the same. We'll deal with those parts later. Right now, our focus is on using the extension function that calculates total winnings as the terminal operation in the call chain.
 
-We run the tests that were already passing before and confirm we haven't broken anything. Great, we can now apply the same change to `part2()`. Doing so makes `totalWinningsOLD()` unused so we can safely delete it. We tidy up and get the code shown below in Listing 5.
+We run the tests that were already passing before and confirm we haven't broken anything. Great, we can now apply the same change to `part2()`. Doing so makes `totalWinningsOLD()` unused so we can safely delete it. After tidying up, we get the code shown below in Listing 5 below.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this... 
@@ -184,7 +184,7 @@ ____
 
 We can now shift our attention to the next bit of non-fluency in the call chain: the call to `sortedWith(...)`. This is a general-purpose function provided by the Kotlin Standard Library and it's currently sitting between the two domain-specific ideas of `plays` and `totalWinnings()`. This alternating shift of context from domain-specific to general and back to domain-specific makes the call chain's fluency inconsistent.
 
-To make the chain more consistently fluent, we'll define another extension function to use instead of `sortedWith()`. This new extension function, which we'll name `rankedWith()` as suggested by our refactoring map, will serve as an alias for the general-purpose name. 
+To make the chain more consistently fluent, we'll define another extension function to use instead of `sortedWith()`. This new extension function, which we'll name `rankedWith()` as our refactoring map suggests, will serve as an alias for the general-purpose name. 
 
 The receiver type for `rankedWith()` is the type of the `plays` object, `List<CamelCardPlay>`. Its return type needs to be `List<CamelCardPlay>` because we're chaining it with `totalWinnings()`.
 
@@ -215,7 +215,9 @@ Note that we've declared the parameter for `rankedWith()` as a `Comparator<in Ca
 
 I won't go into the details of the generic `Comparator<in CamelCardPlay>` declaration but if you're curious, you can [read more about Kotlin generics and declaration site variance](https://kotlinlang.org/docs/generics.html#declaration-site-variance).
 
-Taking another small step, we try `rankedWith()` in `part1()` to see if it works. It does, so we make the same change to `part2()`. We then tidy up.
+Taking another small step, we try `rankedWith()` in `part1()` to see if it works. It does, so we make the same change to `part2()`. We then tidy up and get the code shown in Listing 7 below.
+
+The end, as we mapped it out when we began this refactoring journey, is now in sight.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this... 
@@ -239,17 +241,15 @@ private fun List<CamelCardPlay>.rankedWith(
 #### **Listing 7**. Tidied up code after replacing `sortedWith()` with `rankedWith()`
 ____
 
-The end, as we mapped it out when we began this refactoring journey, is now in sight.
-
 ### Step 3 - Extracting to an explaining variable
 
-The story the code tells now is still a little inconsistent. The `compareBy {...}` parts are once again calls to a general-purpose function provided by the Standard Kotlin Library. We'd like to use a domain-specific term in its place to make the story told by the call chain completely fluent.
+The story the code tells now is still a little inconsistent. The `compareBy {...}` parts are once again calls to a general-purpose function provided by the Standard Kotlin Library. We'd like to use a domain-specific term in its place to make the story told by the call chain completely fluent and completely match the code we sketched out at the beginning.
 
 We can do this by [extracting the expression to an explaining variable](https://refactoring.guru/extract-variable).
 
-Again, we try it with `part1()` first and see all tests pass before we make a similar change to `part2()`. 
+Again, we try it with `part1()` first and see all tests pass before we make a similar change to `part2()`.
 
-The code now says the same thing the comments at the top say. We've achieved our refactoring goal and can delete those guiding comments. After tidying up, we end up with this:
+The code now says exactly what our guiding comments at the top say. We've achieved our refactoring goal and can now delete those guiding comments. After tidying up, we end up with the code in Listing 8 below.
 
 ```kotlin
 class Day07(private val plays: List<CamelCardPlay>): AoCSolution() {
