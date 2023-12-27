@@ -84,11 +84,15 @@ Keeping with the discipline of refactoring as described above can lead you to Te
 
 ### Mapping out where we want to go
 
-When I go on a road trip, I don't just start driving in any random direction. When I head out, I have a good idea of the general direction I'm going. These days, it's easy. I just enter a destination address in my GPS app and I'll get turn-by-turn guidance all the way there.
+When I go on a road trip, I don't just start driving in any random direction. When I head out, I have a good idea of the general direction I'm going. Modern technology has made road trips more or less worry-free: just enter a destination address into your phone's GPS and and you'll get turn-by-turn directions all the way there. You'll even get warned about hazards and traffic that might slow you down.
 
-Likewise, when embarking on a non-trivial refactoring, I find it useful to have a general sense of where I'm going. Unfortunately, for anything larger and more complicated than the simple refactorings my IDE can do automatically, I don't get the kind of step-by-step guidance a GPS app gives me. I have to figure out how to string many small refactoring steps together so I can reach my final destination. This can be challenging, especially when the way is unclear.
+Modern IDEs like IntelliJ IDEA and Eclipse have come a long way to make refactoring easier and safer. Many small refactoring can be performed automatically and safely with a click of a button. Unfortunately for us, however, larger and more complex refactorings that involve stringing together many small steps still requires a fair amount of skill, experience, and even serendipity to get the code to a better place.
 
-To help me stay on track, I'll typically sketch a path in the code. When I'm doing TDD, I use tests to do these sketches. Luckily, for this problem it was enough to use comments to remind me of my final destination, so I didn't get off track as I refactored my way toward it. Listing 2 below shows the comments I added to guide my refactoring.
+Large refactorings can be quite challenging, especially when the transitions from one step to the next are not very obvious. To maintain a general sense of direction and stay on track, I'll typically sketch a path in the code. When I'm doing TDD, I use tests to do these sketches. 
+
+Luckily, in this case there weren't that many steps needed to refactor to a fluent interface. It was enough to use comments to remind me of my final destination, so I didn't get off track as I refactored my way toward it. 
+
+Listing 2 below shows the comments I added to guide my refactoring.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this...
