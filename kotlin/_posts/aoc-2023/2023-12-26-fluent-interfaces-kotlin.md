@@ -294,7 +294,9 @@ I think it's misguided to make judgements based solely on the number of lines of
 Our main priority as developers should be to make the code as easy to read and understand as possible. Optimizing for performance comes later, and only when it's clear that the program's performance is not acceptable. Remember what Sir Tony Hoare (popularized by Donald Knuth) said:
 > Premature optimization is the root of all evil.
 
-As developers, we generally suck at optimizing for performance based on gut feeling and intuition. Any decision to optimize for performance at the cost of readability should be based on quantitative measures. If it's really a concern, use a profiler to gather empirical data that shows there really is a problem with a program's performance. Otherwise, prioritize for readability and understandability.
+As developers, we generally suck at optimizing for performance based on gut feeling and intuition. Any decision to optimize for performance at the cost of readability should be based on quantitative measures. If it's really a concern, use a profiler to gather empirical data that shows there really is a problem with a program's performance. Profiling will help you find where the performance bottlenecks are, and they're usually not where you _think_ they are. 
+
+Make readability and understandability a priority. Optimize for performance later, only when necessary, and only after using a profiler to objectively identify the performance bottlenecks in the code.
 
 ____
 ## Conclusion
