@@ -16,7 +16,7 @@ You can see the full code in [my GitHub repo for AoC 2023](https://github.com/jl
 The [Wikipedia entry for "fluent interface"](https://en.wikipedia.org/wiki/Fluent_interface) starts with this short paragraph:
 > In software engineering, a **fluent interface** is an [object-oriented API](https://en.wikipedia.org/wiki/Object_oriented_design) whose design relies extensively on [method chaining](https://en.wikipedia.org/wiki/Method_chaining). Its goal is to increase code legibility by creating a [domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language) (DSL). The term was coined in 2005 by Eric Evans and [Martin Fowler](https://en.wikipedia.org/wiki/Martin_Fowler_(software_engineer)).
 
-In [my last article](/coding/2023/12/25/aoc-day7-part1-overview.html), I mentioned how a DSL can help align people's understanding by giving them a common set of terms and phrases to use for communicating ideas. The more aligned a program is to the language of the domain, the less translation needs to happen between one set of terms and another, i.e., from techie-speak to nontechie-speak and vice versa.
+In [another article](/coding/2023/12/22/aoc-day7-part1-overview.html), I mentioned how a DSL can help align people's understanding by giving them a common set of terms and phrases to use for communicating ideas. The more aligned a program is to the language of the domain, the less translation needs to happen between one set of terms and another, i.e., from techie-speak to nontechie-speak and vice versa.
 
 A DSL can also make it easier for developers to organize their thoughts and ideas in the program by suggesting logical groupings of logic and data. This can lead to more coherent and cohesive code.
 
