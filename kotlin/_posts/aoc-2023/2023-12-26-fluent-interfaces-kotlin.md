@@ -18,7 +18,7 @@ The [Wikipedia entry for "fluent interface"](https://en.wikipedia.org/wiki/Fluen
 
 In [another article](/coding/2023/12/22/aoc-day7-part1-overview.html), I mentioned how a DSL can help align people's understanding by giving them a common set of words and phrases to use for communicating ideas. The more aligned a program is to the language of the domain, the less translation needs to happen between one set of terms and another, i.e., from techie-speak to nontechie-speak and vice versa.
 
-A DSL can also make it easier for developers to organize their thoughts and ideas in the program by suggesting logical groupings of logic and data. This can lead to more coherent and cohesive code.
+A DSL can also make it easier for developers to organize their thoughts and ideas in the program by suggesting logical groupings of software components, business rules, processes, and data. This can lead to more coherent and cohesive code and designs.
 
 ### A short introduction to the Camel Cards domain
 
@@ -87,7 +87,7 @@ Keeping with the discipline of refactoring as described above can lead to Test a
 
 When I go on a road trip, I don't just start driving in any random direction. When I head out, I usually have a good idea of the general direction I'm going. Modern technology has made road trips more or less worry-free: just enter the destination address into your phone's GPS app and you'll get turn-by-turn directions all the way there. You even get warned about hazards and detours that might slow you down.
 
-Modern IDEs like IntelliJ IDEA and Eclipse have come a long way to make refactoring easier and safer. Many small refactorings can be easily performed automatically and safely with a few keystrokes or mouse clicks. Unfortunately, larger and more complex refactorings that involve multiple steps still require a fair amount of skill, experience, and often, serendipity to get the code to a better place.
+Modern IDEs like IntelliJ IDEA and Eclipse have come a long way to make refactoring easier and safer. Many small refactorings can be easily performed automatically and safely with a few keystrokes or mouse clicks. Unfortunately, larger and more complex refactorings that involve multiple steps still require a fair amount of skill, experience, intuition, and often, serendipity to get the code to a better place.
 
 Large refactorings can be quite challenging, especially when the transitions from one step to the next are not very obvious. To stay on track and maintain a general sense of direction, I'll typically sketch a path in the code. When doing TDD, I use tests to do these sketches. 
 
@@ -160,7 +160,7 @@ ____
 
 Note that the only difference so far is the call to `totalWinnings()`. The rest of the call chain remains the same. We'll deal with those parts later. Right now, our focus is on using the extension function that calculates total winnings as the terminal operation in the call chain.
 
-We run the tests that were already passing before and confirm we haven't broken anything. Great, we can now apply the same change to `part2()`. Doing so makes `totalWinningsOLD()` unused so we can safely delete it. After tidying up, we get the code shown below in Listing 5 below.
+We run the tests that were already passing before and confirm we haven't broken anything. Great, we can now apply the same change to `part2()`. Doing so makes `totalWinningsOLD()` unused so we can safely delete it. After tidying up, we get the code shown below in Listing 5.
 
 ```kotlin
 // try to make the code tell its story more fluently, like this... 
@@ -301,7 +301,7 @@ In his recently released book, [_Tidy First?_](https://tidyfirst.substack.com/),
 
 Our main priority as developers should be to make the code as easy to read and understand as possible. Optimizing for performance comes later, and only when there's clear and compelling evidence that the program's performance is not acceptable. 
 
-Remember what Sir Tony Hoare (popularized by Donald Knuth) said:
+Remember what [Sir Tony Hoare](https://en.wikipedia.org/wiki/Tony_Hoare) (popularized by [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)) said:
 > Premature optimization is the root of all evil.
 
 As developers, we generally suck at using gut feeling and intuition for performance tuning. Any decision to optimize for performance at the cost of readability should be based on quantitative measures. Use a profiler to gather empirical data that clearly shows a problem. Profiling will help you find where the true performance bottlenecks are, and they're usually not where you _think_ they are. 
