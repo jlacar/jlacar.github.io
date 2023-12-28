@@ -4,10 +4,12 @@ title: Fluent Interfaces with Kotlin
 author: Junilu Lacar
 banner-img: /assets/images/aoc2023/07-camels/camel-cards-3.jpg
 banner-alt: Image created by DALL-E3 on Bing.com
-banner-width: 400
-banner-height: 400
+banner-width: 370
+banner-height: 370
 ---
-In this second installment of a planned series of articles, I'll demonstrate how I created a simple fluent interface and domain-specific language (DSL) in Kotlin. I'll do this in the context of my initial solution to the [Day 7 puzzle](https://adventofcode.com/2023/day/7) of [Advent of Code (AoC) 2023](https://adventofcode.com/2023).
+Kotlin has some really nice features that make it easy to write clear, expressive code. These features make it easy to come up with fluent interfaces and create domain-specific languages (DSL) or mini-languages that can improve the code's clarity.
+
+In this second installment of a planned series of articles, I'll show how I used some of those features as I continued to refactor my initial solution to the [Day 7 puzzle](https://adventofcode.com/2023/day/7) of [Advent of Code (AoC) 2023](https://adventofcode.com/2023).
 
 You can see the full code and its change history in [my GitHub repo for AoC 2023](https://github.com/jlacar/aoc-2023-kotlin/blob/main/src/Day07.kt).
 
