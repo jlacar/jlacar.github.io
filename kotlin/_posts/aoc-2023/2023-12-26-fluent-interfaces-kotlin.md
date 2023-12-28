@@ -4,8 +4,8 @@ title: Fluent Interfaces with Kotlin
 author: Junilu Lacar
 banner-img: /assets/images/aoc2023/07-camels/camel-cards-3.jpg
 banner-alt: Image created by DALL-E3 on Bing.com
-banner-width: 370
-banner-height: 370
+banner-width: 360
+banner-height: 360
 ---
 Kotlin has some really nice features that make it easy to write clear, expressive code. These features help you create more fluent interfaces and domain-specific languages (DSL) or mini-languages that can improve the code's clarity.
 
