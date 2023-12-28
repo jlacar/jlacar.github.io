@@ -7,7 +7,7 @@ banner-alt: Image created by DALL-E3 on Bing.com
 banner-width: 370
 banner-height: 370
 ---
-Kotlin has some really nice features that make it easy to write clear, expressive code. These features make it easy to come up with fluent interfaces and create domain-specific languages (DSL) or mini-languages that can improve the code's clarity.
+Kotlin has some really nice features that make it easy to write clear, expressive code. These features help you create more fluent interfaces and domain-specific languages (DSL) or mini-languages that can improve the code's clarity.
 
 In this second installment of a planned series of articles, I'll show how I used some of those features as I continued to refactor my initial solution to the [Day 7 puzzle](https://adventofcode.com/2023/day/7) of [Advent of Code (AoC) 2023](https://adventofcode.com/2023).
 
