@@ -79,11 +79,11 @@ Ward Cunningham posted [a video on YouTube](https://youtu.be/pqeJFYwnkjE?si=HSlw
 
 The more clearly the code expresses its intent, the better and easier it is for anyone reading the code to gain a clear and correct understanding of its behavior. Whenever I find myself staring at the code struggling to understand what it's doing, I take it as a sign that it needs to be refactored for clarity.
 
-This is what "paying back the debt" is about. I want to take any understanding I have in my  head and put it back in the code. I think of this as "paying it forward" to my colleagues who will have to read and maintain the code in the future. And to my your future self, when I have to come back and work on the code again.
+This is what "paying back the debt" is about. I want to take any understanding I have in my  head and put it back in the code. I think of this as "paying it forward" to my colleagues who will have to read and maintain the code in the future. And to my future self, when I have to come back and work on the code again.
 
 ## Coherence and Cohesion
 
-Another thing that triggers refactoring for me is code that is lacking cohesion and coherence.
+Another thing that triggers refactoring for me is code that lacks cohesion and coherence.
 
 Coherent code makes sense when I read it. Coherent code tells me a story. Rule #2 is key to making code make sense and tell a good story.
 
