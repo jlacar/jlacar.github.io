@@ -95,7 +95,7 @@ Whatever the case may be, I know I can stop refactoring when it's not so much of
 
 All of the above are the basic things I look for when I'm reading and working with code. Everything else I do seems to stem from these basic things. Without clarity, coherence, and cohesion, it's hard for me to gain an understanding of the code's behavior. Without a good test suite to provide a safety net, it's hard for me to start refactoring and repaying the debt of understanding owed to the code. The tests give me confidence to refactor ruthlessly and the ability to proceed courageously.
 
-I know these aren't concrete, step-by-step instructions on when to start and stop refactor. That's why I consider them heuristics, fuzzy rules that I have learned through experience and have internalized with practice. I guess it's what we developers like to call "intuition" which is really nothing more than experience whispering in our ear reminding us of those other times we've encountered similar situations.
+I know these aren't concrete, step-by-step instructions on when to start and stop refactoring. That's why I consider them heuristics, fuzzy rules that I have learned through experience and have internalized with practice. I guess it's what we developers like to call "intuition" which is really nothing more than experience whispering in our ear reminding us of those other times we've encountered similar situations.
 
 ## Heuristic Solution to The Monk's Journey
 
