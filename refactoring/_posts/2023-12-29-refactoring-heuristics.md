@@ -49,7 +49,7 @@ You may find these rules expressed a little differently elsewhere but this is ho
 
 ## First, there must be tests
 
-Rule #1 is that all tests pass. For that to happen, there must be tests in the first place. Without tests, refactoring is risky and I would hesitate in doing anything other than the the simplest and safest refactorings of them all, renaming things. 
+Rule #1 is that all tests pass. For that to happen, there must be tests in the first place. Without tests, refactoring is risky and I would hesitate in doing anything other than the simplest and safest refactorings of them all, renaming things.
 
 Renaming is usually safe as long as you're using an IDE that can automatically find and replace all references to the thing you're renaming. If you're renaming manually, make sure you know the scope of the name. The bigger the scope, the riskier it is to rename manually. This is why I like to interpret Rule #4 as "small" rather than "fewest". A local variable with limited scope is much safer and easier to rename manually than a global variable that is referenced in many places in the code, and possibly even outside the immediate codebase.
 
@@ -57,17 +57,19 @@ Tests provide a safety net for refactoring. If the change you make breaks someth
 
 ## Second, gain clarity and understanding.
 
-If you're sitting there looking at the code for more than a minute trying to understand what it's doing, it's time to refactor. I have the threshold down to thirty seconds or less to  understanding the code in a single method or function. Three minutes or less to understand any single behavior. This means that each section of code I need to understand has to be small enough to be consumable in half a minute, a class in less than three. 
+If I've been looking at the code for more than a minute and still struggling to understand what it's doing, that's a strong signal for me to start refactoring. My threshold of pain for this kind of thing is down to about thirty seconds or less to understanding code in a single method or function. It's about three minutes or less to understand any single behavior. This means that each section of code I need to understand has to be small enough to be consumable in half a minute, an entire class in less than five. 
 
 Again, I lean on Rule #4, and look for code to have small methods, functions, classes, tests, and APIs, among other things.
 
 Context also matters, so the more helpful and contextual the information I find around the code, the better. It's also best if I don't have to scroll up or down or away from the main chunk of code I'm looking at in order to understand the context it's working in. Flipping from one file to another is the worst in terms of creating and maintaining context. If I have to bounce around a lot, I tend to lose track of where I am and start getting confused.This makes me want to start refactoring.
 
-Again, that's Rule #4, code with the smallest and fewest elements. By now, you might be wondering why this rule isn't ranked higher in order of importance. It's because it's dependent on writing code that adheres to Rules #2 and #3. 
+Again, that's Rule #4, code with the smallest and fewest elements. By now, you might be wondering why this rule isn't ranked higher in order of importance. It's because small is often the result of making code adhere to Rules #2 and #3. 
 
 ## Clarity and expressiveness improve understanding, pay down debt
 
-Code that expresses itself clearly tends to be small. There are only so many concepts I can hold in head at any given moment. Prioritizing for clarity usually leads to smaller code anyway. Likewise with eliminating duplication, I'll typically extract code, which again leads to smaller code, but not necessarily fewer elements. When I go on a tear with extracting things, I could end up with more methods but each one is small, possibly one to five lines of code each.
+Code that expresses its intent clearly tends to be small. There are only so many concepts I can hold in head at any given moment. Prioritizing for clarity usually leads to smaller code anyway. 
+
+Likewise, when eliminating duplication I'll typically extract code, which again leads to smaller code, but not necessarily fewer elements. When I go on a tear with extracting things, I could easily end up with more methods than I started out with. But each of those newly extracted methods are small, possibly one to five lines of code each.
 
 Code that expresses its intent clearly leads to better understanding of what's going on in the program. Clear, intention-revealing code makes it easier to reason about its behavior. 
 
