@@ -4,8 +4,8 @@ title: Heuristics for Refactoring
 author: Junilu Lacar
 banner-img: /assets/images/refactoring/heuristics-monks-3d-isometric.jpg
 banner-alt: Image created by DALL-E3 on Bing.com
-banner-width: 350
-banner-height: 350
+banner-width: 370
+banner-height: 370
 ---
 The question of when to refactor seems to be a hot topic these days so I decided to throw my two cents into the hat.
 
@@ -91,15 +91,15 @@ Whatever the case may be, I know I can stop refactoring when it's not so much of
 
 All of the above are the basic things I look for when I'm reading and working with code. Everything else I do seems to stem from these basic things. Without clarity, coherence, and cohesion, it's hard for me to gain an understanding of the code's behavior. Without a good test suite to provide a safety net, it's hard for me to start refactoring and repaying the debt of understanding owed to the code. The tests give me confidence to refactor ruthlessly, and the confidence to proceed courageously.
 
-I know these aren't concrete, step-by-step instructions on when to start and stop refactor. That's why I consider them heuristics, fuzzy rules that I have learned through experience and have internalized with practice. I guess it's forms what we developers like to call "intuition" which is really nothing more than experience whispering in your ear reminding you of those other times you've encountered similar situations.
+I know these aren't concrete, step-by-step instructions on when to start and stop refactor. That's why I consider them heuristics, fuzzy rules that I have learned through experience and have internalized with practice. I guess it's what we developers like to call "intuition" which is really nothing more than experience whispering in our ear reminding us of those other times we've encountered similar situations.
 
 ## Heuristic Solution to The Monk's Journey
 
-The Monk's Journey puzzle would be difficult to prove mathematically given the absence of critical information about exact times, speeds, and number and duration of the stops the monk made on each day. This is where heuristics come into play.
+The Monk's Journey puzzle would be difficult to prove mathematically given the absence of critical information about exact start and end times, speed of walking, and the number and duration of stops the monk made on each day. It's all fuzzy information, which is where heuristics come into play.
 
-Imagine _two_ monks instead of one: one monk going up the mountain, the other one going down. Both monks start their respective journeys up or down the mountain on the same day, at about the same time (dawn), and finish at about the same time (sunset). The exact start and end times don't really matter.
+Imagine _two_ monks instead of one: one monk going up the mountain, the other one going down. Both monks start their respective journeys up or down the mountain on the same day, at about the same time (dawn), and finish at about the same time (sunset). The exact start and end times don't really matter. What matters is that there's overlap between the two treks.
 
-Now, imagine yourself as a third monk watching the other two monks as they walk on the path. Imagine also that you can see both monks at all times. At some point in the day, there will be a point where the two monks meet on the path. _That_ time and place is the answer to the puzzle.
+Now, imagine yourself as a third monk watching the other two monks as they walk on the path. Imagine also that you can see both monks at all times. At some point in the day, there will be a point on the path where the two monks meet. _That_ place and time is the answer to the puzzle.
 
 Remember, you were only asked to prove that there _is_ such a place and time, not where and when it is exactly.
 
