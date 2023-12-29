@@ -51,19 +51,23 @@ You may find these rules expressed a little differently elsewhere but this is ho
 
 Rule #1 is that all tests pass. To do that, there have to be tests in the first place and they have to be passing. Without these, refactoring is risky, unless you're only doing the simplest and safest refactorings of them all, renaming things. 
 
-Renaming is usually safe as long as you're using an IDE that can automatically find and replace all references to the thing you're renaming. If you're renaming manually, make sure you know the scope of the name. The bigger the scope, the riskier it is to rename manually. This is why I like to interpret Rule #4 as "small" rather than "fewest". A local variable with limited scope is much safer and easier to rename manually that a global variable.
+Renaming is usually safe as long as you're using an IDE that can automatically find and replace all references to the thing you're renaming. If you're renaming manually, make sure you know the scope of the name. The bigger the scope, the riskier it is to rename manually. This is why I like to interpret Rule #4 as "small" rather than "fewest". A local variable with limited scope is much safer and easier to rename manually than a global variable that is referenced in many places in the code, and possibly even outside the immediate codebase.
 
 Tests provide a safety net for refactoring. If the change you make breaks something, one or more tests should fail to warn you about it. You can then revert the change and try something else. It's all about getting fast feedback about anything you do.
 
 ## Second, gain clarity and understanding.
 
-If you're sitting there looking at the code for more than a minute trying to understand what it's doing, it's time to refactor. I have it down to understanding the code in less than thirty seconds. This means that each section of code I need to understand has to be small enough to be consumable in half a minute. Again, I lean on Rule #4, code that has small elements, small chunks, small methods.
+If you're sitting there looking at the code for more than a minute trying to understand what it's doing, it's time to refactor. I have the threshold down to thirty seconds or less to  understanding the code in a single method or function. Three minutes or less to understand any single behavior. This means that each section of code I need to understand has to be small enough to be consumable in half a minute, a class in less than three. 
 
-Context also matters, so the more helpful and contextual information the surrounding code provides, the better. It's also best if I don't have to scroll up or down away from the main chunk of code I'm looking at in order to understand the context it's working in. Flipping from one file to another is the worst in terms of creating context. If I have to do this a lot, I tend to want to start refactoring.
+Again, I lean on Rule #4, and look for code to have small methods, functions, classes, tests, and APIs, among other things.
 
-That's Rule #4, smallest and fewest elements. By now, you might be wondering why this rule isn't ranked higher in order of importance. It's because it's dependent on writing code that adheres to Rules #2 and #3. Code that expresses itself clearly tends to be small. There's only so many concepts I can hold in head at any given moment. Prioritizing for clarity usually leads to smaller code. Likewise with eliminating duplication.
+Context also matters, so the more helpful and contextual the information I find around the code, the better. It's also best if I don't have to scroll up or down or away from the main chunk of code I'm looking at in order to understand the context it's working in. Flipping from one file to another is the worst in terms of creating and maintaining context. If I have to bounce around a lot, I tend to lose track of where I am and start getting confused.This makes me want to start refactoring.
+
+Again, that's Rule #4, code with the smallest and fewest elements. By now, you might be wondering why this rule isn't ranked higher in order of importance. It's because it's dependent on writing code that adheres to Rules #2 and #3. 
 
 ## Clarity and expressiveness improve understanding, pay down debt
+
+Code that expresses itself clearly tends to be small. There's only so many concepts I can hold in head at any given moment. Prioritizing for clarity usually leads to smaller code. Likewise with eliminating duplication.
 
 Code that expresses its intent clearly leads to better understanding of what's going on in the program. Clear, intention-revealing code makes it easier to reason about its behavior. 
 
