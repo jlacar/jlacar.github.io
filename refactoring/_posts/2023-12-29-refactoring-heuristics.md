@@ -27,7 +27,7 @@ The Monk's Journey is a puzzle that can be solved heuristically. It goes somethi
 What exactly are heuristics anyway? Wikipedia gives us [this definition](https://en.wikipedia.org/wiki/Heuristic):
 > In [psychology](https://en.wikipedia.org/wiki/Psychology), heuristics are simple, efficient rules, either learned or inculcated by evolutionary processes. These psychological heuristics have been proposed to explain how people make decisions, come to judgements, and solve problems. These rules typically come into play when people face complex problems or incomplete information.
 
-Incomplete information is exactly what we seem to have with the Monk's Journey puzzle. It's challenging, if not impossible, to solve with math (I didn't even try). And yet, the solution is easy to understand, logical, and quite elegant in its simplicity using heuristics. See if you can come up with a simple proof before you skip to end to read the solution.
+Incomplete information is exactly what we seem to have with the Monk's Journey puzzle. It's challenging, if not impossible, to solve with math (I didn't even try). And yet, the solution is easy to understand, logical, and quite elegant in its simplicity using heuristics. See if you can come up with a simple proof before you skip to the end to read the solution.
 
 ## Simplicity
 
@@ -53,7 +53,7 @@ Rule #1 is that all tests pass. To do that, there have to be tests in the first 
 
 Renaming is usually safe as long as you're using an IDE that can automatically find and replace all references to the thing you're renaming. If you're renaming manually, make sure you know the scope of the name. The bigger the scope, the riskier it is to rename manually. This is why I like to interpret Rule #4 as "small" rather than "fewest". A local variable with limited scope is much safer and easier to rename manually than a global variable that is referenced in many places in the code, and possibly even outside the immediate codebase.
 
-Tests provide a safety net for refactoring. If the change you make breaks something, one or more tests should fail to warn you about it. You can then revert the change and try something else. It's all about getting fast feedback about anything you do.
+Tests provide a safety net for refactoring. If the change you make breaks something, one or more tests should fail, as a warning that something went wrong. You can then revert the change and try something else. It's all about getting fast feedback about anything you do.
 
 ## Second, gain clarity and understanding.
 
