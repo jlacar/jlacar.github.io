@@ -49,7 +49,7 @@ You may find these rules expressed a little differently elsewhere but this is ho
 
 ## First, there must be tests
 
-Rule #1 is that all tests pass. To do that, there have to be tests in the first place and they have to be passing. Without these, refactoring is risky, unless you're only doing the simplest and safest refactorings of them all, renaming things. 
+Rule #1 is that all tests pass. For that to happen, there must be tests in the first place. Without tests, refactoring is risky and I would hesitate in doing anything other than the the simplest and safest refactorings of them all, renaming things. 
 
 Renaming is usually safe as long as you're using an IDE that can automatically find and replace all references to the thing you're renaming. If you're renaming manually, make sure you know the scope of the name. The bigger the scope, the riskier it is to rename manually. This is why I like to interpret Rule #4 as "small" rather than "fewest". A local variable with limited scope is much safer and easier to rename manually than a global variable that is referenced in many places in the code, and possibly even outside the immediate codebase.
 
@@ -67,7 +67,7 @@ Again, that's Rule #4, code with the smallest and fewest elements. By now, you m
 
 ## Clarity and expressiveness improve understanding, pay down debt
 
-Code that expresses itself clearly tends to be small. There's only so many concepts I can hold in head at any given moment. Prioritizing for clarity usually leads to smaller code. Likewise with eliminating duplication.
+Code that expresses itself clearly tends to be small. There are only so many concepts I can hold in head at any given moment. Prioritizing for clarity usually leads to smaller code anyway. Likewise with eliminating duplication, I'll typically extract code, which again leads to smaller code, but not necessarily fewer elements. When I go on a tear with extracting things, I could end up with more methods but each one is small, possibly one to five lines of code each.
 
 Code that expresses its intent clearly leads to better understanding of what's going on in the program. Clear, intention-revealing code makes it easier to reason about its behavior. 
 
