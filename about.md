@@ -1,17 +1,25 @@
 ---
 layout: page
 title: About
-tagline: A few more things about this blog
+tagline: More about me and this blog
 permalink: /about.html
 ref: about
 order: 1
 ---
 
-This blog is mainly about agile software development techniques. The examples are mostly Java but there are posts that focus on the language I'm learning this year as part of my Pragmatic Programmer
-"learn a new language every year" habit. That means Kotlin, JavaScript, Go, Scala, Python, and Rust, among others.
+# About me 
 
-This blog was generated with Jekyll and currently uses the _Cayman Blog_ Jekyll theme. 
-You can find out more info about this theme and source code at: [cayman-blog](https://github.com/lorepirri/cayman-blog)
+I am a Filipino-American living in Columbus, Ohio. My family and I came to the US in 1997 on a wave of Y2K hirings. I have a Bachelor's Degree in Mechanical Engineering from the Mindanao State University - Iligan Institute of Technology in Iligan City, Philippines. However, my entire professional life has been in software development. I am passionate about quality software and enjoy learning new things.
+
+I have also held positions as a technical lead, coach, and facilitator. I have worked for several consulting companies in these various roles and I try to remain active in the developer community by writing, giving talks, and occasionally speaking at conferences.
+
+My experience is mainly in Java but I have come to really enjoy working with Kotlin. I think Kotlin is a great language and I hope to use it more in the future.
+
+# About this blog
+
+This blog is hosted on GitHub Pages. It was generated with Jekyll and currently uses the _Cayman Blog_ Jekyll theme.
+
+You can find more info about this theme and its source code at: [cayman-blog](https://github.com/lorepirri/cayman-blog)
 
 You can find the source code for _Jekyll_ at [jekyll](https://github.com/jekyll/jekyll)
 
