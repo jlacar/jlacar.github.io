@@ -30,7 +30,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-feed
 
-excerpt_separator: <!---more--->
+excerpt_separator: <!--excerpt-end-->
 
 # Exclude from processing.
 # The following items will not be processed, by default.

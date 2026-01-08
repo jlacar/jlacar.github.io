@@ -21,7 +21,12 @@ layout: default
           <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
 
-        {{ post.excerpt | markdownify | truncatewords: 30 }}
+        {%- unless post.custom-excerpt -%}
+          {{ post.excerpt | markdownify | truncatewords: 40 }}
+        {%- else -%}
+          {%- assign excerptParts = post.excerpt | split: '<!--excerpt-start-->' -%}
+          {{ excerptParts[1] | markdownify | truncatewords: 40 }}
+        {%- endunless -%}
 
       </li>
     {% endfor %}

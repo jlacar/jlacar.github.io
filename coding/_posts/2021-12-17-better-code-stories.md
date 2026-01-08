@@ -8,7 +8,41 @@ banner-width: 640
 banner-height: 397
 ---
 
-I first heard the idea of telling a story in code from Kent Beck in [SE Radio Episode #167](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/). Kent was explaining how a test should have an arc of a story, with a clear beginning, middle, and end. 
+>
+> 
+
+I first heard the idea of code telling a story from Kent Beck in [SE Radio Episode #167](https://www.se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/). "That is, somebody coming along later on and reading it should be able to understand something important about the program." Kent explained how the story in the tests should have an arc, with a clear beginning, middle, and end.
+
+In this post, we'll look at a couple of ways to make our tests and code tell a clear and coherent story that helps developers quickly understand important things about the program.
+
+Why is this important? I'm sure you've had the experience of coming into a codebase and having little to no clue where to begin figuring out what's going on in it. 
+
+
+
+## Elements of a good story
+
+https://www.masterclass.com/articles/the-essential-elements-of-a-good-story
+
+Lists five elements of a good story: Premise, plot, characters, prose, and theme.
+
+
+## Poorly-written code has no clear story
+
+In the real world, however, I seldom find tests that tell a good story. By "good" I mean that the test code follows a clear arc of a story that's easy to follow. Instead, I'll often find tests that 
+
+Often, the test code just dives into nitty-gritty details. It's like watching a movie from the middle, not knowing anything about the characters, their roles, or even what the plot is about.
+
+# Elements of a good story
+
+If you look at a test and 
+
+I've seen a lot of tests that don't tell a clear story and it's very frustrating because I've come to rely on tests to give me some context about what the code does. If I can't rely on tests to do that, then I have to dig into the code and figure out what it does myself.
+
+## ZOMBIES is a great framework for telling stories in code
+
+ZOMBIES is a useful mnemonic from James Grenning that provides a great framework for telling a story with test code. The acronym stands for Zero, One, Many, Boundaries, Interfaces, Exceptions, and Simple Scenarios/Solutions. James explains how to use ZOMBIES to guide TDD in [this article](http://blog.wingman-sw.com/tdd-guided-by-zombies).
+
+
 
 Thinking of code as a story you're trying to tell adds another dimension to how you approach a problem and how you design and organize the solution. 
 

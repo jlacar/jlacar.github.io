@@ -1,0 +1,2 @@
+{% assign excerptParts = post.excerpt | split: "<!-- excerpt-start -->" %}
+{{ excerptParts[1] | markdownify | truncatewords: 50 }}
