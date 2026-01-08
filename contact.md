@@ -8,7 +8,7 @@ order: 10
 
 If you'd like to contact me, your best bet is to message me on [LinkedIn](https://www.linkedin.com/in/jlacar/).
 
-I used to hang out a lot at [CodeRanch](https://coderanch.com) but these days forum life is pretty slow. These days, I spend most of my online time lurking on LI and aside from the occasional comment, I'm content to watch the world from the sidelines. 
+I used to hang out a lot at [CodeRanch](https://coderanch.com) but these days forum life is pretty slow. Nowadays, I spend most of my online time lurking on LI with an occasional comment to posts that are interesting to me.
 
 If you Google my name, Junilu Lacar, you should be able to find me. As far as I know, I'm the only person on the planet with this name.
 
